@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title> 1. Introducción a la estadística y al análisis de datos</title>
+
+<xmp theme="Cerulean" style="display:none;">
+
+<head>
+
+
+</head>
+
+
+
+# Probabilidad y Estadistica para ingeniería y ciencias
+### Warpole &bull; Myers &bull; Myers 
+### Novena Edición
+
+<img src="http://3.bp.blogspot.com/-Vj2H6OjfjTY/UhrqaVecRhI/AAAAAAAAAfQ/QuAyHlX7W5g/s720/Probabilidad+y+estad%C3%ADstica+para+ingenier%C3%ADa+y+ciencias+Walpole+9a+Ed.jpg" alt="ortada Walpole 9ed" style="width: 200px;"/>
+
+
+## <a name="01">1. Introducción a la estadística y al análisis de datos </a>
+
+
+### 1.1 Panorama general: inferencia estadística, muestras, poblaciones y el papel de la probabilidad
+
+#### Empleo de datos científicos
+
+La **estadística inferencial** se encarga de generar un número enorme de "herramientas" en forma de métodos, los cuales se diseñan para contribuir al proceso de realizar juicios científicos frente a la **incertidumbre** y la **variación**. Los métodos estadisticos se utilizan para analizar datos de procesos con el objetivo de tener una mejor orientación respecto a las decisiónes que se requieren tomar.
+
+Cuando se realiza una o un conjunto de mediciones siempre se deben de tomar en cuenta las  **fuentes de variación** las cuales pueden provenir de diversas fuentes como los cambios dada una medición o las diferencias entre distintas mediciones asi como las incertidumbres que se generan dentro de la misma medición del valor observado contra el real. 
+
+#### Variabilidad en los datos científicos
+
+Los principales problemas que se presentaran se relacionan con la variabilidad de los datos. Los profesionales de la estadística usan leyes fundamentales de probabilidad e inferencia estadística para sacar conclusiones respecto de los sistemas científicos. La información se colecta en forma de muestras o conjuntos de observaciones.
+
+Las muestras se reúnen a partir de poblaciones, que son conjuntos de todos los individuos o elementos individuales de un tipo específico. A veces una población representa un sistema científico.
+
+#### El papel de la probabilidad
+
+Es muy natural estudiar probabilidad
+antes de estudiar inferencia estadística. Los elementos de probabilidad nos permiten cuantificar la fortaleza o “confianza” en nuestras conclusiones. En este sentido, los conceptos de probabilidad forman un componente significativo que complementa los métodos estadísticos y ayuda a evaluar la consistencia de la inferencia estadística. Porconsiguiente, la disciplina de la probabilidad brinda la transición entre la estadística
+descriptiva y los métodos inferenciales. Los elementos de la probabilidad permiten expresar la conclusión en el lenguaje que requieren los científicos y los ingenieros.
+
+#### ¿Cómo trabajan juntas la probabilidad y la inferencia estadística?
+
+El uso o la aplicación de conceptos de probabilidad permite interpretar la vida cotidiana a partir de los resultados de la inferencia estadística. Con la información **muestral** disponible podemos obtener conclusiónes acerca de alguna caracteristica de los datos. Así, para un problema estadístico, **la muestra, junto con la estadística inferencial, nos permite obtener conclusiones acerca de la población, ya que la estadística inferencial utiliza ampliamente los elementos de probabilidad.**
+
+![](Walpole/Images/probabilidad_estadistica_inferencial.png)
+
+*<a name="fig1">Figura 1. Relación entre la probabilidad y la estadística inferencial</a>*
+
+### 1.2 Procedimientos de muestreo; recolección de los datos
+
+La importancia del muestreo adecuado gira en torno al grado de confianza con que el analista es capaz de responder las preguntas que se plantean.
+
+#### Muestreo aleatorio simple
+
+El muestreo aleatorio simple significa que cierta muestra dada de un tamaño
+muestral específico tiene la misma probabilidad de ser seleccionada que cualquiera otra muestra del mismo tamaño. El término tamaño muestral simplemente indica el número de elementos en la muestra. La ventaja del muestreo aleatorio simple radica en que ayuda a eliminar el problema de tener una muestra que refleje una población diferente (quizá más restringid - **Muestra sesgada**) de aquella sobre la cual se necesitan realizar las inferencias.
+
+Cuando las unidades muestrales **no son homogéneas** y se dividen naturalmente en **grupos que no se traslapan** y que son intrinsecamente homogeneos, tales grupos se llaman __estratos__ y un proceso llamado **muestreo aleatorio estratificado** implica la selección al azar de una muestra dentro de cada estrato, con la finalidad de asegurarse de que ningun estrato este sobrerepresentado ni subrepresentado.
+
+#### Diseño experimental
+El diseño experimental es el procedimiento de planeación y conducción de experimentos, así como la definición del análisis estadístico para evaluar los resultados, con el objetivo de tener conclusiones válidas y objetivas. El procedimiento incluye la definición de factores a modificar, la manera de su aplicación y el número de pruebas a realizar.
+
+El concepto de aleatoriedad o asignación aleatoria desempeña un papel muy importante en el área del diseño experimental. La naturaleza de la
+variabilidad en un experimento es muy importante. Si es demasiado grande, debido a que resulta de una condición de excesiva falta de homogeneidad en las unidades experimentales, la variabilidad “eliminará” cualquier diferencia detectable entre las muestras.
+
+La unidad experimental es el elemento (planta, animal u objeto) al que se le modificarán en forma planeada factores para revisar su respuesta. 
+
+#### ¿Por qué las unidades experimentales se asignan aleatoriamente?
+
+La variabilidad excesiva entre las unidades experimentales “disfraza” los hallazgos científicos.
+
+### 1.3 Medidas de localización: la media y la mediana de una muestra
+
+Las medidas de localización están diseñadas para brindar al analista algunos valores cuantitativos de la ubicación central o de otro tipo de los datos en una muestra. Una medida obvia y muy útil es la media de la muestra. La media es simplemente un promedio numérico.
+
+##### Definición 1.1: 
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Suponga que las observaciones en una muestra son x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n-1</sub>, x<sub>n</sub>. La **media de la muestra** es: </p>
+![Formula media de muestra](http://latex.codecogs.com/gif.latex?%5Cbg_white%20%5Cbar%7Bx%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5En%7B%5Cfrac%7Bx_i%7D%7Bn%7D%7D%20%3D%20%5Cfrac%7Bx_1%20&plus;%20x_2%20&plus;%20...%20&plus;%20x_n%7D%7Bn%7D) 
+
+</blockquote>
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
