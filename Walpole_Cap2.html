@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title> 2. Probabilidad</title>
+
+<xmp theme="Cerulean" style="display:none;">
+
+<head>
+
+
+</head>
+
+
+
+# Probabilidad y Estadistica para ingeniería y ciencias
+### Warpole &bull; Myers &bull; Myers 
+### Novena Edición
+
+<img src="http://3.bp.blogspot.com/-Vj2H6OjfjTY/UhrqaVecRhI/AAAAAAAAAfQ/QuAyHlX7W5g/s720/Probabilidad+y+estad%C3%ADstica+para+ingenier%C3%ADa+y+ciencias+Walpole+9a+Ed.jpg" alt="ortada Walpole 9ed" style="width: 200px;"/>
+
+
+## <a name="01">2. Probabilidad</a>
+
+
+### 2.1 Espacio muestral
+
+En el estudio de la estadística tratamos básicamente con la presentación e interpretación de resultados fortuitos que ocurren en un estudio planeado o en una investigación científica. Quienes se dedican a la estadística a menudo manejan datos numéricos que representan conteos o mediciones, o datos categóricos que se podrían clasifi car de acuerdo con algún criterio. Al referirnos a cualquier registro de información, ya sea numérico o categórico, utilizaremos el término **observación**.
+
+Los estadísticos utilizan la palabra **experimento** para describir cualquier proceso que
+genere un conjunto de datos. En estadística nos interesan, en particular, las observaciones
+que se obtienen al repetir varias veces un experimento. En la mayoría de los casos los
+resultados dependerán del azar, por lo tanto, no se pueden predecir con certeza.
+
+En cada estudio, sin importar si es diseño experimental, un estudio observacional o retrospectivo, el resultado final es un conjunto de datos que estan sujetos a **incertidumbre**.
+
+<a name="def_2.1"> </a> 
+##### Definición 2.1:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Al conjunto de todos los resultados posibles de un experimento estadístico se le llama **espacio muestral** y se representa con el símbolo S.</p>
+</blockquote>
+
+A cada resultado en un espacio muestral se le llama elemento, miembro del espacio muestral o punto muestral. Si el espacio muestral tiene un número finito de elementos, podemos listar estos miembros. Por lo tanto definimos el espacio muestral como S={A,B,C,...}. Donde A, B, C, ... son los posibles resultados del experimento. Los espacios muestrales con un número grande o infi nito de puntos muestrales se describen mejor mediante un enunciado o método de la regla. "S es el conjunto de todas las x, tales que x ...".
+
+###2.2 Eventos
+
+En cualquier experimento dado, podríamos estar interesados en la ocurrencia de ciertos eventos, más que en la ocurrencia de un elemento específico en el espacio muestral. Para cada evento asignamos un conjunto de puntos muestrales, que constituye un subconjunto del espacio muestral. Este subconjunto representa la totalidad de los elementos para los que el evento es cierto.
+
+
+<a name="def_2.2"> </a> 
+##### Definición 2.2:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Un **evento** es un subconjunto de un espacio muestral.</p>
+</blockquote>
+
+Cuando uno de los elementos puede ser un subconjunto que incluye todo el espacio muestral S, o un subconjunto de S que se denomina **conjunto vacío** se denota con el símbolo φ, que no contiene ningun elemento. Así como el **complemento** el cual se define de la siguiente manera:
+
+<a name="def_2.3"> </a> 
+##### Definición 2.3:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El **complemento** de un evento A respecto de S es el subconjunto de todos los elementos de S que no estan en A. Denotamos el complemento de A mediante el símbolo A'.</p>
+</blockquote>
+
+<a name="def_2.4"> </a> 
+##### Definición 2.4:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>La **intersección de dos eventos A y B, que se denota con el símbolo A∩B, es el evento que contiene todos los elementos que son comunes a A y a B</p>
+</blockquote>
+
+
+
+<a name="def_2.5"> </a> 
+##### Definición 2.5:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Dos eventos A y B son **mutuamente excluyentes** o **disjuntos** si A ∩ B = φ; es decir, si A y B no tienen elementos en común.</p>
+</blockquote>
+
+
+<a name="def_2.6"> </a> 
+##### Definición 2.6:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>La **unión** de dos eventos A y B, que se denota con el símbolo A ∪ B, es el evento que contiene todos los elementos que pertenecen a A o a B, o a ambos.</p>
+</blockquote>
+
+
+![Diagrama de Venn]()
+
+*Fig 2.1 Diagrama de Venn*
+
+#### Ejercicios
+
+### 2.3 Conteo de puntos muestrales
+
+Uno de los problemas que el estadístico debe considerar e intentar evaluar es el elemento de aleatoriedad asociado con la ocurrencia de ciertos eventos cuando se realiza un experimento. El principio fundamental del conteo, a menudo denominado regla de multiplicación.
+
+
+
+<a name="Regla_2.1"> </a> 
+##### Regla 2.1:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si una operación se puede llevar a cabo en n<sub>1</sub> formas, y si para cada una de estas se puede realizar una segunda operación en n<sub>2</sub> formas, entonces las dos operaciónes se pueden ejecutar juntas de n<sub>1</sub>n<sub>2</sub> formas</p>
+</blockquote>
+
+
+<a name="Regla_2.2"> </a> 
+##### Regla 2.2:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puedellevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub> n<sub>2</sub> ...n<sub>k</sub> formas.</p>
+</blockquote>
+
+
+
+<a name="def_2.7"> </a> 
+##### Definición 2.7:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Una permutación es un arreglo de todo o parte de un conjunto de objetos.</p>
+</blockquote>
+
+
+
+
+
+<a name="def_2.8"> </a> 
+##### Definición 2.8:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Para cualquier entero no negativo n, n! se denomina "n factorial" y se define como N!=n(n-1)(n-2)...(2)(1), con el caso especial de 0!=1</p>
+</blockquote>
+
+
+
+<a name="Teorema 2.1"> </a> 
+##### Teorema 2.1:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El número de permutaciones de n objetos es n!</p>
+</blockquote>
+
+
+
+<a name="Teorema 2.2"> </a> 
+##### Teorema 2.2:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El número de permutaciones de n objetos distintos tomados de r a la vez es <sub>n</sub> P<sub>r</sub> = n! / (n-r)!</p>
+</blockquote>
+
+<a name="Teorema 2.3"> </a> 
+##### Teorema 2.3:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El número de permutaciones de n objetos ordenados en círculo es (n-1)!</p>
+</blockquote>
+
+<a name="Teorema 2.4"> </a> 
+##### Teorema 2.4:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El número de permutaciones distintas de n objetos, en el que n<sub>1</sub> son de una clase, n<sub>2</sub> de una segunda clase,..., n<sub>k</sub> de una k-ésima clase es n!/n_1!n_2!...n_k!</p>
+</blockquote>
+
+
+<a name="Teorema 2.5"> </a> 
+##### Teorema 2.5:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>l número de formas de partir un conjunto de n objetos en r celdas con n<sub>1</sub> elementos en
+la primera celda, n<sub>2</sub> elementos en la segunda, y así sucesivamente, es 
+n
+n 1 , n 2 , . . . , n r
+=
+n!
+,
+n 1 !n 2 ! · ·· n r !
+donde n 1 + n 2 + ... + n r = n.</p>
+</blockquote>
+
+
+<a name="Teorema 2.6"> </a> 
+##### Teorema 2.6:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>El número de combinaciones de n objetos distintos tomados de r a la vez es</p>
+(n r) = n!/r!(n-r)!
+</blockquote>
+
+####Ejercicios
+
+### 2.4 Probabilidad de un evento
+
+
+La probabilidad de la ocurrencia de un evento que resulta de tal experimento estadístico se evalúa utilizando un conjunto de números reales denominados pesos o probabilidades, que van de 0 a 1. Para todo punto en el espacio muestral asignamos una probabilidad tal que la suma de todas las probabilidades es 1. Si tenemos razón para creer que al llevar a cabo el experimento es bastante probable que ocurra cierto punto muestral, le tendríamos que asignar a éste una probabilidad cercana a 1. Por el contrario, si creemos que no hay probabilidades de que ocurra cierto punto muestral, le tendríamos que asignar a éste una probabilidad cercana a cero. En muchos experimentos, como lanzar una moneda o un dado, todos los
+puntos muestrales tienen la misma oportunidad de ocurrencia, por lo tanto, se les asignan probabilidades iguales. A los puntos fuera del espacio muestral, es decir, a los eventos simples que no tienen posibilidades de ocurrir, les asignamos una probabilidad de cero. Para encontrar la probabilidad de un evento A sumamos todas las probabilidades que se asignan a los puntos muestrales en A. Esta suma se denomina probabilidad de A y se denota con P(A).
+
+
+
+<a name="def_2.9"> </a> 
+##### Definición 2.9:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>La probabilidad de un evento A es la suma de los pesos de todos los puntos muestrales en A. Por lo tanto</p>
+
+<p>Además, si A<sub>1</sub>, A<sub>2</sub>, A<sub>3</sub>,··· es una serie de eventos mutuamente excluyentes, entonces</p>
+</blockquote>
+
+
+
+<a name="Regla_2.3"> </a> 
+##### Regla 2.3:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si un experimento puede dar como resultado cualquiera de N diferentes resultados que tienen las mismas probabilidades de ocurrir, y si exactamente n de estos resultados corresponden al evento A, entonces la probabilidad del evento A es</p>
+P(A)=n/N
+</blockquote>
+
+
+
+### 2.5 Reglas aditivas
+
+A menudo resulta más sencillo calcular la probabilidad de algún evento a partir de las probabilidades conocidas de otros eventos. Esto puede ser cierto si el evento en cuestión se puede representar como la unión de otros dos eventos o como el complemento de algún evento.
+
+
+<a name="Teorema 2.7"> </a> 
+##### Teorema 2.7:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si A y B son dos eventos, entonces</p>
+P(A ∪ B) = P(A) + P(B) – P(A ∩ B).
+</blockquote>
+
+
+![regla aditiva]()
+*Fig Regla aditiva de probabilidad*
+
+
+
+
+<a name="corolario_2.1"> </a> 
+##### Corolario 2.1:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si A y B son mutuamente excluyentes entonces</p>
+P(A ∪ B) = P(A) + P(B).
+</blockquote>
+
+
+
+
+<a name="corolario_2.2"> </a> 
+##### Corolario 2.2:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Si A 1 , A 2 ,..., A n son mutuamente excluyentes, entonces
+P(A 1 ∪ A 2 ∪ ··· ∪ A n ) = P(A 1 ) + P(A 2 ) + ··· + P(A n ).</p>
+</blockquote>
+
+
+
+
+<a name="corolario_2.3"> </a> 
+##### Corolario 2.3:
+
+<blockquote style= "border-left: 10px solid #2fa4e7;">
+<p>Corolario 2.3: Si A 1 , A 2 ,..., A n es una partición de un espacio muestral S, entonces P(A 1 ∪ A 2 ∪ ··· ∪ A n ) = P(A 1 ) + P(A 2 ) + ··· + P(A n ) = P(S) = 1.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
