@@ -3,7 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 name: Inicio
-##Histopathology in fish: proposal for a protocol to assess aquatic pollution
+##Histopathology in fish: <br> proposal for a protocol to assess aquatic pollution
 #### D Bernet, H Schmidt, W Meler, P Burkhardt-Holm and T Wahil
 #### Journal of Fish Diseases 1999, 22, p25-34
 [Felipe de J. Muñoz González]
