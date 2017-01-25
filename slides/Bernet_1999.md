@@ -3,7 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 name: Inicio
-## Histopathology in fish:
+# Histopathology in fish:
 ### proposal for a protocol to assess aquatic pollution
 #### D Bernet, et. al. Journal of Fish Diseases 1999, 22, p25-34
 [Felipe de J. Muñoz González]
