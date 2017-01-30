@@ -7,7 +7,7 @@ name: title
 
 
 ## Histopathology in fish: proposal for a protocol to assess aquatic pollution
-### D Bernet, et. al. Journal of Fish Diseases 1999, 22, p25-34
+### D Bernet, et. al. Journal of Fish Diseases 1999
 
 ### Felipe de J. Muñoz González
 
