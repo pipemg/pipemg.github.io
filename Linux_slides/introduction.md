@@ -2,6 +2,8 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
+
+
 name: Inicio
 #Curso Básico de Linux
 [Felipe de J. Muñoz González]
@@ -125,381 +127,534 @@ name: Historia
 
 ]
 ---
-name: instalacion3
+name: EntornoGrafico
 
 .left-column[
-  ## Instalación
-### - Linux
+  ## Entornos Gráfico de Linux
 ]
 .right-column[
 
-Abrimos una terminal de linux (Ctrl + Alt + T) y dentro de esta, dependiendo del sistema operativo:
+Existen diferentes entornos graficos (Interfaz con usuario) entre los principales estan: Unity (solo ubuntu), KDE y Gnome.
 
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/ubuntu-22.png" width="18px"> Ubuntu
-```remark
-$ sudo apt-get install r-base
-```
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/fedora-22.png" width="18px"> Fedora
-```remark
-$ su -c 'yum install R'
-```
+Todos estos tienen como objetivo **facilitar** y hacer más **atractivo** el uso de Linux, a pesar de esto. Todo lo que se puede hacer por medio de la interfaz gráfica se puede hacer desde la terminal.
 
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/archlinux-crystal-22.png" width="18px"> Arch Linux
-```remark
-$ sudo pacman -S r
-```
+<image src="https://www.kde.org/announcements/4.2/screenshots/desktop.png" with=100px>
+
+<image src="http://blog.fpmurphy.com/blog-images/gnome3-22.png" with=100px>
+
+<image src="http://toastytech.com/guis/ubuntu114defaultunity.jpg" with=100px>
+
+<image src="http://blog.desdelinux.net/wp-content/uploads/2012/03/gnome-fallback.jpg" with=100px>
+
+<image src="http://blog.capacityacademy.com/wp-content/uploads/2014/11/linux-tux.png" width=160px>
 ]
----
 
+---
+name: EntornoGrafico2
 
 .left-column[
-  ## ¿Cómo funciona?
-  ### - Ejecutar desde el cmd/terminal 
-  ### - Entornos graficos
+  ## Elementos del entorno gráfico
 ]
 .right-column[
-#### Desde Windows:
 
-- Opcion A:
+En general todos los entornos gráficos cuentan con:
 
- Inicio > Simbolo del sistema
+ - Escritorio: Ocupa toda la pantalla y se pueden situar sobre el otros objetos
 
-- Opcion B:
+ - Iconos: Representan objetos accesibles
 
- Buscar > CMD
+ - Paneles: Cada barra que se encuentra en la pantalla y facilitan el trabajo
 
+ - Menus: Estos varian, los más comunes son aplicaciones, lugares y sistema
 
-#### Desde MAC/Linux:
-1. Se abre la terminal
-
-
-## Se ejecuta:
-```remark
-$ R
-```
-
-
-]
-
----
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Entornos graficos
-]
-.right-column[
-### Rstudio
-
-Ambiente gráfico integrado, se basa en diversos compartimentos:
- - Consola para editar codigo
- - Ventana de datos e historial
- - Ventana de la Consola
- - Ventana de gráficas y archivos
-
-Permite importar y ver los datos de una manera gráfica 
-
-<image src="http://www.sthda.com/sthda/RDoc/images/rstudio.png" width="380px" align="middle">
 ]
 ---
-.left-column[
-<br>
-<image src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-250.png" width="150px" align="middle">
-]
-.right-column[
-<br> <br>
-
-Importando desde el ambiente grafico
-
-
-<image src="https://support.rstudio.com/hc/en-us/article_attachments/206327917/data-import-environment.png" width="550" align="rigth">
-
-]
-
----
-
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Entornos graficos
-]
-.right-column[
-### R commander (Rcmdr)
-
-Es una inferfaz gráfica que cuenta con botones y menus extensos, las caracteristicas son
-
- - Contiene codigos precargados (SPSS, SAS o Stata)
- - No provee acceso directo a la linea de comandos de R
- - No es enriquecido gráficamente, contiene 3 paneles:
-   - Ventana del script (código ejecutandose)
-   - Ventana de Salida (Imprime los resultados)
-   - Ventana de Mensajes(Errores/advertencias/notas) 
-  
-
-<image src="http://www.unige.ch/ses/sococ/cl/r/rcommander.menu.png" width="380" align="left">
-]
----
-.left-column[
-<br>
-<image src="http://4.bp.blogspot.com/-bVDv8F9VdLY/T0yobXtHoEI/AAAAAAAADLk/QVue51r1Hbg/s1600/logo+Rcommander.png" width="100" align="left">
-]
-.right-column[
-<br>
-Utilizando las herramientas predefinidas
-
-
-<image src="Images/rcomander_analysis.jpg" width="550" align="rigth">
-
-]
-
----
-
-
 template: inverse
 
-## ¿Cuál usar y como instalarlo?
----
-.left-column[
- ## Comparación
-]
-.right-column[
-<br><br>
-RStudio
-
-- Provee acceso directo al codigo en R.
-
-- Uso para proyectos que requieren interacción directa con el código o manipulacion de datos compleja
-
-Rcmdr
-
-- Simple y amable para el usuario sobre todo en analisis estadísticos y diagnósticos.
-
-- Uso para analisis tradicionales, datos convencionales y tests estadísticos.
-
-<br>
-**NOTA:** Es posible ejecutar Rcmdr desde R-Studio.
-]
+## ¿Bash, Shell o Terminal?
 
 ---
+
+name: Terminal
+
 .left-column[
-  ## Instalación de R-Studio
-]
-.right-column[
-RStudio tiene diferentes versiones:
- - Version gratis para escritorio
- - Version de paga para escritorio
- - Version gratis para servidor
- - Version pro para servidor
-
-Para descargarlo entramos a 
-
-```
-https://www.rstudio.com/products/rstudio/download/
-```
-<image src="Images/Rstudio_instalador.png" width="550" align="rigth">
-]
----
-.left-column[
-  ## Instalación de Rcmdr 
-<br>
-<image src="Images/r-seleccionar-repositorio.png" width="150">
-
+## ¿Bash, Shell o Terminal?
+ - Shell
 ]
 .right-column[
 
-Ejecutamos R
+**Shell** es un programa cuya función consiste en **interpretar órdenes** al sistema operativo y **ejecutar programas**.
 
-```remark
-[usuario@equipo ~]$ R
-```
+Después se derivó en un lenguaje de programación que involucra:
 
-Instalamos el paquete de Rcmdr
+ - Control de procesos
+ - Redirección de entrada/salida
+ - Listado y lectura de ficheros
+ - Protección
+ - Comunicaciones 
 
-```remark
-> install.packages("Rcmdr",dependencies=TRUE)
-```
+<img src="http://myfpschool.com/wp-content/uploads/2014/04/ej5.png" style="width:400px;">
 
-Seguimos las instrucciones de la salida
+**Bourne Shell** (Por Steven Bourne) fue el mayor shell de la historia y se incluyó en la primera versión de unix
 
-```remark
-Aviso en install.packages("Rcmdr", dependencies = TRUE) :
-'lib = "/usr/lib/R/library"' is not writable
-Would you like to use a personal library instead? (y/n) y
-Would you like to create a personal library
-~/R/x86_64-unknown-linux-gnu-library/2.15
-to install packages into? (y/n) y
-```
-
-Se abrirá una ventana para seleccionar el repositorio de dónde descargar los paquetes necesarios. Seleccionamos el que queramos y después de aceptar empezará a descargar los paquetes.
 
 ]
-
----
-.left-column[
-  ## Ejecutar Rcmdr 
-
-]
-.right-column[
-
-Ejecutamos R
-
-```remark
-[usuario@equipo ~]$ R
-```
-
-Cargamos la libreria de Rcmdr
-
-```remark
-> library("Rcmdr")
-```
-<image src="http://www.tuxylinux.com/wp-content/uploads/2013/02/r-commander-gui.png" width="600">
-
-]
-
-
-
 
 
 ---
 
-
+name: Terminal
 
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
+## ¿Bash, Shell o Terminal?
+### Shell
+### Bash
 ]
 .right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
 
-```remark
-.footnote[.red.bold[*] Important footnote]
+Existen diferentes interpretes de shell:
+ - csh
+ - bash 
+ - zsh 
+ - fish
+ - ...
+
+**Bash** (Bourne Again shell - otro shell bourne) es un **intérprete de comandos Unix** escrita para el proyecto **GNU**. 
+
+```
+[~]$bash --version
+$bash --version
+bash --version
+
 ```
 
-Resulting HTML extract:
+```bash
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 
-```xml
-<span class="footnote">
-  <span class="red bold">*</span> Important footnote
-</span>
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
 ```
+
+
 ]
+
+
 ---
+
+name: Terminal
+
 .left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
+## ¿Bash, Shell o Terminal?
+### Shell
+### Bash
+### Terminal (ttys) y Consola
 ]
 .right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
 
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
+La terminal es una consola de comandos Unix escrita para el proyecto GNU. 
+
+ - Terminal = tty = text input/output environment
+
+ - Consola = Terminal Física
+
+
+<image src="Images/terminal.png" style="width:600px;">
+]
+
+
+---
+name: Iniciar la terminal
+.left-column[
+## ¿Como Iniciar la terminal?
+]
+.right-column[
+<br> <br> <br> <br>  <br>
+  Opciones:  <br> 
+
+  1. Por medio del menu.  <br><br>  **Aplicaciones** &rarr;  **Accesorios** &rarr; **Terminal**
+
+  2. Por medio de comando.  <br><br>  **Ctrl** + **Alt** + **T** (algunos)
+
+  3. Buscador del sistema. <br><br>   **buscar** &rarr; **Terminal**
+]
+
+---
+name: Terminal
+
+.left-column[
+## ¿Bash se instala?
+]
+
+.right-column[
 
 .pull-left[
 
-<pre><code>```javascript
-function add(a, b)
-  return a + b
-end
-```</code></pre>
+**Comando**
+
+<pre><code>[~]$ echo $SHELL </code></pre>
+
+<pre><code>[~]$ which bash </code></pre>
+
+<pre><code>[~]$ whereis bash </code></pre>
+
+
+
 ]
 .pull-right[
 
-<pre><code>```ruby
-def add(a, b)
-  a + b
-end
-```</code></pre>
+**Resultado**
+
+<pre><code> /bin/bash </code></pre>
+
+
+<pre><code> /bin/bash </code></pre>
+
+
+<pre><code> bash: /bin/bash /etc/bash.bashrc /usr/share/man/man1/bash.1.gz 
+</code></pre>
+]
+Otro comando
+<br> 
+<pre><code>% chsh /usr/local/bin/bash</code></pre>
 ]
 
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
 
-]
+
 ---
+
+
+
 .left-column[
-  ## Presenter mode
+# "EL COMANDO"
+<br><br>
+
 ]
 .right-column[
-To help out with giving presentations, a presenter mode comprising the
-following features is provided:
 
-- Display of slide notes for the current slide, to help you remember
-  key points
+ <img src="http://image.slidesharecdn.com/recruitloop-mystartupstory-130922195721-phpapp01/95/slide-13-1024.jpg" style="width:150px; margin-left:120px;">
 
-- Display of upcoming slide, to let you know what's coming
+.pull-left[
+#<a style="color:red"> - man</a>
+#### - info/help
+#### - date
+#### - cal
+#### - uptime
+#### - whoami
+#### - finger 
 
-- Cloning of slideshow for viewing on extended display
+]
+.pull-right[
+#### - uname
+#### - df
+#### - du
+#### - free
+#### - whereis 
+#### - file
+#### - find
+#### - history
+]
 ]
 ---
+
+name: Terminal
+
 .left-column[
-  ## Presenter mode
-  ### - Inline notes
+# <a style="color:black">Comandos</a>
+## man
 ]
 .right-column[
-Just like three dashes separate slides,
-three question marks separate slide content from slide notes:
+<br><br><br>
+ - **An interface to the on-line reference manuals** 
 
-```
-Slide 1 content
-
-*???
-
-Slide 1 notes
-
----
-
-Slide 2 content
-
-*???
-
-Slide 2 notes
-```
-
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
-
-Pressing __P__ will toggle presenter mode.
 ]
-???
-Congratulations, you just toggled presenter mode!
-
-Now press __P__ to toggle it back off.
 ---
+
+
+name: Terminal
+
 .left-column[
-  ## Presenter mode
-  ### - Inline notes
-  ### - Cloned view
+# <a style="color:black">Comandos</a>
+### man
+## date
 ]
 .right-column[
-Presenter mode of course makes no sense to the audience.
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
 
-Creating a cloned view of your slideshow lets you:
+ - **Print or set the system date and time**
 
-- Move the cloned view to the extended display visible to the audience
 
-- Put the original slideshow in presenter mode
-
-- Navigate as usual, and the cloned view will automatically keep up with the original
-
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
 ]
 ---
-template: inverse
+name: Terminal
 
-## It's time to get started!
----
 .left-column[
-  ## Getting started
+# <a style="color:black">Comandos</a>
+### man
+### date
+## cal, ncal
 ]
 .right-column[
-Getting up and running is done in only a few steps:
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
 
-1. Visit the [project site](http://github.com/gnab/remark)
+ - Print or set the system date and time<br><br>
 
-2. Follow the steps in the Getting Started section
+ - **Displays a calendar and the date of Easter**<br><br>
 
-For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
+
+
+]
+
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### man
+### date
+### cal, ncal
+## uptime
+]
+.right-column[
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
+
+ - Print or set the system date and time<br><br>
+
+ - Displays a calendar and the date of Easter<br><br>
+
+ - **Tell how long the system has been running.**<br><br>
+
+]
+
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### man
+### date
+### cal, ncal
+### uptime
+## whoami
+]
+.right-column[
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
+
+ - Print or set the system date and time<br><br>
+
+ - Displays a calendar and the date of Easter<br><br>
+
+ - Tell how long the system has been running.<br><br>
+
+ - **Print effective userid**<br><br>
+
+]
+
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### man
+### date
+### cal, ncal
+### uptime
+### whoami
+### uname
+
+]
+.right-column[
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
+
+ - Print or set the system date and time<br><br>
+
+ - Displays a calendar and the date of Easter<br><br>
+
+ - Tell how long the system has been running.<br><br>
+
+ - Print effective userid <br><br>
+
+ - **print system information**<br><br>
+
+]
+
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### man
+### date
+### cal, ncal
+### uptime
+### whoami
+### uname
+## df
+
+]
+.right-column[
+<br><br><br>
+ - An interface to the on-line reference manuals<br><br>
+
+ - Print or set the system date and time<br><br>
+
+ - Displays a calendar and the date of Easter<br><br>
+
+ - Tell how long the system has been running.<br><br>
+
+ - Print effective userid <br><br>
+
+ - print system information<br><br>
+
+ - **report file system disk space usage**<br><br>
+
 ]
 ---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+## du
+
+]
+.right-column[
+<br><br><br>
+ - **estimate file space usage**<br><br>
+
+
+
+]
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### du
+## free
+
+
+]
+.right-column[
+<br><br><br>
+ - estimate file space usage<br><br>
+
+ - **Display amount of free and used memory in the system**<br><br>
+
+
+]
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### du
+### free
+## whereis
+
+]
+.right-column[
+<br><br><br>
+ - estimate file space usage<br><br>
+
+ - Display amount of free and used memory in the system<br><br>
+
+ - **locate the binary, source, and manual page files for a command** <br><br>
+
+
+
+]
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### du
+### free
+### whereis
+## file
+
+]
+.right-column[
+<br><br><br>
+ - estimate file space usage<br><br>
+
+ - Display amount of free and used memory in the system<br><br>
+
+ - locate the binary, source, and manual page files for a command <br><br>
+
+ - **Determine file type**<br><br>
+
+
+
+]
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### du
+### free
+### whereis
+### file
+## find
+
+]
+.right-column[
+<br><br><br>
+ - estimate file space usage<br><br>
+
+ - Display amount of free and used memory in the system<br><br>
+
+ - locate the binary, source, and manual page files for a command <br><br>
+
+ - determine file type<br><br>
+
+ - **search for files in a directory hierarchy** <br><br>
+
+
+
+
+]
+
+---
+name: Terminal
+
+.left-column[
+# <a style="color:black">Comandos</a>
+### du
+### free
+### whereis
+### file
+### find
+## history
+
+]
+.right-column[
+<br><br><br>
+ - estimate file space usage<br><br>
+
+ - Display amount of free and used memory in the system<br><br>
+
+ - locate the binary, source, and manual page files for a command <br><br>
+
+ - determine file type<br><br>
+
+ - search for files in a directory hierarchy <br><br>
+
+ - **GNU History Library**<br><br>
+
+
+]
+
+---
+
+
 name: last-page
 template: inverse
 
