@@ -939,6 +939,8 @@ template:inverse
 
 ]
 .right-column[
+<br><br><br><br><br>
+
 .pull-left[ 
 
 ### apt-get update
@@ -971,9 +973,15 @@ template:inverse
 
 ]
 .right-column[
-### adduser XXXXXX
+
+<br><br><br><br><br>
+
 
 .pull-left[ 
+
+
+### adduser XXXXXX
+
 ### passwd XXXXXX
 
 ]
@@ -1001,6 +1009,7 @@ template:inverse
 
 ]
 .right-column[
+<br><br><br><br><br>
 
 .pull-left[ 
 ### ps
@@ -1034,6 +1043,8 @@ template:inverse
 
 ]
 .right-column[
+<br><br><br><br><br>
+
 .pull-left[ 
 
 ### halt
@@ -1063,7 +1074,7 @@ template:inverse
 ---
 .left-column[
 # Comandos de Red
-
+<br><br><br><br><br>
 ]
 .right-column[
 .pull-left[ 
