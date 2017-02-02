@@ -131,6 +131,8 @@ name: EntornoGrafico
 
 .left-column[
   ## Entornos Gráfico de Linux
+<br><br><br>
+<image src="http://blog.capacityacademy.com/wp-content/uploads/2014/11/linux-tux.png" width=160px>
 ]
 .right-column[
 
@@ -138,34 +140,79 @@ Existen diferentes entornos graficos (Interfaz con usuario) entre los principale
 
 Todos estos tienen como objetivo **facilitar** y hacer más **atractivo** el uso de Linux, a pesar de esto. Todo lo que se puede hacer por medio de la interfaz gráfica se puede hacer desde la terminal.
 
-<image src="https://www.kde.org/announcements/4.2/screenshots/desktop.png" with=100px>
+<image src="https://www.kde.org/announcements/4.2/screenshots/desktop.png" width=250px>
 
-<image src="http://blog.fpmurphy.com/blog-images/gnome3-22.png" with=100px>
+<image src="http://blog.fpmurphy.com/blog-images/gnome3-22.png" width=250px>
 
-<image src="http://toastytech.com/guis/ubuntu114defaultunity.jpg" with=100px>
+<image src="http://toastytech.com/guis/ubuntu114defaultunity.jpg" width=250px>
 
-<image src="http://blog.desdelinux.net/wp-content/uploads/2012/03/gnome-fallback.jpg" with=100px>
+<image src="http://blog.desdelinux.net/wp-content/uploads/2012/03/gnome-fallback.jpg" width=250px>
 
-<image src="http://blog.capacityacademy.com/wp-content/uploads/2014/11/linux-tux.png" width=160px>
+
 ]
 
 ---
 name: EntornoGrafico2
 
 .left-column[
-  ## Elementos del entorno gráfico
+<br><br>
+<img src="http://www.ampercent.com/wp/wp-content/uploads/post/clean-desktop.gif" width="150px"><br>
+<img src="http://thevarguy.com/site-files/thevarguy.com/files/archive/thevarguy.com/wp-content/uploads/2011/01/screenshot47.png" width="150px"><br>
+<img src="http://www.intowindows.com/wp-content/uploads/2015/02/Windows-10-icons-for-Windows-7-and-8.png" width="150px"><br>
+<img src="http://cloud.addictivetips.com/wp-content/uploads/2011/09/Classic-start-menu.jpg" width="150px">
 ]
 .right-column[
-
+<br>
+## Entorno gráfico
 En general todos los entornos gráficos cuentan con:
 
- - Escritorio: Ocupa toda la pantalla y se pueden situar sobre el otros objetos
 
- - Iconos: Representan objetos accesibles
+.pull-left[
 
- - Paneles: Cada barra que se encuentra en la pantalla y facilitan el trabajo
+ - **Escritorio:** Ocupa toda la pantalla y se pueden situar sobre el otros objetos
 
- - Menus: Estos varian, los más comunes son aplicaciones, lugares y sistema
+
+
+
+
+]
+.pull-right[
+
+
+ - **Paneles:** Cada barra que se encuentra en la pantalla y facilitan el trabajo
+
+
+
+
+]
+
+
+<br><br>
+<br><br>
+
+.pull-left[
+
+
+
+ - **Iconos:** Representan objetos accesibles
+
+
+
+
+]
+
+
+
+
+.pull-right[
+
+
+ - **Menus:** Estos varian, los más comunes son aplicaciones, lugares y sistema
+
+
+]
+
+
 
 ]
 ---
@@ -193,7 +240,7 @@ Después se derivó en un lenguaje de programación que involucra:
  - Protección
  - Comunicaciones 
 
-<img src="http://myfpschool.com/wp-content/uploads/2014/04/ej5.png" style="width:400px;">
+<img src="http://myfpschool.com/wp-content/uploads/2014/04/ej5.png" style="width:450px;">
 
 **Bourne Shell** (Por Steven Bourne) fue el mayor shell de la historia y se incluyó en la primera versión de unix
 
@@ -323,11 +370,13 @@ Otro comando
 
 
 ---
+template: inverse
+# "EL COMANDO"
 
-
+---
 
 .left-column[
-# "EL COMANDO"
+### "EL COMANDO"
 <br><br>
 
 ]
@@ -652,7 +701,287 @@ name: Terminal
 
 ]
 
+
 ---
+
+name: Terminal
+
+.left-column[
+# <a style="color:black">Man</a>
+
+
+]
+.right-column[
+<br><br><br>
+ - **NAME:** name - Definicion<br><br>
+
+ - **SYNOPSIS:** name \[OPTION\] ...<br><br>
+
+ - **DESCRIPTION:** Descripcion y descripcion de opciones <br><br>
+
+ - **Author:** Autor y a donde se pueden reportar los errores (bugs)<br><br>
+
+ - **Copyright:** Permisos de edicion y modvimiento de funciones<br><br>
+
+ - **Examples:** Da algunos ejemplos de su uso<br><br>
+
+ - **See also:** Información de interes relacionada<br><br>
+
+
+]
+
+
+---
+template:inverse
+
+# Archivos, ejecutables y directorios
+
+---
+
+.left-column[
+
+### Archivos de texto
+
+]
+.right-column[
+<br><br><br>
+###Archivos de texto (Regular Files or Files)
+Son todos los archivos que se pueden abrir y leer su contenido.
+
+Ejemplos: Codigos de programas, libros de texto, hojas de calculo, hojas de texto, etc...
+
+]
+
+---
+.left-column[
+
+### Archivos de texto
+### Ejecutables
+
+]
+.right-column[
+<br><br><br>
+### Ejecutables
+También llamados programas, son todos aquellos archivos que no se pueden leer y son “imbocados” como comandos 
+
+Ejemplo: Matlab, man, uname, .bin, bash, .exe, .java, .py, .R  etc..
+
+
+]
+
+---
+
+.left-column[
+
+### Archivos de texto
+### Ejecutables
+### Directorios o carpetas
+
+]
+.right-column[
+<br>
+###Directorios o carpetas
+
+Archivos que su función es contener otros archivos, pueden o no incluir otros directorios dentro 
+
+Ejemplo: /, /home/usuario, /var/www/html, /home/usuario/Documents, ...
+
+<img src="http://www.ciss100.com/wp-content/uploads/2012/06/LinuxDirectoryTree.jpg" width="400px">
+
+]
+
+---
+
+.left-column[
+
+### Archivos de texto
+### Ejecutables
+### Directorios o carpetas
+
+]
+.right-column[
+
+###Directorios o carpetas
+
+<img src="http://ptgmedia.pearsoncmg.com/images/chap04_9780133017601/elementLinks/thfig04-09.jpg" width="500px">
+
+Equivalente en windows "C://Windows/..." 
+
+#### Relative Paths vs Absolute Path
+]
+
+---
+
+.left-column[
+
+### Archivos de texto
+### Ejecutables
+### Directorios o carpetas
+
+]
+.right-column[
+
+###Directorios o carpetas
+
+ - **/home/\[usuario\]/**: Se guardan los archivos de los usuarios. La accesibilidad es configurable
+
+ - **/media**: Almacenamiento externo a la computadora 
+
+ - **/mnt**: Aqui aparecen las unidades de CD o USB montadas
+
+ - **/bin**: Este directoria se almacenan los comandos binarios más basicos
+
+ - **/boot**: Aqui se encuentra el sistema operativo y los gestores de arranque (Lillo y Grub)
+
+ - **/dev**: Drivers y discos duros del sistema. Todo lo relacionado con los perifericos del sistema (disco duro, mouse, wifi, eht0, etc..)
+
+ - **.**: Carpeta actual
+
+ - **..**: Carpeta anterior de la actual
+
+
+]
+
+
+---
+
+
+
+.left-column[
+ <img src="http://image.slidesharecdn.com/recruitloop-mystartupstory-130922195721-phpapp01/95/slide-13-1024.jpg" style="width:150px; ">
+
+]
+.right-column[
+
+
+.pull-left[
+##<a style="color:blue;"> Sobre directorios</a>
+####  pwd
+####  cd
+####  mkdir
+####  ls
+####  mv
+
+
+##<a style="color:blue;">Sobre archivos</a>
+
+####  nano/vi/pico/gedit/nedit
+####  more/less 
+####  grep
+####  head
+
+
+]
+.pull-right[
+
+##<a style="color:blue;">Sobre archivos y directorios</a>
+####  cp 
+####  mv
+####  rm
+
+##<a style="color:blue;">Simbolos</a>
+####  >
+####  >>
+####  && 
+####  .
+####  .. 
+]
+]
+
+---
+template: inverse
+
+#Ejecricio
+
+<img src="http://www.classloom.com/en/img/keyboard.gif">
+
+---
+.left-column[
+
+##Ejercicio
+
+]
+
+<br>
+<br>
+
+**1. Sobre Carpetas**
+
+  - Obtener el path actual
+  - Ir a /home/\[usuario\]/Desktop
+  - Listar los archivos que estan en esa carpeta
+  -  Crear una carpeta nueva llamada "Practica_en_linux"
+  -  Entrar a la carpeta creada
+  -  Listar los archivos de Desktop sin cambiar de carpeta
+  -  Mover la carpeta actual a /home/\[usuario\[
+
+**2. Sobre Archivos**
+
+   -  Crear un archivo y dentro de el poner una lista
+   -  leer los primeros renglones del archivo
+   -  Filtrar todo lo que inicie con F
+   -  Copiar este archivo con otro nombre en la misma carpeta
+   -  mover el archivo copiado a /home/\[usuario\]/Desktop
+   -  Borrar el archivo en /home/\[usuario\]/Desktop
+
+
+
+
+---
+template:inverse
+
+# Comandos relacionados con instalación
+
+---
+template:inverse
+
+# Comandos relacionados con manejo de usuarios
+
+---
+template:inverse
+
+# Comandos de manejo de permisos
+
+---
+template:inverse
+
+# Comandos relacionados con procesos
+
+---
+template:inverse
+
+# Otros comandos
+
+---
+
+
+
+.left-column[
+## Teclas de Control
+
+]
+.right-column[
+
+
+|   Control key   |   stty name   |              Function Description             |
+|:---------------:|:-------------:|:---------------------------------------------:|
+| <br>**CTRL-C**  |     intr      |                Stop current command           |
+| <br>**CTRL-Z**  |     susp      |             Suspend current command           |
+| <br>**CTRL-R**  |     rprnt     |                  Reverse i search             |
+| <br>**CTRL-L**  |     clr       |                Limpia la pantalla             |
+|   <br>CTRL-D    |     eof       |                   End of input                |
+|   <br>CTRL-\    |     quit      |  Stop current command if CTRL-C doesn't work  |
+|   <br>CTRL-S    |     stop      |             Halt output to screen             |
+|   <br>CTRL-Q    |     stop      |             Restart output to screen          |
+|<br>DEL or CTRL-?|     erase     |               erase last character            |
+|  <br> CTRL-U    |     kill      |             Erase entire command line         |
+
+ 
+]
+---
+
+
+
 
 
 name: last-page
