@@ -869,6 +869,7 @@ Equivalente en windows "C://Windows/..."
 ####  more/less 
 ####  grep
 ####  head
+####  sort
 
 
 ]
@@ -933,9 +934,56 @@ template:inverse
 # Comandos relacionados con instalación
 
 ---
+.left-column[
+## Instalación
+
+]
+.right-column[
+.pull-left[ 
+
+### apt-get update
+
+### apt-get upgrade
+
+### apt-get install xxxxx
+
+]
+.pull-right[ 
+
+### dpkg –i xxxx.deb
+
+### yum install xxxxxx:
+
+### rpm –i xxxxxx.rpm
+
+]
+]
+
+
+---
 template:inverse
 
 # Comandos relacionados con manejo de usuarios
+
+---
+.left-column[
+## Manejo de Usuarios
+
+]
+.right-column[
+### adduser XXXXXX
+
+.pull-left[ 
+### passwd XXXXXX
+
+]
+.pull-right[ 
+### su
+
+### exit
+
+]
+]
 
 ---
 template:inverse
@@ -948,13 +996,96 @@ template:inverse
 # Comandos relacionados con procesos
 
 ---
-template:inverse
+.left-column[
+## Comandos de Procesos
 
-# Otros comandos
+]
+.right-column[
+
+.pull-left[ 
+### ps
+
+### top/htop
+
+### kill [pid]
+
+]
+.pull-right[ 
+
+### kill [pid]
+
+### bg 
+
+
+### fg
+
+]
+]
+
 
 ---
+template:inverse
+
+# Comandos de inicio y apagado
+
+---
+.left-column[
+# Inicio y apagado
+
+]
+.right-column[
+.pull-left[ 
+
+### halt
+
+### shutdown
+
+### shutdown -h now
 
 
+]
+.pull-right[ 
+
+### shutdown –r now
+
+### reboot
+
+### startx
+
+]
+]
+
+---
+template:inverse
+
+# Comandos de Red
+
+---
+.left-column[
+# Comandos de Red
+
+]
+.right-column[
+.pull-left[ 
+
+### ifconfig
+
+### ping xxxx
+
+### whois xxxxx
+
+
+]
+.pull-right[ 
+
+### wget xxxx
+
+### curl XXXX
+
+]
+]
+
+---
 
 .left-column[
 ## Teclas de Control
