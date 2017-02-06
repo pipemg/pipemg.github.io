@@ -301,153 +301,364 @@ Cargamos la libreria de Rcmdr
 
 ]
 
-
-
-
-
 ---
 
-
-
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-]
-.right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
-
-```remark
-.footnote[.red.bold[*] Important footnote]
-```
-
-Resulting HTML extract:
-
-```xml
-<span class="footnote">
-  <span class="red bold">*</span> Important footnote
-</span>
-```
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
-]
-.right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
-
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
-
-.pull-left[
-
-<pre><code>```javascript
-function add(a, b)
-  return a + b
-end
-```</code></pre>
-]
-.pull-right[
-
-<pre><code>```ruby
-def add(a, b)
-  a + b
-end
-```</code></pre>
-]
-
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
-
-]
----
-.left-column[
-  ## Presenter mode
-]
-.right-column[
-To help out with giving presentations, a presenter mode comprising the
-following features is provided:
-
-- Display of slide notes for the current slide, to help you remember
-  key points
-
-- Display of upcoming slide, to let you know what's coming
-
-- Cloning of slideshow for viewing on extended display
-]
----
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-]
-.right-column[
-Just like three dashes separate slides,
-three question marks separate slide content from slide notes:
-
-```
-Slide 1 content
-
-*???
-
-Slide 1 notes
-
----
-
-Slide 2 content
-
-*???
-
-Slide 2 notes
-```
-
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
-
-Pressing __P__ will toggle presenter mode.
-]
-???
-Congratulations, you just toggled presenter mode!
-
-Now press __P__ to toggle it back off.
----
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-  ### - Cloned view
-]
-.right-column[
-Presenter mode of course makes no sense to the audience.
-
-Creating a cloned view of your slideshow lets you:
-
-- Move the cloned view to the extended display visible to the audience
-
-- Put the original slideshow in presenter mode
-
-- Navigate as usual, and the cloned view will automatically keep up with the original
-
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
-]
----
+name: code_start
 template: inverse
 
-## It's time to get started!
+## Mis primeros pasos en R
+
+<image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png">
+
 ---
 .left-column[
-  ## Getting started
+  ## Sintaxis
+  ### - Calculadora
+
 ]
 .right-column[
-Getting up and running is done in only a few steps:
 
-1. Visit the [project site](http://github.com/gnab/remark)
+  <br><br><br>
+  ```
+  > 1+2
+ ```
 
-2. Follow the steps in the Getting Started section
+  <br>
 
-For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
+  ```
+  > 6*9
+  ```
+  <br>
+
+  ```
+  > 2**3
+  ```
+  <br>
+
+  ```
+  > 2^8
+  ```
+
+]
+
+
+---
+.left-column[
+  ## Sintaxis en R
+  ### - Calculadora
+  ### - Texto
+]
+.right-column[
+  <br><br><br>  <br><br><br>
+  ```
+  > "Esto es una cadena de texto!"
+ ```
 ]
 ---
+.left-column[
+  ## Sintaxis en R
+  ### - Calculadora
+  ### - Texto
+  ### - Operaciones Logicas
+]
+.right-column[
+  <br><br><br>
+  ```
+  >  3 > 4
+ ```
+  <br><br><br>  
+  ```
+  >  2+2 == 5
+ ```
+
+  <br><br><br>  
+  ```
+  >  T == TRUE
+ ```
+]
+
+---
+
+name: code_start
+template: inverse
+
+## Variables
+
+
+---
+
+.left-column[
+  ## Variables
+  ### - Definición
+]
+
+<br>
+<br>
+.right-column[
+Definición de una variable
+
+**Estructura de datos** que pueden cambiar de contenido a lo largo de la ejecución de un programa.
+
+Una variable requiere
+  - Un espacio en el sistema de almacenaje
+
+  - Un identificador (nombre) asociado a ese espacio
+
+  - Cantidad o informacion ya sea conocida o desconocida (Valor)
+
+
+
+]
+
+
+
+---
+.left-column[
+  ## Variables
+  ### - Definición
+  ### - Tipos
+]
+
+<br>
+<br>
+.right-column[
+Tipos de Variables:
+
+   - **Tipo de dato lógico.**
+      - TRUE/FALSE, T/F 
+
+   - **Tipo de dato numerico**
+      - 12.1, 200, 5.2E10, 0.1232
+
+   - **Tipo de dato cadena**
+      - "Esto es texto", "Se pueden usar simbolos.,-.$%&/()="
+
+]
+
+
+---
+
+.left-column[
+  ## Variables
+  ### - Definición
+  ### - Tipos
+  ### - Creación
+]
+
+<br>
+<br>
+.right-column[
+Crea una variable que tenga el valor 42 que se llame var_1
+
+```
+> var_1 <- 42
+```
+
+Divide esa variable entre 2
+
+```
+> var_1/2
+```
+
+Crea una cadena de texto y ponla en la variable txt
+
+```
+> txt<- "Arrg, Soy un pirata"
+
+```
+Asigna un valor de VERDADERO a la variable logic
+
+```
+> logic <- TRUE
+```
+
+]
+
+---
+.left-column[
+  ## Variables
+  ### - Definición
+  ### - Tipos
+  ### - Creación
+]
+
+<br>
+<br>
+.right-column[
+
+Imprime los valores de txt, logic y de var_1
+
+<br>
+
+```
+> txt
+
+```
+
+<br>
+
+```
+> logic
+
+```
+
+<br>
+```
+> var_1
+
+```
+
+]
+
+
+
+
+
+---
+.left-column[
+  ## Funciones
+  ### - Definición
+
+]
+
+<br>
+<br>
+.right-column[
+
+Definición:
+
+**Subrutina** o **subprograma** (también llamada procedimiento, función o rutina), que se presenta como un subalgoritmo que forma parte del algoritmo principal, el cual permite resolver una tarea específica.
+
+]
+
+
+
+---
+.left-column[
+  ## Funciones
+  ### - Definición
+  ### - Ejemplos
+
+]
+
+<br>
+<br>
+.right-column[
+
+ <br> <br> <br>
+```
+> sum(1,2,6,7,9)
+
+```
+Algunas funciones requieren argumentos los cuales tienen nombres determinados
+
+```
+> rep("Yo ho! un pirata soy", times=3)
+
+```
+<br><br>
+**Ejercicio:** Obten la raiz de 16 utilizando la función sqrt
+]
+
+
+---
+.left-column[
+  ## Funciones
+  ### - Definición
+  ### - Ejemplos
+  ### - Help, example
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+De todas las funciones, la que debemos de considerar como básica es **help**
+
+```
+> help (sum)
+
+```
+<br>
+<br>
+
+Otra es la función **example**
+<br>
+
+```
+> example(min)
+
+```
+
+<br><br>
+**Ejercicio:** Obten el help de la función rep
+]
+
+
+
+
+---
+.left-column[
+  ## Archivos
+  ### - Ver archivos
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+Con el fin de leer una carpeta dentro del sistema podemos utilizar la función **list.files()**
+
+```
+> list.files()
+```
+]
+
+
+
+
+---
+.left-column[
+  ## Archivos
+  ### - Ver archivos
+  ### - Scripts R
+
+]
+
+<br>
+<br>
+.right-column[
+ Cuando se programa en R, se generan documentos llamados **Scripts**, los cuales en general por convención finalizan en .R y pueden ser ejecutados en el momento que se desee.
+
+ Si se quiere ejecutar un codigo determinado desde la terminal se utilza la función **source**:
+
+
+```
+> source("bottle1.R")
+```
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
 name: last-page
 template: inverse
 
