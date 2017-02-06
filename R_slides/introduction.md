@@ -313,7 +313,7 @@ template: inverse
 ---
 .left-column[
   ## Sintaxis
-  ### - Calculadora
+  ### - Aritmetica
 
 ]
 .right-column[
@@ -326,17 +326,45 @@ template: inverse
   <br>
 
   ```
-  > 6*9
+  > 6*9/3 #6 multiplicado por nueve y dividido entre 3
   ```
   <br>
 
   ```
-  > 2**3
+  > 2**3 #2 elevado al exponente 3
   ```
   <br>
 
   ```
-  > 2^8
+  > 2^8 #2 elevado al exponente 8
+  ```
+
+]
+
+
+---
+.left-column[
+  ## Sintaxis
+  ### - Aritmetica
+
+]
+.right-column[
+
+  <br><br><br>
+  ```
+  > options(digits =16) #ver mas digitos
+  > 10/3
+ ```
+
+  <br>
+
+  ```
+  > pi #numeros irracionales
+  ```
+  <br>
+
+  ```
+  > exp(1)
   ```
 
 ]
@@ -345,7 +373,7 @@ template: inverse
 ---
 .left-column[
   ## Sintaxis en R
-  ### - Calculadora
+  ### - Aritmetica
   ### - Texto
 ]
 .right-column[
@@ -357,7 +385,7 @@ template: inverse
 ---
 .left-column[
   ## Sintaxis en R
-  ### - Calculadora
+  ### - Aritmetica
   ### - Texto
   ### - Operaciones Logicas
 ]
@@ -375,6 +403,36 @@ template: inverse
   ```
   >  T == TRUE
  ```
+]
+
+---
+.left-column[
+  ## Sintaxis en R
+  ### - Aritmetica
+  ### - Texto
+  ### - Operaciones Logicas
+  ### - No definidos
+]
+.right-column[
+  <br><br><br>
+  ```
+  >  sqrt(-1)
+ ```
+  <br><br><br>  
+  ```
+  >  sqrt(-1+0i)
+ ```
+
+  <br><br><br>  
+  ```
+  >  sqrt(as.complex(-1))
+ ```
+  <br><br><br>  
+  ```
+  >  0+1i
+ ```
+
+**NaN** Not a Number
 ]
 
 ---
@@ -427,8 +485,11 @@ Tipos de Variables:
    - **Tipo de dato lógico.**
       - TRUE/FALSE, T/F 
 
-   - **Tipo de dato numerico**
-      - 12.1, 200, 5.2E10, 0.1232
+   - **Tipo de dato numerico entero**
+      - 0, 1, -2, 3, 10, ...
+
+   - **Tipo de dato numerico doble**
+      - 12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
 
    - **Tipo de dato cadena**
       - "Esto es texto", "Se pueden usar simbolos.,-.$%&/()="
@@ -451,7 +512,7 @@ Tipos de Variables:
 Crea una variable que tenga el valor 42 que se llame var_1
 
 ```
-> var_1 <- 42
+> var_1 <- 42 # o var_1 = 42 pero...
 ```
 
 Divide esa variable entre 2
@@ -510,8 +571,183 @@ Imprime los valores de txt, logic y de var_1
 
 ]
 
+---
+.left-column[
+  ## Variables
+  ### - Definición
+  ### - Tipos
+  ### - Creación
+]
+
+<br>
+<br>
+.right-column[
+Los nombres de las variables solo pueden tener:
+
+ - [a-zA-Z]+
+
+ - [0-9]+
+
+ - [._]+
+
+Que cosas **NO** pueden tener:
+
+ - Numeros para iniciar
+
+ - Simbolos seguidos de numeros (Ej. A+3)
+
+ - Solamente numeros
+
+ - Solamente simbolos
+]
 
 
+---
+.left-column[
+  ## Variables
+  ### - Definición
+  ### - Tipos
+  ### - Creación
+]
+
+<br>
+<br>
+.right-column[
+
+
+ - [a-zA-Z]+
+
+ - [0-9]+
+
+ - [._]+
+
+Que cosas **NO** pueden tener:
+
+ - Numeros para iniciar
+
+ - Simbolos seguidos de numeros (Ej. A+3)
+
+ - Solamente numeros
+
+ - Solamente simbolos
+]
+
+
+
+
+
+---
+.left-column[
+  ## Vectores
+  ### - Introducción a vectores
+
+]
+
+<br>
+<br>
+.right-column[
+
+ Unidad básica de variable en R.
+
+Introducir 74,31,95,61,76,34,23,54,96 en R
+
+ 1. Funcion **c**
+
+```
+x<-c(74,31,95,61,76,34,23,54,96) #Numerico
+
+```
+
+```
+x<-c("74",31,95,61,76,34,23,54,96) #String
+
+```
+<br>
+ 2. Funcion **scan** 
+
+```
+x<-scan() # empty to end
+
+```
+]
+
+
+
+---
+.left-column[
+  ## Vectores
+  ### - Introducción a vectores
+
+]
+
+<br>
+<br>
+.right-column[
+
+ 3. Repeated data; Regular patterns
+
+
+```
+> seq(from = 1, to = 5)
+
+```
+<br>
+
+```
+>  seq(from = 2, by = -0.1, length.out = 4)
+
+```
+<br>
+
+```
+>  1:5
+
+```
+
+]
+
+
+---
+.left-column[
+  ## Vectores
+  ### - Introducción a vectores
+  ### - Indexación
+
+]
+
+<br>
+<br>
+.right-column[
+
+
+```
+> x[1]
+
+```
+
+<br>
+
+```
+> x[c(1, 3, 4, 8)]
+
+```
+<br>
+
+```
+> x[-c(1, 3, 4, 8)]
+
+```
+
+<br>
+
+```
+>LETTERS[1:5] 
+```
+
+```
+letters[-(6:24)]
+```
+]
 
 
 ---
@@ -581,6 +817,9 @@ De todas las funciones, la que debemos de considerar como básica es **help**
 
 ```
 <br>
+```
+> ?sum
+```
 <br>
 
 Otra es la función **example**
@@ -595,8 +834,140 @@ Otra es la función **example**
 **Ejercicio:** Obten el help de la función rep
 ]
 
+---
+
+.left-column[
+  ## Funciones
+  ### - Definición
+  ### - Ejemplos
+  ### - Help, example
+  ### - Codigo
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+ 1. Escribe el nombre de una función sin parentesis
+
+```
+> intersect
+
+```
+<br>
+<br>
+
+ 2. UseMethod
+
+```
+> rev
+
+```
+
+<br>
+
+```
+> methods(rev)
+
+```
+<br>
+
+```
+> rev.default
+
+```
+]
 
 
+---
+
+.left-column[
+  ## Obtener ayuda
+   ### - Interna
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+ - **Consola:** Shortcuts (Ej. Ctrl+L)
+
+ - **FAQ on R:** 
+
+ - **FAQ on R for Windows:** 
+
+ - **R Manuals:** 
+
+ - **R functions (text):** 
+
+ - **HTML Help:** 
+
+ - **Search help:** help.seaerch("plot") // ?? 
+ 
+ - **search.r-project.org** 
+
+ - **Apropos** ?apropos
+
+
+]
+
+
+
+---
+
+.left-column[
+  ## Obtener ayuda
+   ### - Interna
+   ### - Externa
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+ - **The R Project for Statistical Computing:** [http://www.r-project.org/](http://www.r-project.org/)
+
+ - **The Comprehensive R Archive Network:** [http://cran.r-project.org/](http://cran.r-project.org/)
+
+ - **R-Forge:**  [(http://r-forge.r-project.org/](http://r-forge.r-project.org/)
+
+ - **R Wiki:** [http://wiki.r-project.org/rwiki/doku.php](http://wiki.r-project.org/rwiki/doku.php)
+
+ - **Other:** R Graph Gallery (http://addictedtor.free.fr/graphiques/) y R Graphical Manual (http://bm2.genes.nig.ac.jp/RGM2/index.php). RSeek (http://www.rseek.org) 
+
+
+]
+
+
+
+
+---
+
+.left-column[
+  ## Obtener ayuda
+   ### - Interna
+   ### - Externa
+   ### - Otros tips
+
+]
+
+<br>
+<br>
+.right-column[
+ 
+ - **Up Arrow** Para comandos utilizados
+
+ - **objects() o ls()** Variables actuales
+
+ - **remove(var1,var2,var3) o rm(var1,var2)** Borrar variables
+ 
+ - **rm(list=ls())** Borrar todo
+
+
+]
 
 ---
 .left-column[
@@ -639,20 +1010,6 @@ Con el fin de leer una carpeta dentro del sistema podemos utilizar la función *
 > source("bottle1.R")
 ```
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
