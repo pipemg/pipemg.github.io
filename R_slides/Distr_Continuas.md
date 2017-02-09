@@ -16,4 +16,4 @@ Ejemplo: Se tiene una sala de conferencias que se puede apartar maximo 4 horas e
 
 Respuesta: 
 f(x) =1/4 para 0<=x<=4
-<img src="https://latex.codecogs.com/gif.latex?P%5BX%20%5Cgeq%203%5D%5Cint_3%5E4%201/4%20%7E%20dx%20%3D1/4]">
+<img src="https://latex.codecogs.com/gif.latex?P%5BX%20%5Cgeq%203%5D%5Cint_3%5E4%201/4%20%7E%20dx%20%3D1/4">
