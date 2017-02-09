@@ -15,6 +15,7 @@ Distribuciones continuas de probabilidad
 Ejemplo: Se tiene una sala de conferencias que se puede apartar maximo 4 horas en una empresa, esta tiene conferencias de tiempo X donde X es una distribucion uniforme en el intervalo [0,4]. ¿Cuál es la funcion de densidad de probabilidad? ¿Cual es la probabilidad de que una conferencia dure al menos  3 horas? 
 
 Respuesta: 
-f(x) =1/4 para 0<=x<=4
+
+<img src ="https://latex.codecogs.com/gif.latex?f%28x%29%20%3D%20%5Cfrac%7B1%7D%7B4%7D%20%5Ctext%7B%7E%7Epara%7E%7D%200%20%5Cgeq%20x%20%5Cgeq%204"> 
 
 <img src="https://latex.codecogs.com/gif.latex?P%5BX%20%5Cgeq%203%5D%5Cint_3%5E4%201/4%20%7E%20dx%20%3D1/4">
