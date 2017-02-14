@@ -7,7 +7,7 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Descripción de Datos y Probabilidad<br>[Descargar Presentación](https://github.com/gnab/remark)]
+.footnote[Descripción de Datos y Probabilidad<br>[Descargar Presentación](http://pipemg.github.io/R_slides/presentacion2.pdf)]
 ---
 ## Descripción de Datos en Estadística
 ---
