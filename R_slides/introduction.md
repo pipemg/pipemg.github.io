@@ -1,16 +1,16 @@
 name: inverse
 layout: true
 class: center, middle, inverse
----
+------
 name: Inicio
 #Curso de R y estadística básica
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Introducción<br>[Descargar Presentación](https://github.com/gnab/remark)]
----
+------
 ## ¿Qué es y por que deberia usarlo?
----
+------
 name: que_es
 layout: false
 .left-column[
@@ -38,11 +38,11 @@ R tiene las siguientes características:
 
 .footnote[.red[*]  _R es lo que requieres para investigar_]
 ]
----
+------
 template: inverse
 
 ## ¿Dónde comienzo?
----
+------
 name: instalacion
 
 .left-column[
@@ -57,7 +57,7 @@ https://cran.r-project.org/bin/windows/base/
 ```
 <image src="Images/R_for_windows.png" width="590px">
 ]
----
+------
 name: instalacion2
 
 .left-column[
@@ -72,7 +72,7 @@ https://cran.r-project.org/bin/macosx/
 ```
 <image src="Images/R_for_MAC.png" width="590px">
 ]
----
+------
 name: instalacion3
 
 .left-column[
@@ -97,7 +97,7 @@ $ su -c 'yum install R'
 $ sudo pacman -S r
 ```
 ]
----
+------
 
 
 .left-column[
@@ -129,7 +129,7 @@ $ R
 
 ]
 
----
+------
 .left-column[
   ## ¿Cómo funciona?
   ### - Entornos graficos
@@ -147,7 +147,7 @@ Permite importar y ver los datos de una manera gráfica
 
 <image src="http://www.sthda.com/sthda/RDoc/images/rstudio.png" width="380px" align="middle">
 ]
----
+------
 .left-column[
 <br>
 <image src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-250.png" width="150px" align="middle">
@@ -162,7 +162,7 @@ Importando desde el ambiente grafico
 
 ]
 
----
+------
 
 .left-column[
   ## ¿Cómo funciona?
@@ -183,7 +183,7 @@ Es una inferfaz gráfica que cuenta con botones y menus extensos, las caracteris
 
 <image src="http://www.unige.ch/ses/sococ/cl/r/rcommander.menu.png" width="380" align="left">
 ]
----
+------
 .left-column[
 <br>
 <image src="http://4.bp.blogspot.com/-bVDv8F9VdLY/T0yobXtHoEI/AAAAAAAADLk/QVue51r1Hbg/s1600/logo+Rcommander.png" width="100" align="left">
@@ -197,13 +197,13 @@ Utilizando las herramientas predefinidas
 
 ]
 
----
+------
 
 
 template: inverse
 
 ## ¿Cuál usar y como instalarlo?
----
+------
 .left-column[
  ## Comparación
 ]
@@ -225,7 +225,7 @@ Rcmdr
 **NOTA:** Es posible ejecutar Rcmdr desde R-Studio.
 ]
 
----
+------
 .left-column[
   ## Instalación de R-Studio
 ]
@@ -243,7 +243,7 @@ https://www.rstudio.com/products/rstudio/download/
 ```
 <image src="Images/Rstudio_instalador.png" width="550" align="rigth">
 ]
----
+------
 .left-column[
   ## Instalación de Rcmdr 
 <br>
@@ -279,7 +279,7 @@ Se abrirá una ventana para seleccionar el repositorio de dónde descargar los p
 
 ]
 
----
+------
 .left-column[
   ## Ejecutar Rcmdr 
 
@@ -301,7 +301,7 @@ Cargamos la libreria de Rcmdr
 
 ]
 
----
+------
 
 name: code_start
 template: inverse
@@ -310,7 +310,7 @@ template: inverse
 
 <image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png">
 
----
+------
 .left-column[
   ## Sintaxis
   ### - Aritmetica
@@ -342,7 +342,7 @@ template: inverse
 ]
 
 
----
+------
 .left-column[
   ## Sintaxis
   ### - Aritmetica
@@ -370,7 +370,7 @@ template: inverse
 ]
 
 
----
+------
 .left-column[
   ## Sintaxis en R
   ### - Aritmetica
@@ -382,7 +382,7 @@ template: inverse
   > "Esto es una cadena de texto!"
  ```
 ]
----
+------
 .left-column[
   ## Sintaxis en R
   ### - Aritmetica
@@ -405,7 +405,7 @@ template: inverse
  ```
 ]
 
----
+------
 .left-column[
   ## Sintaxis en R
   ### - Aritmetica
@@ -435,7 +435,7 @@ template: inverse
 **NaN** Not a Number
 ]
 
----
+------
 
 name: code_start
 template: inverse
@@ -443,7 +443,7 @@ template: inverse
 ## Variables
 
 
----
+------
 
 .left-column[
   ## Variables
@@ -470,7 +470,7 @@ Una variable requiere
 
 
 
----
+------
 .left-column[
   ## Variables
   ### - Definición
@@ -497,7 +497,7 @@ Tipos de Variables:
 ]
 
 
----
+------
 
 .left-column[
   ## Variables
@@ -535,7 +535,7 @@ Asigna un valor de VERDADERO a la variable logic
 
 ]
 
----
+------
 .left-column[
   ## Variables
   ### - Definición
@@ -571,7 +571,7 @@ Imprime los valores de txt, logic y de var_1
 
 ]
 
----
+------
 .left-column[
   ## Variables
   ### - Definición
@@ -602,7 +602,7 @@ Que cosas **NO** pueden tener:
 ]
 
 
----
+------
 .left-column[
   ## Variables
   ### - Definición
@@ -636,7 +636,7 @@ Que cosas **NO** pueden tener:
 
 
 
----
+------
 .left-column[
   ## Vectores
   ### - Introducción a vectores
@@ -673,7 +673,7 @@ x<-scan() # empty to end
 
 
 
----
+------
 .left-column[
   ## Vectores
   ### - Introducción a vectores
@@ -707,7 +707,7 @@ x<-scan() # empty to end
 ]
 
 
----
+------
 .left-column[
   ## Vectores
   ### - Introducción a vectores
@@ -750,7 +750,7 @@ letters[-(6:24)]
 ]
 
 
----
+------
 .left-column[
   ## Funciones
   ### - Definición
@@ -769,7 +769,7 @@ Definición:
 
 
 
----
+------
 .left-column[
   ## Funciones
   ### - Definición
@@ -797,7 +797,7 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 ]
 
 
----
+------
 .left-column[
   ## Funciones
   ### - Definición
@@ -834,7 +834,7 @@ Otra es la función **example**
 **Ejercicio:** Obten el help de la función rep
 ]
 
----
+------
 
 .left-column[
   ## Funciones
@@ -880,7 +880,7 @@ Otra es la función **example**
 ]
 
 
----
+------
 
 .left-column[
   ## Obtener ayuda
@@ -915,7 +915,7 @@ Otra es la función **example**
 
 
 
----
+------
 
 .left-column[
   ## Obtener ayuda
@@ -944,7 +944,7 @@ Otra es la función **example**
 
 
 
----
+------
 
 .left-column[
   ## Obtener ayuda
@@ -969,7 +969,7 @@ Otra es la función **example**
 
 ]
 
----
+------
 .left-column[
   ## Archivos
   ### - Ver archivos
@@ -990,7 +990,7 @@ Con el fin de leer una carpeta dentro del sistema podemos utilizar la función *
 
 
 
----
+------
 .left-column[
   ## Archivos
   ### - Ver archivos
@@ -1013,7 +1013,7 @@ Con el fin de leer una carpeta dentro del sistema podemos utilizar la función *
 
 
 
----
+------
 
 
 name: last-page
