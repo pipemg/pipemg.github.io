@@ -7,7 +7,7 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Descripción de Datos<br>[Descargar Presentación](https://github.com/gnab/remark)]
+.footnote[Descripción de Datos y Probabilidad<br>[Descargar Presentación](https://github.com/gnab/remark)]
 ---
 ## Descripción de Datos en Estadística
 ---
@@ -901,8 +901,389 @@ Las **Matrices** son solamente arreglos numericos de dos dimensiones mientras qu
 name: last-page
 template: inverse
 
-## Datos bivariados
+## Probabilidad
 ---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Espacio muestral
+]
+.right-column[
+
+Moneda 
+
+```
+> S<-data.frame(pos=c("H","T"))
+```
+
+Dado
+
+```
+> S<-data.frame(pos=c(1:6))
+```
+
+Espacio Muestral de una moneda
+
+```
+> install.packages("prob", dependencies=TRUE)
+
+> library(prob)
+
+> tosscoin(1, makespace=TRUE)
+
+> tosscoin(3, makespace=TRUE)
+
+```
+
+Espacio Muestral de un dado
+
+```
+> rolldie(1, makespace=TRUE)
+
+> rolldie(7, makespace=TRUE)
+
+> rolldie(1, nsides=10, makespace=TRUE)
+
+```
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Espacio muestral
+]
+.right-column[
+<br><br>
+Espacio Muestral de Cartas Inglesas 
+
+```
+> cards(2, makespace=TRUE)
+
+```
+
+Espacio Muestral de Muestreo de urnas
+
+```
+> ?urnsamples
+
+```
+
+```
+> urnsamples(x=c("roja","azul","amarilla","violeta","negra","blanca"), size=2, replace=F, order=F)
+
+```
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Eventos
+]
+.right-column[
+
+<br><br>
+Evento con monedas
+
+```
+>  S <- tosscoin(2, makespace = TRUE)
+>  S[c(2,4),]
+
+```
+
+Evento con cartas
+
+```
+> S <- cards()
+> subset(S, suit == "Heart")
+
+```
+
+```
+> subset(rolldie(3), X1 + X2 + X3 > 16)
+
+```
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Subsets de datos
+]
+.right-column[
+<br><br>
+
+%in%  #busqueda por elementos
+
+```
+> x <- 1:10
+> y <- 8:12
+> y %in% x
+> y[y %in% x]
+
+```
+
+isin 
+
+```
+> isin(x,y) #todo el vector
+
+```
+
+all 
+```
+> x <- 1:10
+> y <- c(3, 3, 7)
+> all(y %in% x)
+
+> isin(x, y)
+
+```
+
+¿Por que isin y all tienen esos resultados?
+
+
+Otras funciones: **countrep** y **isrep**
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Union, Interseccion y diferencia
+]
+.right-column[
+<br><br>
+Elementos que existen en el Evento A, en el Evento B o en ambos
+union(A,B)
+
+```
+> S = cards()
+> A = subset(S, suit == "Heart")
+> B = subset(S, rank %in% 7:9)
+
+> union(A, B)
+```
+Elementos que existen en el Evento A y en el Evento B
+intersect(A,B)
+
+```
+>  intersect(A, B)
+
+```
+
+Elementos que existen en el Evento A pero no en el Evento B
+setdiff(A,B)
+
+```
+> setdiff(A,B)
+```
+
+**Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Probabilidades de frecuencias relativas
+]
+
+.right-column[
+
+<br><br>
+P(A) ≈ observados / posibles ≈ S_n/n
+
+
+Utilizando la ley de Grandes Números:
+
+S_n/n → IP(A) as n → ∞.
+
+```
+> probspace(1:6)
+```
+
+Ej. Moneda no balanceada
+
+
+```
+> probspace(tosscoin(1), probs = c(0.7, 0.3))
+
+```
+**WARNING:** RAM memory y probabilidades infinitecimales 
+
+- Espacio de probabilidad de tirar 100 monedas
+
+- 50 Dados
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo con urnas
+]
+.right-column[
+<br>
+
+<img src="Images/Counting.png", width=500px>
+
+Numeros Factoriales
+
+```
+> factorial(n) 
+```
+
+Coeficiente binomial (Combinaciones) 
+
+
+```
+> choose(n,k)
+
+```
+**WARNING:** RAM memory y probabilidades infinitecimales 
+
+- Espacio de probabilidad de tirar 100 monedas
+
+- 50 Dados
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Problema del cumpleaños
+]
+.right-column[
+<br><br><br>
+¿Calcula la probablidad de que dos personas que esten en el mismo cuarto cumplan años el mismo dia?
+
+```
+> install.packages(pbirthday.ipsur)
+> library(pbirthday.ipsur)
+> g <- Vectorize (pbirthday.ipsur)
+> plot (1:50 , g(1:50) ,
++ xlab = "Number of people in room",
++ ylab = "Prob(at least one match)",
++ main = "The Birthday Problem")
+> abline(h = 0.5)
+> abline(v = 23, lty = 2) # dashed line
+
+```
+
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Probabilidad Condicional
+]
+.right-column[
+<br><br><br>
+
+```
+> library(prob)
+> S <- rolldie(2, makespace = TRUE) # assumes ELM
+> head(S) # first few rows
+
+```
+
+
+```
+> A <- subset(S, X1 == X2)
+> B <- subset(S, X1 + X2 >= 8)
+
+```
+
+```
+> prob(A, given = B)
+> prob(B, given = A)
+
+```
+
+
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Variables Aleatorias
+]
+.right-column[
+<br><br><br>
+
+Definición: Una variable aleatoria X es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
+
+Se define como S todos los posibles resultados de el evento E
+
+**Ejemplo:**
+
+Definimos la variable aleatoria X como "numero de aguilas cuando se tira una moneda".
+
+Por lo tanto si **S** es nuestro espacio muestral y **w** los sucesos posibles 
+
+
+<table border=1px align="center">
+<tr align="center"><th> w∈ S</th><td> AA </td><td> AS </td><td> SA </td><td> SS </td></tr>
+ 
+<tr align="center"  margin=10px><th> X(w) = x </th><td> 2 </td><td>  1 </td><td>  1 </td><td>  0 </td></tr>
+</table>
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Variables Aleatorias
+]
+.right-column[
+<br><br><br>
+
+Escribir una formula que define una variable aleatoria dentro de una función, agregando una columna a un data.frame.
+
+
+```
+> ?transform
+> ?addrv
+```
+
+Ej. Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
+
+```
+> S <- rolldie(3, nsides = 4, makespace = TRUE)
+> S <- addrv(S, U = X1 - X2 + X3)
+> head(S)
+```
+
+Ahora podemos preguntar, ¿Cual es la probabilidad de que U > 6?
+
+```
+Prob(S, U > 6)
+```
+
+]
+---
+
 
 
 name: last-page
