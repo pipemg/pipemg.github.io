@@ -7,7 +7,7 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Introducción<br>[Descargar Presentación](https://github.com/gnab/remark)]
+.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/R_slides/presentacion1.pdf)]
 ---
 ## ¿Qué es y por que deberia usarlo?
 ---
