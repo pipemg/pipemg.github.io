@@ -538,7 +538,7 @@ layout: false
 ]
 .right-column[
 <br><br><br><br>
-<img src="Images/introduccion_dist.png 
+<img src="Images/introduccion_dist.png>
 
 ]
 
