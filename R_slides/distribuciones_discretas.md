@@ -7,7 +7,7 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Distribuciones discretas<br>[Descargar Presentación](https://github.com/gnab/remark)]
+.footnote[Distribuciones discretas<br>[Descargar Presentación](http://pipemg.github.io/R_slides/presentacion3.pdf)]
 ---
 ## Variables Aleatorias Discretas
 ---
