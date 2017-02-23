@@ -1,35 +1,38 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <title>Remark</title>
+    <title>R basic Course</title>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
       body {
-        font-family: 'Droid Serif';
+        font-family: '"Times New Roman"';
       }
       h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
+        font-family: 'Times New Roman';
         font-weight: 400;
         margin-bottom: 0;
       }
       .remark-slide-content h1 { font-size: 3em; }
       .remark-slide-content h2 { font-size: 2em; }
       .remark-slide-content h3 { font-size: 1.6em; }
+
       .footnote {
         position: absolute;
+	margin-rigth: 5px;
         bottom: 3em;
       }
       li p { line-height: 1.25em; }
       .red { color: #fa0000; }
       .large { font-size: 2em; }
       a, a > code {
-        color: rgb(249, 38, 114);
+        color: rgb(0, 153, 0);
         text-decoration: none;
       }
       code {
@@ -104,7 +107,7 @@
       /* Two-column layout */
       .left-column {
         color: #777;
-        width: 20%;
+        width: 30%;
         height: 92%;
         float: left;
       }
@@ -112,23 +115,22 @@
           color: #000;
         }
       .right-column {
-        width: 75%;
+        width: 65%;
         float: right;
         padding-top: 1em;
       }
     </style>
   </head>
   <body>
-    
-    <script src="downloads/remark-latest.min.js"></script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
     <script>
       var hljs = remark.highlighter.engine;
     </script>
-    <script src="remark.language.js"></script>
+    <script src="https://remarkjs.com/remark.language.js"></script>
     <script>
       var slideshow = remark.create({
           highlightStyle: 'monokai',
-          highlightLanguage: 'r',
+          highlightLanguage: 'remark',
           highlightLines: true,
           sourceUrl: 'Chakrabarti_2004.md'
         }) ;
