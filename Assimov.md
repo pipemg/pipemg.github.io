@@ -107,7 +107,7 @@
 
 6. Robots and Empire (Robots e Imperio) (1985). Cuarta novela de robots. Ambientada unos siglos después de la anterior novela, Baley murió muchos años atrás, y la Tierra ha comenzado una nueva ola de colonización, pero los Espaciales no están dispuestos a renunciar sin más a la conquista de la Galaxia 
 
-Tríptico del Imperio Galáctico 
+# Tríptico del Imperio Galáctico 
 
 7. The Currents of Space (Las corrientes del espacio) (1952). La expansión de la Confederación de Trántor, con sólo 5 siglos de existencia, abarca ya la mitad de la Galaxia con un millón de planetas habitados. 
 
