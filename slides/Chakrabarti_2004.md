@@ -2,11 +2,11 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-#Human Papillomavirus Type 16 E6 Amino Acid 83 Variants Enhance E6-Mediated MAPK Signaling and Differentially Regulate Tumorigenesis by Notch Signaling and Oncogenic Ras
-[ri-mahrk]
+<a style="color:White"><h3> Human Papillomavirus Type 16 E6 Amino Acid 83 Variants Enhance E6-Mediated MAPK Signaling and Differentially Regulate Tumorigenesis by Notch Signaling and Oncogenic Ras </h4></a><br>
+[Archivo en PDF](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC415794/)
 .footnote[Descargar presentación [aqui](http://pipemg.github.io/slides/Chakrabarti_2004.html)]
 ---
-## What is it and why should I be using it?
+## INTRODUCTION
 ---
 layout: false
 .left-column[

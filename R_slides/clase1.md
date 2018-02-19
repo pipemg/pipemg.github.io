@@ -36,7 +36,7 @@ R tiene las siguientes características:
 
 - Contiene herramientas enfocadas a las areas biológicas. 
 
-.footnote[.red[*]  _R es lo que requieres para investigar_]
+.footnote[.red[*]  _R es lo que requieres para ciencias biológicas_]
 ]
 ---
 template: inverse
@@ -83,22 +83,21 @@ name: instalacion3
 
 Abrimos una terminal de linux (Ctrl + Alt + T) y dentro de esta, dependiendo del sistema operativo:
 
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/ubuntu-22.png" width="18px"> Ubuntu
+<image src="Images/ubuntu-logo.png" width="18px"> Ubuntu
 ```remark
 $ sudo apt-get install r-base
 ```
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/fedora-22.png" width="18px"> Fedora
+<image src="Images/fedora.png" width="18px"> Fedora
 ```remark
 $ su -c 'yum install R'
 ```
 
-<image src="http://tuxylinux.com/wp-content/themes/images/logos/archlinux-crystal-22.png" width="18px"> Arch Linux
+<image src="Images/archlinux.png" width="18px"> Arch Linux
 ```remark
 $ sudo pacman -S r
 ```
 ]
 ---
-
 
 .left-column[
   ## ¿Cómo funciona?
@@ -297,7 +296,7 @@ Cargamos la libreria de Rcmdr
 ```remark
 > library("Rcmdr")
 ```
-<image src="http://www.tuxylinux.com/wp-content/uploads/2013/02/r-commander-gui.png" width="600">
+<image src="Images/r-commander-gui.jpg" width="600">
 
 ]
 
@@ -308,7 +307,7 @@ template: inverse
 
 ## Mis primeros pasos en R
 
-<image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png">
+<!--<image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png"> -->
 
 ---
 .left-column[
@@ -326,19 +325,21 @@ template: inverse
   <br>
 
   ```
-  > 6*9/3 #6 multiplicado por nueve y dividido entre 3
+  > 6*9+3 #6 por nueve añadir 3
   ```
   <br>
 
   ```
   > 2**3 #2 elevado al exponente 3
-  ```
-  <br>
-
-  ```
   > 2^8 #2 elevado al exponente 8
   ```
 
+  <br>
+
+  ```
+  > log(exp(1)) #2 elevado al exponente 8
+  > log10(1000)
+  ```
 ]
 
 
@@ -352,9 +353,9 @@ template: inverse
 
   <br><br><br>
   ```
-  > options(digits =16) #ver mas digitos
   > 10/3
- ```
+  > options(digits =16) #ver mas digitos
+  > 10/3 ```
 
   <br>
 
@@ -372,7 +373,7 @@ template: inverse
 
 ---
 .left-column[
-  ## Sintaxis en R
+  ## Sintaxis 
   ### - Aritmetica
   ### - Texto
 ]
@@ -380,6 +381,10 @@ template: inverse
   <br><br><br>  <br><br><br>
   ```
   > "Esto es una cadena de texto!"
+ ```
+
+  ```
+  > palabras<-c("Esto", "es", "un", "conjunto", "de", "palabras", "en", "R")
  ```
 ]
 ---
@@ -392,16 +397,16 @@ template: inverse
 .right-column[
   <br><br><br>
   ```
-  >  3 > 4
+  >  3 > 4 #¿Es 3 mayor que 4?
  ```
   <br><br><br>  
   ```
-  >  2+2 == 5
+  >  2+2 == 5 #¿2 más dos es igual a 5?
  ```
 
   <br><br><br>  
   ```
-  >  T == TRUE
+  >  T == TRUE #¿Es T igual a TRUE?
  ```
 ]
 
@@ -414,20 +419,20 @@ template: inverse
   ### - No definidos
 ]
 .right-column[
-  <br><br><br>
+  <br>  <br>
   ```
   >  sqrt(-1)
  ```
-  <br><br><br>  
+  <br>  <br>
   ```
   >  sqrt(-1+0i)
  ```
 
-  <br><br><br>  
+  <br>  <br>
   ```
   >  sqrt(as.complex(-1))
  ```
-  <br><br><br>  
+  <br>  <br>
   ```
   >  0+1i
  ```
@@ -482,17 +487,27 @@ Una variable requiere
 .right-column[
 Tipos de Variables:
 
-   - **Tipo de dato lógico.**
-      - TRUE/FALSE, T/F 
 
-   - **Tipo de dato numerico entero**
-      - 0, 1, -2, 3, 10, ...
+ - **Tipo de dato cuantitativo.**
+      - **Numerico entero (Discreto)**
+        0, 1, -2, 3, 10, ...
+      - **Numerico flotante/doble (Continuo)**
+        12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
 
-   - **Tipo de dato numerico doble**
-      - 12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
 
-   - **Tipo de dato cadena**
-      - "Esto es texto", "Se pueden usar simbolos.,-.$%&/()="
+ - **Tipo de dato cualitativo(categórico).**
+      - **Tipo de dato de texto**
+        > str(state.abb)
+        > "Esto es texto"
+        > "Se pueden usar simbolos.,-.$%&/()="
+
+
+ - **Tipo de dato lógico.**
+        > TRUE/FALSE, T/F 
+
+ - **Datos faltantes.**
+        > NA
+        > NAN
 
 ]
 
@@ -512,7 +527,8 @@ Tipos de Variables:
 Crea una variable que tenga el valor 42 que se llame var_1
 
 ```
-> var_1 <- 42 # o var_1 = 42 pero...
+> var_1 <- 42
+> var_1 = 42 
 ```
 
 Divide esa variable entre 2
@@ -524,15 +540,28 @@ Divide esa variable entre 2
 Crea una cadena de texto y ponla en la variable txt
 
 ```
-> txt<- "Arrg, Soy un pirata"
+> txt <- "Arrg, Soy un pirata"
 
 ```
 Asigna un valor de VERDADERO a la variable logic
 
 ```
-> logic <- TRUE
+> x <- 5:9
+> y <- (x < 7.3)
+> y
+> z <- TRUE
 ```
 
+Datos Faltantes
+
+```
+> x <- c(3, 7, NA, 4, 7)
+> y <- c(5, NA, 1, 2, 2)
+> x + y
+> sum(x)
+> sum(x, na.rm = TRUE)
+> is.na(x)
+```
 ]
 
 ---
@@ -582,7 +611,7 @@ Imprime los valores de txt, logic y de var_1
 <br>
 <br>
 .right-column[
-Los nombres de las variables solo pueden tener:
+Los nombres de las variables solo pueden tener (Nombres significativos):
 
  - [a-zA-Z]+
 
@@ -600,40 +629,6 @@ Que cosas **NO** pueden tener:
 
  - Solamente simbolos
 ]
-
-
----
-.left-column[
-  ## Variables
-  ### - Definición
-  ### - Tipos
-  ### - Creación
-]
-
-<br>
-<br>
-.right-column[
-
-
- - [a-zA-Z]+
-
- - [0-9]+
-
- - [._]+
-
-Que cosas **NO** pueden tener:
-
- - Numeros para iniciar
-
- - Simbolos seguidos de numeros (Ej. A+3)
-
- - Solamente numeros
-
- - Solamente simbolos
-]
-
-
-
 
 
 ---
@@ -654,19 +649,19 @@ Introducir 74,31,95,61,76,34,23,54,96 en R
  1. Funcion **c**
 
 ```
-x<-c(74,31,95,61,76,34,23,54,96) #Numerico
+x <- c(74,31,95,61,76,34,23,54,96) #Numerico
 
 ```
 
 ```
-x<-c("74",31,95,61,76,34,23,54,96) #String
+x <- c("74",31,95,61,76,34,23,54,96) #String
 
 ```
 <br>
  2. Funcion **scan** 
 
 ```
-x<-scan() # empty to end
+x <- scan() # empty to end
 
 ```
 ]
@@ -688,13 +683,14 @@ x<-scan() # empty to end
 
 
 ```
-> seq(from = 1, to = 5)
+>  seq(from = 1, to = 5)
 
 ```
 <br>
 
 ```
->  seq(from = 2, by = -0.1, length.out = 4)
+>  x <- seq(from = 2, by = -0.1, length.out = 20)
+>  y <- seq(from = 2, to= 100, by =  5)
 
 ```
 <br>
@@ -765,6 +761,9 @@ Definición:
 
 **Subrutina** o **subprograma** (también llamada procedimiento, función o rutina), que se presenta como un subalgoritmo que forma parte del algoritmo principal, el cual permite resolver una tarea específica.
 
+
+<image src="Images/funcion.png" width="600">
+
 ]
 
 
@@ -781,7 +780,7 @@ Definición:
 <br>
 .right-column[
 
- <br> <br> <br>
+ <br> 
 ```
 > sum(1,2,6,7,9)
 
@@ -849,16 +848,15 @@ Otra es la función **example**
 <br>
 .right-column[
  
- 1. Escribe el nombre de una función sin parentesis
+ Escribe el nombre de una función sin parentesis
 
 ```
 > intersect
 
 ```
 <br>
-<br>
 
- 2. UseMethod
+ UseMethod
 
 ```
 > rev
@@ -877,6 +875,13 @@ Otra es la función **example**
 > rev.default
 
 ```
+<br>
+
+```
+> wilcox.test
+> methods(wilcox.test)
+
+```
 ]
 
 
@@ -892,23 +897,25 @@ Otra es la función **example**
 <br>
 .right-column[
  
- - **Consola:** Shortcuts (Ej. Ctrl+L)
+ - **Console:**  Shortcuts (Ej. Ctrl+L)
 
- - **FAQ on R:** 
+ - **FAQ on R:** [https://cran.r-project.org/doc/FAQ/R-FAQ.html](https://cran.r-project.org/doc/FAQ/R-FAQ.html)
 
- - **FAQ on R for Windows:** 
+ - **FAQ on R for Windows:**  [https://cran.r-project.org/bin/windows/base/rw-FAQ.html](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
 
- - **R Manuals:** 
+ - **R Manuals:** [https://cran.r-project.org/manuals.html](https://cran.r-project.org/manuals.html)
 
- - **R functions (text):** 
+ - **R functions (text):**  help("mean"), ?plot
 
- - **HTML Help:** 
+ - **HTML Help:** help.start()
 
- - **Search help:** help.seaerch("plot") // ?? 
+ - **Search help:** help.seaerch("plo") // ?? plo
  
  - **search.r-project.org** 
 
- - **Apropos** ?apropos
+ - **Apropos** ?apropos // apropos("GLM") // find("cor")  // apropos("lm")
+
+ - **R Help Mailing Lists**  [http://www.r-project.org/mail.html](http://www.r-project.org/mail.html)
 
 
 ]
@@ -928,16 +935,18 @@ Otra es la función **example**
 <br>
 .right-column[
  
- - **The R Project for Statistical Computing:** [http://www.r-project.org/](http://www.r-project.org/)
 
- - **The Comprehensive R Archive Network:** [http://cran.r-project.org/](http://cran.r-project.org/)
-
- - **R-Forge:**  [(http://r-forge.r-project.org/](http://r-forge.r-project.org/)
+ - **R-Forge:**  [http://r-forge.r-project.org/](http://r-forge.r-project.org/)
 
  - **R Wiki:** [http://wiki.r-project.org/rwiki/doku.php](http://wiki.r-project.org/rwiki/doku.php)
 
- - **Other:** R Graph Gallery (http://addictedtor.free.fr/graphiques/) y R Graphical Manual (http://bm2.genes.nig.ac.jp/RGM2/index.php). RSeek (http://www.rseek.org) 
+ - **R Graph Gallery:**  [http://addictedtor.free.fr/graphiques/](http://addictedtor.free.fr/graphiques/)
 
+ - **R Graphical Manual** [http://bm2.genes.nig.ac.jp/RGM2/index.php](http://bm2.genes.nig.ac.jp/RGM2/index.php)
+
+ - **RSeek**  [(http://www.rseek.org](http://www.rseek.org) 
+
+ - **Google**  [www.google.com](www.google.com) 
 
 ]
 
