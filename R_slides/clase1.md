@@ -39,7 +39,7 @@ R tiene las siguientes características:
 .footnote[.red[*]  _R es lo que requieres para ciencias biológicas_]
 ]
 ---
-template: inverse
+<!-- template: inverse -->
 
 ## ¿Dónde comienzo?
 ---
@@ -199,7 +199,7 @@ Utilizando las herramientas predefinidas
 ---
 
 
-template: inverse
+<!-- template: inverse -->
 
 ## ¿Cuál usar y como instalarlo?
 ---
@@ -303,7 +303,7 @@ Cargamos la libreria de Rcmdr
 ---
 
 name: code_start
-template: inverse
+<!-- template: inverse -->
 
 ## Mis primeros pasos en R
 
@@ -443,7 +443,8 @@ template: inverse
 ---
 
 name: code_start
-template: inverse
+<!-- template: inverse -->
+
 
 ## Variables
 
@@ -1017,7 +1018,8 @@ Con el fin de leer una carpeta dentro del sistema podemos utilizar la función *
 
 
 name: last-page
-template: inverse
+<!-- template: inverse -->
+
 
 ## That's all folks (for now)!
 
