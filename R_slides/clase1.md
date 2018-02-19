@@ -490,27 +490,27 @@ Tipos de Variables:
 
  - **Tipo de dato cuantitativo.**
       - **Numerico entero (Discreto)**
-        0, 1, -2, 3, 10, ...
+       0, 1, -2, 3, 10, ...
       - **Numerico flotante/doble (Continuo)**
-        12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
+       12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
 
 
  - **Tipo de dato cualitativo(categórico).**
       - **Tipo de dato de texto**
 	```
-        > str(state.abb)
-        > "Se pueden usar simbolos.,-.$%&/()="
+       > str(state.abb)
+       > "Se pueden usar simbolos.,-.$%&/()="
 	```
 
  - **Tipo de dato lógico.**
 	```
-        > TRUE/FALSE, T/F 
+       > TRUE/FALSE, T/F 
 	```
 
  - **Datos faltantes.**
 	```
-        > NA
-        > NAN
+       > NA
+       > NAN
 	```
 ]
 
