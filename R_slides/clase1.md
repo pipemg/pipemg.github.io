@@ -419,20 +419,20 @@ template: inverse
   ### - No definidos
 ]
 .right-column[
-  <br>  <br>
+  <br>  
   ```
   >  sqrt(-1)
  ```
-  <br>  <br>
+  <br>  
   ```
   >  sqrt(-1+0i)
  ```
 
-  <br>  <br>
+  <br>  
   ```
   >  sqrt(as.complex(-1))
  ```
-  <br>  <br>
+  <br> 
   ```
   >  0+1i
  ```
