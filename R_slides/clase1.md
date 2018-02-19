@@ -483,20 +483,19 @@ Una variable requiere
 ]
 
 <br>
-<br>
 .right-column[
 Tipos de Variables:
 
 
  - **Tipo de dato cuantitativo.**
-      - **Numerico entero (Discreto)**
-       0, 1, -2, 3, 10, ...
-      - **Numerico flotante/doble (Continuo)**
-       12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
+  - Numerico entero (Discreto)
+   - 0, 1, -2, 3, 10, ...
+  - **Numerico flotante/doble (Continuo)**
+   - 12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
 
 
  - **Tipo de dato cualitativo(categórico).**
-      - **Tipo de dato de texto**
+  -  Tipo de dato de texto 
 	```
        > str(state.abb)
        > "Se pueden usar simbolos.,-.$%&/()="
@@ -510,7 +509,7 @@ Tipos de Variables:
  - **Datos faltantes.**
 	```
        > NA
-       > NAN
+       > NaN
 	```
 ]
 
@@ -525,16 +524,11 @@ Tipos de Variables:
 ]
 
 .right-column[
-Crea una variable que tenga el valor 42 que se llame var_1
+Crea una variable que tenga el valor 42 que se llame var_1 y dividela entre 2
 
 ```
 > var_1 <- 42
 > var_1 = 42 
-```
-
-Divide esa variable entre 2
-
-```
 > var_1/2
 ```
 
@@ -544,11 +538,9 @@ Crea una cadena de texto y ponla en la variable txt
 > txt <- "Arrg, Soy un pirata"
 
 ```
-Asigna un valor de VERDADERO a la variable logic
+Asigna un valor de VERDADERO a una variable logic
 
 ```
-> x <- 5:9
-> x < 7.3
 > z <- TRUE
 ```
 
@@ -712,7 +704,7 @@ x <- scan() # empty to end
 ]
 
 <br>
-<br>
+
 .right-column[
 
 
@@ -739,7 +731,7 @@ x <- scan() # empty to end
 ```
 >LETTERS[1:5] 
 ```
-
+<br>
 ```
 letters[-(6:24)]
 ```
@@ -762,7 +754,7 @@ Definición:
 **Subrutina** o **subprograma** (también llamada procedimiento, función o rutina), que se presenta como un subalgoritmo que forma parte del algoritmo principal, el cual permite resolver una tarea específica.
 
 
-<image src="Images/funcion.png" width="600">
+<image src="Images/funcion.png" width="400">
 
 ]
 
@@ -854,7 +846,7 @@ Otra es la función **example**
 > intersect
 
 ```
-<br>
+
 
  UseMethod
 
@@ -863,19 +855,19 @@ Otra es la función **example**
 
 ```
 
-<br>
+
 
 ```
 > methods(rev)
 
 ```
-<br>
+
 
 ```
 > rev.default
 
 ```
-<br>
+
 
 ```
 > wilcox.test
@@ -893,7 +885,6 @@ Otra es la función **example**
 
 ]
 
-<br>
 <br>
 .right-column[
  
@@ -913,7 +904,7 @@ Otra es la función **example**
  
  - **search.r-project.org** 
 
- - **Apropos** ?apropos // apropos("GLM") // find("cor")  // apropos("lm")
+ - **Apropos** ?apropos // apropos("lm") // find("cor")  
 
  - **R Help Mailing Lists**  [http://www.r-project.org/mail.html](http://www.r-project.org/mail.html)
 
@@ -1030,4 +1021,3 @@ template: inverse
 
 ## That's all folks (for now)!
 
-Slideshow created using [remark](http://github.com/gnab/remark).
