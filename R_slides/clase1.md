@@ -382,7 +382,7 @@ template: inverse
   ```
   > "Esto es una cadena de texto!"
  ```
-
+<br><br><br>
   ```
   > palabras<-c("Esto", "es", "un", "conjunto", "de", "palabras", "en", "R")
  ```
@@ -497,18 +497,21 @@ Tipos de Variables:
 
  - **Tipo de dato cualitativo(categórico).**
       - **Tipo de dato de texto**
+	```
         > str(state.abb)
-        > "Esto es texto"
         > "Se pueden usar simbolos.,-.$%&/()="
-
+	```
 
  - **Tipo de dato lógico.**
+	```
         > TRUE/FALSE, T/F 
+	```
 
  - **Datos faltantes.**
+	```
         > NA
         > NAN
-
+	```
 ]
 
 
@@ -521,8 +524,6 @@ Tipos de Variables:
   ### - Creación
 ]
 
-<br>
-<br>
 .right-column[
 Crea una variable que tenga el valor 42 que se llame var_1
 
@@ -547,8 +548,7 @@ Asigna un valor de VERDADERO a la variable logic
 
 ```
 > x <- 5:9
-> y <- (x < 7.3)
-> y
+> x < 7.3
 > z <- TRUE
 ```
 
