@@ -536,88 +536,18 @@ layout: false
   ### Forma
 ]
 .right-column[
-<br><br><br><br><br>
+<br><br>
 
 
 **Simetría** y **asimetría** 
    - **positivamente sesgada**
    - **negativamente sesgada**
 
+<img src="Images/tipos-asimetria.jpg", width=500px>
 
 La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. 
 
-
-]
-
-
----
-layout: false
-.left-column[
-  ## Observaciones Extremas
-]
-.right-column[
-<br><br><br><br>
-
-Problemas que pueden implicar estimaciones exageradas e "inestabilidad" estadística. Podemos considerar que estos datos pueden ser:
-
- - Error tipográfico (typoo)
-
- - Observaciónes que no eran para el estudio. (Ej. Complicaciones medicas)
-
- - Indican un fenomeno o una tendencia más profunda
-
-]
-
----
-
-layout: false
-.left-column[
-  ## Estadistica descriptiva 
-  ### Rangos intercuantiles y MAD
-]
-.right-column[
-<br><br><br><br>
-
-suceptibilidad de la media, mediana a valores extremos.
-
-Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25}
-
-Otro método más robusto que el IQR es la Media de la desviación absoluta (**MAD**).
-
-1. Calculamos la media (prom) 
- 
-2. mediana(|x{i} - prom(X)|) , para toda i
-
-]
-
----
-
-layout: false
-.left-column[
-  ## Estadistica descriptiva 
-]
-.right-column[
-<br><br><br><br>
-
-Utilizando R. Calcula las siguientes cosas del vector 
-
-```
-x<-round(runif(20, min=1, max=100))
-
-```
-- rango
-- media
-- mediana
-- quantiles/quintiles/septiles
-- varianza
-- desviación estandar
-
-
-**Nota Rcmdr**
-
-Statistics > Summaries > Numerical Summaries
-
-calculamos los cuantiles automaticamente
+<img src="Images/curtosis.jpg", width=500px>
 
 ]
 
@@ -663,7 +593,9 @@ donde S es la desviación estandar (o tipica)
 <img src="http://www.universoformulas.com/imagenes/estadistica/descriptiva/curtosis.jpg" width=400px>
 
 ]
+
 ---
+
 
 
 layout: false
@@ -701,8 +633,81 @@ Curtosis
 **Nota** abs(4 * sqrt(6/n)) < kurtosis(x) => presenta curtosis
 
 
+]
+
+---
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+]
+.right-column[
+<br><br><br><br>
+
+Utilizando R. Calcula las siguientes cosas del vector 
+
+```
+x<-round(runif(20, min=1, max=100))
+
+- rango
+- media
+- mediana/media recortada
+- quantiles/quintiles/septiles
+- varianza
+- desviación estandar
+
+
+**Nota Rcmdr**
+
+Statistics > Summaries > Numerical Summaries
+
+calculamos los cuantiles automaticamente
 
 ]
+---
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+  ### Rangos intercuantiles y MAD
+]
+.right-column[
+<br><br><br><br>
+
+suceptibilidad de la media, mediana a valores extremos.
+
+Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25}
+
+
+Otro método más robusto que el IQR es la Media de la desviación absoluta (**MAD**).
+
+1. Calculamos la media (prom) 
+ 
+2. mediana(|x{i} - prom(X)|) , para toda i
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Observaciones Extremas
+]
+.right-column[
+<br><br><br><br>
+
+Problemas que pueden implicar estimaciones exageradas e "inestabilidad" estadística. Podemos considerar que estos datos pueden ser:
+
+ - Error tipográfico (typoo)
+
+ - Observaciónes que no eran para el estudio. (Ej. Complicaciones medicas)
+
+ - Indican un fenomeno o una tendencia más profunda
+
+]
+
+
 
 ---
 
