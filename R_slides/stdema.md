@@ -1,208 +1,445 @@
-# mermaid
-
-[![Build Status](https://travis-ci.org/knsv/mermaid.svg?branch=master)](https://travis-ci.org/knsv/mermaid)
-[![Code Climate](https://codeclimate.com/github/knsv/mermaid/badges/gpa.svg)](https://codeclimate.com/github/knsv/mermaid)
-[![Join the chat at https://gitter.im/knsv/mermaid](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/knsv/mermaid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-![banner](./img/header.png)
-
-Generation of diagrams and flowcharts from text in a similar manner as markdown.
-
-Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?
-
-This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript.
 
 
-### Flowchart
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>mermaid · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
 
-```
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-![Flowchart](./img/flow.png)
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    <link rel="stylesheet" type="text/css" href="styles/mermaid.forest.min.css" />
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="usage.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
 
 
-### Sequence diagram
+<ul class="summary">
+    
+    
 
-```
-sequenceDiagram
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    mermaid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="flowchart.html">
+            
+                <a href="flowchart.html">
+            
+                    
+                    Flowchart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="sequenceDiagram.html">
+            
+                <a href="sequenceDiagram.html">
+            
+                    
+                    Sequence diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gantt.html">
+            
+                <a href="gantt.html">
+            
+                    
+                    Gantt diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="mermaidCLI.html">
+            
+                <a href="mermaidCLI.html">
+            
+                    
+                    mermaid CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="demos.html">
+            
+                <a href="demos.html">
+            
+                    
+                    Demos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="mermaidAPI.html">
+            
+                <a href="mermaidAPI.html">
+            
+                    
+                    mermaidAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="development.html">
+            
+                <a href="development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="upgrading.html">
+            
+                <a href="upgrading.html">
+            
+                    
+                    Upgrading
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >mermaid</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mermaid">mermaid</h1>
+<p><img src="images/header.png" alt="Header Image"></p>
+<blockquote>
+<p>Generation of diagrams and flowcharts from text in a similar manner as markdown.</p>
+</blockquote>
+<p>Ever wanted to simplify documentation and avoid heavy tools like Visio when explaining your code?</p>
+<p>This is why mermaid was born, a simple markdown-like script language for generating charts from text via javascript. <a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank">Try it using our editor</a>.</p>
+<h2 id="request-for-contribution">Request for contribution</h2>
+<ul>
+<li>Contribute to mermaid: <a href="https://github.com/knsv/mermaid" target="_blank">https://github.com/knsv/mermaid</a></li>
+<li>Contribute to documentation: <a href="https://github.com/mermaidjs/mermaid-gitbook" target="_blank">https://github.com/mermaidjs/mermaid-gitbook</a></li>
+</ul>
+<h3 id="an-example-of-a-flowchart">An example of a flowchart</h3>
+<pre><code class="lang-mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+<h3 id="an-example-of-a-sequence-diagram">An example of a sequence diagram</h3>
+<pre><code class="lang-mermaid">sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice-&gt;John: Hello John, how are you?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John-&gt;John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
-![Sequence diagram](./img/sequence.png)
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+</code></pre>
+<h3 id="an-example-of-a-gantt-diagram">An example of a gantt diagram</h3>
+<pre><code class="lang-mermaid">gantt
+        dateFormat  YYYY-MM-DD
+        title Adding GANTT diagram functionality to mermaid
+        section A section
+        Completed task            :done,    des1, 2014-01-06,2014-01-08
+        Active task               :active,  des2, 2014-01-09, 3d
+        Future task               :         des3, after des2, 5d
+        Future task2               :         des4, after des3, 5d
+        section Critical tasks
+        Completed task in the critical line :crit, done, 2014-01-06,24h
+        Implement parser and jison          :crit, done, after des1, 2d
+        Create tests for parser             :crit, active, 3d
+        Future task in critical line        :crit, 5d
+        Create tests for renderer           :2d
+        Add to mermaid                      :1d
+</code></pre>
+<p>Play with mermaid using this <a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank">live editor</a>.</p>
+<h2 id="credits">Credits</h2>
+<p>Many thanks to the <a href="https://d3js.org/" target="_blank">d3</a> and <a href="https://github.com/cpettitt/dagre-d3" target="_blank">dagre-d3</a> projects for providing the graphical layout and drawing libraries!
+Thanks also to the <a href="https://bramp.github.io/js-sequence-diagrams" target="_blank">js-sequence-diagram</a> project for usage of the grammar for the sequence diagrams.</p>
+<p><em>Mermaid was created by Knut Sveidqvist for easier documentation.</em></p>
+<p>Knut has not done all work by himself, here is the full list of the projects <a href="https://github.com/knsv/mermaid/graphs/contributors" target="_blank">contributors</a>.</p>
+<h1 id="downstream-projects">Downstream projects</h1>
+<p>Mermaid is supported in a number of publishing systems and editors. Please report if a plugin/editor is missing from the list below:</p>
+<ul>
+<li><a href="https://mdp.tylingsoft.com/" target="_blank">Markdown Plus</a> - Markdown editor with extra features</li>
+<li><a href="https://github.com/JozoVilcek/gitbook-plugin-mermaid" target="_blank">gitbook-plugin</a></li>
+<li><a href="https://marketplace.atlassian.com/plugins/org.anvard.atlassian.mermaid-plugin/server/overview" target="_blank">Confluence plugin</a></li>
+<li><a href="http://nauvalatmaja.com/2015/01/13/rendering-mermaid-in-docpad/" target="_blank">Using mermaid via docpad</a></li>
+<li><a href="https://rubygems.org/gems/jekyll-mermaid/versions/1.0.0" target="_blank">Using mermaid in Jekyll</a></li>
+<li><a href="http://mostlyblather.com/blog/2015/05/23/mermaid-jekyll-octopress/" target="_blank">Using mermaid via Octopress</a></li>
+<li><a href="https://github.com/konsumer/gatsby-remark-graph" target="_blank">Using mermaid via Gatsby</a></li>
+<li><a href="http://pad.haroopress.com/user.html" target="_blank">Mardown editor Haroopad</a></li>
+<li><a href="https://atom.io/packages/atom-mermaid" target="_blank">Plugin for atom</a></li>
+<li><a href="https://atom.io/packages/markdown-preview-enhanced" target="_blank">Atom Package markdown-preview-enhanced</a></li>
+<li><a href="https://github.com/kannokanno/previm" target="_blank">Vim Plugin</a></li>
+<li><a href="https://github.com/mgaitan/sphinxcontrib-mermaid" target="_blank">Sphinx extension</a></li>
+<li><a href="https://github.com/raghur/mermaid-filter" target="_blank">Pandoc filter</a></li>
+<li><a href="https://github.com/sinedied/hads" target="_blank">hads</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview" target="_blank">Mermaid Preview for VS Code</a></li>
+<li><a href="https://packagecontrol.io/packages/Mermaid" target="_blank">Package for Sublime Text 3</a></li>
+<li><a href="https://github.com/SemanticMediaWiki/Mermaid" target="_blank">MediaWiki extension</a></li>
+<li><a href="https://stackedit.io/app" target="_blank">StackEdit</a></li>
+</ul>
+<h1 id="online-live-editor">Online live editor</h1>
+<p>An editor is available for creating diagrams. With it you can quickly start writing mermaid diagrams. It is possible to:</p>
+<ul>
+<li>save the result as a svg</li>
+<li>get a link to a viewer of the diagram</li>
+<li><p>get a link to edit of the diagram to share a diagram so that someone else can tweak it and send a new link back</p>
+</li>
+<li><p><a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank">Editor</a></p>
+</li>
+</ul>
 
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
 
-### Gantt diagram
+                        </div>
+                    </div>
+                
+            </div>
 
-```
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram to mermaid
+            
+                
+                
+                <a href="usage.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Usage">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
 
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2               :         des4, after des3, 5d
-```
-![Gantt diagram](./img/gantt.png)
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"mermaid","level":"1.1","depth":1,"next":{"title":"Usage","level":"1.2","depth":1,"path":"usage.md","ref":"usage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["addcssjs","richquotes"],"pluginsConfig":{"addcssjs":{"css":["./styles/mermaid.forest.min.css"],"js":["./scripts/mermaid.min.js","./scripts/index.js"]},"richquotes":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-02-05T01:05:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-02-05T01:11:42.664Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
 
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
 
-### Class diagram - :exclamation: experimental
+    
+    <script type="text/javascript" src="scripts/mermaid.min.js"></script>
+    
+    <script type="text/javascript" src="scripts/index.js"></script>
+    
 
-```
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-![Class diagram](./img/class.png)
-
-
-### Git graph - :exclamation: experimental
-
-```
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch newbranch
-checkout newbranch
-commit
-commit
-checkout master
-commit
-commit
-merge newbranch
-
-```
-
-![Git graph](./img/git.png)
-
-
-## Installation
-
-### CDN
-
-```
-https://unpkg.com/mermaid@<version>/dist/
-```
-
-Replace `<version>` with expected version number.
-
-Example: https://unpkg.com/mermaid@7.1.0/dist/
-
-### Node.js
-
-```
-yarn add mermaid
-```
-
-
-## Documentation
-
-https://mermaidjs.github.io
-
-
-## Sibling projects
-
-- [mermaid CLI](https://github.com/mermaidjs/mermaid.cli)
-- [mermaid live editor](https://github.com/mermaidjs/mermaid-live-editor)
-- [mermaid webpack demo](https://github.com/mermaidjs/mermaid-webpack-demo)
-- [mermaid Parcel demo](https://github.com/mermaidjs/mermaid-parcel-demo)
-
-
-# Request for assistance
-
-Things are piling up and I have hard time keeping up. To remedy this
-it would be great if we could form a core team of developers to cooperate
-with the future development mermaid.
-
-As part of this team you would get write access to the repository and would
-represent the project when answering questions and issues.
-
-Together we could continue the work with things like:
-* adding more typers of diagrams like mindmaps, ert digrams etc
-* improving existing diagrams
-
-Don't hesitate to contact me if you want to get involved.
-
-
-# For contributors
-
-## Setup
-
-Make sure you have Chrome browser installed, this project uses Chrome headless to running tests.
-
-    yarn install
-
-
-## Build
-
-    yarn build:watch
-
-
-## Lint
-
-    yarn lint
-
-We use [JavaScript Standard Style](https://github.com/feross/standard).
-We recommend you installing [editor plugins](https://github.com/feross/standard#are-there-text-editor-plugins) so you can get real time lint result.
-
-
-## Test
-
-    yarn test
-
-Manual test in browser:
-
-    open dist/index.html
-
-
-## Release
-
-For those who have the permission to do so:
-
-Update version number in `package.json`.
-
-    npm publish
-
-Command above generates files into the `dist` folder and publishes them to npmjs.org.
-
-
-# Credits
-
-Many thanks to the [d3](http://d3js.org/) and [dagre-d3](https://github.com/cpettitt/dagre-d3) projects for providing the graphical layout and drawing libraries!
-
-Thanks also to the [js-sequence-diagram](http://bramp.github.io/js-sequence-diagrams) project for usage of the grammar for the sequence diagrams. Thanks to Jessica Peter for inspiration and starting point for gantt rendering.
-
-*Mermaid was created by Knut Sveidqvist for easier documentation.*
-
-*[Tyler Long](https://github.com/tylerlong) has became a collaborator since April 2017.*
-
-Here is the full list of the projects [contributors](https://github.com/knsv/mermaid/graphs/contributors).
+    </body>
+</html>
