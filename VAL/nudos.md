@@ -14,9 +14,9 @@ Se utiliza para afirmar un mástil mediante tres vientos,  para elevar plataform
 3. Se toman los extremos inferiores de los nudos simples y se hala hacia afuera ajustando
 
  
-![Nudo de trebol]("Images/nudo_trebol.jpg")
+![Nudo de trebol](Images/nudo_trebol.jpg)
 
-[Video_nudo_trebol]("")
+[Video_nudo_trebol]()
 
 
 
@@ -33,9 +33,9 @@ Su utilidad es similar a la del as de guia doble pero con la ventaja del tiempo 
 3. Hacer una gaza a cada uno de los costados, introducir los senos por la gaza y ajustar
 
  
-![Nudo de trebol]("Images/nudo_sillaDeBombero.jpg")
+![Nudo de trebol](Images/nudo_sillaDeBombero.jpg)
 
-[Video_nudo_trebol]("https://www.youtube.com/watch?time_continue=1&v=uCFruu956TA")
+[Video_nudo_trebol](https://www.youtube.com/watch?time_continue=1&v=uCFruu956TA)
 
 
 
@@ -53,9 +53,9 @@ Nudo de fijación que sirve para tensar una cuerda y tiene como ventaja su facil
 4. Se hala desde el chicote haciendo que se tense la cuerda y cada vez que necesite ser tensada de nuevo solo se vuelve a ajustar desde el chicote
 
  
-![Nudo de trebol]("Images/nudo_tensor.jpg")
+![Nudo de trebol](Images/nudo_tensor.jpg)
 
-[Video_nudo_trebol]("https://www.youtube.com/watch?v=Sang_kRsAco")
+[Video_nudo_trebol](https://www.youtube.com/watch?v=Sang_kRsAco)
 
 
 
@@ -74,9 +74,9 @@ El nudo Presilla de Alondra es muy útil para sujetar un tronco a una cuerda de 
 
 
  
-![Nudo de trebol]("Images/nudo_presillaAlondra.gif")
+![Nudo de trebol](Images/nudo_presillaAlondra.gif)
 
-[Video_nudo_trebol]("https://www.youtube.com/watch?v=R3N38kEYOx0")
+[Video_nudo_trebol](https://www.youtube.com/watch?v=R3N38kEYOx0)
 
 
 
@@ -95,9 +95,9 @@ Es uno de los nudos de unión de gran utilidad, muy similar a un nudo de rizo co
 
 
  
-![Nudo de trebol]("Images/nudo_vueltaEscota.jpg")
+![Nudo de trebol](Images/nudo_vueltaEscota.jpg)
 
-[Video_nudo_trebol]("")
+[Video_nudo_trebol]()
 
 
 
@@ -116,9 +116,9 @@ Nudo de tope o peso, se utiliza para evitar que los cabos se salgan de las polea
 
 
  
-![Nudo de trebol]("Images/nudo_ochoSimple.jpg")
+![Nudo de trebol](Images/nudo_ochoSimple.jpg)
 
-[Ocho Simple]("https://www.youtube.com/watch?v=lUBsyGRf4pM")
+[Ocho Simple](https://www.youtube.com/watch?v=lUBsyGRf4pM)
 
 
 
@@ -139,9 +139,9 @@ El **as de guía doble** es un nudo muy utilizado en tareas de rescate marítimo
 6. Si este nudo se hace en la cintura, debe quedar a la altura de la cadera y a unos 4 dedos de separación del cuerpo.
 
  
-![Nudo de trebol]("Images/nudo_ochoSimple.jpg")
+![Nudo de trebol](Images/nudo_ochoSimple.jpg)
 
-[Ocho Simple]("https://www.youtube.com/watch?v=lUBsyGRf4pM")
+[Ocho Simple]()
 
 
 
