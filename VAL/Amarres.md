@@ -40,3 +40,50 @@ Este amarre se usa para unir dos troncos cruzados en ángulo recto o casi recto 
 5.- Se hace un ballestrinque para terminar el amarre
 
 ![Redondo Version 2](Images/amarre_cuadrado.jpg)
+
+
+## Amarre Diagonal
+
+### Para que sirve
+
+Se usa este amarre para unir dos troncos que forman un ángulo muy cerrado a diferencia del amarre cuadrado que se usa con ángulos rectos.
+
+### Como se hace
+
+1. Se hace un nudo de leñador alrededor de los dos troncos cuzados
+2. Dar por lo menos tres vueltas siguiendo la dirección del nudo leñador
+3. Se dan tres vueltas de forma cruzada a las vueltas anteriores
+4. Ahorcar el amarre dando por lo menos tres vueltas de forma cruzada de las vueltas anteriores
+5. Termina el amarre con un ballestrinque
+
+![Diagonal](Images/amarre_diagonal.jpg)
+
+
+
+
+## Amarre de tripie/trípode
+
+### Para que sirve
+
+Sirve para hacer una construcción que servirá de base para otras construcciones, para hacer refugios, mástiles, cocinas, etc…
+
+### Como se hace
+
+1. Se ubican los troncos de manera que el tronco central quede en dirección opuesta a los otros dos
+2. Hacer un ballestrinque sobre el tronco central cuidando no hacerlo muy cerca del borde para evitar que se salga
+3. Se abraza los tres troncos ajustándolos con la cuerda por arriba y por abajo de forma que queden entrelazados
+4. Se ahorca el amarre por la unión de los dos troncos y después se ahorcan los otros dos y se termina el amarre con un ballestrinque
+5. Al momento de levantar esta construcción se cruzan entre si de forma que vayan ajustándose
+6. Es recomendable enterrar los troncos para evitar que la construcción se corra o también utilizar maderos haciendo un marco amarrándolos al rededor de la construcción
+
+![Diagonal](Images/amarre_tripode.jpg)
+
+
+
+![Diagonal](Images/amarre_diagonal.jpg)
+
+ 
+
+ 
+
+![Redondo Version 2](Images/amarre_cuadrado.jpg)
