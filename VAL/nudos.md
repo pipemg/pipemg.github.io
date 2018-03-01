@@ -374,7 +374,7 @@ Es un nudo de fijación que sirve para poder hacer un descenso y recuperar la cu
 4. La cuerda donde se hizo el segundo seno es la que se utiliza para descender mientras que la otra línea recupera la cuerda. Recomendado para utilizar sobre superficies rugosas como un tronco.
 
  
-![Nudo rizo o plano](Images/fugitivo_v1.jpg)
+![Nudo rizo o plano](Images/fugitivo_v2.jpg)
 
 
 
