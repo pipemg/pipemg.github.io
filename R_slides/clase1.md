@@ -445,6 +445,7 @@ template: inverse
 name: code_start
 template: inverse
 
+
 ## Variables
 
 
@@ -1018,6 +1019,7 @@ Con el fin de leer una carpeta dentro del sistema podemos utilizar la función *
 
 name: last-page
 template: inverse
+
 
 ## That's all folks (for now)!
 
