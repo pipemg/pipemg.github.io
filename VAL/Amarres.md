@@ -10,11 +10,11 @@ Este amarre se usa para prolongación de un madero o un mástil.
 2.- En casa extremo se rodean los troncos apretando fuertemente
 3.- Luego se ahorca el amarre con tres vueltas de forma cruzada y se termina el amarre con un ballestrinque.
 
-![Redondo Version 1](Image/redondo_version1.jpg)
+![Redondo Version 1](Images/redondo_version1.jpg)
 
 **Segunda versión**
 1.- Se hace un seno apoyándolo sobre la parte común  ambos troncos
 2.- Se comienza a dar vueltas hasta cubrir casi en forma total la longitud del seno
 3.- Luego se introduce el chicote por el seno y se tira desde el firme que quedo pisado con las vueltas anteriores
 
-![Redondo Version 2](Image/redondo_version2.jpg)
+![Redondo Version 2](Images/redondo_version2.jpg)
