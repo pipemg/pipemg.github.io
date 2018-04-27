@@ -8,7 +8,6 @@ name: Inicio
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Vectores y Matrices<br>[Descargar Presentación](http://pipemg.github.io/R_slides/presentacion2.pdf)]
---> -
 ## Descripción de Datos en Estadística
 ---
 
