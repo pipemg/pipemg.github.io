@@ -46,16 +46,22 @@ layout: false
 R tiene la posibilidad de generar vectores con secuencias específicas
 
 ```
+> #numeros del 5 al 10
 > 5:10
 
+> #Secuencia del 1 al 20 pasando cada 7 decimas
 > seq(from=1,to=20,by=.7)
 
+> #Secuencia de numeros del 90 al 100 en orden inverso
 > 100:90
 
+> #Secuencia del 10 al 40 en orden inverso con saltos de 5
 > seq(from=40,to=10, by=-5)
 
+> #Letras mayusculas de la A a la F
 > LETTERS[1:6]
 
+> #6 letras minusculas
 > letters[seq(1,24,6)]
 
 ```
@@ -70,7 +76,7 @@ layout: false
    ###  - Acceso a vectores
 ]
 .right-column[
-<br><br><br><br><br><br>
+
 Los datos dentro de vectores se guardan en una variable y se pueden acceder en el momento que se desee.
 
 ```
@@ -109,7 +115,7 @@ layout: false
    ###  - Nombre de vectores
 ]
 .right-column[
-<br><br><br><br><br><br>
+
 Se puede establecer un vector en donde cada elemento del vector contenga un nombre
 
 ```
@@ -136,7 +142,7 @@ layout: false
    ###  - Graficar un vector
 ]
 .right-column[
-<br><br><br><br><br><br>
+
 
 Existen diferentes paquetes para graficar en R, por el momento utilizaremos los del paquete base.
 
@@ -145,13 +151,16 @@ Graficamos un vector en una grafica de barras.
 ```
 > barplot(rango, xlab="Muestra", ylab="Rango (unidades)", main="Titulo de la gráfica")
 
->barplot(rango, xlab="Muestra", ylab="Rango (unidades)", main="Titulo de la gráfica", col=terrain.colors(17))
+> barplot(rango, xlab="Muestra", ylab="Rango (unidades)", main="Titulo de la gráfica", col=terrain.colors(17))
 
 > x = seq(1,20,2)
 > y = rev(x)
 > secuencia<- rep(c(x,y),3)
 > barplot(secuencia, col=rep(gray.colors(10),3))
 ```
+
+
+<img src="barplot.png" alt="Barplot1" style="width: 300px;"/>
 
 ]
 
@@ -164,7 +173,7 @@ layout: false
    ###  - Operaciones con vectores
 ]
 .right-column[
-<br><br><br><br>
+
 
 La unidad de variables básica en R es el vector, por lo tanto hacer operaciones sobre vectores es sumamente eficiente.
 
@@ -203,7 +212,7 @@ layout: false
    ###  - Graficas de dispersión
 ]
 .right-column[
-<br><br><br><br>
+
 ```
 > x <- seq(1, 20, 0.1)
 > y <- sin(x)
@@ -219,6 +228,11 @@ layout: false
 >legend(x="bottomright",legend=c("Sin(x)","Sin(x+3)"), cex=1.2, col=c("blue","red"), lty=c(4,1), title="Sin")
 
 ```
+
+
+
+<img src="dispersion.png" alt="Barplot1" style="width: 300px;"/>
+
 ]
 
 ---
@@ -229,9 +243,11 @@ layout: false
    ### - Valores NA o NaN
 ]
 .right-column[
+
 <br><br><br><br>
 
-Cuando tenemos datos incompletos veremos en el caso de numeros la señal de "not available" (NA) o cuando el tipo de dato no coincida "Not a Number" (NaN). 
+
+Cuando tenemos datos incompletos veremos en el caso de numeros la señal de **"not available" (NA)** o cuando el tipo de dato no coincida **"Not a Number" (NaN)**. 
 
 ```
 > a <- c(1, 3, NA, 7, 9)
@@ -255,8 +271,8 @@ layout: false
    ### - Definicion de matrices
 ]
 .right-column[
-<br><br><br><br>
 
+<br><br>
 Podemos considerar una matriz como un vector de dos dimensiones
 
 
@@ -288,22 +304,32 @@ layout: false
    ### - Acceder a una matriz
 ]
 .right-column[
-<br><br><br><br>
 
+<br><br>
 El manejo de matrices es similar al de vectores con la diferencia en el numero de dimensiones
 
 ```
+> #Imprimimos la matriz b
 > print(b)
 
+```
+Accedemos a diversos elementos de la matriz b
+
+```
 > b[3,1]
 
 > b[,2]
 
+> b[c(1,3),]
+
+```
+Podemos modificar los elementos de la matriz
+
+```
 > b[2,1]<-0
 
-> b[c(1,3),]
+> b
 ```
-
 
 ]
 
@@ -316,13 +342,19 @@ layout: false
    ### - Graficar una matriz
 ]
 .right-column[
-<br><br><br><br>
 
+
+Existen diferentes formas de graficar matrices, las más básicas son: graficas de elevación, contorno, perspectiva y mapas de calor
+
+Definimos una matriz de 10 renglones y 10 columnas, con 100 elementos y una distribucion normal con media en 50 y desviacion de 3
 ```
 > elevation <- matrix(rnorm(100,50,3), 10, 10)
 
 > elevation[4, 6] <- 0
+```
+Graficamos la matriz de diversas maneras
 
+```
 > contour(elevation)
 
 > persp(elevation, expand=0.6)
@@ -333,8 +365,8 @@ layout: false
 
 > image(volcano)
 ```
-
------
+]
+---
 
 layout: false
 .left-column[
@@ -342,7 +374,8 @@ layout: false
    ### - Media, mediana, moda, desviación estandar
 ]
 .right-column[
-<br><br><br><br>
+
+Existen diferentes numeros en estadística que nos informa de la estructura de nuestros datos, los principales son los siguientes:
 
 ```
 > a <- round(rnorm(20,10,3))
@@ -362,18 +395,19 @@ layout: false
 > sd(a)
 > abline(h = mean(a)+sd(a), col="green", lwd=2)
 > abline(h = mean(a)-sd(a), col="green", lwd=2)
+```
 
-
+Tambien podemos ver un resumen de los datos
+```
 > # conteo de valores
 > table(a)
 
 > # Resumen 
 > summary(a)
 ```
--
+]
 
-
-
+---
 name: last-page
 template: inverse
 
