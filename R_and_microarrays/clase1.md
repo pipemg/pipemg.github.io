@@ -481,7 +481,6 @@ Una variable requiere
   ### - Tipos
 ]
 
-<br>
 .right-column[
 Tipos de Variables:
 
