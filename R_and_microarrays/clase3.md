@@ -100,7 +100,7 @@ layout: false
 ]
 .right-column[
   **Un gen** puede ser definido como un tramo continuo de una molécula de ADN genómico a partir del cual se puede leer información codificada en forma de polynucleótidos de DNA. 
-<img src="DNA_cromosoma_gene.jpg" alt="cromosoma" style="width: 300px;"/> 
+<img src="DNA_cromosoma_gene.png" alt="cromosoma" style="width: 300px;"/> 
 
 La relación entre ADN y la secuencia de una proteina se encuentra en el **Dogma central de la biologia molecular**
 
@@ -111,14 +111,36 @@ La relación entre ADN y la secuencia de una proteina se encuentra en el **Dogma
 ---
 layout: false
 .left-column[
-  ## Manejo de Vectores
-   ###  - Graficar un vector
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
 ]
 .right-column[
 
 
+1.En el proceso de **Transcripción** una cadena de ADN es copiada a una cadena complementaria de pre-mARN (o ARN nuclear).
 
-<img src="dogma_central_proteina.jpg" alt="dogma_central" style="width: 500px;"/>
+<img src="dogma_central_proteina.jpg" alt="dogma_central" style="width: 300px;"/>
+
+2.En el proceso de **empalme(splicing)** se quitan algunas secciones del pre-mARN llamadas **intrones**. Las secciones restantes se les llaman **exones** y son unidas una tras otra. El resultante es el mARN o ARN mensajero maduro.
+
+<img src="splicing.png" alt="dogma_central" style="width: 300px;"/>
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
+]
+.right-column[
+3.La **traducción** es el proceso de generar proteinas que se encuentran codigicadas en una cadena de mARN. Cada aminoacido se determina basado en tripletes de nuncleotidos llamados **codones**. A esto se le llama **código genético**. Existen 20 aminoacidos y 64 codones asi que hay redundancia. Los encargados de traducir el mRNA a proteina se les conoce como **RNA de transferencia (tRNA)**. 
+<img src="codigo-genetico.jpg"  alt="codigo genetico" style="width: 300px;"/>
+
+4.Las proteinas resultantes pueden ser modificadas de forma **post-tarduccional** e.g. agregando un azucar. 
+
+Se solia creer que un 'un gen -una proteina', actualmente se sabe que esto no es así y que existe una gran complejidad en estos procesos.
 
 ]
 
@@ -127,69 +149,44 @@ layout: false
 
 layout: false
 .left-column[
-  ## Manejo de Vectores
-   ###  - Operaciones con vectores
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
 ]
 .right-column[
+Concusión:
 
-
-La unidad de variables básica en R es el vector, por lo tanto hacer operaciones sobre vectores es sumamente eficiente.
-
-```
-> a<-seq(1,20,2)
-
-> a^2
-
-> sqrt(a)
-
-
-> b <- seq(from=1,by=.5,length.out=10)
-
-> a + b
-
-> a - b
-
-> # Podemos realizar comparaciones
-> a == c(1,88,5,7,9,11,23,45,32,19)
-
-> # Buscando diferencias
-> a != c(1,88,5,7,9,11,23,45,32,19)
-
-> a < c(1,88,5,7,9,11,23,45,32,19)
-```
-
-
+**Dado que los genes se expresan transcribiendo y traduciendo su información en ARNm, que luego se utilizará para sintetizar proteínas, si somos capaces de averiguar qué ARNm y qué cantidad hay alrededor, deberíamos poder averiguar qué genes y con qué intensidad se encuentran. siendo expresado**
 ]
+---
 
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - Hibridización de ácidos nucleicos
+]
+.right-column[
+La **hibridización** es el proceso por el cual dos secuencias en cadena simple de ADN o ARN complementarias se combinan en una molécula. Entre más parecidas sean las secuencias, se uniran más favorablemente. 
+Este proceso se ha utilizado por más de 40 años en los ~~Southern blot~~.
+]
 
 ---
 
 layout: false
 .left-column[
-  ## Manejo de Vectores
-   ###  - Graficas de dispersión
+  ##  Microarreglos
+   ### - Tecnologia
 ]
 .right-column[
+ Los **Microarreglos de DNA** o **Chips de DNA** son herramientas que nos permiten identificar y cuantificar el mARN transcrito en un conjunto de células. De esta forma cuantificar indirectamente el nivel de expresión de un gen. 
 
-```
-> x <- seq(1, 20, 0.1)
-> y <- sin(x)
-```
+Un microarreglo consiste en:
+ - Superficie solida de vidrio, plastico y otro material
+ - Secuencias de polynucleótidos fijadas llamados **sondas (probs)** 
 
-```
-> plot(x,y, type="o", lwd=2, col="blue", )
+Existen de dos tipos:
+ - **microarreglos de cADN (spotted)**. Las sondas son sintetizadas independientemente y se unen a la superficie mecánicamente. 
 
-> plot(x,y, type="l", lwd=2, col="blue", lty=2, xlim=c(6,20))
-
-> lines(x+5,y, col="red", type="o", pch=12)
-
->legend(x="bottomright",legend=c("Sin(x)","Sin(x+3)"), cex=1.2, col=c("blue","red"), lty=c(4,1), title="Sin")
-
-```
-
-
-
-<img src="dispersion.png" alt="Barplot1" style="width: 300px;"/>
+ - **Chips de oligonucléotidos**. (Genechip/affimetrix) en donde las sondas son sintetizadas en la superficie. Un gen no es representado por una sonda si no por un conjunto llamado set de sondas o probset. 
 
 ]
 
@@ -197,173 +194,36 @@ layout: false
 
 layout: false
 .left-column[
-  ##  Manejo de Vectores
-   ### - Valores NA o NaN
+  ##  Microarreglos
+   ### - Tecnologia
 ]
 .right-column[
+  Una vez el mARN es purificado de las células se procede a sustituir el mRNA por otros nucleotidos que contienen un fluoróforo. Después estas moleculas llamdas blancos se depositan en el chip y se coloca en la camara de hibridización. Despúes se lavan y se eliminan los que no pegaron a ninguna sonda.
 
-<br><br><br><br>
+Se puede realizar de dos maneras:
 
-
-Cuando tenemos datos incompletos veremos en el caso de numeros la señal de **"not available" (NA)** o cuando el tipo de dato no coincida **"Not a Number" (NaN)**. 
-
-```
-> a <- c(1, 3, NA, 7, 9)
-```
-
-Las operaciones en este caso resultan ser diferentes y la mayoria no se puede utilizar si tenemos valores NA a menos que asi lo indiquemos
-
-```
-> sum(a)
-
-> sum(a, rm.na=TRUE)
-```
-
+ - El cADN procede de dos tejidos de interes y se utilizan dos fluoróforos (rojo y verde). La hibridización es en un solo chip (**microarreglos de dos colores**) 
+ 
+ - Hibridización de una muestra por chip. Es cuando se utiliza un solo color de fluoróforo pero se hibridiza una muestra por chip.
 ]
 
 ---
 
 layout: false
 .left-column[
-  ## Matrices
-   ### - Definicion de matrices
-]
-.right-column[
-
-<br><br>
-Podemos considerar una matriz como un vector de dos dimensiones
-
-
-```
-> mi_matriz<-matrix(data=pi,nrow=3,ncol=4)
-```
-podemos convertir un vecctor a una matriz
-
-```
-> a<-rnorm(n=12,5,.1)
-
-> mi_matriz<-matrix(data=a, nrow=3,ncol=4,byrow=T)
-```
-para obtener el tamaño de una matriz o definir dimenciones usamos dim
-
-
-```
-> b<-1:8
-
-> dim(b)<-c(4,2)
-```
-]
-
----
-
-layout: false
-.left-column[
-  ## Matrices
-   ### - Acceder a una matriz
-]
-.right-column[
-
-<br><br>
-El manejo de matrices es similar al de vectores con la diferencia en el numero de dimensiones
-
-```
-> #Imprimimos la matriz b
-> print(b)
-
-```
-Accedemos a diversos elementos de la matriz b
-
-```
-> b[3,1]
-
-> b[,2]
-
-> b[c(1,3),]
-
-```
-Podemos modificar los elementos de la matriz
-
-```
-> b[2,1]<-0
-
-> b
-```
-
-]
-
-
----
-
-layout: false
-.left-column[
-    ## Matrices
-   ### - Graficar una matriz
+  ##  Microarreglos
+   ### - Medición de la expresión
 ]
 .right-column[
 
 
-Existen diferentes formas de graficar matrices, las más básicas son: graficas de elevación, contorno, perspectiva y mapas de calor
+<img src="microarrays_one_two_colors.png"  alt="microarreglos" style="width: 300px;"/>
 
-Definimos una matriz de 10 renglones y 10 columnas, con 100 elementos y una distribucion normal con media en 50 y desviacion de 3
-```
-> elevation <- matrix(rnorm(100,50,3), 10, 10)
+Los microarreglos se cuantifican por la **intensidad de la fluorecencia** que se captura en una imagen (fotografia). La imagen se procesa a una matriz en un proceso computacional que "cuantifica" los microarreglos. 
 
-> elevation[4, 6] <- 0
-```
-Graficamos la matriz de diversas maneras
-
-```
-> contour(elevation)
-
-> persp(elevation, expand=0.6)
-
-> contour(volcano)
-
-> persp(volcano, expand=0.2)
-
-> image(volcano)
-```
+<img src="quantification_color_cDNA.png" alt="microarreglos" style="width: 300px;"/>
 ]
----
 
-layout: false
-.left-column[
-    ## Datos estadísticos
-   ### - Media, mediana, moda, desviación estandar
-]
-.right-column[
-
-Existen diferentes numeros en estadística que nos informa de la estructura de nuestros datos, los principales son los siguientes:
-
-```
-> a <- round(rnorm(20,10,3))
-> names(a)<-LETTERS[1:20]
-> #Media/Promedio
-> mean(a)
-
-> barplot(a)
-> abline(h = mean(a), col="red", lwd=3)
-
-> #Mediana
-> median(a)
-> abline(h = median(a), col="blue", lty=3, lwd=2)
-
-
-> # Desviacion
-> sd(a)
-> abline(h = mean(a)+sd(a), col="green", lwd=2)
-> abline(h = mean(a)-sd(a), col="green", lwd=2)
-```
-
-Tambien podemos ver un resumen de los datos
-```
-> # conteo de valores
-> table(a)
-
-> # Resumen 
-> summary(a)
-```
-]
 
 ---
 name: last-page
