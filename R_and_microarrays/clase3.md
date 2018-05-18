@@ -13,7 +13,7 @@ name: Inicio
 
 layout: false
 .left-column[
-  ## Introducción a microarreglos
+  ## Microarreglos
    ###  - Tecnologías de alta eficiencia
 ]
 .right-column[
@@ -38,7 +38,7 @@ Para cada uno de estos objetivos podemos encontrar diferentes métodos estadíst
 layout: false
 .left-column[
 
-  ## Introducción a microarreglos
+  ## Microarreglos
    ###  - Clasificación por uso
 ]
 .right-column[
@@ -216,7 +216,18 @@ Se puede realizar de dos maneras:
  
  - Hibridización de una muestra por chip. Es cuando se utiliza un solo color de fluoróforo pero se hibridiza una muestra por chip. (**Microarreglos de un color**)
 ]
+---
 
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Comparación de chips
+]
+.right-column[
+
+
+<img src="comparacion_chips.png" alt="comparacion_chips" style="width: 600px;"/>
+]
 ---
 
 layout: false
@@ -233,9 +244,196 @@ Los microarreglos se cuantifican por la **intensidad de la fluorecencia** que se
 
 <img src="quantification_color_cDNA.png" alt="microarreglos" style="width: 300px;"/>
 ]
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Variabilidad
+]
+.right-column[
+
+
+<img src="variabilidad_experimental.png" alt="variabilidadexp" style="width: 600px;"/>
+
+]
 
 
 ---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Variabilidad
+]
+.right-column[
+
+Existen dos tipos de variabilidad en los microarreglos:
+ - Sistemática. Aquella que afecta de manera similar a todas las mediciones
+   - Cantidad de material disponible
+   - Instrumental de laboratorio
+ - Aleatoria. Aquella que afecta distintamente cada componente del experimento
+   - Cantidad de material
+   - Eficiencia de los procedimientos (Estandarización)
+
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Variabilidad
+]
+.right-column[
+
+Cada tipo de variabilidad se afronta de manera distinta
+ - Sistemática
+   - Se estima la corrección a partir de una normalización
+ - Aleatoria
+   - Suponemos modelos de error y recurrimos al **diseño experimental** para controlarla y **inferencia estadística** para extraer conclusiones
+
+Todo esto se integra en el flujo de trabajo o ciclo de vida de un experimento con microarreglos (pipeline)
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Pipeline
+]
+.right-column[
+
+<img src="pipeline.png" alt="microarreglos" style="width: 600px;"/>
+
+]
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Pipeline
+]
+.right-column[
+
+<img src="control_calidad.png" alt="microarreglos" style="width: 600px;"/>
+
+]
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Pipeline
+]
+.right-column[
+
+<img src="normalizacion.png" alt="microarreglos" style="width: 600px;"/>
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Tipos de análisis
+]
+.right-column[
+
+Los microarreglos pueden responder distintas preguntas de investigación
+
+ - Encontrar **genes diferencialmente expresados** en dos o más condiciones o a lo largo del tiempo
+ - **Identificar subtipos** de una poblacion
+ - Definir **Patrones de expresión** caracteristicos
+ - **Predecir la respuesta** o **clasificar individuos**
+ - **Identificar genes co-regulados** o **co-expresion**
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Métodos de análisis
+]
+.right-column[
+
+Por cada problema existen múltiples métodos
+
+ - **Modelos lineales**, pruebas t-student para expresión diferencial
+ - **Análisis de agrupamiento** o conglomerados ("**clustering**") para encontrar patrones de corregulación o coexpresión
+ - **Métodos de clasificación** tradicionales (kNN, LDA) y modernos (SVM, PAM) para construir predictores.
+ - **Análisis basados en Ontologia de Genes** (GSEA) para buscar significancia biológica
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Expresión diferencial
+]
+.right-column[
+
+- Para comparar dos o más grupos se utilizan extensiones del t-test:
+  - El tamaño de muestra suele ser menor que lo que se mide
+  - Se compenza estimando la varianza de cada gen a partir de todos los genes
+  - SAM, Empirical Bayes
+
+- Por cada gen se hace un test con un problema de multiplicidad
+  - Ajustes de multiple testing
+  - Estimación de tasa de falsos positivos (FDR) 
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Análisis de conglomerados
+]
+.right-column[
+
+- Los genes no varian independientemente
+- Permite descubrir patrones de expresión
+- Puede agrupar muestras por fenotipos similares (Descubrimiento de clases)
+
+]
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Análisis de GO
+]
+.right-column[
+
+- Los resultados de microarreglos son listas de genes
+- Se utilizan los análisis de GO para interpretar los datos
+  - Proyectarse en bases de datos como GO o KEGGS
+  - Estudiar clases enriquecidas
+  - Agrupar genes por similitud funcional
+]
+---
+
 name: last-page
 template: inverse
 
