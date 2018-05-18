@@ -69,11 +69,11 @@ layout: false
 .right-column[
 <br><br>
    **Proteina** Secuencia de amino ácidos 
+<br>
     <img src="Protein_primary_structure.png" alt="proteina" style="width: 500px;"/> 
 
    Toda la información para producir las proteinas se encuentra almacenada en el **ADN (ácido desoxirribonucleico) ** el cual es una cadena de pequeñas moléculas llamadas **nucleótidos** y en el ADN existen 5 tipos de nucleótidos **Adenosina(A)**, **Citocina(C)**, **Guanina(G)** y **Timina(T)** a las cuales también se les conoce como **bases**.
 
-   EL ADN se puede encontrar en ~Doble cadena~, también conocida como **Doble hélice** o ~Cadena sencilla~. La doble cadena se forma cuando las bases complementarias **A-T** y **G-C** se enlazan quimicamente. 
 
    
 ]
@@ -90,9 +90,12 @@ layout: false
 
     <img src="Diferencias-entre-ADN-y-ARN.png" alt="proteina" style="width: 500px;"/> 
 
+   EL ADN se puede encontrar en ~Doble cadena~, también conocida como **Doble hélice** o ~Cadena sencilla~. La doble cadena se forma cuando las bases complementarias **A-T** y **G-C** se enlazan quimicamente. 
+
    EL **ARN (ácido ribonucleico)** es en gran medida igual al ADN pero en lugar de timina contiene un nucleótido similar, el **Uracilo(U)** y solo podemos encontrar ARN en forma de una sola cadena sencilla. Una de las funciones principales del ARN es ser un **intermediario entre el ADN y la proteina**.
 
    Es común utilizar **polynucleótido** para llamar al ADN o al ARN indistintamente. También hablamos de **cRNA** o **cDNA** cuando nos referimos a una cadena sintetisada estable de ARN o ADN.
+
 ]
 
 
@@ -104,10 +107,22 @@ layout: false
    ###  - Genes y síntesis de proteinas
 ]
 .right-column[
-<br><br>
+<br>
   **Un gen** puede ser definido como un tramo continuo de una molécula de ADN genómico a partir del cual se puede leer información codificada en forma de polynucleótidos de DNA. 
 
-<img src="DNA_cromosoma_gene.png" alt="cromosoma" style="width: 300px;"/> 
+<img src="DNA_cromosoma_gene.png" alt="cromosoma" style="width: 500px;"/> 
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
+]
+.right-column[
+<br><br>
 
 La relación entre ADN y la secuencia de una proteina se encuentra en el **Dogma central de la biologia molecular**
 
@@ -126,27 +141,53 @@ layout: false
 
 1.En el proceso de **Transcripción** una cadena de ADN es copiada a una cadena complementaria de pre-mARN (o ARN nuclear).
 
-<img src="dogma_central_proteina.jpg" alt="dogma_central" style="width: 300px;"/>
+<img src="dogma_central_proteina.jpg" alt="dogma_central" style="width: 500px;"/>
 
-2.En el proceso de **empalme(splicing)** se quitan algunas secciones del pre-mARN llamadas **intrones**. Las secciones restantes se les llaman **exones** y son unidas una tras otra. El resultante es el mARN o ARN mensajero maduro.
-
-<img src="splicing.png" alt="dogma_central" style="width: 300px;"/>
 ]
 
 
 ---
-
 layout: false
 .left-column[
   ## Bases biológicas
    ###  - Genes y síntesis de proteinas
 ]
 .right-column[
+
+
+
+2.En el proceso de **empalme(splicing)** se quitan algunas secciones del pre-mARN llamadas **intrones**. Las secciones restantes se les llaman **exones** y son unidas una tras otra. El resultante es el mARN o ARN mensajero maduro.
+
+<img src="splicing.png" alt="dogma_central" style="width: 500px;"/>
+]
+
+
+---
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
+]
+.right-column[
+<br>
 3.La **traducción** es el proceso de generar proteinas que se encuentran codigicadas en una cadena de mARN. Cada aminoacido se determina basado en tripletes de nuncleotidos llamados **codones**. A esto se le llama **código genético**. Existen 20 aminoacidos y 64 codones asi que hay redundancia. Los encargados de traducir el mRNA a proteina se les conoce como **RNA de transferencia (tRNA)**. 
+
 <img src="codigo-genetico.jpg"  alt="codigo genetico" style="width: 300px;"/>
 
-4.Las proteinas resultantes pueden ser modificadas de forma **post-tarduccional** e.g. agregando un azucar. 
 
+]
+
+
+---
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - Genes y síntesis de proteinas
+]
+.right-column[
+<br><br>
+4.Las proteinas resultantes pueden ser modificadas de forma **post-tarduccional** e.g. agregando un azucar. 
+<br>
 Se solia creer que un 'un gen -una proteina', actualmente se sabe que esto no es así y que existe una gran complejidad en estos procesos.
 
 ]
@@ -163,7 +204,7 @@ layout: false
 <br><br><br><br>
 Concusión:
 
-**Dado que los genes se expresan transcribiendo y traduciendo su información en ARNm, que luego se utilizará para sintetizar proteínas, si somos capaces de averiguar qué ARNm y qué cantidad hay alrededor, deberíamos poder averiguar qué genes y con qué intensidad se encuentran. siendo expresado**
+**Dado que los genes se expresan transcribiendo y traduciendo su información en ARNm**, que luego se utilizará para sintetizar proteínas, si somos capaces de averiguar qué ARNm y qué cantidad hay alrededor, **deberíamos poder averiguar qué genes y con qué intensidad se encuentran siendo expresados**
 ]
 ---
 
@@ -173,9 +214,12 @@ layout: false
    ###  - Hibridización de ácidos nucleicos
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 La **hibridización** es el proceso por el cual dos secuencias en cadena simple de ADN o ARN complementarias se combinan en una molécula. Entre más parecidas sean las secuencias, se uniran más favorablemente. 
 Este proceso se ha utilizado por más de 40 años en los ~Southern blot~.
+<br>
+<img src="hybridize.jpg"  alt="hybridize" style="width: 300px;"/>
+
 ]
 
 ---
@@ -192,6 +236,18 @@ Un microarreglo consiste en:
  - Superficie solida de vidrio, plastico y otro material
  - Secuencias de polynucleótidos fijadas llamados **sondas (probs)** 
 
+<img src="gene_chip.jpg"  alt="chip" style="width: 300px;"/>
+
+]
+
+---
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Tecnologia
+]
+.right-column[
+
 Existen de dos tipos:
  - **microarreglos de cADN (spotted)**. Las sondas son sintetizadas independientemente y se unen a la superficie mecánicamente. 
 
@@ -200,7 +256,38 @@ Existen de dos tipos:
 ]
 
 ---
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Tecnologia
+]
+.right-column[
 
+- **microarreglos de cADN (spotted)**
+ - Ventajas
+  - Economicos
+  - Flexibles (cualquier secuencia)
+  - Elevada intensidad de señal (Secuencias largas)
+ - Desventajas
+  - Baja reproducibilidad
+  - Hibridación cruzada (Baja especificidad)
+  - Elevada manipulación manual
+
+
+- **Chips de oligonucléotidos**
+ - Ventajas
+  - Fabricación rápida y robusta
+  - Elevada reproducibilidad
+  - Elevada especificidad
+  - Se miden muchas sondas/genes
+ - Desventajas
+  - Requiere equipo especializado
+  - Costoso
+  - Poca flexibilidad
+
+]
+
+---
 layout: false
 .left-column[
   ##  Microarreglos
@@ -221,12 +308,16 @@ Se puede realizar de dos maneras:
 layout: false
 .left-column[
   ##  Microarreglos
-   ### - Comparación de chips
+   ### - Medición de la expresión
 ]
 .right-column[
 
+<br>
+<br>
 
-<img src="comparacion_chips.png" alt="comparacion_chips" style="width: 600px;"/>
+<img src="microarrays_one_two_colors.png"  alt="microarreglos" style="width: 600px;"/>
+
+
 ]
 ---
 
@@ -238,12 +329,25 @@ layout: false
 .right-column[
 
 
-<img src="microarrays_one_two_colors.png"  alt="microarreglos" style="width: 300px;"/>
-
 Los microarreglos se cuantifican por la **intensidad de la fluorecencia** que se captura en una imagen (fotografia). La imagen se procesa a una matriz en un proceso computacional que "cuantifica" los microarreglos. 
 
-<img src="quantification_color_cDNA.png" alt="microarreglos" style="width: 300px;"/>
+<img src="quantification_color_cDNA.png" alt="microarreglos" style="width: 600px;"/>
 ]
+---
+
+layout: false
+.left-column[
+  ##  Microarreglos
+   ### - Fuentes de Variabilidad
+]
+.right-column[
+
+<br>
+<img src="variabilidad_experimental.png" alt="variabilidadexp" style="width: 700px;"/>
+
+]
+
+
 ---
 
 layout: false
@@ -252,27 +356,14 @@ layout: false
    ### - Variabilidad
 ]
 .right-column[
-
-
-<img src="variabilidad_experimental.png" alt="variabilidadexp" style="width: 600px;"/>
-
-]
-
-
----
-
-layout: false
-.left-column[
-  ##  Microarreglos
-   ### - Variabilidad
-]
-.right-column[
-
+<br><br>
 Existen dos tipos de variabilidad en los microarreglos:
- - Sistemática. Aquella que afecta de manera similar a todas las mediciones
+
+ - **Sistemática**. Aquella que afecta de manera similar a todas las mediciones
    - Cantidad de material disponible
    - Instrumental de laboratorio
- - Aleatoria. Aquella que afecta distintamente cada componente del experimento
+
+ - **Aleatoria**. Aquella que afecta distintamente cada componente del experimento
    - Cantidad de material
    - Eficiencia de los procedimientos (Estandarización)
 
@@ -290,10 +381,12 @@ layout: false
 ]
 .right-column[
 
-Cada tipo de variabilidad se afronta de manera distinta
- - Sistemática
+Cada tipo de variabilidad se ~afronta de manera distinta~
+
+ - **Sistemática**
    - Se estima la corrección a partir de una normalización
- - Aleatoria
+
+ - **Aleatoria**
    - Suponemos modelos de error y recurrimos al **diseño experimental** para controlarla y **inferencia estadística** para extraer conclusiones
 
 Todo esto se integra en el flujo de trabajo o ciclo de vida de un experimento con microarreglos (pipeline)
@@ -310,7 +403,7 @@ layout: false
 ]
 .right-column[
 
-<img src="pipeline.png" alt="microarreglos" style="width: 600px;"/>
+<img src="pipeline.png" alt="microarreglos" style="width: 800px;"/>
 
 ]
 
@@ -323,7 +416,7 @@ layout: false
 ]
 .right-column[
 
-<img src="control_calidad.png" alt="microarreglos" style="width: 600px;"/>
+<img src="control_calidad.png" alt="microarreglos" style="width: 700px;"/>
 
 ]
 
@@ -336,7 +429,7 @@ layout: false
 ]
 .right-column[
 
-<img src="normalizacion.png" alt="microarreglos" style="width: 600px;"/>
+<img src="normalizacion.png" alt="microarreglos" style="width: 700px;"/>
 
 ]
 
@@ -349,13 +442,19 @@ layout: false
    ### - Tipos de análisis
 ]
 .right-column[
+<br>
 
+<br>
 Los microarreglos pueden responder distintas preguntas de investigación
 
  - Encontrar **genes diferencialmente expresados** en dos o más condiciones o a lo largo del tiempo
+
  - **Identificar subtipos** de una poblacion
+
  - Definir **Patrones de expresión** caracteristicos
+
  - **Predecir la respuesta** o **clasificar individuos**
+
  - **Identificar genes co-regulados** o **co-expresion**
 
 
@@ -369,15 +468,20 @@ layout: false
    ### - Métodos de análisis
 ]
 .right-column[
+<br>
+<br>
 
 Por cada problema existen múltiples métodos
 
  - **Modelos lineales**, pruebas t-student para expresión diferencial
+
  - **Análisis de agrupamiento** o conglomerados ("**clustering**") para encontrar patrones de corregulación o coexpresión
+
  - **Métodos de clasificación** tradicionales (kNN, LDA) y modernos (SVM, PAM) para construir predictores.
+
  - **Análisis basados en Ontologia de Genes** (GSEA) para buscar significancia biológica
 
-<img src="conglomerados.png" alt="microarreglos" style="width: 300px;"/>
+<img src="conglomerados.png" alt="microarreglos" style="width: 500px;"/>
 
 ]
 
@@ -401,7 +505,7 @@ layout: false
   - Estimación de tasa de falsos positivos (FDR) 
 
 
-<img src="diferencial.png" alt="microarreglos" style="width: 300px;"/>
+<img src="diferencial.png" alt="microarreglos" style="width: 500px;"/>
 ]
 
 
@@ -434,7 +538,7 @@ layout: false
   - Estudiar clases enriquecidas
   - Agrupar genes por similitud funcional
 
-<img src="GO.png" alt="microarreglos" style="width: 300px;"/>
+<img src="GO.png" alt="microarreglos" style="width: 500px;"/>
 ]
 ---
 
