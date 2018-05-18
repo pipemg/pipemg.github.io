@@ -8,7 +8,7 @@ name: Inicio
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Introducción a Microarreglos<br>[Descargar Presentación](http://pipemg.github.io/R_slides/presentacion2.pdf)]
-## Introducción a Microarreglos
+## Microarreglos
 ---
 
 layout: false
@@ -17,14 +17,14 @@ layout: false
    ###  - Tecnologías de alta eficiencia
 ]
 .right-column[
-<br><br><br><br>
+<br>
 - Las nuevas tecnologías nos permiten analizar multiples genes, proteinas o regniónes del genóma en un solo experimento.
 
 Los microarreglos pueden utilizarse con diferentes objetivos
-1. Análisis diferencial de dos o más condiciones (Class comparations)
-2. Predicción de clases moleculares (class prediction)
-3. Identificación de subtipos moleculares (class discovery)
-4. Definición de vias (Pathway analysis)
+1. Análisis diferencial de dos o más condiciones (**Class comparations**)
+2. Predicción de clases moleculares (**class prediction**)
+3. Identificación de subtipos moleculares (**class discovery**)
+4. Definición de vias (**Pathway analysis**)
 
 Para cada uno de estos objetivos podemos encontrar diferentes métodos estadísticos:
 
@@ -42,31 +42,20 @@ layout: false
    ###  - Clasificación por uso
 ]
 .right-column[
-
+<br><br>
 Existen diferentes microarreglos, por su uso:
 1. Microarreglos de oligonucleótidos de DNA.
 2. Microarreglos de variaciónes genómicas (SNPs).
 3. Microarreglos de epigenética.
 4. Microarreglos de proteinas.
-
+<br>
 Todos utilizan la fluorecencia como indicador de niveles de mRNA, presencia o ausencia de variaciónes genómicas o epigenéticas.
-]
----
 
-layout: false
-.left-column[
-  ## Introducción a microarreglos
-   ###  - Clasificación por canales
-]
-.right-column[
  
 Por clasificación en canales:
 
 1. Microarreglos de un canal
 2. Microarreglos de dos canales
-
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Microarray-schema.gif/410px-Microarray-schema.gif" alt="dos canales" style="width: 300px;"/>
 
 ]
 
@@ -78,12 +67,28 @@ layout: false
    ###  - ADN, proteinas y el dogma central
 ]
 .right-column[
+<br><br>
    **Proteina** Secuencia de amino ácidos 
-    <img src="Protein_primary_structure.png" alt="proteina" style="width: 300px;"/> 
+    <img src="Protein_primary_structure.png" alt="proteina" style="width: 500px;"/> 
 
    Toda la información para producir las proteinas se encuentra almacenada en el **ADN (ácido desoxirribonucleico) ** el cual es una cadena de pequeñas moléculas llamadas **nucleótidos** y en el ADN existen 5 tipos de nucleótidos **Adenosina(A)**, **Citocina(C)**, **Guanina(G)** y **Timina(T)** a las cuales también se les conoce como **bases**.
 
-   EL ADN se puede encontrar en ~~Doble cadena~~, también conocida como **Doble hélice** o ~~Cadena sencilla~~. La doble cadena se forma cuando las bases complementarias **A-T** y **G-C** se enlazan quimicamente. 
+   EL ADN se puede encontrar en ~Doble cadena~, también conocida como **Doble hélice** o ~Cadena sencilla~. La doble cadena se forma cuando las bases complementarias **A-T** y **G-C** se enlazan quimicamente. 
+
+   
+]
+
+---
+
+layout: false
+.left-column[
+  ## Bases biológicas
+   ###  - ADN, proteinas y el dogma central
+]
+.right-column[
+<br><br>
+
+    <img src="Diferencias-entre-ADN-y-ARN.png" alt="proteina" style="width: 500px;"/> 
 
    EL **ARN (ácido ribonucleico)** es en gran medida igual al ADN pero en lugar de timina contiene un nucleótido similar, el **Uracilo(U)** y solo podemos encontrar ARN en forma de una sola cadena sencilla. Una de las funciones principales del ARN es ser un **intermediario entre el ADN y la proteina**.
 
@@ -99,12 +104,14 @@ layout: false
    ###  - Genes y síntesis de proteinas
 ]
 .right-column[
+<br><br>
   **Un gen** puede ser definido como un tramo continuo de una molécula de ADN genómico a partir del cual se puede leer información codificada en forma de polynucleótidos de DNA. 
+
 <img src="DNA_cromosoma_gene.png" alt="cromosoma" style="width: 300px;"/> 
 
 La relación entre ADN y la secuencia de una proteina se encuentra en el **Dogma central de la biologia molecular**
 
-<img src="dogma_central.jpg" alt="cromosoma" style="width: 300px;"/> 
+<img src="dogma_central.jpg" alt="cromosoma" style="width: 400px;"/> 
 ]
 
 
@@ -153,6 +160,7 @@ layout: false
    ###  - Genes y síntesis de proteinas
 ]
 .right-column[
+<br><br><br><br>
 Concusión:
 
 **Dado que los genes se expresan transcribiendo y traduciendo su información en ARNm, que luego se utilizará para sintetizar proteínas, si somos capaces de averiguar qué ARNm y qué cantidad hay alrededor, deberíamos poder averiguar qué genes y con qué intensidad se encuentran. siendo expresado**
@@ -165,8 +173,9 @@ layout: false
    ###  - Hibridización de ácidos nucleicos
 ]
 .right-column[
+<br><br><br><br>
 La **hibridización** es el proceso por el cual dos secuencias en cadena simple de ADN o ARN complementarias se combinan en una molécula. Entre más parecidas sean las secuencias, se uniran más favorablemente. 
-Este proceso se ha utilizado por más de 40 años en los ~~Southern blot~~.
+Este proceso se ha utilizado por más de 40 años en los ~Southern blot~.
 ]
 
 ---
@@ -198,13 +207,14 @@ layout: false
    ### - Tecnologia
 ]
 .right-column[
-  Una vez el mARN es purificado de las células se procede a sustituir el mRNA por otros nucleotidos que contienen un fluoróforo. Después estas moleculas llamdas blancos se depositan en el chip y se coloca en la camara de hibridización. Despúes se lavan y se eliminan los que no pegaron a ninguna sonda.
+<br><br>
+  Una vez el **mARN es purificado** de las células se procede a sustituir el mRNA por otros nucleotidos que contienen un **fluoróforo**. Después estas moleculas llamdas blancos se depositan en el chip y se coloca en la camara de hibridización. Despúes se lavan y se eliminan los que no pegaron a ninguna sonda.
 
 Se puede realizar de dos maneras:
 
  - El cADN procede de dos tejidos de interes y se utilizan dos fluoróforos (rojo y verde). La hibridización es en un solo chip (**microarreglos de dos colores**) 
  
- - Hibridización de una muestra por chip. Es cuando se utiliza un solo color de fluoróforo pero se hibridiza una muestra por chip.
+ - Hibridización de una muestra por chip. Es cuando se utiliza un solo color de fluoróforo pero se hibridiza una muestra por chip. (**Microarreglos de un color**)
 ]
 
 ---
