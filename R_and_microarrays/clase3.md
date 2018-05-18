@@ -377,6 +377,7 @@ Por cada problema existen múltiples métodos
  - **Métodos de clasificación** tradicionales (kNN, LDA) y modernos (SVM, PAM) para construir predictores.
  - **Análisis basados en Ontologia de Genes** (GSEA) para buscar significancia biológica
 
+<img src="conglomerados.png" alt="microarreglos" style="width: 300px;"/>
 
 ]
 
@@ -400,6 +401,7 @@ layout: false
   - Estimación de tasa de falsos positivos (FDR) 
 
 
+<img src="diferencial.png" alt="microarreglos" style="width: 300px;"/>
 ]
 
 
@@ -431,6 +433,8 @@ layout: false
   - Proyectarse en bases de datos como GO o KEGGS
   - Estudiar clases enriquecidas
   - Agrupar genes por similitud funcional
+
+<img src="GO.png" alt="microarreglos" style="width: 300px;"/>
 ]
 ---
 
