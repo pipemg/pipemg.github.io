@@ -9,22 +9,34 @@ name: Inicio
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion1.pdf)]
 ---
-<div style="text-align: right"> 
-## Temario de esta presentación
-- Introducción a R
-  - Historia de R
-  - Instalación de R
-  - R, R commander y RStudio
-  - Bibliografía
-</div>
----
+name: Temario1
+layout: false
+.left-column[
+  ## ¿Temario de esta presentación
+
+]
+.right-column[
+* Introducción a R
+  * Historia de R
+  * Instalación de R
+  * R, R commander y RStudio
+  * Bibliografía
 - Fundamentos de R y programación
   - Expresiones y sintaxis en R
   - Funciones en R
   - Crear una función en R
   - Ayuda, manuales y ejemplos
   - Manejo de archivos del sistema
+]
+
 ---
+name: Temario2
+layout: false
+.left-column[
+  ## ¿Temario de esta presentación
+
+]
+.right-column[
 - Variables y estructuras de datos
   - El vector como unidad básica de R
   - Función concatenar
@@ -34,29 +46,40 @@ name: Inicio
   - Nombres del vector
   - Operaciones sobre vectores
   - Listas y sus operaciones
+]
+
+
 ---
+name: historia
+layout: false
+.left-column[
 ## Brebe historia
 
-- Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)
+]
+.right-column[
+
+- Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)<br>
+
 - Se mezcla S y Scheme para generar R en la universidad de Auckland (**R**obert Gentleman & **R**oss Ihaka, 1995)
    -  R esta escrito en C y Fortran
-   -  GNU General Public License (freely available)
-- Creación del R Development Core Team y el CRAN (1997)
-- Versión mas antigua. Versión 0.49 (23 de abril de 1997)
-- Versión 3.4.0 (21 de abril de 2017)
+   -  GNU General Public License (freely available)<br>
+   
+- Creación del R Development Core Team y el CRAN (1997)<br>
 
+- Versión mas antigua. Versión 0.49 (23 de abril de 1997)<br>
 
+- Versión 3.4.0 (21 de abril de 2017)<br>
 
-´´
+```
 > contributors()
-´´
---
+```
+]
 
-<image src="Images/TIOBE_rating.png" width="560px">
-
-
---
-## ¿Qué es y por que deberia usarlo?
+---
+name: historia
+layout: false
+<br><br>
+<image src="Images/TIOBE_rating.png" width="900px">
 ---
 name: que_es
 layout: false
@@ -85,22 +108,30 @@ R tiene las siguientes características:
 ]
 
 ---
+<br><br>
+<br><br>
 **Why R is Not Enough** 
+
  - The R interpreter is not fast and execution of large amounts of R code can be unacceptably
 slow.
  - R is set up to carry out vectorised computations and not scalar (element-by-element)
 computations. 
  - R was designed to hold its data “in core” and this places severe limitations of the
 size of problem which can be dealt with.
+<br><br>
 
 **Directions for Future Work**
+
  - Wait for faster machines.
  - Introduce more vectorisation and take advantage of multicores.
  - Make changes to R to eliminate bottlenecks.
  - Sweep the page clean and look at designs for new languages.
 
-R: Lessons Learned, Directions for the Future
-Ross Ihaka
+
+
+.footnote[.red[*]  R: Lessons Learned, Directions for the Future
+_Ross Ihaka_]
+
 ---
 template: inverse
 
@@ -918,9 +949,9 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
  <br> 
 ```
 > mi_función<-function(varA,varB,varC,...){
-> #AQUÍ VA EL CÓDIGO A EJECUTAR
-> # ... 
-> #AQUÍ HAY MÁS CÓDIGO
+>    #AQUÍ VA EL CÓDIGO A EJECUTAR
+>     # ... 
+>    #AQUÍ HAY MÁS CÓDIGO
 > }
 
 ```
@@ -931,10 +962,9 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 
 ```
 <br><br>
-**Ejercicio:** Genera una funcion de fibonacci.
-F_{n}=F_{n-1}+F_{n-2}
-{\displaystyle F_{1}=1,\;F_{2}=1} or {\displaystyle F_{0}=0,\;F_{1}=1.}
-]
+**Ejercicio:** Genera una funcion de fibonacci. <br>
+1. F_{n}=F_{n-1}+F_{n-2}
+2. F_{1}=1,\;F_{2}=1} or F_{0}=0,\;F_{1}=1
 
 
 
@@ -1003,11 +1033,16 @@ Buscar una función con methdos
 > methods(summary)
 
 ```
-
+Ejercició. Busca la ayuda y el metodo de un test de wilcox
 ```
 > wilcox.test
+> ?wilcox.test
 > methods(wilcox.test)
 
+```
+Ejercició. busca las funciones de R que comienzan con lengt
+```
+> ??lengt
 ```
 ]
 
@@ -1060,7 +1095,7 @@ Buscar una función con methdos
 <br>
 .right-column[
  
-# Para R
+### Para R
 
  - **R-Forge:**  [http://r-forge.r-project.org/](http://r-forge.r-project.org/)
 
@@ -1073,12 +1108,12 @@ Buscar una función con methdos
  - **RSeek**  [(http://www.rseek.org](http://www.rseek.org) 
 
 
-# Para estadística
+### Para estadística
 
- **Probabilidad y Estadistica para ingeniería y ciencias**
- *Warpole &bull; Myers &bull; Myers*
+ -  **Probabilidad y Estadistica para ingeniería y ciencias**
+ *Warpole &bull; Myers &bull; Myers. 9th Ed*
 
-# Para todo
+### Para todo
  - **Google**  [www.google.com](www.google.com) 
 
 ]
@@ -1158,7 +1193,7 @@ Cambiar el directorio actual
 
  Si se quiere ejecutar un codigo determinado desde la terminal se utilza la función **source**:
 
-![/Codes/beers_code.r]
+[beers_code.r](Codes/beers_code.r)
 
 ```
 > source("beers_code.r")
