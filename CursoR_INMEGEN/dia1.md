@@ -11,11 +11,11 @@ name: Inicio
 ---
 <div style="text-align: right"> 
 ## Temario de esta presentación
-- Introducción a R
-  - Historia de R
-  - Instalación de R
-  - R, R commander y RStudio
-  - Bibliografía
+1. Introducción a R
+  1.1. Historia de R
+  1.2 Instalación de R
+  1.3 R, R commander y RStudio
+  1.4 Bibliografía
 </div>
 ---
 - Fundamentos de R y programación
