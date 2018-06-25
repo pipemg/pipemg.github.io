@@ -27,16 +27,6 @@ layout: false
   - Crear una función en R
   - Ayuda, manuales y ejemplos
   - Manejo de archivos del sistema
-]
-
----
-name: Temario2
-layout: false
-.left-column[
-  ## ¿Temario de esta presentación
-
-]
-.right-column[
 - Variables y estructuras de datos
   - El vector como unidad básica de R
   - Función concatenar
@@ -47,6 +37,7 @@ layout: false
   - Operaciones sobre vectores
   - Listas y sus operaciones
 ]
+
 
 
 ---
