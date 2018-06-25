@@ -118,22 +118,30 @@ R tiene las siguientes características:
 ]
 
 ---
+<br><br>
+<br><br>
 **Why R is Not Enough** 
+
  - The R interpreter is not fast and execution of large amounts of R code can be unacceptably
 slow.
  - R is set up to carry out vectorised computations and not scalar (element-by-element)
 computations. 
  - R was designed to hold its data “in core” and this places severe limitations of the
 size of problem which can be dealt with.
+<br><br>
 
 **Directions for Future Work**
+
  - Wait for faster machines.
  - Introduce more vectorisation and take advantage of multicores.
  - Make changes to R to eliminate bottlenecks.
  - Sweep the page clean and look at designs for new languages.
 
-R: Lessons Learned, Directions for the Future
-Ross Ihaka
+
+
+.footnote[.red[*]  R: Lessons Learned, Directions for the Future
+_Ross Ihaka_]
+
 ---
 template: inverse
 
@@ -897,9 +905,9 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
  <br> 
 ```
 > mi_función<-function(varA,varB,varC,...){
-> #AQUÍ VA EL CÓDIGO A EJECUTAR
-> # ... 
-> #AQUÍ HAY MÁS CÓDIGO
+>    #AQUÍ VA EL CÓDIGO A EJECUTAR
+>     # ... 
+>    #AQUÍ HAY MÁS CÓDIGO
 > }
 
 ```
@@ -910,10 +918,9 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 
 ```
 <br><br>
-**Ejercicio:** Genera una funcion de fibonacci.
-F_{n}=F_{n-1}+F_{n-2}
-{\displaystyle F_{1}=1,\;F_{2}=1} or {\displaystyle F_{0}=0,\;F_{1}=1.}
-]
+**Ejercicio:** Genera una funcion de fibonacci. <br>
+1. F_{n}=F_{n-1}+F_{n-2}
+2. F_{1}=1,\;F_{2}=1} or F_{0}=0,\;F_{1}=1
 
 
 
@@ -982,11 +989,16 @@ Buscar una función con methdos
 > methods(summary)
 
 ```
-
+Ejercició. Busca la ayuda y el metodo de un test de wilcox
 ```
 > wilcox.test
+> ?wilcox.test
 > methods(wilcox.test)
 
+```
+Ejercició. busca las funciones de R que comienzan con lengt
+```
+> ??lengt
 ```
 ]
 
@@ -1039,7 +1051,7 @@ Buscar una función con methdos
 <br>
 .right-column[
  
-# Para R
+### Para R
 
  - **R-Forge:**  [http://r-forge.r-project.org/](http://r-forge.r-project.org/)
 
@@ -1052,12 +1064,12 @@ Buscar una función con methdos
  - **RSeek**  [(http://www.rseek.org](http://www.rseek.org) 
 
 
-# Para estadística
+### Para estadística
 
- **Probabilidad y Estadistica para ingeniería y ciencias**
- *Warpole &bull; Myers &bull; Myers*
+ -  **Probabilidad y Estadistica para ingeniería y ciencias**
+ *Warpole &bull; Myers &bull; Myers. 9th Ed*
 
-# Para todo
+### Para todo
  - **Google**  [www.google.com](www.google.com) 
 
 ]
@@ -1137,7 +1149,7 @@ Cambiar el directorio actual
 
  Si se quiere ejecutar un codigo determinado desde la terminal se utilza la función **source**:
 
-![/Codes/beers_code.r]
+[beers_code.r](Codes/beers_code.r)
 
 ```
 > source("beers_code.r")
