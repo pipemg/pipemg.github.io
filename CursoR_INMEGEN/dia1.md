@@ -9,22 +9,46 @@ name: Inicio
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion1.pdf)]
 ---
-<div style="text-align: right"> 
-## Temario de esta presentación
-1. Introducción a R
+name: Temario1
+layout: false
+.left-column[
+  ## ¿Temario de esta presentación
+
+]
+.right-column[
+* Introducción a R
   * Historia de R
   * Instalación de R
   * R, R commander y RStudio
   * Bibliografía
-</div>
+]
+
+
 ---
+name: Temario2
+layout: false
+.left-column[
+  ## ¿Temario de esta presentación
+
+]
+.right-column[
 - Fundamentos de R y programación
   - Expresiones y sintaxis en R
   - Funciones en R
   - Crear una función en R
   - Ayuda, manuales y ejemplos
   - Manejo de archivos del sistema
+]
+
+
 ---
+name: Temario3
+layout: false
+.left-column[
+  ## ¿Temario de esta presentación
+
+]
+.right-column[
 - Variables y estructuras de datos
   - El vector como unidad básica de R
   - Función concatenar
@@ -34,8 +58,17 @@ name: Inicio
   - Nombres del vector
   - Operaciones sobre vectores
   - Listas y sus operaciones
+]
+
+
 ---
+name: historia
+layout: false
+.left-column[
 ## Brebe historia
+
+]
+.right-column[
 
 - Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)
 - Se mezcla S y Scheme para generar R en la universidad de Auckland (**R**obert Gentleman & **R**oss Ihaka, 1995)
@@ -45,15 +78,15 @@ name: Inicio
 - Versión mas antigua. Versión 0.49 (23 de abril de 1997)
 - Versión 3.4.0 (21 de abril de 2017)
 
-
-
 ´´
 > contributors()
 ´´
---
+]
 
+---
+name: historia
+layout: false
 <image src="Images/TIOBE_rating.png" width="560px">
-
 
 --
 ## ¿Qué es y por que deberia usarlo?
