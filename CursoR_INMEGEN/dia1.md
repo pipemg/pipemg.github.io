@@ -21,17 +21,6 @@ layout: false
   * Instalación de R
   * R, R commander y RStudio
   * Bibliografía
-]
-
-
----
-name: Temario2
-layout: false
-.left-column[
-  ## ¿Temario de esta presentación
-
-]
-.right-column[
 - Fundamentos de R y programación
   - Expresiones y sintaxis en R
   - Funciones en R
@@ -40,9 +29,8 @@ layout: false
   - Manejo de archivos del sistema
 ]
 
-
 ---
-name: Temario3
+name: Temario2
 layout: false
 .left-column[
   ## ¿Temario de esta presentación
@@ -70,26 +58,28 @@ layout: false
 ]
 .right-column[
 
-- Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)
+- Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)<br>
+
 - Se mezcla S y Scheme para generar R en la universidad de Auckland (**R**obert Gentleman & **R**oss Ihaka, 1995)
    -  R esta escrito en C y Fortran
-   -  GNU General Public License (freely available)
-- Creación del R Development Core Team y el CRAN (1997)
-- Versión mas antigua. Versión 0.49 (23 de abril de 1997)
-- Versión 3.4.0 (21 de abril de 2017)
+   -  GNU General Public License (freely available)<br>
+   
+- Creación del R Development Core Team y el CRAN (1997)<br>
 
-´´
+- Versión mas antigua. Versión 0.49 (23 de abril de 1997)<br>
+
+- Versión 3.4.0 (21 de abril de 2017)<br>
+
+```
 > contributors()
-´´
+```
 ]
 
 ---
 name: historia
 layout: false
-<image src="Images/TIOBE_rating.png" width="560px">
-
---
-## ¿Qué es y por que deberia usarlo?
+<br><br>
+<image src="Images/TIOBE_rating.png" width="900px">
 ---
 name: que_es
 layout: false
