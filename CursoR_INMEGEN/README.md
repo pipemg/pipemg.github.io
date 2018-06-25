@@ -3,7 +3,7 @@ Este repositorio tiene el objetivo de proporcionar las presentaciones e informac
 
 El temario del curso incluye lo siguiente:
 
-[Presentaci\'on 1](Presentación1.html)
+[Presentación 1](http://pipemg.github.io/CursoR_INMEGEN/Presentacion1.html)
 * Introducción a R 
   - Historia de R
   - Instalación de R
