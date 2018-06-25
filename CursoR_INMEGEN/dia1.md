@@ -7,14 +7,16 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/tema1.pdf)]
+.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion1.pdf)]
 ---
+<div style="text-align: right"> 
 ## Temario de esta presentación
 - Introducción a R
   - Historia de R
   - Instalación de R
   - R, R commander y RStudio
   - Bibliografía
+</div>
 ---
 - Fundamentos de R y programación
   - Expresiones y sintaxis en R
@@ -42,6 +44,8 @@ name: Inicio
 - Creación del R Development Core Team y el CRAN (1997)
 - Versión mas antigua. Versión 0.49 (23 de abril de 1997)
 - Versión 3.4.0 (21 de abril de 2017)
+
+
 
 ´´
 > contributors()
