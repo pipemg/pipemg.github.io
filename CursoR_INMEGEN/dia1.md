@@ -108,6 +108,8 @@ R tiene las siguientes características:
 ]
 
 ---
+name: que_es
+layout: false
 <br><br>
 <br><br>
 **Why R is Not Enough** 

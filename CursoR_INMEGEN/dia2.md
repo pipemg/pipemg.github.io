@@ -7,1111 +7,899 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion1.pdf)]
+.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion2.pdf)]
+
 ---
-<div style="text-align: right"> 
-## Temario de esta presentación
-- Introducción a R
-  - Historia de R
-  - Instalación de R
-  - R, R commander y RStudio
-  - Bibliografía
-</div>
+## Descripción de Datos en Estadística
 ---
-- Fundamentos de R y programación
-  - Expresiones y sintaxis en R
-  - Funciones en R
-  - Crear una función en R
-  - Ayuda, manuales y ejemplos
-  - Manejo de archivos del sistema
----
-- Variables y estructuras de datos
-  - El vector como unidad básica de R
-  - Función concatenar
-  - Generadores de secuencias
-  - Acceso a elementos de un vector
-  - Modificación de elementos de un vector
-  - Nombres del vector
-  - Operaciones sobre vectores
-  - Listas y sus operaciones
----
-## Brebe historia
 
-- Creación de S por parte de AT&T en Nueva Jersey ( John Chambers & Rick Becker)
-- Se mezcla S y Scheme para generar R en la universidad de Auckland (**R**obert Gentleman & **R**oss Ihaka, 1995)
-   -  R esta escrito en C y Fortran
-   -  GNU General Public License (freely available)
-- Creación del R Development Core Team y el CRAN (1997)
-- Versión mas antigua. Versión 0.49 (23 de abril de 1997)
-- Versión 3.4.0 (21 de abril de 2017)
-
-
-
-´´
-> contributors()
-´´
---
-
-<image src="Images/TIOBE_rating.png" width="560px">
-
-
---
-## ¿Qué es y por que deberia usarlo?
----
-name: que_es
 layout: false
 .left-column[
-  ## ¿Qué es R?
-<br><br>
-<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Rlogo-unofficial-vector-editable.svg/725px-Rlogo-unofficial-vector-editable.svg.png" width="160px">
+  ## ¿Tipos de Datos?
 ]
 .right-column[
+<br><br><br><br>
+**_datum_** se refiere a la información concreta, cualquier pieza de información colectada.
 
-**R** es un **lenguaje de programación** para la **estadística** y el **modelado de datos**.
-	
-R tiene las siguientes características:
+Un **"Data set"** o set de datos es una colección de datos relacionadas de alguna forma.
 
-- Es elegante y versatil
+Se definen 5 tipos de datos:
 
-- Sintaxis diseñada para trabajar con datos
+ - Cuantitativos
 
-- Capacidades gráficas altamente potentes
+ - Cualitativos
 
-- Facil y eficiente manipulación de datos
+ - Logicos
 
-- Contiene herramientas enfocadas a las areas biológicas. 
+ - Faltantes
 
-.footnote[.red[*]  _R es lo que requieres para ciencias biológicas_]
+ - Otros tipos
+
+]
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ###  - Datos cuantitativos
+]
+.right-column[
+<br><br><br><br><br><br>
+Son datos que se pueden medir o son asociados a alguna cantidad. 
+
+Se subdividen en:
+
+ - Datos discretos
+
+ - Datos continuos (datos escalares o de intervalos)
+<br><br><br><br>
+
+**Nota** Cuando no se sabe que tipo de dato es, considerese continuo
+
 ]
 
 ---
-**Why R is Not Enough** 
- - The R interpreter is not fast and execution of large amounts of R code can be unacceptably
-slow.
- - R is set up to carry out vectorised computations and not scalar (element-by-element)
-computations. 
- - R was designed to hold its data “in core” and this places severe limitations of the
-size of problem which can be dealt with.
 
-**Directions for Future Work**
- - Wait for faster machines.
- - Introduce more vectorisation and take advantage of multicores.
- - Make changes to R to eliminate bottlenecks.
- - Sweep the page clean and look at designs for new languages.
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos (Ejemplo)
+]
+.right-column[
+<br><br><br><br><br><br>
+Ejemplo Precipitaciones anuales en ciudades de EE.UU. El vector contiene la cantidad promedio de lluvia (en pulgadas) para cada una de las 70 ciudades de los Estados Unidos.
 
-R: Lessons Learned, Directions for the Future
-Ross Ihaka
+```
+> str(precip)
+```
+<br><br>
+```
+> precip[1:4]
+```
+
+**Ejercicio**
+
+Describir los datos dentro de los dataset "rivers" y "discoveries"
+
+]
+
+
 ---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de puntos
+]
+.right-column[
+<br><br><br><br>
+
+Una de las cosas básicas que debe de manejarse cuando se describen los datos son gráficas que nos permitan tener mas información.
+
+
+ 1. Graficas de puntos (Strip charts). Existen 3 metodos:
+   - overplot
+   - jitter
+   - stack
+
+```
+> stripchart(precip, xlab = "rainfall") 
+```
+<br>
+```
+> stripchart(rivers, method = "jitter", xlab = "length")
+```
+<br>
+```
+> stripchart(discoveries, method = "stack", xlab = "number")
+```
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Histogramas
+]
+.right-column[
+<br><br><br><br>
+
+
+ 1. Histogramas (Bar Graphs)
+
+Normalmente se usan para datos continuos y se requiere decidir un conjunto de clases o compartimientos que dividen la linea real en un conjunto de cajas a los cuales caen los valores.
+
+```
+> hist(precip, main = "Histograma de lluvias en U.S.A")
+```
+<br>
+```
+> hist(precip, freq = FALSE, main = "") #Frecuencias Relativas
+```
+
+<br>
+<br>
+Consideraciones:
+ - La gráfica depende de los "bins" elegidos
+ 
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Histogramas
+]
+.right-column[
+<br><br><br><br>
+
+**Ejercicios**
+
+ - Genera dos histogramas de los datos de precipitación, el primero con 10 divisiónes y el segundo con 200
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Ejercicios
+]
+.right-column[
+<br><br><br><br>
+
+**Ejercicios**
+
+ - Genera dos histogramas de los datos de precipitación, el primero con 10 divisiónes y el segundo con 200
+
+
+
+```
+> hist(precip, breaks = 10, main = "")
+```
+<br>
+```
+> hist(precip, breaks = 200, main = "")
+```
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de tallo
+]
+.right-column[
+<br><br><br><br>
+
+**Definición**
+
+Las Gráficas de tallo tienen dos partes básicas: tallos y hojas.
+El último dígito de los valores de datos se toma como una hoja y el (los) dígito (s) principal (es) se toma (n) como
+tallos.
+
+
+**Ejemplo**
+UKDriverDeaths serie de datos en el tiempo que contiene las muertes en accidentes automovilisticos o con lesiones fuertes en Reino Unido de Enero de 1969 a Diciembre de 1984. ?UKDriverDeaths.
+
+```
+> install.packages("aplpack")
+
+> library(aplpack)
+
+> stem.leaf(UKDriverDeaths, depth = FALSE)
+
+```
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de Índice
+]
+.right-column[
+<br><br><br><br>
+
+Estas se realizan utilizando la función **plot** y son buenas para visualizar datos que han sido ordenados, cuando los datos fueron medidos a traves del tiempo.
+
+Es una gráfica de dos dimensiones que tiene una variable índice (x) y una variable medida (y). 
+
+Existen los siguientes métodos:
+
+ - picos (spikes).  code: (type = "h")
+
+ - puntos (points) code: (type = "p"=)
+
+
+
+**Ejemplo**
+Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el tiempo. ?LakeHuron
+
+
+```
+> plot(LakeHuron, type = "h")
+
+```
+<br>
+
+
+
+```
+> plot(LakeHuron, type = "p")
+
+```
+
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+]
+.right-column[
+<br><br><br><br>
+Datos **no numericos** o que no representan cantidades numericas.
+
+Ej. Nombre, genero, grupo etnico, estado socioeconomico, numero de seguridad social, licencia, ...
+
+Algunos datos parecen ser cuantitativos pero no lo son por que no representan cantidades numericas medibles ni conservan reglas matemáticas.
+
+Ej. Tamaño del pie de una persona (si sumas el tamaño del pie de dos personas no tiene sentido)
+
+La información cuantitativa que se puede utilizar para subdividir información en diversas categorias se le llama **factor** 
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Presentación de Datos
+]
+.right-column[
+<br><br><br><br>
+
+**Tablas** 
+Una forma de mostrar resumenes de datos estadisticos es con el uso de las tablas. 
+
+
+```
+> str(state.abb)
+```
+
+Frecuencias absolutas
+
+```
+> Tbl <- table(state.division)
+> Tbl
+```
+
+Frecuencias Relativas
+
+```
+> Tbl/sum(Tbl)
+```
+
+```
+> Tbl/sum(Tbl)
+```
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Descripción
+]
+.right-column[
+<br><br>
+
+
+Los datos de state.region enumera cada uno de los 50 estados y la región a la que pertenece, ya sea en el noreste, sur, norte central u oeste.
+
+```
+> str(state.region)
+```
+
+```
+> state.region[1:5]
+```
+
+```
+> str(state.abb)
+```
+
+Frecuencias absolutas
+
+```
+> Tbl <- table(state.division)
+> Tbl
+```
+
+Frecuencias Relativas
+
+```
+> Tbl/sum(Tbl)
+```
+
+```
+> prop.table(Tbl) # same thing
+```
+
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Gráficas de Barras
+]
+.right-column[
+<br><br><br><br>
+
+
+Un gráfico de barras es el análogo de un histograma para datos categóricos. Se muestra una barra
+Para cada nivel de un factor, con las alturas de las barras proporcionales a las frecuencias de observaciones
+Pertenecientes a las respectivas categorías. Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
+
+```
+> barplot(table(state.region), cex.names = 0.5)
+```
+
+```
+> barplot(prop.table(table(state.region)), cex.names = 0.5)
+```
+
+]
+
+
+
+---
+
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Diagramas de Pareto
+]
+.right-column[
+<br><br><br><br>
+
+
+Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
+
+```
+> library(qcc)
+```
+
+```
+> pareto.chart(table(state.division), ylab = "Frequency")
+```
+
+]
+
+
+---
+
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Gráfica de puntos
+]
+.right-column[
+<br><br><br><br>
+
+
+Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla. Los gráficos de puntos son tan compactos que es fácil graficar interacciones multi-variables muy complicadas en un gráfico.
+
+```
+x <- table(state.region)
+```
+
+```
+> dotchart(as.vector(x), labels = names(x))
+```
+
+]
+
+
+
+---
+
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Gráfica de pastel
+]
+.right-column[
+<br><br><br><br>
+
+
+These can be done with R and the R Commander, but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas.
+
+```
+> slices <- c(10, 12,4, 16, 8)
+> lbls <- c("US", "UK", "Australia", "Germany", "France")
+
+```
+
+```
+> pie(slices, labels = lbls, main="Pie Chart of Countries"
+```
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Gráfica de pastel
+]
+.right-column[
+<br><br><br><br>
+
+
+These can be done with R and the R Commander, but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas.
+
+```
+> slices <- c(10, 12,4, 16, 8)
+> lbls <- c("US", "UK", "Australia", "Germany", "France")
+
+```
+
+```
+> pie(slices, labels = lbls, main="Pie Chart of Countries"
+```
+]
+
+
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones de datos
+]
+.right-column[
+<br><br><br><br>
+
+**Centroide:** Conjunto de datos está asociado con un número que representa una tendencia media o general de los datos.
+
+La **Dispersión** de un conjunto de datos está asociada con su variabilidad; Los conjuntos de datos con una dispersión grande tienden a cubrir un gran intervalo de valores, mientras que los conjuntos de datos con dispersión pequeña tienden a agruparse fuertemente alrededor de un valor central.
+
+**Forma:** Forma exhibida por una pantalla gráfica asociada. La forma puede decirnos mucho sobre cualquier estructura subyacente a los datos, y puede ayudarnos a decidir qué procedimiento estadístico debemos usar para analizar los.
+
+]
+
+---
+layout: false
+.left-column[
+  ## Distribuciones de datos
+  ### Forma
+]
+.right-column[
+<br><br>
+
+
+**Simetría** y **asimetría** 
+   - **positivamente sesgada**
+   - **negativamente sesgada**
+
+<img src="Images/tipos-asimetria.jpg", width=500px>
+
+La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. 
+
+<img src="Images/curtosis.jpg", width=500px>
+
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+   ### Medidas de Forma
+]
+.right-column[
+<br><br><br><br>
+
+
+La **asimetría** (Fisher) de la muestra, se define por la fórmula
+
+<img src="http://www.universoformulas.com/imagenes/formulas/estadistica/descriptiva/coeficiente-asimetria-fisher.jpg" width=400px>
+
+donde S es la desviación estandar (o tipica)
+
+<img src="http://www.universoformulas.com/imagenes/estadistica/descriptiva/coeficiente-asimetria-fisher.jpg" width=400px>
+
+]
+---
+
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+   ### Medidas de Forma
+]
+.right-column[
+<br><br><br><br>
+
+
+La **curtosis**  de la muestra, se define por la fórmula
+
+<img src="http://www.universoformulas.com/imagenes/formulas/estadistica/descriptiva/curtosis.jpg" width=400px>
+
+donde S es la desviación estandar (o tipica)
+
+<img src="http://www.universoformulas.com/imagenes/estadistica/descriptiva/curtosis.jpg" width=400px>
+
+]
+
+---
+
+
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+   ### Medidas de Forma
+]
+.right-column[
+<br><br>
+
+Asimetria
+ 
+```
+> library(e1071)
+> skewness(discoveries)
+```
+
+```
+> 2 * sqrt(6/length(discoveries))
+```
+
+**Nota** si 2 * sqrt(6/n) < skewness(x) => existe un sesgo dado el signo del calculo.
+
+
+Curtosis
+ 
+```
+> kurtosis(UKDriverDeaths)
+```
+
+```
+> 4 * sqrt(6/length(UKDriverDeaths))
+```
+
+**Nota** abs(4 * sqrt(6/n)) < kurtosis(x) => presenta curtosis
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+]
+.right-column[
+<br><br><br><br>
+
+Utilizando R. Calcula las siguientes cosas del vector 
+
+```
+x<-round(runif(20, min=1, max=100))
+
+- rango
+- media
+- mediana/media recortada
+- quantiles/quintiles/septiles
+- varianza
+- desviación estandar
+
+
+**Nota Rcmdr**
+
+Statistics > Summaries > Numerical Summaries
+
+calculamos los cuantiles automaticamente
+
+]
+---
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+  ### Rangos intercuantiles y MAD
+]
+.right-column[
+<br><br><br><br>
+
+suceptibilidad de la media, mediana a valores extremos.
+
+Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25}
+
+
+Otro método más robusto que el IQR es la Media de la desviación absoluta (**MAD**).
+
+1. Calculamos la media (prom) 
+ 
+2. mediana(|x{i} - prom(X)|) , para toda i
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Observaciones Extremas
+]
+.right-column[
+<br><br><br><br>
+
+Problemas que pueden implicar estimaciones exageradas e "inestabilidad" estadística. Podemos considerar que estos datos pueden ser:
+
+ - Error tipográfico (typoo)
+
+ - Observaciónes que no eran para el estudio. (Ej. Complicaciones medicas)
+
+ - Indican un fenomeno o una tendencia más profunda
+
+]
+
+
+
+---
+
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+   ### Grafica de caja
+]
+.right-column[
+<br><br>
+
+Estas gráficas son buenas para visualizar mucha información descriptiva de nuestros datos al mismo tiempo:
+
+**Centroide** (estimada por la mediana)
+
+**Dispersión**
+
+**Forma**
+
+**Observaciones extremas**
+
+**Outliers** Observaciones que pasan 1.5 veces el tamaño de la caja para cualquier extremo. 
+
+
+Para observar los valores outliers
+
+```
+> boxplot.stats(rivers)$out #1.5 default
+```
+```
+> boxplot.stats(rivers, coef = 3)$out #coef=3
+```
+
+```
+> boxplot(rivers, horizontal=T)
+
+```
+
+
+
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+   ### Z-value
+]
+.right-column[
+<br><br>
+
+Valor estandarizado, cuando queremos comparar datos en escala que es independiente a la medida.
+
+Dado X=x[1], x[2], x[3], ... ,x[n] los z-scores son z[1], z[2],...z[n] se ven definidos como
+
+z[i]=(x[i]-median(x))/s 
+
+donde s es la sd()
+
+
+```
+> ?scale
+
+```
+]
+
+---
+
+
+
+name: last-page
 template: inverse
 
-## ¿Dónde comienzo?
----
-name: instalacion
+## Datos Multivariados y DataFrames
 
+
+
+---
+
+
+layout: false
 .left-column[
-  ## Instalación
-### - Windows
-]
-.right-column[
-Lo primero es identificar donde descargamos R para instalarlo: 
-
-```
-https://cran.r-project.org/bin/windows/base/
-```
-<image src="Images/R_for_windows.png" width="590px">
-]
----
-name: instalacion2
-
-.left-column[
-  ## Instalación
-### - MAC
-]
-.right-column[
-Lo primero es identificar donde descargamos R para instalarlo: 
-
-```
-https://cran.r-project.org/bin/macosx/
-```
-<image src="Images/R_for_MAC.png" width="590px">
-]
----
-name: instalacion3
-
-.left-column[
-  ## Instalación
-### - Linux
-]
-.right-column[
-
-Abrimos una terminal de linux (Ctrl + Alt + T) y dentro de esta, dependiendo del sistema operativo:
-
-<image src="Images/ubuntu-logo.png" width="18px"> Ubuntu
-```remark
-$ sudo apt-get install r-base
-```
-<image src="Images/fedora.png" width="18px"> Fedora
-```remark
-$ su -c 'yum install R'
-```
-<image src="Images/archlinux.png" width="18px"> Arch Linux
-```remark
-$ sudo pacman -S r
-```
-]
----
-
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Ejecutar desde el cmd/terminal 
-  ### - Entornos graficos
-]
-.right-column[
-#### Desde Windows:
-
-- Opcion A:
-
- Inicio > Simbolo del sistema
-
-- Opcion B:
-
- Buscar > CMD
-
-
-#### Desde MAC/Linux:
-1. Se abre la terminal
-
-
-## Se ejecuta:
-```remark
-$ R
-```
-]
-
----
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Entornos graficos
-]
-.right-column[
-### Rstudio
-
-Ambiente gráfico integrado, se basa en diversos compartimentos:
- - Consola para editar codigo
- - Ventana de datos e historial
- - Ventana de la Consola
- - Ventana de gráficas y archivos
-
-Permite importar y ver los datos de una manera gráfica 
-
-<image src="http://www.sthda.com/sthda/RDoc/images/rstudio.png" width="380px" align="middle">
-]
----
-.left-column[
-<br>
-<image src="https://www.rstudio.com/wp-content/uploads/2016/09/RStudio-Logo-Blue-Gray-250.png" width="150px" align="middle">
-]
-.right-column[
-<br> <br>
-
-Importando desde el ambiente grafico
-
-
-<image src="https://support.rstudio.com/hc/en-us/article_attachments/206327917/data-import-environment.png" width="550" align="rigth">
-
-]
-
----
-
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Entornos graficos
-]
-.right-column[
-### R commander (Rcmdr)
-
-Es una inferfaz gráfica que cuenta con botones y menus extensos, las caracteristicas son
-
- - Contiene codigos precargados (SPSS, SAS o Stata)
- - No provee acceso directo a la linea de comandos de R
- - No es enriquecido gráficamente, contiene 3 paneles:
-   - Ventana del script (código ejecutandose)
-   - Ventana de Salida (Imprime los resultados)
-   - Ventana de Mensajes(Errores/advertencias/notas) 
-  
-
-<image src="http://www.unige.ch/ses/sococ/cl/r/rcommander.menu.png" width="380" align="left">
-]
----
-.left-column[
-<br>
-<image src="http://4.bp.blogspot.com/-bVDv8F9VdLY/T0yobXtHoEI/AAAAAAAADLk/QVue51r1Hbg/s1600/logo+Rcommander.png" width="100" align="left">
-]
-.right-column[
-<br>
-Utilizando las herramientas predefinidas
-
-
-<image src="Images/rcomander_analysis.jpg" width="550" align="rigth">
-
-]
-
----
-
-
-template: inverse
-
-## ¿Cuál usar y como instalarlo?
----
-.left-column[
- ## Comparación
+  ## Datos multivariados
+   ### Introducción
 ]
 .right-column[
 <br><br>
-RStudio
+ 
+Los estudios estadísticos requieren mas de un factor o medición asociado a cada objeto, para esto utilizamos otra **estructura de datos**.
 
-- Provee acceso directo al codigo en R.
+Para esto existen dos tipos de estructuras en R:
 
-- Uso para proyectos que requieren interacción directa con el código o manipulacion de datos compleja
+ - Matrices
+ - DataFrames
 
-Rcmdr
+Ambas son estructuras arreglas en dos dimensiones en forma rectangular y estaremos considerando que (a menos que se indique lo contrario):
 
-- Simple y amable para el usuario sobre todo en analisis estadísticos y diagnósticos.
+  - Las lineas son objetos
+  - Las columnas contienen diferentes mediciones o factores
 
-- Uso para analisis tradicionales, datos convencionales y tests estadísticos.
+Ejemplo:
 
-<br>
-**NOTA:** Es posible ejecutar Rcmdr desde R-Studio.
+```
+> x <- 5:8
+> y <- letters[3:6]
+> z <- 1:4*pi
+> A <- data.frame(v1 = x, v2 = y, v3=z)
+```
 ]
 
 ---
+
+
+
+layout: false
 .left-column[
-  ## Instalación de R-Studio
+  ## Datos multivariados
+   ### Acceso a DataFrames
 ]
 .right-column[
-RStudio tiene diferentes versiones:
- - Version gratis para escritorio
- - Version de paga para escritorio
- - Version gratis para servidor
- - Version pro para servidor
-
-Para descargarlo entramos a 
-
-```
-https://www.rstudio.com/products/rstudio/download/
-```
-<image src="Images/Rstudio_instalador.png" width="550" align="rigth">
-]
----
-.left-column[
-  ## Instalación de Rcmdr 
-<br>
-<image src="Images/r-seleccionar-repositorio.png" width="150">
-
-]
-.right-column[
-
-Ejecutamos R
-
-```remark
-[usuario@equipo ~]$ R
-```
-
-Instalamos el paquete de Rcmdr
-
-```remark
-> install.packages("Rcmdr",dependencies=TRUE)
-```
-
-Seguimos las instrucciones de la salida
-
-```remark
-Aviso en install.packages("Rcmdr", dependencies = TRUE) :
-'lib = "/usr/lib/R/library"' is not writable
-Would you like to use a personal library instead? (y/n) y
-Would you like to create a personal library
-~/R/x86_64-unknown-linux-gnu-library/2.15
-to install packages into? (y/n) y
-```
-
-Se abrirá una ventana para seleccionar el repositorio de dónde descargar los paquetes necesarios. Seleccionamos el que queramos y después de aceptar empezará a descargar los paquetes.
-
-```remark
-chooseCRANmirror(graphics=FALSE) # chooseCRANmirror(81)
-
-
-```
-]
-
----
-.left-column[
-  ## Ejecutar Rcmdr 
-
-]
-.right-column[
-
-Ejecutamos R
-
-```remark
-[usuario@equipo ~]$ R
-```
-
-Cargamos la libreria de Rcmdr y ejecutamos
-
-```remark
-> library("Rcmdr")
-```
-<image src="Images/r-commander-gui.jpg" width="600">
-
-]
-
----
-
-name: code_start
-template: inverse
-
-## Mis primeros pasos en R
-
-<image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png">
-
----
-.left-column[
-  ## Sintaxis
-  ### - Aritmetica
-
-]
-.right-column[
-
-  <br><br><br>
-  ```
-  > 1+2 # Sumar 1 más 2 
- ```
-
-  <br>
-
-  ```
-  > 6*5+3 # 6 por nueve añadir 3
-  ```
-  <br>
-
-  ```
-  > 2**3 #2 elevado al exponente 3
-  > 2^8 #2 elevado al exponente 8
-  ```
-
-  <br>
-
-  ```
-  > log(exp(3)) # e elevado a la 3 y logaritmo del resultado anterior
-  > log10(1000) #Logaritmo de 1000 base 10
-  > log2(10**20) # Logaritmo de 10 elevado a la 20 base 10
-  ```
-]
-
-
----
-.left-column[
-  ## Sintaxis
-  ### - Aritmetica
-
-]
-.right-column[
-
-  <br><br><br>
-  ```
-  > 10/3
-  > options(digits =16) #ver mas digitos
-  > 10/3 ```
-
-  <br>
-
-  ```
-  > pi #numeros irracionales
-  ```
-  <br>
-
-  ```
-  > exp(1)
-  ```
-
-]
-
-
----
-.left-column[
-  ## Sintaxis 
-  ### - Aritmetica
-  ### - Texto
-]
-.right-column[
-  <br><br><br>  <br><br><br>
-  ```
-  > "Esto es una cadena de texto!"
- ```
-<br><br><br>
-  ```
-  > palabras<-c("Esto", "es", "un", "conjunto", "de", "palabras", "en", "R")
- ```
-]
----
-.left-column[
-  ## Sintaxis en R
-  ### - Aritmetica
-  ### - Texto
-  ### - Operaciones Logicas
-]
-.right-column[
-  <br><br><br>
-  ```
-  >  3 > 4 # ¿Es 3 mayor que 4?
- ```
-  <br><br><br>  
-  ```
-  >  2+2 == 5 # ¿2 más dos es igual a 5?
- ```
-
-  <br><br><br>  
-  ```
-  >  T == TRUE #¿Es T igual a TRUE?
- ```
-]
-
----
-.left-column[
-  ## Sintaxis en R
-  ### - Aritmetica
-  ### - Texto
-  ### - Operaciones Logicas
-  ### - No definidos
-]
-.right-column[
-  <br>  
-  ```
-  >  sqrt(-1)
- ```
-  <br>  
-  ```
-  >  sqrt(-1+0i)
- ```
-
-  <br>  
-  ```
-  >  sqrt(as.complex(-1))
- ```
-
-
-**NaN** Not a Number
-]
-
----
-
-name: code_start
-template: inverse
-
-
-## Variables
-
-
----
-
-.left-column[
-  ## Variables
-  ### - Definición
-]
-
-<br>
-<br>
-.right-column[
-Definición de una variable
-
-**Estructura de datos** que pueden cambiar de contenido a lo largo de la ejecución de un programa.
-
-Una variable requiere
-  - Un espacio en el sistema de almacenaje
-
-  - Un identificador (nombre) asociado a ese espacio
-
-  - Cantidad o informacion ya sea conocida o desconocida (Valor)
-
-
-]
-
-
-
----
-.left-column[
-  ## Variables
-  ### - Definición
-  ### - Tipos
-]
-
-<br>
-.right-column[
-Tipos de Variables:
-
-
- - **Tipo de dato cuantitativo.**
-  - Numerico entero (Discreto)
-   - 0, 1, -2, 3, 10, ...
-  - **Numerico flotante/doble (Continuo)**
-   - 12.1, 200, 5.2E10, 0.1232, pi, e, sqrt(2)
-
-
- - **Tipo de dato cualitativo(categórico).**
-  -  Tipo de dato de texto 
-	```
-       > str(state.abb)
-       > "Se pueden usar simbolos.,-.$%&/()="
-	```
-
- - **Tipo de dato lógico.**
-	```
-       > TRUE/FALSE, T/F 
-	```
-
- - **Datos faltantes.**
-	```
-       > NA
-       > NaN
-	```
-]
-
-
----
-
-.left-column[
-  ## Variables
-  ### - Definición
-  ### - Tipos
-  ### - Creación
-]
-
-.right-column[
-Crea una variable que tenga el valor 42 que se llame a y dividela entre 3
-
-```
-> 1 <- 42 #a = 42  
-> var_1/3
-```
-
-Crea una cadena de texto y ponla en la variable txt
-
-```
-> txt <- "Arrg, Soy un pirata"
-
-```
-Asigna un valor de VERDADERO a una variable logic
-
-```
-> z <- TRUE
-```
-
-Datos Faltantes
-
-```
-> x <- c(3, 7, NA, 4, 7)
-> y <- c(5, NA, 1, 2, 2)
-> x + y
-> sum(x)
-> sum(x, na.rm = TRUE)
-> is.na(x)
-```
-]
-
----
-.left-column[
-  ## Variables
-  ### - Definición
-  ### - Tipos
-  ### - Creación
-]
-
-<br>
-<br>
-.right-column[
-
-Imprime los valores de txt, logic y de a
-
-<br>
-
-```
-> txt
-
-```
-
-<br>
-
-```
-> logic
-
-```
-
-<br>
-```
-> a
-
-```
-
-]
-
----
-.left-column[
-  ## Variables
-  ### - Definición
-  ### - Tipos
-  ### - Creación
-]
-
-<br>
-<br>
-.right-column[
-Los nombres de las variables solo pueden tener (Nombres significativos):
-
- - [a-zA-Z]+
-
- - [0-9]+
-
- - [._]+
-
-Que cosas **NO** pueden tener:
-
- - Numeros para iniciar
-
- - Simbolos seguidos de numeros (Ej. A+3)
-
- - Solamente numeros
-
- - Solamente simbolos
-]
-
-
----
-.left-column[
-  ## Vectores
-  ### - Introducción a vectores
-
-]
-
-<br>
-<br>
-.right-column[
-
- Unidad básica de variable en R.
-
-Introducir 74,31,95,61,76,34,23,54,96 en R
-
- 1. Funcion **c**
-
-```
-x <- c(74,31,95,61,76,34,23,54,96) #Numerico
-
-```
-
-```
-x <- c("74",31,95,61,76,34,23,54,96) #String
-
-```
-<br>
- 2. Funcion **scan** 
-
-```
-x <- scan() # empty to end
-
-```
-]
-
----
-.left-column[
-  ## Vectores
-  ### - Introducción a vectores
-
-]
-
-<br>
-<br>
-.right-column[
-
- 3. Repeated data; Regular patterns
-
-
-```
->  seq(from = 1, to = 5)
-
-```
-<br>
-
-```
->  x <- seq(from = 2, by = -0.1, length.out = 20)
->  y <- seq(from = 2, to= 100, by =  5)
-
-```
-<br>
-
-```
->  1:5
-
-```
-
-]
-
-
----
-.left-column[
-  ## Vectores
-  ### - Introducción a vectores
-  ### - Indexación
-
-]
-
-<br>
-
-.right-column[
-
-
-```
-> x[1]
-
-```
-
-<br>
-
-```
-> x[c(1, 3, 4, 8)]
-
-```
-<br>
-
-```
-> x[-c(1, 3, 4, 8)]
-
-```
-
-<br>
-
-```
->LETTERS[1:5] 
-```
-<br>
-```
-letters[-(6:24)]
-```
-]
-
-
----
-.left-column[
-  ## Funciones
-  ### - Definición
-
-]
-
-<br>
-<br>
-.right-column[
-
-Definición:
-
-**Subrutina** o **subprograma** (también llamada procedimiento, función o rutina), que se presenta como un subalgoritmo que forma parte del algoritmo principal, el cual permite resolver una tarea específica.
-
-
-<image src="Images/funcion.png" width="400">
-
-]
-
-
-
----
-.left-column[
-  ## Funciones
-  ### - Definición
-  ### - Ejemplos
-
-]
-
-<br>
-<br>
-.right-column[
-
- <br> 
-```
-> sum(1,2,6,7,9)
-
-```
-Algunas funciones requieren argumentos los cuales tienen nombres determinados
-
-```
-> rep("Yo ho! un pirata soy", times=3)
-
-```
 <br><br>
-**Ejercicio:** Obten la raiz de 16 utilizando la función sqrt
+
+```
+> A[3, ]
+```
+
+<br>
+```
+> A[1, ]
+```
+
+<br>
+```
+> A[, 2]
+```
+<br>
+
+```
+> names(A)
+```
+<br>
+```
+> A$v1
+```
+
 ]
+
 
 ---
 
+
+
+layout: false
 .left-column[
-  ## Funciones
-  ### - Definición
-  ### - Ejemplos
-  ### - Creación
-
+  ## Datos multivariados
+   ### Matrices
 ]
-
-<br>
-<br>
 .right-column[
-
- <br> 
-```
-> mi_función<-function(varA,varB,varC,...){
-> #AQUÍ VA EL CÓDIGO A EJECUTAR
-> # ... 
-> #AQUÍ HAY MÁS CÓDIGO
-> }
-
-```
-Algunas funciones requieren argumentos los cuales tienen nombres determinados
-
-```
-> rep("Yo ho! un pirata soy", times=3)
-
-```
 <br><br>
-**Ejercicio:** Genera una funcion de fibonacci.
-F_{n}=F_{n-1}+F_{n-2}
-{\displaystyle F_{1}=1,\;F_{2}=1} or {\displaystyle F_{0}=0,\;F_{1}=1.}
-]
 
-
-
----
-.left-column[
-  ## Funciones
-  ### - Definición
-  ### - Ejemplos
-  ### - Help, example
-
-]
-
-<br>
-<br>
-.right-column[
+```
+> A = matrix( 
++   c(2, 4, 3, 1, 5, 7), # the data elements 
++   nrow=2,              # number of rows 
++   ncol=3,              # number of columns 
++   byrow = TRUE)        # fill matrix by rows 
  
-De todas las funciones, la que debemos de considerar como básica es **help**
-
-```
-> help (sum)
-
-```
-<br>
-```
-> ?sum
-```
-<br>
-
-Otra es la función **example**
-<br>
-
-```
-> example(min)
-
-```
-
-<br><br>
-**Ejercicio:** Obten el help de la función rep
-]
-
----
-
-.left-column[
-  ## Funciones
-  ### - Definición
-  ### - Ejemplos
-  ### - Help, example
-  ### - Codigo
-
-]
-
-<br>
-<br>
-.right-column[
- 
- Escribe el nombre de una función sin parentesis
-
-```
-> intersect
-
-```
-
-Buscar una función con methdos
-
-```
-> methods(summary)
+> A                      # print the matrix 
 
 ```
 
 ```
-> wilcox.test
-> methods(wilcox.test)
+> dimnames(A) = list( 
++   c("row1", "row2"),         # row names 
++   c("col1", "col2", "col3")) # column names
+``` 
+
 
 ```
-]
+> A[, 2] 
+```
 
+DataFrames vs Matrices:
 
----
-
-.left-column[
-  ## Obtener ayuda
-   ### - Interna
-
-]
-
-<br>
-.right-column[
- 
-
- - **FAQ on R:** [https://cran.r-project.org/doc/FAQ/R-FAQ.html](https://cran.r-project.org/doc/FAQ/R-FAQ.html)
-
- - **FAQ on R for Windows:**  [https://cran.r-project.org/bin/windows/base/rw-FAQ.html](https://cran.r-project.org/bin/windows/base/rw-FAQ.html)
-
- - **R Manuals:** [https://cran.r-project.org/manuals.html](https://cran.r-project.org/manuals.html)
-
- - **R functions (text):**  help("mean"), ?plot
-
- - **HTML Help:** help.start()
-
- - **Search help:** help.seaerch("plo") // ?? plo
- 
- - **search.r-project.org** 
-
- - **Apropos** ?apropos // apropos("lm") // find("cor")  
-
- - **R Help Mailing Lists**  [http://www.r-project.org/mail.html](http://www.r-project.org/mail.html)
+Las **Matrices** son solamente arreglos numericos de dos dimensiones mientras que los **DataFrame** contienen diferentes tipos de valores
 
 
 ]
-
-
-
----
-
-.left-column[
-  ## Obtener ayuda
-   ### - Interna
-   ### - Externa
-
-]
-
-<br>
-<br>
-.right-column[
- 
-# Para R
-
- - **R-Forge:**  [http://r-forge.r-project.org/](http://r-forge.r-project.org/)
-
- - **R Wiki:** [http://wiki.r-project.org/rwiki/doku.php](http://wiki.r-project.org/rwiki/doku.php)
-
- - **R Graph Gallery:**  [http://addictedtor.free.fr/graphiques/](http://addictedtor.free.fr/graphiques/)
-
- - **R Graphical Manual** [http://bm2.genes.nig.ac.jp/RGM2/index.php](http://bm2.genes.nig.ac.jp/RGM2/index.php)
-
- - **RSeek**  [(http://www.rseek.org](http://www.rseek.org) 
-
-
-# Para estadística
-
- **Probabilidad y Estadistica para ingeniería y ciencias**
- *Warpole &bull; Myers &bull; Myers*
-
-# Para todo
- - **Google**  [www.google.com](www.google.com) 
-
-]
-
-
-
-
----
-
-.left-column[
-  ## Obtener ayuda
-   ### - Interna
-   ### - Externa
-   ### - Otros tips
-
-]
-
-<br>
-<br>
-.right-column[
- 
- - **Console:**  Shortcuts (Ej. Ctrl+L)
-
- - **Up Arrow** Para comandos utilizados
-
- - **objects() o ls()** Variables actuales
-
- - **remove(var1,var2,var3) o rm(var1,var2)** Borrar variables
- 
- - **rm(list=ls())** Borrar todo
-
-
-]
-
----
-.left-column[
-  ## Archivos
-  ### - Ver archivos, obtener el directorio y cambiar de directorio
-
-]
-
-<br>
-<br>
-.right-column[
- 
-Con el fin de leer una carpeta dentro del sistema podemos utilizar la función **list.files()**
-
-```
-> list.files()
-```
-
-Localizar el directorio actual
-
-```
-> getwd() #*Get* *W*orking *D*irectory
-```
-
-Cambiar el directorio actual
-```
-> setwd() #*Set* *W*orking *D*irectory
-```
-]
-
-
----
-.left-column[
-  ## Archivos
-  ### - Ver archivos
-  ### - Scripts R
-
-]
-
-<br>
-<br>
-.right-column[
- Cuando se programa en R, se generan documentos llamados **Scripts**, los cuales en general por convención finalizan en .R y pueden ser ejecutados en el momento que se desee.
-
- Si se quiere ejecutar un codigo determinado desde la terminal se utilza la función **source**:
-
-![/Codes/beers_code.r]
-
-```
-> source("beers_code.r")
-```
-]
-
-
 
 ---
 
@@ -1119,6 +907,394 @@ Cambiar el directorio actual
 name: last-page
 template: inverse
 
+## Probabilidad
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Espacio muestral
+]
+.right-column[
+
+Moneda 
+
+```
+> S<-data.frame(pos=c("H","T"))
+```
+
+Dado
+
+```
+> S<-data.frame(pos=c(1:6))
+```
+
+Espacio Muestral de una moneda
+
+```
+> install.packages("prob", dependencies=TRUE)
+
+> library(prob)
+
+> tosscoin(1, makespace=TRUE)
+
+> tosscoin(3, makespace=TRUE)
+
+```
+
+Espacio Muestral de un dado
+
+```
+> rolldie(1, makespace=TRUE)
+
+> rolldie(7, makespace=TRUE)
+
+> rolldie(1, nsides=10, makespace=TRUE)
+
+```
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Espacio muestral
+]
+.right-column[
+<br><br>
+Espacio Muestral de Cartas Inglesas 
+
+```
+> cards(2, makespace=TRUE)
+
+```
+
+Espacio Muestral de Muestreo de urnas
+
+```
+> ?urnsamples
+
+```
+
+```
+> urnsamples(x=c("roja","azul","amarilla","violeta","negra","blanca"), size=2, replace=F, order=F)
+
+```
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Eventos
+]
+.right-column[
+
+<br><br>
+Evento con monedas
+
+```
+>  S <- tosscoin(2, makespace = TRUE)
+>  S[c(2,4),]
+
+```
+
+Evento con cartas
+
+```
+> S <- cards()
+> subset(S, suit == "Heart")
+
+```
+
+```
+> subset(rolldie(3), X1 + X2 + X3 > 16)
+
+```
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Subsets de datos
+]
+.right-column[
+<br><br>
+
+%in%  #busqueda por elementos
+
+```
+> x <- 1:10
+> y <- 8:12
+> y %in% x
+> y[y %in% x]
+
+```
+
+isin 
+
+```
+> isin(x,y) #todo el vector
+
+```
+
+all 
+```
+> x <- 1:10
+> y <- c(3, 3, 7)
+> all(y %in% x)
+
+> isin(x, y)
+
+```
+
+¿Por que isin y all tienen esos resultados?
+
+
+Otras funciones: **countrep** y **isrep**
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Union, Interseccion y diferencia
+]
+.right-column[
+<br><br>
+Elementos que existen en el Evento A, en el Evento B o en ambos
+union(A,B)
+
+```
+> S = cards()
+> A = subset(S, suit == "Heart")
+> B = subset(S, rank %in% 7:9)
+
+> union(A, B)
+```
+Elementos que existen en el Evento A y en el Evento B
+intersect(A,B)
+
+```
+>  intersect(A, B)
+
+```
+
+Elementos que existen en el Evento A pero no en el Evento B
+setdiff(A,B)
+
+```
+> setdiff(A,B)
+```
+
+**Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Probabilidades de frecuencias relativas
+]
+
+.right-column[
+
+<br><br>
+P(A) ≈ observados / posibles ≈ S_n/n
+
+
+Utilizando la ley de Grandes Números:
+
+S_n/n → IP(A) as n → ∞.
+
+```
+> probspace(1:6)
+```
+
+Ej. Moneda no balanceada
+
+
+```
+> probspace(tosscoin(1), probs = c(0.7, 0.3))
+
+```
+**WARNING:** RAM memory y probabilidades infinitecimales 
+
+- Espacio de probabilidad de tirar 100 monedas
+
+- 50 Dados
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo con urnas
+]
+.right-column[
+<br>
+
+<img src="Images/Counting.png", width=500px>
+
+Numeros Factoriales
+
+```
+> factorial(n) 
+```
+
+Coeficiente binomial (Combinaciones) 
+
+
+```
+> choose(n,k)
+
+```
+**WARNING:** RAM memory y probabilidades infinitecimales 
+
+- Espacio de probabilidad de tirar 100 monedas
+
+- 50 Dados
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Problema del cumpleaños
+]
+.right-column[
+<br><br><br>
+¿Calcula la probablidad de que dos personas que esten en el mismo cuarto cumplan años el mismo dia?
+
+```
+> install.packages(pbirthday.ipsur)
+> library(pbirthday.ipsur)
+> g <- Vectorize (pbirthday.ipsur)
+> plot (1:50 , g(1:50) ,
++ xlab = "Number of people in room",
++ ylab = "Prob(at least one match)",
++ main = "The Birthday Problem")
+> abline(h = 0.5)
+> abline(v = 23, lty = 2) # dashed line
+
+```
+
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Probabilidad Condicional
+]
+.right-column[
+<br><br><br>
+
+```
+> library(prob)
+> S <- rolldie(2, makespace = TRUE) # assumes ELM
+> head(S) # first few rows
+
+```
+
+
+```
+> A <- subset(S, X1 == X2)
+> B <- subset(S, X1 + X2 >= 8)
+
+```
+
+```
+> prob(A, given = B)
+> prob(B, given = A)
+
+```
+
+
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Variables Aleatorias
+]
+.right-column[
+<br><br><br>
+
+Definición: Una variable aleatoria X es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
+
+Se define como S todos los posibles resultados de el evento E
+
+**Ejemplo:**
+
+Definimos la variable aleatoria X como "numero de aguilas cuando se tira una moneda".
+
+Por lo tanto si **S** es nuestro espacio muestral y **w** los sucesos posibles 
+
+
+<table border=1px align="center">
+<tr align="center"><th> w∈ S</th><td> AA </td><td> AS </td><td> SA </td><td> SS </td></tr>
+ 
+<tr align="center"  margin=10px><th> X(w) = x </th><td> 2 </td><td>  1 </td><td>  1 </td><td>  0 </td></tr>
+</table>
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Variables Aleatorias
+]
+.right-column[
+<br><br><br>
+
+Escribir una formula que define una variable aleatoria dentro de una función, agregando una columna a un data.frame.
+
+
+```
+> ?transform
+> ?addrv
+```
+
+Ej. Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
+
+```
+> S <- rolldie(3, nsides = 4, makespace = TRUE)
+> S <- addrv(S, U = X1 - X2 + X3)
+> head(S)
+```
+
+Ahora podemos preguntar, ¿Cual es la probabilidad de que U > 6?
+
+```
+Prob(S, U > 6)
+```
+
+]
+---
+
+
+
+name: last-page
+template: inverse
 
 ## That's all folks (for now)!
 
+Slideshow created using [remark](http://github.com/gnab/remark).
