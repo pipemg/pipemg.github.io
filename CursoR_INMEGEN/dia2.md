@@ -13,6 +13,13 @@ name: Inicio
 ## Descripción de Datos en Estadística
 ---
 
+name: last-page
+template: inverse
+
+## Datos y gráficas básicas en R
+
+---
+
 layout: false
 .left-column[
   ## ¿Tipos de Datos?
@@ -33,7 +40,6 @@ Se definen 5 tipos de datos:
 
  - Faltantes
 
- - Otros tipos
 
 ]
 ---
@@ -54,7 +60,7 @@ Se subdividen en:
  - Datos continuos (datos escalares o de intervalos)
 <br><br><br><br>
 
-**Nota** Cuando no se sabe que tipo de dato es, considerese continuo
+**Nota** Cuando no se sabe que tipo de dato cuantitativo es, considerese continuo
 
 ]
 
@@ -109,11 +115,14 @@ Una de las cosas básicas que debe de manejarse cuando se describen los datos so
 <br>
 ```
 > stripchart(rivers, method = "jitter", xlab = "length")
+
 ```
 <br>
 ```
 > stripchart(discoveries, method = "stack", xlab = "number")
 ```
+**Ejercicio** 
+ - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
 
 ]
 
@@ -146,7 +155,6 @@ Normalmente se usan para datos continuos y se requiere decidir un conjunto de cl
 <br>
 Consideraciones:
  - La gráfica depende de los "bins" elegidos
- 
 ]
 
 ---
@@ -160,38 +168,13 @@ layout: false
 .right-column[
 <br><br><br><br>
 
-**Ejercicios**
-
+**Ejercicio** 
+ - Jugar con el valor de ~breaks~ dentro de histograma
+ - probar las diferentes opciones de ~labels~,~freq~, ~col~, ~main, xlab, ylab, xlim, ylim~ y ~labels~. *Revisar el manual*
  - Genera dos histogramas de los datos de precipitación, el primero con 10 divisiónes y el segundo con 200
 ]
 
----
 
-layout: false
-.left-column[
-  ## ¿Tipos de Datos?
-   ### - Datos cuantitativos 
-   ### - Ejercicios
-]
-.right-column[
-<br><br><br><br>
-
-**Ejercicios**
-
- - Genera dos histogramas de los datos de precipitación, el primero con 10 divisiónes y el segundo con 200
-
-
-
-```
-> hist(precip, breaks = 10, main = "")
-```
-<br>
-```
-> hist(precip, breaks = 200, main = "")
-```
-
-
-]
 
 ---
 
@@ -207,8 +190,7 @@ layout: false
 **Definición**
 
 Las Gráficas de tallo tienen dos partes básicas: tallos y hojas.
-El último dígito de los valores de datos se toma como una hoja y el (los) dígito (s) principal (es) se toma (n) como
-tallos.
+El último dígito de los valores de datos se toma como una hoja y el (los) dígito (s) principal (es) se toma (n) como tallos. Permite obtener simultáneamente una distribución de frecuencias de la variable y su representación gráfica. 
 
 
 **Ejemplo**
@@ -260,14 +242,14 @@ Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el ti
 ```
 <br>
 
-
-
 ```
 > plot(LakeHuron, type = "p")
 
 ```
+**Ejercicio**
 
-
+- Utilizar diferentes tipos de gráficas de plot, definir nombres de los ejes y la proporcion de los ejes x/y
+- utilizar la función abline con la opcion lty para trazar una linea horizontal punteada que divida el 15% de las muestras menores y una linea vertical que divida antes y despúes del año de inicio de la primera guerra mundial (tip. 1914).
 
 ]
 
@@ -289,7 +271,7 @@ Algunos datos parecen ser cuantitativos pero no lo son por que no representan ca
 
 Ej. Tamaño del pie de una persona (si sumas el tamaño del pie de dos personas no tiene sentido)
 
-La información cuantitativa que se puede utilizar para subdividir información en diversas categorias se le llama **factor** 
+La información cuantitativa que se puede utilizar para subdividir información en diversas categorias se le llama **factor** .
 
 ]
 
@@ -306,6 +288,8 @@ layout: false
 
 **Tablas** 
 Una forma de mostrar resumenes de datos estadisticos es con el uso de las tablas. 
+
+state.XXXX Data sets related to the 50 states of the United States of America.
 
 
 ```
@@ -405,7 +389,6 @@ Pertenecientes a las respectivas categorías. Una desventaja de los gráficos de
 ]
 
 
-
 ---
 
 
@@ -422,11 +405,21 @@ layout: false
 Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
 
 ```
+> install.packages("qcc")
+```
+
+```
 > library(qcc)
 ```
 
 ```
 > pareto.chart(table(state.division), ylab = "Frequency")
+```
+**Ejercicio** cambia los colores de la gráfica de pareto, utilizando alguna de las paletas de colores.
+```
+> install.packages("RColorBrewer")
+> library(RColorBrewer)
+> display.brewer.all()
 ```
 
 ]
@@ -444,7 +437,6 @@ layout: false
 .right-column[
 <br><br><br><br>
 
-
 Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla. Los gráficos de puntos son tan compactos que es fácil graficar interacciones multi-variables muy complicadas en un gráfico.
 
 ```
@@ -457,8 +449,6 @@ x <- table(state.region)
 
 ]
 
-
-
 ---
 
 
@@ -472,7 +462,7 @@ layout: false
 <br><br><br><br>
 
 
-These can be done with R and the R Commander, but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas.
+"These can be done with R but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas."  - Introduction to probability using R.
 
 ```
 > slices <- c(10, 12,4, 16, 8)
@@ -485,31 +475,6 @@ These can be done with R and the R Commander, but they fallen out of favor in re
 ```
 ]
 
----
-
-
-layout: false
-.left-column[
-  ## ¿Tipos de Datos?
-   ### - Datos cualitativos
-   ### - Gráfica de pastel
-]
-.right-column[
-<br><br><br><br>
-
-
-These can be done with R and the R Commander, but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas.
-
-```
-> slices <- c(10, 12,4, 16, 8)
-> lbls <- c("US", "UK", "Australia", "Germany", "France")
-
-```
-
-```
-> pie(slices, labels = lbls, main="Pie Chart of Countries"
-```
-]
 
 
 ---
@@ -675,10 +640,17 @@ layout: false
 .right-column[
 <br><br><br><br>
 
+```
+> tr=c(3,4,5,3,4,5,4,3,2,3,12,11,3,4,89)
+> quantile(tr)
+> quantile(tr,.25)
+> quantile(tr,.10)
+
+```
+
 suceptibilidad de la media, mediana a valores extremos.
 
 Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25}
-
 
 Otro método más robusto que el IQR es la Media de la desviación absoluta (**MAD**).
 
@@ -787,7 +759,11 @@ template: inverse
 
 ## Datos Multivariados y DataFrames
 
+---
+name: last-page
+template: inverse
 
+## Matrices, Factores en R y DataFrames
 
 ---
 
@@ -829,6 +805,86 @@ Ejemplo:
 layout: false
 .left-column[
   ## Datos multivariados
+   ### Matrices
+]
+.right-column[
+<br><br>
+
+```
+> A = matrix( 
++   c(2, 4, 3, 1, 5, 7), # the data elements 
++   nrow=2,              # number of rows 
++   ncol=3,              # number of columns 
++   byrow = TRUE)        # fill matrix by rows 
+ 
+> A                      # print the matrix 
+
+```
+
+```
+> A = matrix( 
++   c(2, 4, 3, 1, 5, 7), # the data elements 
++   nrow=2,              # number of rows 
++   ncol=3,              # number of columns 
++   byrow = TRUE)        # fill matrix by rows 
+ 
+> A                      # print the matrix 
+
+```
+
+```
+> dimnames(A) = list( 
++   c("row1", "row2"),         # row names 
++   c("col1", "col2", "col3")) # column names
+``` 
+```
+> rownames(x) <- c("row1", "row2")
+> colnames(x) <- c("C1","C2","C3")
+``` 
+]
+
+
+---
+
+
+
+layout: false
+.left-column[
+  ## Datos multivariados
+   ### Matrices
+]
+.right-column[
+<br><br>
+
+
+
+```
+> A<-cbind(c(1,2,3),c(4,5,6))
+[,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+> B<-rbind(c(1,2,3),c(4,5,6))
+[,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+
+```
+
+
+```
+> x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
+> x[-1,]    # select all rows except first
+> x[c(3,2),]
+```
+
+---
+
+
+
+layout: false
+.left-column[
+  ## Datos multivariados
    ### Acceso a DataFrames
 ]
 .right-column[
@@ -862,37 +918,40 @@ layout: false
 
 ---
 
-
-
 layout: false
 .left-column[
   ## Datos multivariados
-   ### Matrices
+   ### Modificar un DataFrame
 ]
 .right-column[
 <br><br>
 
 ```
-> A = matrix( 
-+   c(2, 4, 3, 1, 5, 7), # the data elements 
-+   nrow=2,              # number of rows 
-+   ncol=3,              # number of columns 
-+   byrow = TRUE)        # fill matrix by rows 
- 
-> A                      # print the matrix 
-
+> A <- data.frame(SN = c(1,2), Age = c(21,15), Name=c("John","Dora"))
 ```
 
+<br>
 ```
-> dimnames(A) = list( 
-+   c("row1", "row2"),         # row names 
-+   c("col1", "col2", "col3")) # column names
-``` 
+>  A[1,"Age"] <- 20; x
+```
 
+<br>
+Agregar nuevos elementos
+```
+> rbind(A,list(1,16,"Paul"))
+```
+<br>
 
 ```
-> A[, 2] 
+> cbind(A,State=c("NY","FL"))
 ```
+<br>
+Eliminar un elemento
+```
+> A$State <- NULL
+```
+
+]
 
 DataFrames vs Matrices:
 
@@ -900,7 +959,201 @@ Las **Matrices** son solamente arreglos numericos de dos dimensiones mientras qu
 
 
 ]
+---
+name: last-page
+template: inverse
 
+## Estructuras de Control 
+
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### If
+]
+.right-column[
+
+```
+>  if (test_expression) {
+>	statement
+>  }
+```
+
+
+Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
+
+
+**Ejercicio** Crea un if que evalue si X es positivo 
+
+
+
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### If else
+]
+.right-column[
+
+```
+> if (test_expression) {
++   statement1
++ } else {
++   statement2
++ }
+```
+
+
+Si test_expression es TRUE, la instrucción 1 se ejecuta. Pero si es FALSO se ejecuta la instrucción 2
+
+
+**Ejercicio** Crea un if,else que evalue si X es positivo o negativo
+
+Cascada if..else
+
+```
+> if ( test_expression1) {
++	statement1
++ } else if ( test_expression2) {
++	statement2
++ } else if ( test_expression3) {
++	statement3
++ } else {
++	statement4
++ }
+```
+
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### ifelse
+]
+.right-column[
+```
+ifelse(test_expression, x, y)
+```
+**Ejercicio** Crea un ifelse que evalue si X es par o no
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### For
+]
+.right-column[
+```
+> for (val in sequence){
++   statement
++ }
+
+```
+
+Aquí, la secuencia es un vector y val toma cada uno de sus valores durante el ciclo. En cada iteración, se evalúa la declaración.
+
+
+**Ejercicio**  contar el número de números pares en un vector.
+
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### R while Loop
+]
+.right-column[
+
+```
+> while (test_expression){
++	statement
++ }
+```
+
+
+Aquí, test_expression se evalúa y el cuerpo del loop se ingresa si el resultado es TRUE.
+
+Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_expression nuevamente.
+
+Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
+
+
+```
+> i <- 1
+> while (i < 6) {
++	print(i)
++	i = i+1
++ }
+```
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ###  break and next 
+
+]
+.right-column[
+
+Una instrucción break se usa dentro de un ciclo (repeat, for, while) para detener las iteraciones y hacer fluir el control fuera del ciclo.
+
+
+```
+> if (test_expression) {
++	break
++ }
+```
+Una siguiente declaración es útil cuando queremos omitir la iteración actual de un ciclo sin terminarlo. Al encontrar el siguiente, el analizador R omite una evaluación adicional y comienza la siguiente iteración del ciclo.
+
+```
+> if (test_condition) {
+	next
+> }
+```
+
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### repeat
+]
+.right-column[
+
+Un ciclo de repetición se usa para iterar sobre un bloque de código varias veces.
+
+No hay verificación de condición en repetir bucle para salir del bucle.
+
+Nosotros mismos debemos poner una condición explícitamente dentro del cuerpo del ciclo y usar la instrucción break para salir del ciclo. De lo contrario, se producirá un ciclo infinito.
+```
+> repeat {
++   statement
++   break 
+> }
+```
+
+```
+> x <- 1
+> repeat {
++	print(x)
++	x = x+1
++	if (x == 6){
++ 		break
++ 	}
++ }
+```
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Variables Aleatorias
+]
+.right-column[
+
+
+]
 ---
 
 
@@ -917,39 +1170,37 @@ layout: false
 ]
 .right-column[
 
+**Espacio muestral**  (denotado S) consiste en el conjunto de todos los posibles resultados de un experimento aleatorio.
+
 Moneda 
 
 ```
 > S<-data.frame(pos=c("H","T"))
+
+```
+Espacio Muestral de una moneda que se lanza 3 veces
+
+```
+> expand.grid(t(S),t(S),t(S))
 ```
 
 Dado
 
 ```
 > S<-data.frame(pos=c(1:6))
-```
-
-Espacio Muestral de una moneda
 
 ```
-> install.packages("prob", dependencies=TRUE)
 
-> library(prob)
 
-> tosscoin(1, makespace=TRUE)
-
-> tosscoin(3, makespace=TRUE)
+```
+>  sample(x=c("H","T"), size=5, replace=T)
 
 ```
 
 Espacio Muestral de un dado
 
 ```
-> rolldie(1, makespace=TRUE)
-
-> rolldie(7, makespace=TRUE)
-
-> rolldie(1, nsides=10, makespace=TRUE)
+>  expand.grid(t(S),t(S),t(S))
 
 ```
 
@@ -968,57 +1219,31 @@ layout: false
 Espacio Muestral de Cartas Inglesas 
 
 ```
-> cards(2, makespace=TRUE)
+> palos<-c("D","P","T","C")
+
+> numeros<-c(1:10,"J","Q","R")
+
+> cartas<-as.vector(outer(números, palos, paste, sep=""))
+
+> cartas<-sample(cartas)
 
 ```
 
 Espacio Muestral de Muestreo de urnas
 
 ```
-> ?urnsamples
+> urna=c("roja","azul","amarilla","violeta","negra","blanca")
 
 ```
 
 ```
-> urnsamples(x=c("roja","azul","amarilla","violeta","negra","blanca"), size=2, replace=F, order=F)
+> urnsample<-sample(urna,size=20, replace=T)
 
-```
-
-]
-
-
----
-
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Eventos
-]
-.right-column[
-
-<br><br>
-Evento con monedas
-
-```
->  S <- tosscoin(2, makespace = TRUE)
->  S[c(2,4),]
-
-```
-
-Evento con cartas
-
-```
-> S <- cards()
-> subset(S, suit == "Heart")
-
-```
-
-```
-> subset(rolldie(3), X1 + X2 + X3 > 16)
-
+> table(urnsample)
 ```
 
 ]
+
 
 ---
 layout: false
@@ -1113,26 +1338,26 @@ layout: false
 P(A) ≈ observados / posibles ≈ S_n/n
 
 
-Utilizando la ley de Grandes Números:
-
-S_n/n → IP(A) as n → ∞.
-
 ```
-> probspace(1:6)
+> S<-data.frame(pos=c(1:6))
+> posibles<-expand.grid(t(S),t(S),t(S))
+> posibles[which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]),]
+> obsv<-length(which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]))
+> prob= obsv/length(posibles)
 ```
 
 Ej. Moneda no balanceada
 
 
 ```
-> probspace(tosscoin(1), probs = c(0.7, 0.3))
+> S<-c("H","T")
+> p<-c(1/3,2/3)
+> sample(S, prob=p, size=1, replace=T)
+> sample(S, prob=p, size=200, replace=T)
 
 ```
 **WARNING:** RAM memory y probabilidades infinitecimales 
 
-- Espacio de probabilidad de tirar 100 monedas
-
-- 50 Dados
 
 ]
 
@@ -1160,35 +1385,9 @@ Coeficiente binomial (Combinaciones)
 > choose(n,k)
 
 ```
-**WARNING:** RAM memory y probabilidades infinitecimales 
-
-- Espacio de probabilidad de tirar 100 monedas
-
-- 50 Dados
 
 
 ]
-
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Problema del cumpleaños
-]
-.right-column[
-<br><br><br>
-¿Calcula la probablidad de que dos personas que esten en el mismo cuarto cumplan años el mismo dia?
-
-```
-> install.packages(pbirthday.ipsur)
-> library(pbirthday.ipsur)
-> g <- Vectorize (pbirthday.ipsur)
-> plot (1:50 , g(1:50) ,
-+ xlab = "Number of people in room",
-+ ylab = "Prob(at least one match)",
-+ main = "The Birthday Problem")
-> abline(h = 0.5)
-> abline(v = 23, lty = 2) # dashed line
 
 ```
 
@@ -1203,22 +1402,23 @@ layout: false
 <br><br><br>
 
 ```
-> library(prob)
-> S <- rolldie(2, makespace = TRUE) # assumes ELM
+> S<-1:6
+> space <- sample(S, size=100, replace= TRUE) 
 > head(S) # first few rows
 
 ```
 
 
 ```
-> A <- subset(S, X1 == X2)
-> B <- subset(S, X1 + X2 >= 8)
+> E <- expand.grid(t(S),t(S),t(S))
+> A <- subset(E, Var1 == Var2)
+> B <- subset(E, Var1 + Var2 >= 8)
 
 ```
 
 ```
-> prob(A, given = B)
-> prob(B, given = A)
+> prob(A, given = B) #no Code
+> prob(B, given = A) #no Code
 
 ```
 
@@ -1268,29 +1468,14 @@ layout: false
 Escribir una formula que define una variable aleatoria dentro de una función, agregando una columna a un data.frame.
 
 
-```
-> ?transform
-> ?addrv
-```
+Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
 
-Ej. Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
-
-```
-> S <- rolldie(3, nsides = 4, makespace = TRUE)
-> S <- addrv(S, U = X1 - X2 + X3)
-> head(S)
-```
 
 Ahora podemos preguntar, ¿Cual es la probabilidad de que U > 6?
 
-```
-Prob(S, U > 6)
-```
 
 ]
 ---
-
-
 
 name: last-page
 template: inverse
