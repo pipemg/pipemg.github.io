@@ -244,6 +244,7 @@ Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el ti
 
 ```
 > plot(LakeHuron, type = "p")
+```
 ]
 ---
 
@@ -255,7 +256,6 @@ layout: false
 ]
 .right-column[
 
-```
 **Ejercicio**
 
 - Utilizar diferentes tipos de gráficas de plot, definir nombres de los ejes y la proporcion de los ejes x/y
