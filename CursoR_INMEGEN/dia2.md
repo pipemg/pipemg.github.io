@@ -855,9 +855,6 @@ layout: false
 
 
 ---
-
-
-
 layout: false
 .left-column[
   ## Datos multivariados
@@ -865,8 +862,6 @@ layout: false
 ]
 .right-column[
 <br><br>
-
-
 
 ```
 > A<-cbind(c(1,2,3),c(4,5,6))
@@ -887,11 +882,8 @@ layout: false
 > x[-1,]    # select all rows except first
 > x[c(3,2),]
 ```
-
+]
 ---
-
-
-
 layout: false
 .left-column[
   ## Datos multivariados
