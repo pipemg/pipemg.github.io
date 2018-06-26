@@ -244,6 +244,16 @@ Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el ti
 
 ```
 > plot(LakeHuron, type = "p")
+]
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de Índice
+]
+.right-column[
 
 ```
 **Ejercicio**
