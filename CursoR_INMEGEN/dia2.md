@@ -917,9 +917,7 @@ layout: false
 
 ]
 
-
 ---
-
 layout: false
 .left-column[
   ## Datos multivariados
