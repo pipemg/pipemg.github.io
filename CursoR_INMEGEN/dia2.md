@@ -859,6 +859,97 @@ Nosotros mismos debemos poner una condición explícitamente dentro del cuerpo d
 ```
 ]
 
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### apply
+]
+.right-column[
+<br><br> 
+
+Cuando usar apply.
+
+Cuando tenemos una función para aplicar a una estructura de datos determinada. Donde estructura se puede definir como un tipo de matriz o lista. 
+
+```
+> m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3) 
+```
+Primero quiero asegurarme de haber creado correctamente la matriz, tres columnas cada una con una media de 0, 2 y 5 respectivamente. 
+
+```
+> apply(m, 1, mean)
+```
+
+Al pasar un 1 en el segundo argumento, recuperamos 30 valores, dando la media de cada fila. No son los tres números que esperábamos, intente de nuevo.
+```
+apply(m, 2, mean)
+```
+]
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### apply
+]
+.right-column[
+<br><br> 
+
+Utilizar tus propias funciones
+```
+> mifuncion<-function(x){
++	length(x[x<0])
++ }
+
+> apply(m, 2, FUN=mifuncion)
+```
+
+```
+> apply(m, 2, function(x) length(x[x<0]))
+
+```
+> apply(m, 2, function(x) is.matrix(x))
+> apply(m, 2, is.matrix)
+> apply(m, 2, is.vector)
+```
+
+```
+]
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+<br><br> 
+
+Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
+
+
+```
+> sapply(1:3, function(x) x^2)
+
+
+> lapply(1:3, function(x) x^2)
+
+```
+
+Utilizando la opci[on simplify = F, saplly te da una lista
+```
+> sapply(1:3, function(x) x^2, simplify=F)
+
+```
+> ?unlist
+> ?tapply
+> ?
+```
+
+```
+]
 ---
 
 
