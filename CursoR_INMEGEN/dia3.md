@@ -18,8 +18,6 @@ layout: false
 ]
 .right-column[
 
-<br><br>
-
 Relaciónes
 - **>** Mayor que
 - **<** Menor que
@@ -27,7 +25,6 @@ Relaciónes
 - **>=** Mayor o igual que
 - **==** Igual 
 - **!=** Diferente
-
 
 Lógicos
 - **!x** Negación (no x)
@@ -38,8 +35,8 @@ Lógicos
 - **xor(x, y)** O exclusivo (∗∗)
 - **identical()** Comparar dos objetos
 
-(∗) Si se escriben dos símbolos repetidos, estos tienen el mismo significado que si apareciese uno, pero la diferencia consiste en que se evalúa primero la parte de la izquierda y, si ya se sabe el resultado no se sigue evaluando, por lo que pueden ser mas rapidos y eliminar errores
-(∗∗) Da como valor verdadero si uno y s´olo un argumento es v´alido.
+(∗) Si se escriben dos símbolos repetidos, estos tienen el mismo significado que si apareciese uno,  la diferencia consiste en que se evalúa primero la parte de la izquierda y, si ya se sabe el resultado no se sigue evaluando, por lo que pueden ser mas rapidos y eliminar errores
+(∗∗) Da como valor verdadero si uno y sólo un argumento es válido.
 
 ]
 
@@ -59,13 +56,17 @@ layout: false
 > x>=5 # Le preguntamos si x es mayor o igual que 5
 > x==5 # Le preguntamos si x vale 5
 > x!=5 # Le preguntamos si x es distinto de 5
+```
 
+```
 > y<-1:3; z<-3:1 # Creamos dos vectores
 > identical(y,z) # Le preguntamos si son iguales
 > y==z # Vemos los elementos que coinciden
 > x<-1:5 # Renombramos x e y
 > y<-c(2,4,3,6,5)
+```
 
+```
 > x==y
 > x!=y
 > x[x==y]
@@ -74,16 +75,7 @@ layout: false
 ```
 ]
 
----
 
-layout: false
-.left-column[
-  ## Programación
-   ### Operadores lógicos y comparativos
-]
-.right-column[
-
-]
 
 ---
 
@@ -313,11 +305,6 @@ Coeficiente binomial (Combinaciones)
 
 ```
 > choose(n,k)
-
-```
-
-
-]
 
 ```
 
@@ -684,16 +671,17 @@ donde s es la sd()
 layout: false
 .left-column[
   ## Lectura y escritura de datos.
-    ### Read table, View, fix
+   ### Read table, View, fix
 ]
 .right-column[
 
+<br><br>
 ```
 > # Leemos el archivo tabla.csv y lo nombramos misdatos
 > misdatos <- read.table("Pathway", header=FALSE, sep="", na.strings="NA", dec=".")
 ```
 
-Con la funci´on “View” visualizamos los datos que hemos cargado en memoria anteriormente.
+Con la función “View” visualizamos los datos que hemos cargado en memoria anteriormente.
 
 ```
 > View(Datos) #ver los datos
@@ -707,10 +695,11 @@ Con la funci´on “View” visualizamos los datos que hemos cargado en memoria 
 layout: false
 .left-column[
   ## Lectura y escritura de datos.
-    ### write
+   ### write
 ]
 .right-column[
 
+<br><br>
 ```
 > Datos1 <- edit(as.data.frame(NULL)) # Creamos una tabla en blanco a la que nombramos como Datos1
 ```
