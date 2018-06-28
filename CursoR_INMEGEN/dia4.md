@@ -413,17 +413,17 @@ layout: false
    ### Distribución De Poisson
 ]
 .right-column[
-La distribuci´on de Poisson expresa la probabilidad de un n´umero k de eventos ocurriendo en un tiempo fijo si estos eventos ocurren con una frecuencia media conocida y son independientes del tiempo discurrido desde el ´ultimo evento.
+La distribución de Poisson expresa la probabilidad de un número k de eventos ocurriendo en un tiempo fijo si estos eventos ocurren con una frecuencia media conocida y son independientes del tiempo discurrido desde el último evento.
 
 - X ~ P(λ)
 
-La funci´on de densidad de la distribuci´on de Poisson es:
+La función de densidad de la distribución de Poisson es:
 
 - f(k,λ) = e<sup>-λ</sup>λ<sup>k</sup>/k!
 
-Para obtener valores que se basen en la distribuci´on de Poisson, R dispone de cuatro funciones basados en“pois”:
-- dpois(x, lambda, log = F); Devuelve resultados de la funci´on de densidad.
-- ppois(q, lambda, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de distribuci´on acumulada.
+Para obtener valores que se basen en la distribución de Poisson, R dispone de cuatro funciones basados en“pois”:
+- dpois(x, lambda, log = F); Devuelve resultados de la función de densidad.
+- ppois(q, lambda, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
 - qpois(p, lambda, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Poisson.
 - rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
 
@@ -439,11 +439,11 @@ Con:
 - x: Vector de cuantiles (Valores enteros positivos).
 - q: Vector de cuantiles.
 - p: Vector de probabilidades.
-- n: N´umeros de valores aleatorios a devolver.
-- prob: Probabilidad de ´exito en cada ensayo.
+- n: Números de valores aleatorios a devolver.
+- prob: Probabilidad de éxito en cada ensayo.
 - lambda: Vector de medias (valor no negativo).
-- log, log.p: Par´ametro booleano, si es TRUE, las probabilidades p se ofrecen como log(p).
-- lower.tail: Par´ametro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo contrario, P[X > x].
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p se ofrecen como log(p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo contrario, P[X > x].
 
 ]
 ---
