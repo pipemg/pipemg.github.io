@@ -21,6 +21,7 @@ layout: false
   ## Distribuciones de probabilidad
    ### Definiciones
 ]
+
 .right-column[
 <br><br>
 Cuando una variable aleatoria toma diversos valores, la probabilidad asociada a cada uno de tales valores puede ser organizada como una **distribucion de probabilidad**.
@@ -29,7 +30,7 @@ Las distribuciones de probabilidad pueden representarse a traves de una una form
 
 - Distribuciones discretas
 - Distribuciones continuas
-
+]
 ---
 
 layout: false
@@ -48,6 +49,20 @@ layout: false
 | nbinom        | binomial negativa | Discreta  |    µ = [(r-1)(1-p)/p] si r>1, 0 si r<=1  | σ<sup>2</sup>= |
 | pois          | Poisson           | Discreta  |    µ =  λ     |  σ<sup>2</sup> =  λ                       |
 | beta          | beta              | Continua  |    µ = α/(α + β) | σ<sup>2</sup>=αβ/(α + β)<sup>2</sup> /(α + β + 1)  |
+
+]
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Definiciones
+]
+.right-column[
+<br><br>
+
+| Función       | Distribución      |   Tipo    |       media   |                   varianza                |
+|:-------------:|:-----------------:|:---------:|:-------------:|:-----------------------------------------:|
 | cauchy        | Cauchy–Lorentz    | Continua  |    µ = x<sub>0</sub>| Not Defined                         |
 | exp           | exponencial       | Continua  |    µ = 1/λ    |  σ<sup>2</sup>= 1/λ<sup>2</sup>           |
 | chisq         | chi-cuadrado      | Continua  |    µ = k      | σ<sup>2</sup>=2k                          |
@@ -208,7 +223,6 @@ layout: false
 .left-column[
   ## Distribuciones de probabilidad
     ### Experimentos multinominal
-
 ]
 .right-column[
 <br><br>
@@ -250,7 +264,9 @@ La complejidad de las llegadas y salidas de los aviones en un aeropuerto es tal 
 
 f(2,1,3;4/18,3/18,11/18,6) = 6!/2!1!3! * 2<sup>2</sup>/9<sup>2</sup> * 11<sup>3</sup>/18<sup>3</sup> = 0.1127
 
-]---
+]
+
+---
 
 layout: false
 .left-column[
@@ -266,11 +282,23 @@ La distribución Geométrica es una serie de ensayos de Bernoulli independientes
 
  - f(x) = p(1-p)<sub>x-1</sub>; con x={0,1}
 
+```
  - dgeom(x, prob, log = F); Devuelve resultados de la función de densidad.
  - pgeom(q, prob, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
  - qgeom(p, prob, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Geométrica.
-- rgeom(n, prob); Devuelve un vector de valores binomiales aleatorios.
+ - rgeom(n, prob); Devuelve un vector de valores binomiales aleatorios.
 
+```
+
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+    ### Distribución Geométrica
+
+]
+.right-column[
 con:
 
  - x, q: Vector de cuantiles que representa el número de fallos antes del primer éxito.
@@ -290,13 +318,18 @@ layout: false
     ### Distribución Geométrica
 ]
 .right-column[
+
 <br><br>
+
+```
 > dgeom(4, 0.5) # Calculamos la P(X=4) de una G(0.5); representa el número de fallos antes del primer éxito
 
 > pgeom(4, 0.5, lower.tail = F) # Calculamos la P(X>4) de una G(0.5) > # Que en este caso coincide con dgeom(4, 0.5)
 
-> # Lo comprobamos; P(X > 4) = 1 - P(X<=3) = 1 - [P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)]
+> Lo comprobamos; P(X > 4) = 1 - P(X<=3) = 1 - [P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)]
 > 1 - (dgeom(0, 0.5) + dgeom(1, 0.5) + dgeom(2, 0.5)+ dgeom(3, 0.5) + dgeom(4, 0.5))
+
+```
 ]
 
 ---
