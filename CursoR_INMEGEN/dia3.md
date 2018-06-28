@@ -7,10 +7,86 @@ name: Inicio
 [Felipe de J. Muñoz González]
 
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
-.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion2.pdf)]
+.footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion3.pdf)]
+
+---
+
+layout: false
+.left-column[
+  ## Programación
+   ### Operadores lógicos y comparativos
+]
+.right-column[
+
+<br><br>
+
+Relaciónes
+- **>** Mayor que
+- **<** Menor que
+- **<=** Menor o igual que
+- **>=** Mayor o igual que
+- **==** Igual 
+- **!=** Diferente
+
+
+Lógicos
+- **!x** Negación (no x)
+- **x & z** Conjución (x y z)
+- **x && z** Conjunción(*)
+- **x|y** Disyuncion
+- **==** Disyuncion(*) 
+- **xor(x, y)** O exclusivo (∗∗)
+- **identical()** Comparar dos objetos
+
+(∗) Si se escriben dos símbolos repetidos, estos tienen el mismo significado que si apareciese uno, pero la diferencia consiste en que se evalúa primero la parte de la izquierda y, si ya se sabe el resultado no se sigue evaluando, por lo que pueden ser mas rapidos y eliminar errores
+(∗∗) Da como valor verdadero si uno y s´olo un argumento es v´alido.
+
+]
 
 
 ---
+
+layout: false
+.left-column[
+  ## Programación
+   ### Operadores lógicos y comparativos
+]
+.right-column[
+<br><br>
+```
+> x<-10; x # Asignamos a x el valor 10
+> x<5 # Le preguntamos si x es menor que 5
+> x>=5 # Le preguntamos si x es mayor o igual que 5
+> x==5 # Le preguntamos si x vale 5
+> x!=5 # Le preguntamos si x es distinto de 5
+
+> y<-1:3; z<-3:1 # Creamos dos vectores
+> identical(y,z) # Le preguntamos si son iguales
+> y==z # Vemos los elementos que coinciden
+> x<-1:5 # Renombramos x e y
+> y<-c(2,4,3,6,5)
+
+> x==y
+> x!=y
+> x[x==y]
+> x[x!=y]
+
+```
+]
+
+---
+
+layout: false
+.left-column[
+  ## Programación
+   ### Operadores lógicos y comparativos
+]
+.right-column[
+
+]
+
+---
+
 name: last-page
 template: inverse
 
@@ -603,9 +679,127 @@ donde s es la sd()
 
 ```
 ]
+---
+
+layout: false
+.left-column[
+  ## Lectura y escritura de datos.
+    ### Read table, View, fix
+]
+.right-column[
+
+```
+> # Leemos el archivo tabla.csv y lo nombramos misdatos
+> misdatos <- read.table("Pathway", header=FALSE, sep="", na.strings="NA", dec=".")
+```
+
+Con la funci´on “View” visualizamos los datos que hemos cargado en memoria anteriormente.
+
+```
+> View(Datos) #ver los datos
+
+> fix(Datos) # editarlos datos
+```
+]
 
 ---
 
+layout: false
+.left-column[
+  ## Lectura y escritura de datos.
+    ### write
+]
+.right-column[
+
+```
+> Datos1 <- edit(as.data.frame(NULL)) # Creamos una tabla en blanco a la que nombramos como Datos1
+```
+
+```
+> Datos1 # Vemos si realmente tenemos lo datos
+> Datos1$var1->A # Vemos las columnas y las renombramos
+> Datos1$var2->B
+```
+
+```
+> A
+> B
+> A+B
+> write(A*B,"sumaAyB.dat") # Lo guardamos en un fichero .dat que se llame sumaAyB
+```
+]
+---
+
+layout: false
+.left-column[
+  ## Ejemplos de funciones
+    ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la media
+
+```
+> media<-function(x=NA)
++ {
++ x<-x[!is.na(x)]
++ sum(x)/length(x)
++ }
+> media(c(2,4,1,3,6,7))
+> media(c(2,4,1,3,6,NA))
+```
+
+Calcular la varianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Ejemplos de funciones
+    ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la desviación estandar
+
+```
+> DT<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sqrt(sum((x-(sum(x)/n))^2)/n)
++ return(v)
++ }
+> DT(1:3)
+> DT(c(1,3,4,2,6,4))
+```
+
+Calcular la covarianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
+]
+---
 name: last-page
 template: inverse
 
