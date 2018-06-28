@@ -222,7 +222,7 @@ En forma general, una probabilidad p de éxito y q=1-p el fracaso. La distribuci
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-    ### Experimentos multinominal
+   ### Experimentos multinominal
 ]
 .right-column[
 <br><br>
@@ -243,7 +243,7 @@ f(x<sub>1</sub>,x<sub>2</sub>,...,x<sub>k</sub>;p<sub>1</sub>,p<sub>2</sub>,...,
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-    ### Experimentos multinominal
+   ### Experimentos multinominal
 
 ]
 .right-column[
@@ -271,7 +271,7 @@ f(2,1,3;4/18,3/18,11/18,6) = 6!/2!1!3! * 2<sup>2</sup>/9<sup>2</sup> * 11<sup>3<
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-    ### Distribución Geométrica
+   ### Distribución Geométrica
 
 ]
 .right-column[
@@ -298,10 +298,11 @@ La distribución Geométrica es una serie de ensayos de Bernoulli independientes
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-    ### Distribución Geométrica
+   ### Distribución Geométrica
 
 ]
 .right-column[
+<br><br>
 con:
 
  - x, q: Vector de cuantiles que representa el número de fallos antes del primer éxito.
@@ -318,7 +319,7 @@ con:
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-    ### Distribución Geométrica
+   ### Distribución Geométrica
 ]
 .right-column[
 
@@ -354,7 +355,7 @@ Entonces X tiene una distribución Binomial Negativa.
 su función de probabilidad
 
  - P(y) = conv(x-1,r-1)p<sup>r</sup>q<usp>x-r</sup>; para x {r,r+1,r+2,...}
-
+]
 ---
 
 layout: false
@@ -426,6 +427,7 @@ Para obtener valores que se basen en la distribución de Poisson, R dispone de c
 - ppois(q, lambda, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
 - qpois(p, lambda, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Poisson.
 - rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
+]
 
 ---
 
@@ -435,6 +437,7 @@ layout: false
    ### Distribución De Poisson
 ]
 .right-column[
+<br><br>
 Con:
 - x: Vector de cuantiles (Valores enteros positivos).
 - q: Vector de cuantiles.

@@ -35,9 +35,11 @@ Lógicos
 - **xor(x, y)** O exclusivo (∗∗)
 - **identical()** Comparar dos objetos
 
+<small><small>
 (∗) Si se escriben dos símbolos repetidos, estos tienen el mismo significado que si apareciese uno,  la diferencia consiste en que se evalúa primero la parte de la izquierda y, si ya se sabe el resultado no se sigue evaluando, por lo que pueden ser mas rapidos y eliminar errores
-(∗∗) Da como valor verdadero si uno y sólo un argumento es válido.
 
+(∗∗) Da como valor verdadero si uno y sólo un argumento es válido.
+</small></small>
 ]
 
 
@@ -421,8 +423,6 @@ layout: false
   ### Forma
 ]
 .right-column[
-<br><br>
-
 
 **Simetría** y **asimetría** 
    - **positivamente sesgada**
@@ -533,6 +533,7 @@ Utilizando R. Calcula las siguientes cosas del vector
 
 ```
 x<-round(runif(20, min=1, max=100))
+```
 
 - rango
 - media
@@ -610,7 +611,6 @@ layout: false
    ### Grafica de caja
 ]
 .right-column[
-<br><br>
 
 Estas gráficas son buenas para visualizar mucha información descriptiva de nuestros datos al mismo tiempo:
 
@@ -722,7 +722,7 @@ layout: false
 layout: false
 .left-column[
   ## Ejemplos de funciones
-    ### Funciones elementales
+   ### Funciones elementales
 ]
 .right-column[
 <br><br>
