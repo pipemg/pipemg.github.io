@@ -275,7 +275,9 @@ layout: false
 
 ]
 .right-column[
+
 <br><br>
+
 La distribución Geométrica es una serie de ensayos de Bernoulli independientes, con probabilidad constante p de éxito, donde la variable aleatoria X denota el número de ensayos hasta el primer éxito.
 
  - X ~ G(p)
@@ -289,6 +291,7 @@ La distribución Geométrica es una serie de ensayos de Bernoulli independientes
  - rgeom(n, prob); Devuelve un vector de valores binomiales aleatorios.
 
 ```
+]
 
 ---
 
@@ -352,6 +355,16 @@ su función de probabilidad
 
  - P(y) = conv(x-1,r-1)p<sup>r</sup>q<usp>x-r</sup>; para x {r,r+1,r+2,...}
 
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución Binomial Negativa
+]
+.right-column[
+<br><br>
+
 Para obtener valores que se basen en la distribución Binomial Negativa, R dispone de cuatro funciones basados en “nbinom”:
 
 - dnbinom(x, size, prob, mu, log = F); Devuelve resultados de la función de densidad.
@@ -377,20 +390,20 @@ con:
 - q: Vector de cuantiles.
 - p: Vector de probabilidades.
 - n: Números de valores aleatorios a devolver.
-prob: Probabilidad de éxito en cada ensayo.
-size: Número total de ensayos. Debe ser estrictamente positivo.
-mu: Parametrización alternativa por la media.
-log, log.p: Parámetro booleano, si es TRUE, las probabilidades p se ofrecen como log(p).
-lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
-contrario, P[X > x].
+- prob: Probabilidad de éxito en cada ensayo.
+- size: Número total de ensayos. Debe ser estrictamente positivo.
+- mu: Parametrización alternativa por la media.
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p se ofrecen como log(p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo contrario, P[X > x].
 
+```
 > # Suponga que el 60% de los elementos no están defectuosos.
 > # Para encontrar la probabilidad de localizar el quinto elemento sin defecto en el séptimo ensayo.
 > # Calculamos P(X = 7), con r=5
 > dnbinom(7-5, 5, 0.6)
 > # si queremos calcular en el séptimo ensayo o antes
 > pnbinom(7-5, 5, 0.6, lower.tail = T)
-
+```
 ]
 ---
 
@@ -414,6 +427,14 @@ Para obtener valores que se basen en la distribuci´on de Poisson, R dispone de 
 - qpois(p, lambda, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Poisson.
 - rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
 
+---
+
+layout: false
+.left-column[
+  ## Programación
+   ### Distribución De Poisson
+]
+.right-column[
 Con:
 - x: Vector de cuantiles (Valores enteros positivos).
 - q: Vector de cuantiles.
