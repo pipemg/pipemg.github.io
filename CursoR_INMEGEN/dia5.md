@@ -429,76 +429,44 @@ Para obtener valores que se basen en la distribución de Poisson, R dispone de c
 - rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
 ]
 
-
 ---
 
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribución normal
-]
-.right-column[
-La distribuci´on normal, distribuci´on de Gauss o distribuci´on gaussiana, a una de las distribuciones de probabilidad de variable continua que con m´as frecuencia aparece en fen´omenos reales.
-
-Se dice que una variable aleatoria continua X sigue una distribuci´on normal de par´ametros µ y σ y se denota X ∼ N(µ, σ) si su funci´on de densidad est´a dada por:
-
-<img src="./Images/normal.png"> normal_dist</img>
-
-Para obtener valores que se basen en la distribuci´on normal, R dispone de cuatro funciones basados en “norm”:
-
-- dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la funci´on de densidad.
-- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de distribuci´on
-acumulada.
-- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Normal.
-- rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
-]
-
----
-
-layout: false
-.left-column[
-  ## Distribuciones de probabilidad
-   ### Distribución normal
+   ### Distribución De Poisson
 ]
 .right-column[
 <br><br>
-```
-> # Calcular la P(Z>1) de una N(0,1)
-> pnorm(1, mean = 0, sd = 1, lower.tail = F)
-> # Calcular la P(-2<Z<2) de una N(0,1)
-> pnorm(c(2), mean = 0, sd = 1) - pnorm(c(-2), mean = 0, sd = 1)
-> # Calcular la P(0<Z<1.96) de una N(0,1)
-> pnorm(1.96, mean = 0, sd = 1) - pnorm(0, mean = 0, sd = 1)
-> # Calcular la P(Z<=z)=0,5793 de una N(0,1)
-> qnorm(0.5793, mean = 0, sd = 1)
-> # Calcular la P(Z>150) de una Normal de media 125 y la desviaci´on esa´andar 50.
-> pnorm(150, mean = 125, sd = 50, lower.tail = F)
-```
+Con:
+- x: Vector de cuantiles (Valores enteros positivos).
+- q: Vector de cuantiles.
+- p: Vector de probabilidades.
+- n: Números de valores aleatorios a devolver.
+- prob: Probabilidad de éxito en cada ensayo.
+- lambda: Vector de medias (valor no negativo).
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p se ofrecen como log(p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo contrario, P[X > x].
+
 ]
 ---
 
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on t-Student
+   ### Distribución De Poisson
 ]
 .right-column[
 
-La distribuci´on t-Student es una distribuci´on de probabilidad que surge del problema de estimar la media de una poblaci´on normalmente distribuida cuando el tama˜no de la muestra es peque˜no.
-
-La distribuci´on t de Student es la distribuci´on de probabilidad del cociente:
-
-- Z/sqrt(V/v)
 ```
-donde:
-1. Z tiene una distribuci´on normal de media nula y varianza 1
-2. V tiene una distribuci´on chi-cuadrado con ν grados de libertad
-3. Z y V son independientes
-s
-La funci´on de densidad de t es
-
-<img src="./Images/t-test.png"> Test-T</img>
-
+> # Calcular la P(X = 1) de una Poisson(3)
+> dpois(1, 3)
+> dpois(c(1), 3)
+> # Calcular la P(X <= 3) de una Poisson(3)
+> ppois(3,3)
+> # Calcular la P(X > 3) de una Poisson(3)
+> ppois(3, 3, lower.tail=F)
+> # Calcular el valor de la variable aleatoria X, dada la probabilidad 0.985
 > qpois(0.985, 3)
 
 ```

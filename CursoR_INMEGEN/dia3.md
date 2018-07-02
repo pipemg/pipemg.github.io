@@ -147,7 +147,7 @@ Espacio Muestral de Cartas Inglesas
 
 > numeros<-c(1:10,"J","Q","R")
 
-> cartas<-as.vector(outer(números, palos, paste, sep=""))
+> cartas<-as.vector(outer(numeros, palos, paste, sep=""))
 
 > cartas<-sample(cartas)
 
@@ -161,7 +161,7 @@ Espacio Muestral de Muestreo de urnas
 ```
 
 ```
-> sample(urna,size=20, replace=T)
+> urnsample<-sample(urna,size=20, replace=T)
 
 > table(urnsample)
 ```
@@ -199,16 +199,14 @@ all
 ```
 > x <- 1:10
 > y <- c(3, 3, 7)
-> all(y %in% x)
+> unique(c(y %in% x))
 
-> isin(x, y)
 
 ```
 
 ¿Por que isin y all tienen esos resultados?
 
 
-Otras funciones: **countrep** y **isrep**
 ]
 
 ---
@@ -224,25 +222,26 @@ Elementos que existen en el Evento A, en el Evento B o en ambos
 union(A,B)
 
 ```
-> S = cards()
-> A = subset(S, suit == "Heart")
-> B = subset(S, rank %in% 7:9)
+> S <- expand.grid(numeros, palos)
+> colnames(S)<-c("numero", "palo")
+> A <- subset(S, palo == "C")
+> B <- subset(S, numero %in% as.character(7:9))
 
-> union(A, B)
+> union(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
 ```
 Elementos que existen en el Evento A y en el Evento B
-intersect(A,B)
+intersect(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
 
 ```
->  intersect(A, B)
+>  intersect(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
 
 ```
 
 Elementos que existen en el Evento A pero no en el Evento B
-setdiff(A,B)
+
 
 ```
-> setdiff(A,B)
+> setdiff(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
 ```
 
 **Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
