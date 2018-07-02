@@ -442,15 +442,14 @@ La distribución normal, distribución de Gauss o distribución gaussiana, a una
 
 Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
 
-<img src="./Images/normal.png"> normal_dist</img>
-
+<img src="./Images/normal.png" with=50%>
+ 
 Para obtener valores que se basen en la distribución normal, R dispone de cuatro funciones basados en “norm”:
 
-- dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la función de densidad.
-- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución
-acumulada.
-- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Normal.
-- rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
+- dnorm(x, mean = 0, sd = 1, log = F); Resultados de la función de densidad.
+- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de distribución acumulada.
+- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de los cuantiles de la Normal.
+- rnorm(n, mean = 0, sd = 1); Vector de valores normales aleatorios.
 ]
 
 ---
@@ -489,19 +488,17 @@ La distribución t-Student es una distribución de probabilidad que surge del pr
 La distribución t de Student es la distribución de probabilidad del cociente:
 
 - Z/sqrt(V/v)
-```
+
 donde:
 1. Z tiene una distribución normal de media nula y varianza 1
 2. V tiene una distribución chi-cuadrado con ν grados de libertad
 3. Z y V son independientess
 La función de densidad de t es
 
-<img src="./Images/t-test.png"> Test-T</img>
+<img src="Images/t-test.png"> Test-T</img>
 
 ```
-
 > qpois(0.985, 3)
-
 ```
 ]
 ---
@@ -522,7 +519,7 @@ La gráfica de su función de densidad tiene una forma acampanada y es simétric
 Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
 
 
-<img src="https://matematicasconmuchotruco.files.wordpress.com/2014/07/normal.png" width=200px alt="normal"></img> 
+<img src="https://matematicasconmuchotruco.files.wordpress.com/2014/07/normal.png" width=350px alt="normal" align="middle"></img> 
 
 ]
 ---
@@ -587,7 +584,7 @@ layout: false
 La distribución t-Student es una distribución de probabilidad que surge del problema de estimar la media
 de una población **normalmente distribuida** cuando el **tama˜no de la muestra es peque˜no**.
 
-Aparece de manera natural al realizar la prueba t de Student para la determinación de las diferencias entre dos medias muestrales y para la construcción del intervalo de confianza para la diferencia entre las medias de dos poblaciones cuando se desconoce la desviación t´ıpica de una población y ésta debe ser estimada a partir de los datos de una muestra.
+Aparece de manera natural al realizar la prueba t de Student para la determinación de las diferencias entre dos medias muestrales y para la construcción del intervalo de confianza para la diferencia entre las medias de dos poblaciones cuando se desconoce la desviación típica de una población y ésta debe ser estimada a partir de los datos de una muestra.
 
 T = Z/sqrt(V/v)
 
@@ -647,7 +644,7 @@ layout: false
 ]
 .right-column[
 <br><br>
-En estad´ıstica, la distribución X<sup>2</sup> (de Pearson) es una distribución de probabilidad continua con un parámetro k que representa los grados de libertad de la variable aleatoria:
+En estadística, la distribución X<sup>2</sup> (de Pearson) es una distribución de probabilidad continua con un parámetro k que representa los grados de libertad de la variable aleatoria:
 
 X = Z<sup>2</sup><sub>1</sub> + Z<sup>2</sup><sub>2</sub>+. · · + Z<sup>2</sup><sub>k</sub>
 
@@ -655,7 +652,7 @@ donde Z<sub>i</sub> son variables de distribución normal, de media cero y varia
 
 <img src="Images/densidad_chi2.png" width=350px> </img>
 
-donde Γ es la funci´on gamma
+donde Γ es la función gamma
 
 ]
 ---
@@ -667,8 +664,8 @@ layout: false
 .right-column[
 <br><br>
 ```
-- dchisq(x, df, ncp=0, log = F); Devuelve resultados de la funci´on de densidad.
-- pchisq(q, df, ncp=0, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de distribuci´on
+- dchisq(x, df, ncp=0, log = F); Devuelve resultados de la función de densidad.
+- pchisq(q, df, ncp=0, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución
 acumulada.
 - qchisq(p, df, ncp=0, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la chi-Cuadrada.
 - rchisq(n, df, ncp=0); Devuelve un vector de valores chi-Cuadrados aleatorios.
@@ -678,12 +675,12 @@ acumulada.
 Con:
 - x, q: Vector de cuantiles.
 - p: Vector de probabilidades.
-- n: N´umeros de observaciones.
+- n: Números de observaciones.
 - df: Grados de libertad.
-- ncp: Par´ametro que determina la centralidad de la gr´afica chi-Cuadrados. Si se omite, el estudio se
-realiza con la gr´afica centralizada en 0.
-- log, log.p: Par´ametro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
-lower.tail: Par´ametro 
+- ncp: Parámetro que determina la centralidad de la gráfica chi-Cuadrados. Si se omite, el estudio se
+realiza con la gráfica centralizada en 0.
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
+lower.tail: Parámetro 
 
 ]
 
@@ -702,7 +699,7 @@ layout: false
 > qchisq(0.8, 25, lower.tail = T)
 > # P(X^2 >= 18.49) con 24 grados de libertad.
 > pchisq(18.49, 24, lower.tail = F)
-> # Calcular 5 n´umeros aleatorios de una dist. Chi-cuadrado con 24 grados de libertad.
+> # Calcular 5 números aleatorios de una dist. Chi-cuadrado con 24 grados de libertad.
 > rchisq(5, 24)
 
 ```
@@ -712,16 +709,16 @@ layout: false
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on F
+   ### Distribución F
 ]
 .right-column[
-La distribuci´on F de Snedecor es una distribuci´on de probabilidad continua. Una variable aleatoria de
-distribuci´on F se construye como el siguiente cociente:
+La distribución F de Snedecor es una distribución de probabilidad continua. Una variable aleatoria de
+distribución F se construye como el siguiente cociente:
 
 F=U<sub>1</sub>d<sub>1</sub> / U<sub>2</sub>d<sub>2</sub>
 
-- U1 y U2 siguen una distribuci´on chi-cuadrada con d1 y d2 grados de libertad respectivamente, y
-- U1 y U2 son estad´ısticamente independientes
+- U1 y U2 siguen una distribución chi-cuadrada con d1 y d2 grados de libertad respectivamente, y
+- U1 y U2 son estadísticamente independientes
 
 ]
 
@@ -730,23 +727,23 @@ F=U<sub>1</sub>d<sub>1</sub> / U<sub>2</sub>d<sub>2</sub>
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on F
+   ### Distribución F
 ]
 .right-column[
 ```
-df(x, df1, df2, ncp, log = F); Devuelve resultados de la funci´on de densidad.
-pf(q, df1, df2, ncp, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de distribuci´on acumulada.
-qf(p, df1, df2, ncp, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la distribuci´on F.
-rf(n, df1, df2, ncp); Devuelve un vector de valores de la distribuci´on F aleatorios.
+df(x, df1, df2, ncp, log = F); Devuelve resultados de la función de densidad.
+pf(q, df1, df2, ncp, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+qf(p, df1, df2, ncp, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la distribución F.
+rf(n, df1, df2, ncp); Devuelve un vector de valores de la distribución F aleatorios.
  ```
 Con:
 - x, q: Vector de cuantiles.
 - p: Vector de probabilidades.
-- n: N´umeros de observaciones.
+- n: Números de observaciones.
 - df1, df2: Grados de libertad, df1 corresponde al numerador y df2 al denominador.
-- ncp: Par´ametro que determina la centralidad de la gr´afica de la distribuci´on F. Si se omite, el estudio se realiza con la gr´afica no centralizada.
-- log, log.p: Par´ametro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
-- lower.tail: Par´ametro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
+- ncp: Parámetro que determina la centralidad de la gráfica de la distribución F. Si se omite, el estudio se realiza con la gráfica no centralizada.
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
 contrario, P[X > x].
 
 ]
@@ -754,7 +751,7 @@ contrario, P[X > x].
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on F
+   ### Distribución F
 ]
 .right-column[
 
@@ -765,7 +762,7 @@ layout: false
 > qf(0.025, 20, Inf, lower.tail=T)
 > # P(F >= 198.50) con df1 = 10 y df2 = 2.
 > pf(198.50, 10, 2, lower.tail=F)
-> # Calcular 5 n´umeros aleatorios de una dist. F de Snedecor con 24 y 10 grados de libertad.
+> # Calcular 5 números aleatorios de una dist. F de Snedecor con 24 y 10 grados de libertad.
 > rf(5,24,10)
 ```
 ]
@@ -775,34 +772,42 @@ layout: false
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on beta
+   ### Distribución beta
 ]
 .right-column[
-En estad´ıstica la distribuci´on beta es una distribuci´on de probabilidad continua con dos par´ametros a y b cuya funci´on de densidad para valores 0 < x < 1 es
+En estadística la distribución beta es una distribución de probabilidad continua con dos parámetros a y b cuya función de densidad para valores 0 < x < 1 es
  
-<img src="Images/beta_dist.png" width=150px> </img>
+<img src="Images/beta_dist.png" width=350px> </img>
 
-Donde Γ es la funci´on gamma. 
+Donde Γ es la función gamma. 
 
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución beta
+]
+.right-column[
 ```
-- dbeta(x, shape1, shape2, ncp = 0, log = F); Devuelve resultados de la funci´on de densidad.
-- pbeta(q, shape1, shape2, ncp = 0, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de
-distribuci´on acumulada.
+- dbeta(x, shape1, shape2, ncp = 0, log = F); Devuelve resultados de la función de densidad.
+- pbeta(q, shape1, shape2, ncp = 0, lower.tail = T, log.p = F); Devuelve resultados de la función de
+distribución acumulada.
 - qbeta(p, shape1, shape2, ncp = 0, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la
-distribuci´on Beta.
-- rbeta(n, shape1, shape2, ncp = 0); Devuelve un vector de valores de la distribuci´on Beta aleatorios.
+distribución Beta.
+- rbeta(n, shape1, shape2, ncp = 0); Devuelve un vector de valores de la distribución Beta aleatorios.
 
 ```
 
 Con:
 - x, q: Vector de cuantiles.
 - p: Vector de probabilidades.
-- n: N´umeros de observaciones.
-shape1, shape2: Par´ametros de la Distribuci´on Beta. Shape1 = α y Shape2 = β. Ambos deben ser
+- n: Números de observaciones.
+shape1, shape2: Parámetros de la Distribución Beta. Shape1 = α y Shape2 = β. Ambos deben ser
 positivos.
-- ncp: Par´ametro l´ogico que determina si la distribuci´on es central o no.
-- log, log.p: Par´ametro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
-- lower.tail: Par´ametro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
+- ncp: Parámetro lógico que determina si la distribución es central o no.
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
 contrario, P[X > x].
 
 ]
@@ -812,11 +817,12 @@ contrario, P[X > x].
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on beta
+   ### Distribución beta
 ]
 .right-column[
+<br><br>
 ```
-> # Mediante una distribuci´on beta con ALPHA = 5 y BETA = 4.
+> # Mediante una distribución beta con ALPHA = 5 y BETA = 4.
 > # Calcule la probabilidad al menos del 75%
 > pbeta(0.75, 5, 4, lower.tail = F)
 > # Menos del 50%
@@ -825,7 +831,7 @@ layout: false
 > qbeta(0.25, 5, 4, lower.tail = T)
 > # P(X > x) = 0.5
 > qbeta(0.5, 5, 4, lower.tail = F)
-> # Calcular 5 n´umeros aleatorios de una dist. Beta con ALPHA = 5 y BETA = 4
+> # Calcular 5 números aleatorios de una dist. Beta con ALPHA = 5 y BETA = 4
 > rbeta(5,5,4)
 
 ```
@@ -838,34 +844,41 @@ layout: false
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on gamma
+   ### Distribución gamma
 ]
 .right-column[
 
-La distribuci´on gamma es una distribuci´on de probabilidad continua con dos par´ametros k y λ cuya funci´on de densidad para valores x > 0 es
+La distribución gamma es una distribución de probabilidad continua con dos parámetros k y λ cuya función de densidad para valores x > 0 es
 
- <img src="Images/gamma_dist.png" width=150px> </img>
+ <img src="Images/gamma_dist.png" width=300px> </img>
 
-Aqu´ı e es el n´umero e y Γ es la funci´on gamma.
+Aquí e es el número e y Γ es la función gamma.
 
+---
 
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución gamma
+]
+.right-column[
 ```
-- dgamma(x, shape, rate, scale = 1/rate, log = F); Devuelve resultados de la funci´on de densidad.
-- pgamma(q, shape, rate, scale = 1/rate, lower.tail = T, log.p = F); Devuelve resultados de la funci´on
+- dgamma(x, shape, rate, scale = 1/rate, log = F); Devuelve resultados de la función de densidad.
+- pgamma(q, shape, rate, scale = 1/rate, lower.tail = T, log.p = F); Devuelve resultados de la función
 acumulada.
 - qgamma(p, shape, rate, scale = 1/rate, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles
-de la distribuci´on Gamma.
-- rgamma(n, shape, rate, scale = 1/rate); Devuelve un vector de valores de la distribuci´on Gamma aleatorios.
+de la distribución Gamma.
+- rgamma(n, shape, rate, scale = 1/rate); Devuelve un vector de valores de la distribución Gamma aleatorios.
 ```
 
 Con:
 - x, q: Vector de cuantiles.
 - p: Vector de probabilidades.
-- n: N´umeros de observaciones.
+- n: Números de observaciones.
 - rate: Alternativa para especificar el valor de escala (Scale). Por defecto, su valor es igual a 1.
-shape, scale: Par´ametros de la Distribuci´on Gamma. Shape = a y Scale = s = 1/rate. Debe ser estrictamente positivo el par´ametro Scale.
-- log, log.p: Par´ametro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
-- lower.tail: Par´ametro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
+shape, scale: Parámetros de la Distribución Gamma. Shape = a y Scale = s = 1/rate. Debe ser estrictamente positivo el parámetro Scale.
+- log, log.p: Parámetro booleano, si es TRUE, las probabilidades p son devueltas como log (p).
+- lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo
 contrario, P[X > x].
 
 ]
@@ -875,11 +888,11 @@ contrario, P[X > x].
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribuci´on gamma
+   ### Distribución gamma
 ]
 .right-column[
 ```
-> # Mediante una distribuci´on gamma con ALPHA = 3 y BETA = 0.5.
+> # Mediante una distribución gamma con ALPHA = 3 y BETA = 0.5.
 > # Calcule la probabilidad de que sea mejor de 10
 > pgamma(10, 3, rate = 0.5, lower.tail = F)
 > # Entre 4 y 8
@@ -888,7 +901,7 @@ layout: false
 > qgamma(0.7, 3, rate = 0.5, lower.tail = T)
 > # P(X > x) = 0.5
 > qgamma(0.5, 3, rate = 0.5, lower.tail = F)
-> # Calcular 5 n´umeros aleatorios de una dist. gamma con ALPHA = 3 y BETA = 0.5
+> # Calcular 5 números aleatorios de una dist. gamma con ALPHA = 3 y BETA = 0.5
 > rgamma(5, 3, rate = 0.5)
 ```
 ]
@@ -896,35 +909,35 @@ layout: false
 ---
 layout: false
 .left-column[
-  ## Regresi´on
+  ## Regresión
    ### Definición
 ]
 .right-column[
 
-La regresi´on es una t´ecnica estad´ıstica que analiza la relaci´on de dos o mas variables que principalmente se utilizada para inferir datos a partir de otros y hallar una respuesta de lo que puede suceder. Esta nos permite conocer el cambio en una de las variables llamadas respuesta y que corresponde a otra conocida como variable explicativa.
+La regresión es una técnica estadística que analiza la relación de dos o mas variables que principalmente se utilizada para inferir datos a partir de otros y hallar una respuesta de lo que puede suceder. Esta nos permite conocer el cambio en una de las variables llamadas respuesta y que corresponde a otra conocida como variable explicativa.
 
-Se pueden encontrar varios tipos de regresi´on, por ejemplo:
-- Regresi´on lineal simple
-- Regresi´on m´ultiple ( varias variables)
-- Regresi´on log´ıstica
+Se pueden encontrar varios tipos de regresión, por ejemplo:
+- Regresión lineal simple
+- Regresión múltiple ( varias variables)
+- Regresión logística
 
-Algunas ecuaciones regresi´on son:
-- Regresi´on Lineal : y = A + Bx
-- Regresi´on Logar´ıtmica : y = A + BLn(x)
-- Regresi´on Exponencial : y = Ac(bx)
-- Regresi´on Cuadr´atica : y = A + Bx +Cx2
+Algunas ecuaciones regresión son:
+- Regresión Lineal : y = A + Bx
+- Regresión Logarítmica : y = A + BLn(x)
+- Regresión Exponencial : y = Ac(bx)
+- Regresión Cuadrática : y = A + Bx +Cx2
 
 ]
 
 ---
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on lineal
+  ## Regresión
+   ### Regresión lineal
 ]
 .right-column[
-La funci´on en R para obtener modelos de regresi´on lineal simple, Y=aX+b, es “lm”, aunque tambi´en se
-puede utilizar esta funci´on para el an´alisis de la varianza y an´alisis de covarianza.
+La función en R para obtener modelos de regresión lineal simple, Y=aX+b, es “lm”, aunque también se
+puede utilizar esta función para el análisis de la varianza y análisis de covarianza.
 
 ```
 > a.docencia <- c(3,1,1,2,5,6,12,7,3,10,6,11,4,4,16,4,5,3,5,2)
@@ -951,24 +964,24 @@ Ejercicio: Realizar el caso donde la variable dependiente es la edad.
 ---
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on lineal
+  ## Regresión
+   ### Regresión lineal
 ]
 .right-column[
-Dibujar la recta de regresi´on
+Dibujar la recta de regresión
  
 
 ```
 > # Defino los datos
 > x <- c(3, 5, 2, 3, 1, 4, 6, 4)
 > y <- c(150, 150, 250, 200, 350, 200, 50, 125)
-> # Defino la recta de regresi´on
+> # Defino la recta de regresión
 > lm(y~x)->ryx
 
 > # Definimos el eje X
 > litros <- seq(0:length(x))
 > # Defino la recta
-> precio <- (ryx$coefficients[1])+ (ryx$coefficients[2])*aceite# Ecuaci´on ajustada
+> precio <- (ryx$coefficients[1])+ (ryx$coefficients[2])*aceite# Ecuación ajustada
 > #Dibujo los puntos, se~nalados con una X
 > plot(x, y, pch="X", col=2, xlab="Litros", ylab="Precio")
 > #Dibujo la recta
@@ -980,43 +993,42 @@ Dibujar la recta de regresi´on
 ```
 > # Creamos el diagrama de puntos
 > plot(x, y)
-> # Dibujamos la recta de regresi´on
+> # Dibujamos la recta de regresión
 > abline(lm(y ~ x))
-> predict(ryx) # Son los valores de y cuando aplicamos la recta de regresi´on a los calores de x
+> predict(ryx) # Son los valores de y cuando aplicamos la recta de regresión a los calores de x
 ```
-
-Si lo que queremos es ajustar el modelo para poder usarlo posteriormente para predecir datos utilizaremos
-la funci´on “predict”. Esta funci´on obtiene todas las posibles predicciones para la variable x seg´un la posici´on en la que se encuentren sus datos.
-
-Predecir un vector de valores  y utilizar summary.
-]
 ---
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on lineal sin t´ermino independiente
+  ## Regresión
+   ### Regresión lineal
 ]
 .right-column[
+Si lo que queremos es ajustar el modelo para poder usarlo posteriormente para predecir datos utilizaremos
+la función “predict”. Esta función obtiene todas las posibles predicciones para la variable x según la posición en la que se encuentren sus datos.
+
+Predecir un vector de valores  y utilizar summary.
+<br><br>
 ```
 > x <- c(3, 5, 2, 3, 1, 4, 6, 4)
 > y <- c(150, 150, 250, 200, 350, 200, 50, 125)
-> # Recta de regresi´on sin termino independiente
+> # Recta de regresión sin termino independiente
 > lm(y~0+x)
 ```
 ]
 ---
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on Polinomial
+  ## Regresión
+   ### Regresión Polinomial
 ]
 .right-column[
 <br><br>
-Para calcular la funci´on de regresi´on polinomial Y = a<sub>0</sub> + a<sub>1</sub>X + a<sub>2</sub>X<sup>2 </sup>+ . . . + a<sub>p</sub>X<sup>p</sup> utilizamos la funci´on
+Para calcular la función de regresión polinomial Y = a<sub>0</sub> + a<sub>1</sub>X + a<sub>2</sub>X<sup>2 </sup>+ . . . + a<sub>p</sub>X<sup>p</sup> utilizamos la función
 lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 ``` 
-> # Cuadr´atica
+> # Cuadrática
 > lm(y~x+x^2)
 ```
 ]
@@ -1025,16 +1037,16 @@ lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on Polinomial
+  ## Regresión
+   ### Regresión Polinomial
 ]
 .right-column[
 <br><br>
-Para calcular la funci´on de regresi´on polinomial Y = a<sub>0</sub> + a<sub>1</sub>X + a<sub>2</sub>X<sup>2 </sup>+ . . . + a<sub>p</sub>X<sup>p</sup> utilizamos la funci´on
+Para calcular la función de regresión polinomial Y = a<sub>0</sub> + a<sub>1</sub>X + a<sub>2</sub>X<sup>2 </sup>+ . . . + a<sub>p</sub>X<sup>p</sup> utilizamos la función
 lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 ``` 
-> # Cuadr´atica
+> # Cuadrática
 > lm(y~x+x^2)
 ```
 ]
@@ -1043,8 +1055,8 @@ lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on Polinomial sin t´ermino independiente
+  ## Regresión
+   ### Regresión Polinomial sin término independiente
 ]
 .right-column[
 <br><br>
@@ -1059,12 +1071,12 @@ layout: false
 
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on Potencial
+  ## Regresión
+   ### Regresión Potencial
 ]
 .right-column[
 <br><br>
-Para calcular la funci´on de regresi´on potencial Y = aX<sup>b</sup> utilizamos la funci´on lm(log(y)˜ log(x)).
+Para calcular la función de regresión potencial Y = aX<sup>b</sup> utilizamos la función lm(log(y)˜ log(x)).
 
 ```
 > lm(log(y)~log(x))
@@ -1074,12 +1086,12 @@ Para calcular la funci´on de regresi´on potencial Y = aX<sup>b</sup> utilizamo
 
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on exponencial
+  ## Regresión
+   ### Regresión exponencial
 ]
 .right-column[
 <br><br>
-Para calcular la funci´on de regresi´on potencial Y = e<sup>a+bX</sup> utilizamos la funci´on lm(log(y)˜x).
+Para calcular la función de regresión potencial Y = e<sup>a+bX</sup> utilizamos la función lm(log(y)˜x).
 
 ```
 > lm(log(y)~x)
@@ -1089,12 +1101,12 @@ Para calcular la funci´on de regresi´on potencial Y = e<sup>a+bX</sup> utiliza
 
 layout: false
 .left-column[
-  ## Regresi´on
-   ### Regresi´on logar´ıtmica
+  ## Regresión
+   ### Regresión logarítmica
 ]
 .right-column[
 <br><br>
-Para calcular la funci´on de regresi´on logar´ıtmica Y = a + b log(x) utilizamos la funci´on lm(y˜ log(x)).
+Para calcular la función de regresión logarítmica Y = a + b log(x) utilizamos la función lm(y˜ log(x)).
 
 ```
 > lm(y~log(x))
