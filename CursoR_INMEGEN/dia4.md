@@ -493,11 +493,12 @@ La distribución t de Student es la distribución de probabilidad del cociente:
 donde:
 1. Z tiene una distribución normal de media nula y varianza 1
 2. V tiene una distribución chi-cuadrado con ν grados de libertad
-3. Z y V son independientes
-s
+3. Z y V son independientess
 La función de densidad de t es
 
 <img src="./Images/t-test.png"> Test-T</img>
+
+```
 
 > qpois(0.985, 3)
 
@@ -521,7 +522,7 @@ La gráfica de su función de densidad tiene una forma acampanada y es simétric
 Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
 
 
-<img src="https://www.google.com.mx/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwioverj9YDcAhVIYK0KHRlWA08QjRx6BAgBEAU&url=https%3A%2F%2Fmatematicasconmuchotruco.wordpress.com%2F2014%2F07%2F25%2F502%2F&psig=AOvVaw0XNIBA5eezDGCuq-i0feSJ&ust=1530638200139764" width=200px alt="normal"></img> 
+<img src="https://matematicasconmuchotruco.files.wordpress.com/2014/07/normal.png" width=200px alt="normal"></img> 
 
 ]
 ---
@@ -534,11 +535,11 @@ layout: false
 .right-column[
 
 
- - dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la función de densidad.
- - pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
- - qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la
+- dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la función de densidad.
+- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la
 Normal.
- - rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
+- rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
 
 Con:
  - x, q: Vector de cuantiles.
@@ -559,6 +560,7 @@ layout: false
    ### Distribución normal
 ]
 .right-column[
+<br><br>
 ```
 > # Calcular la P(Z>1) de una N(0,1)
 > pnorm(1, mean = 0, sd = 1, lower.tail = F)
@@ -592,9 +594,6 @@ T = Z/sqrt(V/v)
 - Z variable aleatoria distribuida segun una normal típica (media = 0, varianza=1)
 - V es una variable con distribución chi^2
 - Z y V son independientes
-
-La función de densidad
-
 ]
 ---
 layout: false
@@ -627,7 +626,7 @@ layout: false
    ### Distribución t-Student
 ]
 .right-column[
-
+<br><br>
 ```
 > # Calcular P(T >= 1.3) con 7 grados de libertad.
 > pt(1.3, 7, lower.tail = F)
@@ -647,14 +646,14 @@ layout: false
    ### Distribución Chi-cuadrado
 ]
 .right-column[
-
+<br><br>
 En estad´ıstica, la distribución X<sup>2</sup> (de Pearson) es una distribución de probabilidad continua con un parámetro k que representa los grados de libertad de la variable aleatoria:
 
 X = Z<sup>2</sup><sub>1</sub> + Z<sup>2</sup><sub>2</sub>+. · · + Z<sup>2</sup><sub>k</sub>
 
 donde Z<sub>i</sub> son variables de distribución normal, de media cero y varianza uno. 
 
-<img src="Images/densidad_chi2.png" width=150px> </img>
+<img src="Images/densidad_chi2.png" width=350px> </img>
 
 donde Γ es la funci´on gamma
 
@@ -666,7 +665,7 @@ layout: false
    ### Distribución Chi-cuadrado
 ]
 .right-column[
-
+<br><br>
 ```
 - dchisq(x, df, ncp=0, log = F); Devuelve resultados de la funci´on de densidad.
 - pchisq(q, df, ncp=0, lower.tail = T, log.p = F); Devuelve resultados de la funci´on de distribuci´on
@@ -695,7 +694,7 @@ layout: false
    ### Distribución Chi-cuadrado
 ]
 .right-column[
-
+<br><br>
 ```
 > # Calcular X^2(0.52, 7) con 7 grados de libertad.
 > qchisq(0.52, 7, lower.tail = F)
@@ -709,6 +708,7 @@ layout: false
 ```
 ]
 ---
+
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
@@ -725,7 +725,9 @@ F=U<sub>1</sub>d<sub>1</sub> / U<sub>2</sub>d<sub>2</sub>
 
 ]
 
----layout: false
+---
+
+layout: false
 .left-column[
   ## Distribuciones de probabilidad
    ### Distribuci´on F
@@ -768,7 +770,9 @@ layout: false
 ```
 ]
 
----layout: false
+---
+
+layout: false
 .left-column[
   ## Distribuciones de probabilidad
    ### Distribuci´on beta
@@ -803,7 +807,9 @@ contrario, P[X > x].
 
 ]
 
----layout: false
+---
+
+layout: false
 .left-column[
   ## Distribuciones de probabilidad
    ### Distribuci´on beta
@@ -827,7 +833,9 @@ contrario, P[X > x].
 
 ]
 
----layout: false
+---
+
+layout: false
 .left-column[
   ## Distribuciones de probabilidad
    ### Distribuci´on gamma
@@ -862,7 +870,9 @@ contrario, P[X > x].
 
 ]
 
----layout: false
+---
+
+layout: false
 .left-column[
   ## Distribuciones de probabilidad
    ### Distribuci´on gamma
