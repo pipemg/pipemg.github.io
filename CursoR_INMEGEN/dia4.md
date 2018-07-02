@@ -442,7 +442,7 @@ La distribución normal, distribución de Gauss o distribución gaussiana, a una
 
 Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
 
-<img src="Images/normal.png"> normal_dist</img>
+<img src="./Images/normal.png"> normal_dist</img>
 
 Para obtener valores que se basen en la distribución normal, R dispone de cuatro funciones basados en “norm”:
 
