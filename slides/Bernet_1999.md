@@ -177,7 +177,6 @@ En este articulo se describe un **método** para volver posible esta comparació
 
 <image src="http://saludpasion.com/wp-content/2013/03/inflamacion.jpg" width=150px ><br>
 
-
 <image src="http://4.bp.blogspot.com/-TXutuxUAuwI/Uy-KN7sTS0I/AAAAAAAAADA/fgTswerSBHY/s1600/preview001.png" width=150px >
 
 ]
