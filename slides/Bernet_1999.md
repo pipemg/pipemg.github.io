@@ -13,8 +13,8 @@ name: title
 
 
 ### [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
+.footnote[Bernet_1999<br>[Descargar Presentación](http://pipemg.github.io/slides/Bernet_1999.html)]
 
-.footnote[[Descargar Presentación](http://pipemg.github.io/slides/Bernet_1999.html)]
 ---
 name: abstract
 layout: false
