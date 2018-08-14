@@ -10,7 +10,7 @@ name: Inicio
 .footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion2.pdf)]
 
 ---
-
+layout: false
 
 .left-column[
   ## Archivos
@@ -47,7 +47,7 @@ Para leer tablas directamente en R tenemos diversas funciones como read.table()
 ]
 
 ---
-
+layout: false
 .left-column[
   ## Archivos
   ### - Ver archivos, obtener el directorio y cambiar de directorio
@@ -190,6 +190,7 @@ Una de las cosas básicas que debe de manejarse cuando se describen los datos so
 ```
 **Ejercicio** 
  - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
+
 ```
 > demo("graphics")
 
@@ -614,7 +615,6 @@ x <- table(state.region)
 
 
 ---
-
 layout: false
 
 .left-column[
@@ -638,10 +638,6 @@ layout: false
 > pie(slices, labels = lbls, main="Pie Chart of Countries"
 ```
 ]
-
-
-
-
 
 ---
 name: last-page
@@ -831,12 +827,13 @@ layout: false
 >  }
 ```
 
+<img src="ifcondition.jpg" alt="If statement", style="width:250px">
+
 
 Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
 
 
 **Ejercicio** Crea un if que evalue si X es positivo 
-
 
 
 ]
@@ -884,12 +881,18 @@ layout: false
    ### ifelse
 ]
 .right-column[
-
+<br> 
 
 ```
 ifelse(test_expression, x, y)
 ```
 **Ejercicio** Crea un ifelse que evalue si X es par o no
+
+```
+> a = c(5,7,2,9)
+> ifelse(a %% 2 == 0,"even","odd")
+```
+
 ]
 ---
 layout: false
@@ -899,6 +902,9 @@ layout: false
 ]
 .right-column[
 
+<br> 
+
+<img src="for_loop.jpg" alt="If statement", style="width:250px">
 
 ```
 > for (val in sequence){
@@ -921,6 +927,8 @@ layout: false
 ]
 .right-column[
 
+<img src="While-loop.png" alt="If statement", style="width:250px">
+
 ```
 > while (test_expression){
 +	statement
@@ -934,6 +942,14 @@ Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_
 
 Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
 
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### R while Loop
+]
+.right-column[
 
 ```
 > i <- 1
@@ -952,6 +968,7 @@ layout: false
 ]
 .right-column[
 
+<br><br>
 Una instrucción break se usa dentro de un ciclo (repeat, for, while) para detener las iteraciones y hacer fluir el control fuera del ciclo.
 
 
@@ -1038,12 +1055,13 @@ layout: false
 ]
 .right-column[
  
-
+<br><br>
 Utilizar tus propias funciones
+
 ```
 > mifuncion<-function(x){
-+	length(x[x<0])
-+ }
+	length(x[x<0])
+ }
 
 > apply(m, 2, FUN=mifuncion)
 ```
@@ -1052,12 +1070,13 @@ Utilizar tus propias funciones
 > apply(m, 2, function(x) length(x[x<0]))
 
 ```
+
+```
 > apply(m, 2, function(x) is.matrix(x))
 > apply(m, 2, is.matrix)
 > apply(m, 2, is.vector)
 ```
 
-```
 ]
 
 ---
@@ -1067,7 +1086,7 @@ layout: false
    ### sapply and lapply
 ]
 .right-column[
- 
+ <br><br>
 
 Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
 
