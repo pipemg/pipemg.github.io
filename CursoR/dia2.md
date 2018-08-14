@@ -10,6 +10,79 @@ name: Inicio
 .footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion2.pdf)]
 
 ---
+
+
+.left-column[
+  ## Archivos
+  ### - Ver archivos, obtener el directorio y cambiar de directorio
+
+]
+
+.right-column[
+ 
+Escritura y lectura de archivos en R
+
+
+Supongamos que tenemos un fichero denominado [lista_de_datos.txt](lista_de_datos.txt)  y que lo queremos leer utilizando scan(file=" ", what = numeric(), n, sep, ...)
+
+
+```
+> datos = scan("lista_de_datos.txt",sep=",")
+```
+ 
+Para leer tablas directamente en R tenemos diversas funciones como read.table()
+
+```
+> datos = read.table("edadaltura.csv", sep=",")
+> colnames(datos)
+> rownames(datos)
+> ?read.table
+
+```
+ 
+```
+> ?read.csv
+
+```
+]
+
+---
+
+.left-column[
+  ## Archivos
+  ### - Ver archivos, obtener el directorio y cambiar de directorio
+
+]
+
+.right-column[
+ 
+Escritura y lectura de archivos en R
+
+Para el caso análogo de escritura utilizamos la función write.table
+
+```
+> ?write.table
+```
+ 
+guardemos la tabla de datos en el archivo datos1
+
+```
+> write.table(datos, "datos1.csv")
+> write.table(datos, "datos2.tsv", sep="\t")
+> write.table(datos, "datos3.tsv", sep="\t", quote=T)
+```
+
+adicional a la función write.table, tenemos la función write para vectores.
+
+```
+> x<-seq_len(1:100)
+> write(x, file="seq_numerica.txt")
+```
+
+ 
+]
+
+---
 name: last-page
 template: inverse
 
@@ -22,7 +95,7 @@ layout: false
   ## ¿Tipos de Datos?
 ]
 .right-column[
-<br><br>
+
 **_datum_** se refiere a la información concreta, cualquier pieza de información colectada.
 
 Un **"Data set"** o set de datos es una colección de datos relacionadas de alguna forma.
@@ -47,7 +120,7 @@ layout: false
    ###  - Datos cuantitativos
 ]
 .right-column[
-<br><br><br><br>
+
 Son datos que se pueden medir o son asociados a alguna cantidad. 
 
 Se subdividen en:
@@ -55,7 +128,7 @@ Se subdividen en:
  - Datos discretos
 
  - Datos continuos (datos escalares o de intervalos)
-<br><br>
+
 
 **Nota** Cuando no se sabe que tipo de dato cuantitativo es, considerese continuo
 
@@ -69,13 +142,13 @@ layout: false
    ### - Datos cuantitativos (Ejemplo)
 ]
 .right-column[
-<br><br><br>
+<br>
 Ejemplo Precipitaciones anuales en ciudades de EE.UU. El vector contiene la cantidad promedio de lluvia (en pulgadas) para cada una de las 70 ciudades de los Estados Unidos.
 
 ```
 > str(precip)
 ```
-<br><br>
+
 ```
 > precip[1:4]
 ```
@@ -96,7 +169,6 @@ layout: false
    ### - Gráficas de puntos
 ]
 .right-column[
-<br><br>
 
 Una de las cosas básicas que debe de manejarse cuando se describen los datos son gráficas que nos permitan tener mas información.
 
@@ -109,18 +181,19 @@ Una de las cosas básicas que debe de manejarse cuando se describen los datos so
 ```
 > stripchart(precip, xlab = "rainfall") 
 ```
-<br>
 ```
 > stripchart(rivers, method = "jitter", xlab = "length")
 
 ```
-<br>
 ```
 > stripchart(discoveries, method = "stack", xlab = "number")
 ```
 **Ejercicio** 
  - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
+```
+> demo("graphics")
 
+```
 ]
 
 
@@ -133,7 +206,7 @@ layout: false
    ### - Histogramas
 ]
 .right-column[
-<br><br><br>
+<br>
 
 
  1. Histogramas (Bar Graphs)
@@ -149,7 +222,6 @@ Normalmente se usan para datos continuos y se requiere decidir un conjunto de cl
 ```
 
 <br>
-<br>
 Consideraciones:
  - La gráfica depende de los "bins" elegidos
 ]
@@ -163,11 +235,14 @@ layout: false
    ### - Histogramas
 ]
 .right-column[
-<br><br>
+
 
 **Ejercicio** 
  - Jugar con el valor de ~breaks~ dentro de histograma
- - probar las diferentes opciones de ~labels~,~freq~, ~col~, ~main, xlab, ylab, xlim, ylim~ y ~labels~. *Revisar el manual*
+ - probar las diferentes opciones de ~labels~,~freq~, ~col~, ~main, xlab, ylab, xlim, ylim~ y ~labels~.
+<br>
+ *Revisar el manual*
+<br>
  - Genera dos histogramas de los datos de precipitación, el primero con 10 divisiónes y el segundo con 200
 ]
 
@@ -182,7 +257,7 @@ layout: false
    ### - Gráficas de tallo
 ]
 .right-column[
-<br><br>
+
 
 **Definición**
 
@@ -215,7 +290,7 @@ layout: false
    ### - Gráficas de Índice
 ]
 .right-column[
-<br><br>
+
 
 Estas se realizan utilizando la función **plot** y son buenas para visualizar datos que han sido ordenados, cuando los datos fueron medidos a traves del tiempo.
 
@@ -268,7 +343,7 @@ layout: false
    ### - Datos cualitativos
 ]
 .right-column[
-<br><br>
+
 Datos **no numericos** o que no representan cantidades numericas.
 
 Ej. Nombre, genero, grupo etnico, estado socioeconomico, numero de seguridad social, licencia, ...
@@ -290,7 +365,92 @@ layout: false
    ### - Presentación de Datos
 ]
 .right-column[
-<br><br>
+**Factores** 
+Un factor es un vector que se usa para especificar una clasificación discreta de los componentes de
+otros vectores de la misma longitud.
+
+
+```
+> estudiantes.origen = c("Sonora","Nuevo Leon","CDMX","CDMX","Nuevo Leon",
+"Yucatan","Sonora","Yucatan","CDMX","Nuevo Leon","Durango","Jalisco","Nuevo Leon",
+"Sonora","Yucatan")
+> estudiantes.origen
+> length(estudiantes.origen)
+
+```
+Ahora creamos una variable de tipo factor, a partir de la existente:
+
+
+```
+> festudiantes = as.factor(estudiantes.origen)
+> festudiantes
+> levels(festudiantes)
+> summary(festudiantes)
+
+```
+
+Supongamos ahora que disponemos de las estaturas de cada uno de los estudiantes del ejemplo
+anterior y vamos a calcular la estatura promedio
+
+```
+> estudiantes.estaturas = c(1.83, 1.71, 1.79, 1.64, 1.74, 1.81, 1.62, 1.84, 1.68, 1.81, 1.82, 1.74, 1.84, 1.61, 1.84)
+> tapply(estudiantes.estaturas,festudiantes,mean)
+
+```
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Presentación de Datos
+]
+.right-column[
+**Factores ordenados** 
+Son factores cuyos niveles guardan un determinado orden. Para crear un factor ordenado o
+para transformar un factor en ordenado se usa la función ordered().
+
+Supongamos que tenemos un vector con el nivel de inglés de 10 estudiantes:
+
+
+
+```
+> nivel.ingles = c("medio", "medio", "bajo",  "medio", "bajo",  "medio", "alto",  "alto",  "bajo", "bajo" )
+> nivel.ingles
+
+
+```
+Ahora creamos un factor ordenado con el nivel de inglés de los estudiantes:
+
+```
+> fnivel.ingles = ordered(nivel.ingles,levels=c("bajo","medio","alto"))
+> fnivel.ingles
+
+```
+
+Si ahora queremos saber qué estudiantes tienen un nivel de inglés por debajo de "medio":
+
+
+
+```
+> fnivel.ingles<"medio"
+
+```
+
+]
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cualitativos
+   ### - Presentación de Datos
+]
+.right-column[
+
 **Tablas** 
 Una forma de mostrar resumenes de datos estadisticos es con el uso de las tablas. 
 
@@ -330,7 +490,7 @@ layout: false
    ### - Descripción
 ]
 .right-column[
-<br><br>
+
 
 
 Los datos de state.region enumera cada uno de los 50 estados y la región a la que pertenece, ya sea en el noreste, sur, norte central u oeste.
@@ -376,7 +536,7 @@ layout: false
    ### - Gráficas de Barras
 ]
 .right-column[
-<br><br>
+
 
 
 Un gráfico de barras es el análogo de un histograma para datos categóricos. Se muestra una barra
@@ -404,7 +564,7 @@ layout: false
    ### - Diagramas de Pareto
 ]
 .right-column[
-<br><br>
+
 
 
 Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
@@ -432,7 +592,6 @@ Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barra
 
 ---
 
-
 layout: false
 .left-column[
   ## ¿Tipos de Datos?
@@ -440,7 +599,7 @@ layout: false
    ### - Gráfica de puntos
 ]
 .right-column[
-<br><br>
+
 
 Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla. Los gráficos de puntos son tan compactos que es fácil graficar interacciones multi-variables muy complicadas en un gráfico.
 
@@ -451,20 +610,20 @@ x <- table(state.region)
 ```
 > dotchart(as.vector(x), labels = names(x))
 ```
-
 ]
+
 
 ---
 
-
 layout: false
+
 .left-column[
   ## ¿Tipos de Datos?
    ### - Datos cualitativos
    ### - Gráfica de pastel
 ]
 .right-column[
-<br><br>
+
 
 
 "These can be done with R but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas."  - Introduction to probability using R.
@@ -499,7 +658,6 @@ layout: false
    ### Introducción
 ]
 .right-column[
-<br><br>
  
 Los estudios estadísticos requieren mas de un factor o medición asociado a cada objeto, para esto utilizamos otra **estructura de datos**.
 
@@ -533,7 +691,6 @@ layout: false
    ### Matrices
 ]
 .right-column[
-<br><br>
 
 ```
 > A = matrix( 
@@ -562,6 +719,7 @@ layout: false
 +   c("row1", "row2"),         # row names 
 +   c("col1", "col2", "col3")) # column names
 ``` 
+
 ```
 > rownames(x) <- c("row1", "row2")
 > colnames(x) <- c("C1","C2","C3")
@@ -576,7 +734,6 @@ layout: false
    ### Matrices
 ]
 .right-column[
-<br><br>
 
 ```
 > A<-cbind(c(1,2,3),c(4,5,6))
@@ -589,15 +746,13 @@ layout: false
 [1,]    1    2    3
 [2,]    4    5    6
 
-```
 
-
-```
 > x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
 > x[-1,]    # select all rows except first
 > x[c(3,2),]
 ```
 ]
+
 ---
 layout: false
 .left-column[
@@ -605,28 +760,15 @@ layout: false
    ### Acceso a DataFrames
 ]
 .right-column[
-<br><br>
 
 ```
 > A[3, ]
-```
-
-<br>
-```
 > A[1, ]
 ```
 
-<br>
 ```
 > A[, 2]
-```
-<br>
-
-```
 > names(A)
-```
-<br>
-```
 > A$v1
 ```
 
@@ -681,7 +823,7 @@ layout: false
    ### If
 ]
 .right-column[
-<br><br>
+
 
 ```
 >  if (test_expression) {
@@ -705,7 +847,7 @@ layout: false
    ### If else
 ]
 .right-column[
-<br><br>
+
 ```
 > if (test_expression) {
 +   statement1
@@ -742,7 +884,7 @@ layout: false
    ### ifelse
 ]
 .right-column[
-<br><br>
+
 
 ```
 ifelse(test_expression, x, y)
@@ -756,7 +898,7 @@ layout: false
    ### For
 ]
 .right-column[
-<br><br>
+
 
 ```
 > for (val in sequence){
@@ -778,7 +920,7 @@ layout: false
    ### R while Loop
 ]
 .right-column[
-<br><br>
+
 ```
 > while (test_expression){
 +	statement
@@ -809,7 +951,7 @@ layout: false
 
 ]
 .right-column[
-<br><br>
+
 Una instrucción break se usa dentro de un ciclo (repeat, for, while) para detener las iteraciones y hacer fluir el control fuera del ciclo.
 
 
@@ -834,7 +976,7 @@ layout: false
    ### repeat
 ]
 .right-column[
-<br><br>
+
 Un ciclo de repetición se usa para iterar sobre un bloque de código varias veces.
 
 No hay verificación de condición en repetir bucle para salir del bucle.
@@ -867,7 +1009,7 @@ layout: false
    ### apply
 ]
 .right-column[
-<br><br> 
+ 
 
 Cuando usar apply.
 
@@ -895,7 +1037,7 @@ layout: false
    ### apply
 ]
 .right-column[
-<br><br> 
+ 
 
 Utilizar tus propias funciones
 ```
@@ -925,7 +1067,7 @@ layout: false
    ### sapply and lapply
 ]
 .right-column[
-<br><br> 
+ 
 
 Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
 
@@ -938,16 +1080,12 @@ Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos
 
 ```
 
-Utilizando la opci[on simplify = F, saplly te da una lista
+Utilizando la opcion simplify = F, saplly te da una lista
 ```
 > sapply(1:3, function(x) x^2, simplify=F)
-
-```
 > ?unlist
 > ?tapply
 > ?
-```
-
 ```
 ]
 ---
