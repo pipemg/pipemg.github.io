@@ -99,34 +99,32 @@ layout: false
 Moneda 
 
 ```
-> S<-data.frame(pos=c("H","T"))
+> coin<-data.frame(pos=c("H","T"))
 
 ```
 Espacio Muestral de una moneda que se lanza 3 veces
 
 ```
-> expand.grid(t(S),t(S),t(S))
+> Scoin<-expand.grid(t(S),t(S),t(S))
+> Scoin[sample(1:nrow(Scoin),1),]
+> sample(x=c("H","T"), size=5, replace=T)
 ```
 
 Dado
 
 ```
-> S<-data.frame(pos=c(1:6))
+> dice<-data.frame(pos=c(1:6))
+> Sdice<-expand.grid(t(dice),t(dice),t(dice))
 
 ```
 
 
 ```
->  sample(x=c("H","T"), size=5, replace=T)
+>  Sdice[sample(1:nrow(Sdice),1),]
 
 ```
 
-Espacio Muestral de un dado
 
-```
->  expand.grid(t(S),t(S),t(S))
-
-```
 
 
 ]
@@ -721,7 +719,7 @@ layout: false
 layout: false
 .left-column[
   ## Ejemplos de funciones
-   ### Funciones elementales
+  ### Funciones elementales
 ]
 .right-column[
 <br><br>
@@ -731,7 +729,7 @@ Calcular la media
 ```
 > media<-function(x=NA)
 + {
-+ x<-x[!is.na(x)]
++ x <- x[!is.na(x)]
 + sum(x)/length(x)
 + }
 > media(c(2,4,1,3,6,7))
@@ -749,6 +747,7 @@ Calcular la varianza
 + }
 ```
 
+
 ]
 
 ---
@@ -756,7 +755,7 @@ Calcular la varianza
 layout: false
 .left-column[
   ## Ejemplos de funciones
-    ### Funciones elementales
+  ### Funciones elementales
 ]
 .right-column[
 <br><br>
@@ -787,6 +786,7 @@ Calcular la covarianza
 
 Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
 ]
+
 ---
 name: last-page
 template: inverse

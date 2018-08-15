@@ -779,8 +779,6 @@ x <- scan() # empty to end
 
 ]
 
-<br>
-<br>
 .right-column[
 
  3. Repeated data; Regular patterns
@@ -931,11 +929,8 @@ Definición:
 
 ]
 
-<br>
-<br>
 .right-column[
 
- <br> 
 ```
 > sum(1,2,6,7,9)
 
@@ -960,11 +955,8 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 
 ]
 
-<br>
-<br>
 .right-column[
 
- <br> 
 ```
 > mi_función<-function(varA,varB,varC,...){
 >    #AQUÍ VA EL CÓDIGO A EJECUTAR
@@ -991,8 +983,6 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 
 ]
 
-<br>
-<br>
 .right-column[
 
 <br><br>
@@ -1000,7 +990,7 @@ Algunas funciones requieren argumentos los cuales tienen nombres determinados
 1. F_{n}=F_{n-1}+F_{n-2}
 2. F_{1}=1,\;F_{2}=1} or F_{0}=0,\;F_{1}=1
 
-
+]
 
 ---
 .left-column[
@@ -1101,8 +1091,6 @@ Ejercició. busca las funciones de R que comienzan con lengt
  - **Search help:** help.seaerch("plo") // ?? plo
  
  - **search.r-project.org** 
-
- - **Apropos** ?apropos // apropos("lm") // find("cor")  
 
  - **R Help Mailing Lists**  [http://www.r-project.org/mail.html](http://www.r-project.org/mail.html)
 
