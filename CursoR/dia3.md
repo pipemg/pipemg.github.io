@@ -403,7 +403,7 @@ layout: false
   ## Distribuciones de datos
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 
 **Centroide:** Conjunto de datos está asociado con un número que representa una tendencia media o general de los datos.
 
@@ -442,7 +442,7 @@ layout: false
    ### Medidas de Forma
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 
 
 La **asimetría** (Fisher) de la muestra, se define por la fórmula
@@ -463,7 +463,7 @@ layout: false
    ### Medidas de Forma
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 
 
 La **curtosis**  de la muestra, se define por la fórmula
@@ -524,7 +524,7 @@ layout: false
   ## Estadistica descriptiva 
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 
 Utilizando R. Calcula las siguientes cosas del vector 
 
@@ -547,6 +547,32 @@ Statistics > Summaries > Numerical Summaries
 calculamos los cuantiles automaticamente
 
 ]
+
+
+---
+
+layout: false
+.left-column[
+  ## Estadistica descriptiva 
+]
+.right-column[
+<br><br>
+
+Utilizando R. Calcula las siguientes cosas del vector 
+
+```
+x<-round(runif(20, min=1, max=100))
+```
+
+- rango:  La diferencia entre el menor y el mayor valor.
+- media/media recortada: Medida de tendencia central (promedio)
+- mediana: El número de la mitad en un conjunto de números
+- varianza: Media aritmética del cuadrado de las desviaciones respecto a la media.
+- desviación estandar(típica): Raiz cuadrada de la varianza
+
+
+]
+
 ---
 
 layout: false
@@ -555,7 +581,6 @@ layout: false
   ### Rangos intercuantiles y MAD
 ]
 .right-column[
-<br><br><br><br>
 
 ```
 > tr=c(3,4,5,3,4,5,4,3,2,3,12,11,3,4,89)
@@ -565,11 +590,15 @@ layout: false
 
 ```
 
+- Q1: percentil 25%, El 75% de los datos son superiores a este cuantil
+- Q2: percentil 50%, es el equivalente a la mediana 
+- Q3: percentil 75%, El 25% de los datos son superiores a este cuantil
+
 suceptibilidad de la media, mediana a valores extremos.
 
-Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25}
+Rango intercuartil (**IQR**) definido por IQR = q_{0.75} - q_{0.25} (Medida de dispersión.)
 
-Otro método más robusto que el IQR es la Media de la desviación absoluta (**MAD**).
+Otro método más robusto que el IQR es la desviación absoluta media (**MAD**). Distancia promedio entre cada valor y el promedio. La desviación media absoluta nos ayuda a tener una idea de qué tan "extendidos" están los valores en un conjunto de datos.
 
 1. Calculamos la media (prom) 
  
@@ -585,7 +614,7 @@ layout: false
   ## Observaciones Extremas
 ]
 .right-column[
-<br><br><br><br>
+<br><br>
 
 Problemas que pueden implicar estimaciones exageradas e "inestabilidad" estadística. Podemos considerar que estos datos pueden ser:
 

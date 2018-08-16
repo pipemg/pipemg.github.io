@@ -442,7 +442,7 @@ La distribución normal, distribución de Gauss o distribución gaussiana, a una
 
 Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
 
-<img src="./Images/normal.png" with=50%>
+<img src="./Images/normal.png" with=40%>
  
 Para obtener valores que se basen en la distribución normal, R dispone de cuatro funciones basados en “norm”:
 
@@ -712,6 +712,7 @@ layout: false
    ### Distribución F
 ]
 .right-column[
+<br><br>
 La distribución F de Snedecor es una distribución de probabilidad continua. Una variable aleatoria de
 distribución F se construye como el siguiente cociente:
 
@@ -775,12 +776,13 @@ layout: false
    ### Distribución beta
 ]
 .right-column[
+<br><br>
 En estadística la distribución beta es una distribución de probabilidad continua con dos parámetros a y b cuya función de densidad para valores 0 < x < 1 es
  
-<img src="Images/beta_dist.png" width=350px> </img>
+<img src="Images/beta_dist.png" width=450px> 
 
 Donde Γ es la función gamma. 
-
+]
 ---
 
 layout: false
@@ -838,21 +840,6 @@ layout: false
  
 
 ]
-
----
-
-layout: false
-.left-column[
-  ## Distribuciones de probabilidad
-   ### Distribución gamma
-]
-.right-column[
-
-La distribución gamma es una distribución de probabilidad continua con dos parámetros k y λ cuya función de densidad para valores x > 0 es
-
- <img src="Images/gamma_dist.png" width=300px> </img>
-
-Aquí e es el número e y Γ es la función gamma.
 
 ---
 
@@ -967,7 +954,9 @@ layout: false
   ## Regresión
    ### Regresión lineal
 ]
+
 .right-column[
+
 Dibujar la recta de regresión
  
 
@@ -997,6 +986,7 @@ Dibujar la recta de regresión
 > abline(lm(y ~ x))
 > predict(ryx) # Son los valores de y cuando aplicamos la recta de regresión a los calores de x
 ```
+]
 ---
 layout: false
 .left-column[
