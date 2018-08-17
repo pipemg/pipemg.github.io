@@ -1,0 +1,289 @@
+---
+title: "Medidas de centralización y dispersión"
+output: html_notebook
+---
+
+
+## Puntuales
+###Estadísticos de centralización
+
+#### Estadísticos básicos Media, mediana, cuartiles, percentiles y la moda
+```{r}
+
+estadisticos <- function(x) {
+ 
+  source("moda.r") # Carga la función moda()
+ 
+  cat("\nn=",length(x),"\nMedia=",mean(x),"\nMediana=",median(x),"\nModa=",moda(x),
+        "\nVarianza=",var(x),"\nDesviación típica=",sd(x),"\n\n")
+ 
+  print(quantile(x))
+ 
+  per <- c(0,1/3,2/3,1) # Percentiles 0%, 33%, 66% y 100%
+  print(quantile(x,p=per))
+ 
+  # Diagrama de caja. Muestra la mediana y los cuartiles
+  boxplot(x, main="Diagrama de caja")
+}
+ 
+x<- c(6,7,8,9,9,9,9,10,11,11) # Asignamos unos números al vector x
+ 
+print(x) # Muestra los números ordenados de menor a mayor
+ 
+estadisticos(x)
+
+```
+
+[1]  6  7  8  9  9  9  9 10 11 11
+ 
+n= 10
+Media= 8.9
+Mediana= 9
+Moda= 9
+Varianza= 2.544444
+Desviación típica= 1.595131
+ 
+   0%   25%   50%   75%  100%
+ 6.00  8.25  9.00  9.75 11.00
+ 
+       0% 33.33333% 66.66667%      100%
+        6         9         9        11
+
+#### Resumen de los 5 numeros
+
+El resumen de los 5 números de Tukey fue propuesto por este autor para obtener una descripción inicial de un conjunto de datos. Se suele complementar con un gráfico de cajas.
+
+Estos 5 números son el segundo y tercer cuartil (que incluyen el 25% y 75% de los datos, respectivamente), la mediana, el valor máximo y el valor mínimo. Son calculados por la función fivenumbers(), si se desea también la media se puede utilizar la función summary().
+
+```{r}
+# Resumen de los 5 números de Tukey aplicado a un vector
+ 
+set.seed(10)
+x <- rnorm(50,10,2) # 50 números aleatorios de media 10 y desviación típica 2
+ 
+cinco <- fivenum(x)
+seis <- summary(x)
+ 
+cat("\nResumen de los 5 números:\n")
+print(cinco)
+ 
+ 
+boxplot(x,main="Resumen de los 5 números")
+ 
+ 
+cat("\nResumen de los 5 número más la medias:\n")
+print(seis)
+boxplot(x,main="Resumen de los 5 números + media")
+points(mean(x),pch=4,col="red")
+
+```
+
+Resumen de los 5 números:
+[1]  5.629426  8.255682  9.442313 10.589090 12.203559
+ 
+Resumen de los 5 número más la medias:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  5.629   8.277   9.442   9.317  10.560  12.200
+
+```{r}
+# Calculo en data frames
+data("iris")
+ 
+# Usamos la función sapply() para aplicarlo ya que no funciona con data frames
+# sapply() permite aplicar la función fivenum a cada columna automáticamente
+cinco2 <- sapply(iris[-5],fivenum)
+boxplot(iris[-5])
+print(cinco2)
+ 
+# Summary puede trabajar directamente con data frames
+seis2 <- summary(iris[-5])
+print(seis2)
+ 
+medias <- sapply(iris[-5], mean) # Extraemos las medias para el gráfico
+boxplot(iris[-5])
+points(medias,col="red",pch=4) # Dibujamos las medias
+
+```
+
+   Sepal.Length Sepal.Width Petal.Length Petal.Width
+[1,]          4.3         2.0         1.00         0.1
+[2,]          5.1         2.8         1.60         0.3
+[3,]          5.8         3.0         4.35         1.3
+[4,]          6.4         3.3         5.10         1.8
+[5,]          7.9         4.4         6.90         2.5
+  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500
+
+
+## Por intervalos
+
+
+Un intervalo de confianza es un rango de valores, derivado de los estadísticos de la muestra, que posiblemente incluya el valor de un parámetro de población desconocido. Debido a su naturaleza aleatoria, es poco probable que dos muestras de una población en particular produzcan intervalos de confianza idénticos. Sin embargo, si usted repitiera muchas veces su muestra, un determinado porcentaje de los intervalos de confianza resultantes incluiría el parámetro de población desconocido.
+
+<img src="../Images/confidence_interval_def.gif">
+
+
+### Intervalo de confianza  para la media 
+
+
+Par el cálculo del intervalo de confianza de la media usamos uno de los valores devueltos por la función t.test():
+
+t.test(datos)$conf.int[1:2]
+
+
+
+```{r}
+# Cálculo del IC de la media de una variable de iris
+ 
+data(iris)
+ t.test(iris$Sepal.Length)$conf.int[1:2]
+
+```
+
+[1] 5.709732 5.976934
+
+
+
+El nivel de significación es del 95%Para cambiar el nivel de significación se usa el parámetro conf.level. Ejemplo con un nivel del 99%
+
+```{r}
+t.test(iris$Sepal.Length, conf.level = 0.99)$conf.int[1:2]
+```
+[1] 5.666920 6.019747
+  
+### Intervalo de confianza  para la mediana 
+
+El intervalo de confianza para la mediana se puede calcular mediante el test de Wilcoxon, wilcox.test, aunque hay que especificar que lo haga con la opción .conf.int = TRUE.
+
+```{r}
+set.seed(1)
+x <- trunc(runif(11, 1, 100))
+wilcox.test(x, conf.int = TRUE, conf.level = 0.95)
+```
+
+Ejecutar este programa Wilcoxon signed rank test
+ 
+data:  x
+V = 66, p-value = 0.0009766
+alternative hypothesis: true location is not equal to 0
+95 percent confidence interval:
+ 27.0 76.5
+sample estimates:
+(pseudo)median
+            53
+
+
+Podemos acceder directamente al intervalo de confianza añadiendo $conf.int
+
+```{r}
+wilcox.test(x, conf.int = TRUE, conf.level = 0.95)$conf.int
+```
+
+[1] 27.0 76.5
+attr(,"conf.level")
+[1] 0.95
+
+
+### Intervalo de confianza  para la varianza
+
+
+R no tiene una función para calcular el intervalo de confianza de una variable por lo que proporcionamos una función que lo hace. El nivel de confianza por defecto es del 95%
+
+Función ic.var
+
+```{r}
+
+# Intervalo de confianza para la varianza
+# Modificado de http://cvb.ehu.es/open_course_ware/ca
+
+
+ic.var <- function(x, conf.level=0.95) {
+ 
+  alfa <- 1 - conf.level
+  n <- length(x)
+  l1 <- (n - 1) * var(x) / qchisq(1 - alfa / 2,n - 1)
+  l2 <- (n - 1) * var(x) / qchisq(alfa / 2,n - 1)
+  ic <- c(l1,l2)
+  return(ic)
+}
+
+```
+
+
+```{r}
+
+> # Cálculo del IC de la varianza de Sepal.Length de Iris
+ data(iris)
+ 
+ ic.var(iris$Sepal.Length)
+ 
+```
+ [1] 0.5531973 0.8725029
+
+ 
+```{r}
+ 
+ # Cálculo del IC de la varianza de todas las variables numéricas de Iris
+ # usando saply
+ sapply(iris[,1:4],ic.var)
+
+```
+
+     Sepal.Length Sepal.Width Petal.Length Petal.Width
+[1,]    0.5531973   0.1532698     2.514121   0.4687388
+[2,]    0.8725029   0.2417372     3.965272   0.7392948
+
+
+### Intervalo de confianza  para los porcentajes
+
+
+Para el cálculo de los intervalos de confianza de los porcentajes usaremos binom.test en lugar de prop.test ya que esta última es una aproximación a la primera basada en la distribución normal, mientras que el primero es un test exacto. El resultado devuelto es la proporción sobre 1, si deseamos porcentajes hay que multiplicar por 100 los resultados
+
+```{r}
+ 
+ # Intervalo de confianza de un porcentaje o proporción
+
+ # Se contabiliza el % de hombres y mujeres de una reunión de 60 personas
+ # y se halla su intervalo de confianza
+ # Hay 21 mujeres (35%) y 39 hombres (65%)
+
+ # Mujeres
+ pm <- binom.test(21,60)$conf.int[1:2]
+ # pm es la proporción, se multiplica por 100 para expresar el resultado en %
+ 100 * pm
+
+```
+
+[1] 23.13264 48.40280
+
+```{r}
+ 
+# Hombres
+ ph <- binom.test(39,60)$conf.int[1:2]
+# ph es la proporción, se multiplica por 100 para expresar el resultado en %
+100 * ph
+```
+
+[1] 51.59720 76.86736
+
+El nivel de confianza del ejemplo anterior es del 95%. Para cambiarlo se usa el parámetro conf.level. Ejemplo con un nivel del 99%
+
+```{r}
+pm <- binom.test(21,60, conf.level = 0.99)$conf.int[1:2]
+ 100 * pm
+```
+
+[1] 20.05877 52.38539
+
+```{r}
+ph <- binom.test(39,60, conf.level = 0.99)$conf.int[1:2]
+100 * ph
+```
+
+[1] 47.61461 79.94123
+

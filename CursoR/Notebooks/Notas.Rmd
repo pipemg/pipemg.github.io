@@ -1,0 +1,129 @@
+---
+title: "NOTAS"
+output: html_notebook
+---
+
+### ¿Qué es una prueba de hipótesis?
+Más información sobre Minitab 18 
+Una prueba de hipótesis es una regla que especifica si se puede aceptar o rechazar una afirmación acerca de una población dependiendo de la evidencia proporcionada por una muestra de datos.
+
+Una prueba de hipótesis examina dos hipótesis opuestas sobre una población: la hipótesis nula y la hipótesis alternativa. La hipótesis nula es el enunciado que se probará. Por lo general, la hipótesis nula es un enunciado de que "no hay efecto" o "no hay diferencia". La hipótesis alternativa es el enunciado que se desea poder concluir que es verdadero de acuerdo con la evidencia proporcionada por los datos de la muestra.
+
+Con base en los datos de muestra, la prueba determina si se puede rechazar la hipótesis nula. Usted utiliza el valor p para tomar esa decisión. Si el valor p es menor que el nivel de significancia (denotado como α o alfa), entonces puede rechazar la hipótesis nula.
+
+Un error común de percepción es que las pruebas estadísticas de hipótesis están diseñadas para seleccionar la más probable de dos hipótesis. Sin embargo, al diseñar una prueba de hipótesis, establecemos la hipótesis nula como lo que queremos desaprobar. Puesto que establecemos el nivel de significancia para que sea pequeño antes del análisis (por lo general, un valor de 0.05 funciona adecuadamente), cuando rechazamos la hipótesis nula, tenemos prueba estadística de que la alternativa es verdadera. En cambio, si no podemos rechazar la hipótesis nula, no tenemos prueba estadística de que la hipótesis nula sea verdadera. Esto se debe a que no establecimos la probabilidad de aceptar equivocadamente la hipótesis nula para que fuera pequeña.
+
+Entre las preguntas que se pueden contestar con una prueba de hipótesis están las siguientes:
+
+- ¿Tienen las estudiantes de pregrado una estatura media diferente de 66 pulgadas?
+- ¿Es la desviación estándar de su estatura igual a o menor que 5 pulgadas?
+- ¿Es diferente la estatura de las estudiantes y los estudiantes de pregrado en    promedio?
+- ¿Es la proporción de los estudiantes de pregrado significativamente más alta que la proporción de las estudiantes de pregrado?
+
+
+
+### Ejemplo de cómo realizar una prueba de hipótesis básica
+
+Usted puede seguir seis pasos básicos para configurar y realizar correctamente una prueba de hipótesis. Por ejemplo, el gerente de una fábrica de tuberías desea determinar si el diámetro promedio de los tubos es diferente de 5 cm. El gerente sigue los pasos básicos para realizar una prueba de hipótesis.
+
+ ** NOTA **
+Debe determinar los criterios para la prueba y el tamaño de muestra necesario antes de recolectar los datos.
+
+1. Especificar las hipótesis.
+
+ En primer lugar, el gerente formula las hipótesis. La hipótesis nula es: la media de la población de todos los tubos es igual a 5 cm. Formalmente, esto se escribe como: H0: μ = 5
+
+ Luego, el gerente elige entre las siguientes hipótesis alternativas:
+
+
+
+|Condición que se probará |	Hipótesis alternativa|
+|-------------------------|---------------------|
+|La media de la población es menor que el objetivo.|	unilateral: μ < 5|
+|La media de la población es mayor que el objetivo.|	unilateral: μ > 5|
+|La media de la población es diferente del objetivo.|	bilateral: μ ≠ 5|
+
+Como tiene que asegurarse de que los tubos no sean más grandes ni más pequeños de 5 cm, el gerente elige la hipótesis alternativa bilateral, que indica que la media de la población de todos los tubos no es igual a 5 cm. Formalmente, esto se escribe como H1: μ ≠ 5
+
+2. Elegir un nivel de significancia (también denominado alfa o α).
+  
+El gerente selecciona un nivel de significancia de 0.05, que es el nivel de significancia más utilizado.
+  
+3. Determinar la potencia y el tamaño de la muestra para la prueba.
+
+  El gerente utiliza un cálculo de potencia y tamaño de la muestra para determinar cuántos tubos tiene que medir para tener una buena probabilidad de detectar una diferencia de 0.1 cm o más con respecto al diámetro objetivo.
+
+4. Recolectar los datos.
+
+Recoge una muestra de tubos y mide los diámetros.
+
+5. Comparar el valor p de la prueba con el nivel de significancia.
+
+ Después de realizar la prueba de hipótesis, el gerente obtiene un valor p de 0.004. El valor p es menor que el nivel de significancia de 0.05.
+
+
+6. Decidir si rechazar o no rechazar la hipótesis nula.
+
+El gerente rechaza la hipótesis nula y concluye que el diámetro medio de todos los tubos no es igual a 5 cm.
+
+
+### Acerca de las hipótesis nula y alternativa
+
+Las hipótesis nula y alternativa son dos enunciados mutuamente excluyentes acerca de una población. Una prueba de hipótesis utiliza los datos de la muestra para determinar si se puede rechazar la hipótesis nula.
+
+#### Hipótesis nula (H0)
+La hipótesis nula indica que un parámetro de población (tal como la media, la desviación estándar, etc.) es igual a un valor hipotético. La hipótesis nula suele ser una afirmación inicial que se basa en análisis previos o en conocimiento especializado.
+
+#### Hipótesis alternativa (H1)
+La hipótesis alternativa indica que un parámetro de población es más pequeño, más grande o diferente del valor hipotético de la hipótesis nula. La hipótesis alternativa es lo que usted podría pensar que es cierto o espera probar que es cierto.
+
+
+### Hipótesis unilaterales y bilaterales
+La hipótesis alternativa puede ser unilateral o bilateral.
+
+#### Bilateral
+Utilice una hipótesis alternativa bilateral (también conocida como hipótesis no direccional) para determinar si el parámetro de población es mayor que o menor que el valor hipotético. Una prueba bilateral puede detectar cuándo el parámetro de población difiere en cualquier dirección, pero tiene menos potencia que una prueba unilateral.
+
+#### Unilateral
+Utilice una hipótesis alternativa unilateral (también conocida como hipótesis direccional) para determinar si el parámetro de población difiere del valor hipotético en una dirección específica. Usted puede especificar la dirección para que sea mayor que o menor que el valor hipotético. Una prueba unilateral tiene mayor potencia que una prueba bilateral, pero no puede detectar si el parámetro de población difiere en la dirección opuesta.
+
+### Ejemplos de hipótesis bilaterales y unilaterales
+
+#### Bilateral
+Un investigador tiene los resultados de una muestra de estudiantes que presentaron un examen nacional en una escuela secundaria. El investigador desea saber si las calificaciones de esa escuela difieren del promedio nacional de 850. Una hipótesis alternativa bilateral (también conocida como hipótesis no direccional) es adecuada porque el investigador está interesado en determinar si las calificaciones son menores que o mayores que el promedio nacional. (H0: μ = 850 vs. H1: μ≠ 850)
+
+####  Unilateral
+Un investigador tiene los resultados de una muestra de estudiantes que tomaron un curso de preparación para un examen nacional. El investigador desea saber si los estudiantes preparados tuvieron puntuaciones por encima del promedio nacional de 850. Una hipótesis alternativa unilateral (también conocida como hipótesis direccional) se puede utilizar porque el investigador plantea la hipótesis de que las puntuaciones de los estudiantes preparados son mayores que el promedio nacional. (H0: μ = 850 vs. H1: μ > 850)
+
+
+### ¿Qué son los errores de tipo I y tipo II?
+
+Ninguna prueba de hipótesis es 100% cierta. Puesto que la prueba se basa en probabilidades, siempre existe la posibilidad de llegar a una conclusión incorrecta. Cuando usted realiza una prueba de hipótesis, puede cometer dos tipos de error: tipo I y tipo II. Los riesgos de estos dos errores están inversamente relacionados y se determinan según el nivel de significancia y la potencia de la prueba. Por lo tanto, usted debe determinar qué error tiene consecuencias más graves para su situación antes de definir los riesgos.
+
+#### Error de tipo I
+Si usted rechaza la hipótesis nula cuando es verdadera, comete un error de tipo I. La probabilidad de cometer un error de tipo I es α, que es el nivel de significancia que usted establece para su prueba de hipótesis. Un α de 0.05 indica que usted está dispuesto a aceptar una probabilidad de 5% de estar equivocado al rechazar la hipótesis nula. Para reducir este riesgo, debe utilizar un valor menor para α. Sin embargo, usar un valor menor para alfa significa que usted tendrá menos probabilidad de detectar una diferencia si esta realmente existe.
+
+#### Error de tipo II
+Cuando la hipótesis nula es falsa y usted no la rechaza, comete un error de tipo II. La probabilidad de cometer un error de tipo II es β, que depende de la potencia de la prueba. Puede reducir el riesgo de cometer un error de tipo II al asegurarse de que la prueba tenga suficiente potencia. Para ello, asegúrese de que el tamaño de la muestra sea lo suficientemente grande como para detectar una diferencia práctica cuando esta realmente exista.
+La probabilidad de rechazar la hipótesis nula cuando es falsa es igual a 1–β. Este valor es la potencia de la prueba.
+
+|Verdad acerca de la población|
+|-----|
+|Decisión basada en la muestra|	H0 es verdadera|	H0 es falsa|
+|No rechazar H0|	Decisión correcta (probabilidad = 1 - α)|	Error tipo II - no rechazar H0 cuando es falsa (probabilidad = β)|
+|Rechazar H0|	Error tipo I - rechazar H0 cuando es verdadera (probabilidad = α)	|Decisión correcta (probabilidad = 1 - β)|
+
+#### Ejemplo de error de tipo I y tipo II
+Para entender la interrelación entre los errores de tipo I y tipo II, y para determinar cuál error tiene consecuencias más graves para su situación, considere el siguiente ejemplo.
+
+Un investigador médico desea comparar la efectividad de dos medicamentos. Las hipótesis nula y alternativa son:
+
+- Hipótesis nula (H0): μ1= μ2.Los dos medicamentos tienen la misma eficacia.
+
+ - Hipótesis alternativa (H1): μ1≠ μ2. Los dos medicamentos no tienen la misma eficacia.
+
+Un error de tipo I se produce si el investigador rechaza la hipótesis nula y concluye que los dos medicamentos son diferentes cuando, en realidad, no lo son. Si los medicamentos tienen la misma eficacia, el investigador podría considerar que este error no es muy grave, porque de todos modos los pacientes se beneficiarían con el mismo nivel de eficacia independientemente del medicamento que tomen. Sin embargo, si se produce un error de tipo II, el investigador no rechaza la hipótesis nula cuando debe rechazarla. Es decir, el investigador concluye que los medicamentos son iguales cuando en realidad son diferentes. Este error puede poner en riesgo la vida de los pacientes si se pone en venta el medicamento menos efectivo en lugar del medicamento más efectivo.
+
+Cuando realice las pruebas de hipótesis, considere los riesgos de cometer errores de tipo I y tipo II. Si las consecuencias de cometer un tipo de error son más graves o costosas que cometer el otro tipo de error, entonces elija un nivel de significancia y una potencia para la prueba que reflejen la gravedad relativa de esas consecuencias.
+
+

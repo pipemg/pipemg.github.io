@@ -13,7 +13,129 @@ name: Inicio
 name: last-page
 template: inverse
 
+## Fenómenos aleatorios
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+
+]
+
+.right-column[
+
+En estadística, un fenómeno aleatorio es aquel que bajo el mismo conjunto aparente
+de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede
+predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un
+dado).
+
+Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos
+los factores de un experimento nos hace predecir exactamente el resultado del mismo.
+Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber
+exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+
+Un experimento se dice aleatorio si verifica las siguientes condiciones:
+ - Es posible conocer previamente todos los posibles resultados asociados al
+experimento (el espacio muestral, constituido por diferentes sucesos).
+ - Es imposible predecir el resultado exacto del mismo antes de realizarlo
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+   ### Nociones básicas sobre sucesos
+]
+.right-column[
+
+El espacio de resultados o espacio muestral, Ω es el conjunto de todos los posibles
+resultados de un experimento aleatorio.
+
+Sucesos
+
+Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado
+del experimento aleatorio es uno de los elementos de A.
+
+- Suceso complementario de A (A'): ocurre cuando el resultado del experimento
+no es un elemento de A.
+- Suceso unión de A y B (A ∪ B): ocurre cuando ó bien sucede A ó bien sucede B.
+- Suceso intersección de A y B (A ∩ B): ocurre cuando A y B suceden
+simultáneamente
+
+Cada uno de los elementos de Ω constituye un suceso. A estos sucesos se les
+denomina sucesos elementales.
+
+El propio Ω también constituye un suceso, al que se denomina suceso seguro
+
+]
+
+.right-column[
+Nociones básicas sobre sucesos
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+   ### Nociones básicas sobre sucesos
+
+]
+
+.right-column[
+Ejemplo 1
+
+Se lanzan dos dados, uno rojo y otro azul. El espacio de resultados Ω estará
+constituido por los 36 posibles resultados del experimento, es decir:
+Ω = {(1, 1),(1, 2), . . . ,(1, 6),(2, 1), . . . ,(6, 6)}
+
+- Los sucesos elementales son (1, 1), (1, 2), etc., es decir, cada uno de los 36
+elementos de Ω.
+- A = {rojo = 4} = {(4, 1),(4, 2),(4, 3),(4, 4),(4, 5),(4, 6)}
+- B = {rojo + azul = 10} = {(4, 6),(5, 5),(6, 4)}
+- A' = {rojo 6= 4}; B¯ = {rojo + azul 6= 10}
+- A ∪ B = {(4, 1),(4, 2),(4, 3),(4, 4),(4, 5),(4, 6),(5, 5),(6, 4)}
+- A ∩ B = {(4, 6)}
+
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+   ### Definición clásica de probabilidad
+
+
+]
+
+.right-column[
+
+#### Probabilidad
+La probabilidad es una medida para cuantificar la seguridad que tenemos de que
+ocurra cada uno de los sucesos de un experimento aleatorio. A cada suceso A se le
+asocia un valor, P(A), con 0 ≤ P(A) ≤ 1.
+
+Si P(A) = 0, el suceso A no va a ocurrir. Si P(A) = 1, el suceso A va a ocurrir con
+toda seguridad. Conforme mayor sea el número P(A) más verosímil es el suceso A.
+
+#### Definición clásica
+
+En la definición clásica de probabilidad, todos los resultados del experimento nos
+resultan igualmente verosímiles, por lo que tendrán igual probabilidad.
+De este modo, la probabilidad de un suceso A podrá ser calculada del siguiente modo:
+P(A) = # de sucesos elementales faborables de A / # total de sucesos
+
+Ejemplo
+]
+---
+
+name: last-page
+template: inverse
+
 ## Distribuciones de probabilidad
+
 ---
 
 layout: false
@@ -32,7 +154,21 @@ Las distribuciones de probabilidad pueden representarse a traves de una una form
 - Distribuciones continuas
 ]
 ---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Definiciones
+]
 
+.right-column[
+Existe una relación muy importante entre las funciones de distribución F(x) y de densidad f(x) de una variable aleatoria discreta. La función de distribución en un punto se obtiene acumulando el valor de la función de densidad para todos los valores del recorrido menores o iguales al punto en cuestión.
+
+F(X) = SUM(f(xi)) para toda xi en X
+
+
+
+]
+---
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
@@ -93,6 +229,33 @@ A cada nombre de función dado por R se le agrega un prefijo ‘d’ para obtene
 Donde xxx indica el nombre de cualquiera de las distribuciones, x y q son vectores que toman valores en el soporte de la distribución, p es un vector de probabilidades y n es un valor entero.
 
 ]
+
+
+
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución Uniforme Discreta
+]
+.right-column[
+Es la distribución de probabilidad se asocia a variables cuyos posibles valores tienen
+todos la misma probabilidad. Si una variable aleatoria X cuyos posibles valores son
+x1, . . . , xn, tiene distribución uniforme discreta entonces
+
+P(X=x<sub>1</sub>)=P(X=x<sub>2</sub>)=P(X=x<sub>3</sub>)=...)P(X=x<sub>n</sub>)=1/n
+
+Intuitivamente, esta variable está asociada al experimento similares al de elegir al azar
+un número entre 1 y n sin disponer de ninguna información adicional.
+
+- µ = (x1 + · · · + xn)/n= ¯x 
+
+- σ2 = [(x1 − µ)^2 + · · · + (xn − µ)^2 ]/n
+]
+
+
+
 ---
 
 layout: false
@@ -101,7 +264,7 @@ layout: false
    ### Distribución Binomial
 ]
 .right-column[
-<br><br>
+
 La distribución  binomial es una distribucón de probabilidad que
 toma valor 1 para la probabilidad de éxito (p) y valor q para la probabilidad de fracaso (q = 1 − p).
 
@@ -113,12 +276,42 @@ parametro p si sigue un proceso de bernulli.
  - La probabilidad de éxito p es constante
  - Los ensayos
 
-X ∼ Be(p)
+# f(x) = p<sup>x</sup> (1 − p)<sup>1-x</sup>; con x = {0, 1}
 
-f(x) = p<sup>x</sup> (1 − p)<sup>1-x</sup>; con x = {0, 1}
+# P(X = 1) = p , P(X = 0) = 1 − p , 0 < p < 1
 
+# µ = p 
+
+# σ^2 = p(1 − p)
 
 ]
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución Binomial
+]
+.right-column[
+
+Ejemplo
+
+Con objeto de estudiar el número de salmones de cierto río que llegan vivos al mar se
+marca el 20% de la camada en el lugar de nacimiento. Posteriormente, en una estación
+de seguimiento río abajo, se registra el paso de 10 salmones de dicha camada. 
+
+¿Cuál es la probabilidad de que se registren 3 de los marcados? 
+¿Y con qué probabilidad se registrarán 2 ó menos de los marcados?
+
+X ≡ número de salmones marcados que se registran ∼ B(10, 0.2)
+P(X = 3) = conv(10,3) * 0.2^3 * 0.8 ^ 7 = 
+
+10!*0.2^3*.08^7 /(3! 7!)  = 0.2013
+
+P(X ≤ 2) =P(X = 0) + P(X = 1) + P(X = 2)
+=0.1074 + 0.2684 + 0.3020 = 0.6778
+]
+
 ---
 
 layout: false
@@ -444,7 +637,24 @@ Se dice que una variable aleatoria continua X sigue una distribución normal de 
 
 <img src="./Images/normal.png" with=50%>
  
+Intuitivamente, es la distribución de probabilidad que se asume para una variable
+cuyos posibles valores se disponen de forma simétrica en torno a su media de modo
+que los valores próximos a dicha media tendrán mayor probabilidad de ser
+alcanzados. Conforme más alejados estén de la media, los valores tienen menor
+probabilidad de ser alcanzados.
+
+]
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución normal
+]
+.right-column[
+
 Para obtener valores que se basen en la distribución normal, R dispone de cuatro funciones basados en “norm”:
+
 
 - dnorm(x, mean = 0, sd = 1, log = F); Resultados de la función de densidad.
 - pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de distribución acumulada.
@@ -474,6 +684,34 @@ layout: false
 > pnorm(150, mean = 125, sd = 50, lower.tail = F)
 ```
 ]
+
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución normal
+]
+.right-column[
+La vida de un semiconductor láser a una potencia constante se distribuye
+normalmente con media 7000 horas y desviación típica 600 horas. ¿Cuál es la
+probabilidad de que la vida del láser esté entre 6280 y 7120 horas?
+
+X ≡ vida del semiconductor (en horas) ∼ N(7000, 600)
+
+Tipificación:
+Z = (X − 7000)/600 ∼ N(0, 1)
+
+(6280 − 7000)/600 ) −1.2 
+
+(7120 − 7000)/600 = 0.2
+
+P(6280 ≤ X ≤ 7120) = P(−1.2 ≤ Z ≤ 0.2)
+=P(Z ≤ 0.2) − P(Z ≤ −1.2) = 0.5793 − 0.1151 = 0.4642
+
+]
+
+
 ---
 
 layout: false
@@ -483,7 +721,11 @@ layout: false
 ]
 .right-column[
 
-La distribución t-Student es una distribución de probabilidad que surge del problema de estimar la media de una población normalmente distribuida cuando el tama˜no de la muestra es peque˜no.
+La distribución t-Student es una distribución de probabilidad que surge del problema de estimar la media de una población normalmente distribuida cuando el tamaño de la muestra es pequeño.
+
+La distribución de probabilidad t de Student con n grados de libertad (t(n)) es la
+asociada a una variable aleatoria que se obtiene a partir del cociente de una variable
+N(0, 1) y la raíz cuadrada de una variable χ^2(n).
 
 La distribución t de Student es la distribución de probabilidad del cociente:
 
@@ -655,6 +897,38 @@ donde Z<sub>i</sub> son variables de distribución normal, de media cero y varia
 donde Γ es la función gamma
 
 ]
+
+
+---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución Chi-cuadrado
+]
+.right-column[
+
+La distribución de probabilidad chi-cuadrado con n grados de libertad (χ^2(n)) es la
+asociada a una variable aleatoria que se obtiene como suma de los cuadrados de n variables independientes con distribución N(0, 1).
+
+Por tanto, esta distribución sólo toma valores positivos y además su función de
+densidad es muy compleja. (Graficar una chi cubica y chi cuadrada)
+
+Intuitivamente, esta distribución es de utilidad para obtener información de la varianza
+poblacional a partir de un conjunto de datos extraídos de una variable normal.
+
+]
+---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución Chi-cuadrado
+]
+.right-column[
+
+Ejemplo 
+
+]
+
 ---
 layout: false
 .left-column[
@@ -712,6 +986,13 @@ layout: false
    ### Distribución F
 ]
 .right-column[
+
+La distribución de probabilidad F de Snedecor con n y m grados de libertad (F(n, m))
+es la asociada a una variable aleatoria que se obtiene a partir del cociente de una dos
+variables chi-cuadrado con n y m grados de libertad respectivamente.
+Por tanto, esta distribución sólo tomar valores positivos. Su función de densidad es
+muy compleja y su gráfica es parecida a la de la distribución chi-cuadrado
+
 La distribución F de Snedecor es una distribución de probabilidad continua. Una variable aleatoria de
 distribución F se construye como el siguiente cociente:
 
@@ -767,6 +1048,24 @@ layout: false
 ```
 ]
 
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución uniforme continua
+]
+.right-column[
+Distribuciones Uniforme Continua en el intervalo [a, b] (U[a, b])
+Es la distribución de probabilidad que se asocia a variables aleatorias que pueden
+tomar cualquier valor en el intervalo [a, b] y cuya función de densidad es
+
+f(x) = 1/(a-b) donde x esta en [a,b]
+
+Intuitivamente, es la distribución de probabilidad que se asocia a experimentos
+similares a elegir un número al azar entre los valores a y b.
+
+(Falta gráfica)
 ---
 
 layout: false
