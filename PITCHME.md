@@ -1,9 +1,12 @@
 ##### Monitoring thioredoxin redox with a genetically encoded red fluorescent biosensor
 
-Yichong Fan, Merna Makar, Michael X. Wang, and Hui-wang Ai1
+<small>Yichong Fan, Merna Makar, Michael X. Wang, and Hui-wang Ai</small>
 
-Felipe Muñoz.
+<small><small>Felipe Muñoz-González</small></small>
+<small><small>fmunoz@lcg.unam.mx</small></small>
 
---
+---
+
+
 
 
