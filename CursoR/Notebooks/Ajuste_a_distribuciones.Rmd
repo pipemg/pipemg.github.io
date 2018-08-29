@@ -1,0 +1,185 @@
+---
+title: "Ajuste a distribuciones"
+output: html_notebook
+---
+
+
+##Pruebas de normalidad
+
+
+### Test de Shapiro-Wilk
+La prueba de Shapiro-Wilk es una de las más utilizadas y eficientes para comprobar la normalidad de una variable, auarnque el tamaño de la muestra debe ser menor de 5000. En caso de tener más pueden usarse alguna de las muchas pruebas de normalidad que hay.
+
+```{r}
+# Test de normalidad de Shapiro-Wilk
+set.seed(10)
+x <- rnorm(100) # Creamos una variable normal con 100 valores
+x.test <- shapiro.test(x)
+print(x.test)
+ 
+x2 <- runif(100) # Creamos una variable con distribución uniforme (no normal) con 100 valores
+x2.test <- shapiro.test(x2)
+print(x2.test)
+```
+
+
+  Shapiro-Wilk normality test
+ 
+data:  x
+W = 0.9891, p-value = 0.5911
+Como p > 0.05 no podemos rechazar que la distribución sea normal.
+
+
+    Shapiro-Wilk normality test
+ 
+data:  x2
+W = 0.9285, p-value = 4.082e-05
+
+
+En este caso p < 0.05 por lo que podemos rechazar que la distribución sea de tipo normal.
+
+
+Podemos hacer unos gráficos superponiendo la distribución normal al histograma de frecuencias. Para ello hemos creado la función plotn() que lo hace. Es fácil modificarla para añadir más opciones para los gráficos.
+
+
+```{r}
+# Dado un vector dibuja el histograma asociado y la distribución normal
+ 
+plotn <- function(x,main="Histograma de frecuencias \ny distribución normal",
+                  xlab="X",ylab="Densidad") {
+  min <- min(x)
+  max <- max(x)
+  media <- mean(x)
+  dt <- sd(x)
+ 
+  hist(x,freq=F,main=main,xlab=xlab,ylab=ylab)
+  curve(dnorm(x,media,dt), min, max,add = T,col="blue")
+}
+ 
+plotn(x,main="Distribución normal")
+plotn(x2,main="Distribución uniforme")
+```
+
+
+### Test de Lilliefors
+
+
+Esta prueba de normalidad requiere la librería nortest.
+
+```{r}
+# Test de normalidad de Lilliefors
+library(nortest)
+set.seed(10)
+x <- rnorm(100) # Creamos una variable normal con 100 valores
+x.test <- lillie.test(x)  # Test de Lilliefors
+x.test
+ 
+# Creamos una variable con distribución uniforme (no normal) con 100 valores
+x2 <- runif(100)
+x2.test <- lillie.test(x2)
+x2.test
+ 
+
+```
+
+Lilliefors (Kolmogorov-Smirnov) normality test
+ 
+data:  x
+D = 0.0471, p-value = 0.8461
+ 
+    Lilliefors (Kolmogorov-Smirnov) normality test
+ 
+data:  x2
+D = 0.1226, p-value = 0.0008086
+
+### Test de Anderson-Darling
+
+La prueba de Anderson-Darling necesita la librería nortest.
+
+
+```{r}
+# Test de normalidad de Anderson-Darling
+library(nortest)
+set.seed(10)
+x <- rnorm(100) # Creamos una variable normal con 100 valores
+x.test <- ad.test(x)  # Test de Lilliefors
+x.test
+
+```
+  Anderson-Darling normality test
+ 
+data:  x
+A = 0.3046, p-value = 0.5636
+
+```{r}
+
+# Creamos una variable con distribución uniforme (no normal) con 100 valores
+x2 <- runif(100)
+x2.test <- ad.test(x2)
+x2.test
+```
+    Anderson-Darling normality test
+ 
+data:  x2
+A = 2.2429, p-value = 9.982e-06
+
+
+### Test binomial para dos frecuencias
+
+
+El test binomial se utiliza para ver si una variable con dos estados (como la cara y cruz de una moneda) se ajusta a una probabilidad determinada.
+
+
+```{r}
+# Test binomial exacto
+ 
+# Al lanzar una moneda 20 veces se obtienen 14 caras y 6 cruces
+# ¿Se ajusta a una probalidad del 50%?
+ 
+print(binom.test(14,20))
+
+```
+
+data:  14 and 20
+number of successes = 14, number of trials = 20, p-value = 0.1153
+alternative hypothesis: true probability of success is not equal to 0.5
+95 percent confidence interval:
+ 0.4572108 0.8810684
+sample estimates:
+probability of success
+                   0.7
+
+Como p-value > 0.05 debemos concluir que entra dentro de lo posible obtener este resultado
+
+### Test Chi cuadrado para frecuencias observadas y esperadas
+```{r}
+
+# Al lanzar un dado 30 veces se obtienen 12 veces el 2
+# ¿Se ajusta a una probabilidad de 1/6?
+ 
+print(binom.test(12,30,p=1/6))
+
+```
+    Exact binomial test
+ 
+data:  12 and 30
+number of successes = 12, number of trials = 30, p-value = 0.002032
+alternative hypothesis: true probability of success is not equal to 0.1666667
+95 percent confidence interval:
+ 0.2265576 0.5939651
+sample estimates:
+probability of success
+                   0.4
+
+Como p-value < 0.05 el resultado obtenido no se ajusta a lo esperado en un dado.
+
+
+
+
+
+
+
+
+
+
+

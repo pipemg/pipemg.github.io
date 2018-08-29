@@ -1,0 +1,1 @@
+filename	name	condition	replicateSRR792268-p90-q30-final	68	Mbovis	1SRR792269-p90-q30-final	69	Control	1SRR792270-p90-q30-final	70	Mbovis	2SRR792271-p90-q30-final	71	Control	2SRR792272-p90-q30-final	72	Mbovis	3SRR792273-p90-q30-final	73	Control	3
