@@ -2,8 +2,9 @@
 
 <small>Yichong Fan, Merna Makar, Michael X. Wang, and Hui-wang Ai</small>
 
-<small><small>Felipe Muñoz-González</small></small>
-<small><small>fmunoz@lcg.unam.mx</small></small>
+<small><small>Felipe Muñoz-González
+<br>
+fmunoz@lcg.unam.mx</small></small>
 
 ---
 
