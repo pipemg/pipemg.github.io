@@ -46,7 +46,7 @@ layout: false
 name: historia
 layout: false
 .left-column[
-## Brebe historia
+## Breve historia
 
 ]
 .right-column[
