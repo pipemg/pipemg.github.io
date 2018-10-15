@@ -12,7 +12,7 @@ name: Inicio
 name: Temario1
 layout: false
 .left-column[
-  ## ¿Temario de esta presentación
+  ## Temario de esta presentación
 
 ]
 .right-column[
