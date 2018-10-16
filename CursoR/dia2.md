@@ -827,7 +827,7 @@ layout: false
 >  }
 ```
 
-<img src="ifcondition.jpg" alt="If statement", style="width:250px">
+<img src="Images/ifcondition.jpg" alt="If statement", style="width:250px">
 
 
 Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
@@ -904,7 +904,7 @@ layout: false
 
 <br> 
 
-<img src="for_loop.jpg" alt="If statement", style="width:250px">
+<img src="Images/for_loop.jpg" alt="If statement", style="width:250px">
 
 ```
 > for (val in sequence){
@@ -927,7 +927,7 @@ layout: false
 ]
 .right-column[
 
-<img src="While-loop.png" alt="If statement", style="width:250px">
+<img src="Images/While-loop.png" alt="If statement", style="width:250px">
 
 ```
 > while (test_expression){
