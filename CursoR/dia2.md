@@ -296,7 +296,7 @@ Normalmente se usan para datos continuos y se requiere decidir un conjunto de cl
 ```
  hist(precip, main = "Histograma de lluvias en U.S.A")
 ```
-<br>
+
 ```
  hist(precip, freq = FALSE, main = "") #Frecuencias Relativas
 ```
@@ -653,9 +653,10 @@ layout: false
 
 
 
-Un gráfico de barras es el análogo de un histograma para datos categóricos. Se muestra una barra
-Para cada nivel de un factor, con las alturas de las barras proporcionales a las frecuencias de observaciones
-Pertenecientes a las respectivas categorías. Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
+Un gráfico de barras es el análogo de un histograma para datos categóricos. 
+<br> Se muestra una barra Para cada nivel de un factor, con las alturas de las barras proporcionales a las frecuencias de observaciones
+Pertenecientes a las respectivas categorías.
+<br> Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
 
 ```
  barplot(table(state.region), cex.names = 0.5)
@@ -679,9 +680,9 @@ layout: false
 ]
 .right-column[
 
-
-
-Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
+Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. 
+<br> 
+La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
 
 ```
  install.packages("qcc")
@@ -714,8 +715,13 @@ layout: false
 ]
 .right-column[
 
+Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. 
 
-Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla. Los gráficos de puntos son tan compactos que es fácil graficar interacciones multi-variables muy complicadas en un gráfico.
+<br>
+
+No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla.
+
+<br> Los gráficos de puntos son tan compactos que es fácil graficar interacciones multi-variables muy complicadas en un gráfico.
 
 ```
 x <- table(state.region)
@@ -739,7 +745,7 @@ layout: false
 
 
 
-"These can be done with R but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas."  - Introduction to probability using R.
+"These can be done with R but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas." <br> - Introduction to probability using R.
 
 ```
  slices <- c(10, 12,4, 16, 8)
@@ -1015,9 +1021,8 @@ layout: false
 ]
 .right-column[
 
-<br> 
 
-<img src="Images/for_loop.jpg" alt="If statement", style="width:250px">
+<img src="Images/for_loop.jpg" alt="If statement", style="width:350px">
 
 ```
  for (val in sequence){
@@ -1051,9 +1056,7 @@ layout: false
 
 Aquí, test_expression se evalúa y el cuerpo del loop se ingresa si el resultado es TRUE.
 
-Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_expression nuevamente.
 
-Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
 
 ]
 ---
@@ -1063,6 +1066,11 @@ layout: false
    ### R while Loop
 ]
 .right-column[
+
+Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_expression nuevamente.
+
+Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
+
 
 ```
  i <- 1
@@ -1090,6 +1098,8 @@ Una instrucción break se usa dentro de un ciclo (repeat, for, while) para deten
 +	break
 + }
 ```
+<br>
+
 Una siguiente declaración es útil cuando queremos omitir la iteración actual de un ciclo sin terminarlo. Al encontrar el siguiente, el analizador R omite una evaluación adicional y comienza la siguiente iteración del ciclo.
 
 ```
@@ -1220,6 +1230,44 @@ Utilizando la opcion simplify = F, saplly te da una lista
  ?
 ```
 ]
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+<br>
+
+- La función <br>apply()</br> es la función base.
+- La función lapply se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
+- sapply es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
+- tapply() es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
+- by () funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
+```
+
+```
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+<br>
+
+- La función <br>apply()</br> es la función base.
+- La función lapply se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
+- sapply es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
+- tapply() es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
+- by() funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
+```
+
+```
+]
+
 ---
 
 
