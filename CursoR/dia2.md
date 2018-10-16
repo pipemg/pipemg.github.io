@@ -228,8 +228,8 @@ stripchart(x, main="Multiple stripchart for comparision",
 xlab="Degree Fahrenheit",
 ylab="Temperature", method="jitter",
 col=c("orange","red"), pch=16)
-
 ```
+
 ]
 
 ---
