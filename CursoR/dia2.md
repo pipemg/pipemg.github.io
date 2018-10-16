@@ -405,7 +405,7 @@ layout: false
 .left-column[
   ## ¿Tipos de Datos?
    ### - Datos cuantitativos 
-   ### - Gráficas de Índice
+   ### - Gráficas con plot()
 ]
 .right-column[
 La función de graficación más utilizada en la programación de R es la función plot(). Es una función genérica, es decir, tiene muchos métodos que se llaman según el tipo de objeto pasado a plot().
@@ -437,18 +437,104 @@ layout: false
 .left-column[
   ## ¿Tipos de Datos?
    ### - Datos cuantitativos 
-   ### - Gráficas de Índice
+   ### - Gráficas con plot()
 ]
 .right-column[
 
 **Ejercicio**
 
 - Utilizar diferentes tipos de gráficas de plot, definir nombres de los ejes y la proporcion de los ejes x/y
+<br>
 - utilizar la función abline con la opcion lty para trazar una linea horizontal punteada que divida el 15% de las muestras menores y una linea vertical que divida antes y despúes del año de inicio de la primera guerra mundial (tip. 1914).
 
 ]
 
+---
 
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas con par()
+]
+.right-column[
+Podemos poner varios gráficos en una sola gráfica estableciendo algunos parámetros gráficos con la ayuda de la función par().
+```
+#Establecer par sin parametros nos permite ver las opciones
+par()
+#Tambien podemos ver la ayuda
+?par
+```
+El parámetro gráfico mfrow se puede usar para especificar el número de subgraficas que necesitamos. Toma un vector de la forma c (m, n) que divide la trama dada en m * n matriz de subgraficas.
+
+```
+max.temp<-c(22, 27, 26, 24, 23, 26, 28)
+names(max.temp)<-c("Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat")
+par(mfrow=c(1,2))
+barplot(max.temp, main="Barplot")
+pie(max.temp, main="Piechart", radius=1)
+
+```
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas con par()
+]
+.right-column[
+
+<br>
+
+Las funciones mfrow y mfcol funcionan de manera similar.
+
+```
+Temperature <- airquality$Temp
+Ozone <- airquality$Ozone
+par(mfrow=c(2,2)) #probar con mfcol en vez de mfrow
+hist(Temperature)
+boxplot(Temperature, horizontal=TRUE)
+hist(Ozone)
+boxplot(Ozone, horizontal=TRUE)
+```
+
+]
+---
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas con par()
+]
+.right-column[
+
+<br>
+
+El parámetro gráfico fig nos permite controlar la ubicación de una figura de manera precisa en una gráfica.
+
+**Nota:** hemos utilizado los parámetros cex para disminuir el tamaño de las etiquetas y mai para definir los márgenes.
+
+```
+# make labels and margins smaller
+par(cex=0.7, mai=c(0.1,0.1,0.2,0.1))
+Temperature <- airquality$Temp
+# define area for the histogram
+par(fig=c(0.1,0.7,0.3,0.9))
+hist(Temperature)
+# define area for the boxplot
+par(fig=c(0.8,1,0,1), new=TRUE)
+boxplot(Temperature)
+# define area for the stripchart
+par(fig=c(0.1,0.67,0.1,0.25), new=TRUE)
+stripchart(Temperature, method="jitter")
+
+```
+
+]
 ---
 
 layout: false
@@ -1240,10 +1326,10 @@ layout: false
 .right-column[
 <br>
 
-- La función <b>apply()</b> es la función base.
-- La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
-- <b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
-- <b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
+- La función <b>apply()</b> es la función base.<br>
+- La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.<br>
+- <b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
+- <b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
 - <b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
 
 
@@ -1257,6 +1343,7 @@ layout: false
 .right-column[
 <br>
 
+Función Apply
 ```
 data(beavers)
 head(t(beaver1)[1:4,1:10])
@@ -1265,6 +1352,7 @@ apply(mtcars,2,mean)
 head(apply(mtcars,2,function(x) x%%10))
 ```
 <br>
+Función lapply
 ```
 #Crea una lista con dos elementos
 l = (a=1:10,b=11:20)
@@ -1283,6 +1371,7 @@ layout: false
 ]
 .right-column[
 <br>
+Función sapply
 ```
 #Crea una lista con dos elementos
 l = (a=1:10,b=11:20)
@@ -1290,14 +1379,16 @@ l = (a=1:10,b=11:20)
 sapply(l, mean)
 
 ```
-
+<br>
+Función tapply
 ```
 #Cilindros de diferentes autos
 str(mtcars$cyl)
 #mpg= Millas por galon (Rendimiento)
 tapply(mtcars$mpg,mtcars$cyl,mean)
 ```
-
+<br>
+Función by
 ```
 data(iris) 
 by(iris[,1:4],iris$Species,colMeans)
