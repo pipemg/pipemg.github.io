@@ -27,21 +27,21 @@ Supongamos que tenemos un fichero denominado [lista_de_datos.txt](lista_de_datos
 
 
 ```
-> datos = scan("lista_de_datos.txt",sep=",")
+ datos = scan("lista_de_datos.txt",sep=",")
 ```
  
 Para leer tablas directamente en R tenemos diversas funciones como read.table()
 
 ```
-> datos = read.table("edadaltura.csv", sep=",")
-> colnames(datos)
-> rownames(datos)
-> ?read.table
+ datos = read.table("edadaltura.csv", sep=",")
+ colnames(datos)
+ rownames(datos)
+ ?read.table
 
 ```
  
 ```
-> ?read.csv
+ ?read.csv
 
 ```
 ]
@@ -61,22 +61,22 @@ Escritura y lectura de archivos en R
 Para el caso análogo de escritura utilizamos la función write.table
 
 ```
-> ?write.table
+ ?write.table
 ```
  
 guardemos la tabla de datos en el archivo datos1
 
 ```
-> write.table(datos, "datos1.csv")
-> write.table(datos, "datos2.tsv", sep="\t")
-> write.table(datos, "datos3.tsv", sep="\t", quote=T)
+ write.table(datos, "datos1.csv")
+ write.table(datos, "datos2.tsv", sep="\t")
+ write.table(datos, "datos3.tsv", sep="\t", quote=T)
 ```
 
 adicional a la función write.table, tenemos la función write para vectores.
 
 ```
-> x<-seq_len(1:100)
-> write(x, file="seq_numerica.txt")
+ x<-seq_len(1:100)
+ write(x, file="seq_numerica.txt")
 ```
 
  
@@ -146,11 +146,11 @@ layout: false
 Ejemplo Precipitaciones anuales en ciudades de EE.UU. El vector contiene la cantidad promedio de lluvia (en pulgadas) para cada una de las 70 ciudades de los Estados Unidos.
 
 ```
-> str(precip)
+ str(precip)
 ```
 
 ```
-> precip[1:4]
+ precip[1:4]
 ```
 
 **Ejercicio**
@@ -174,25 +174,65 @@ Una de las cosas básicas que debe de manejarse cuando se describen los datos so
 
 
  1. Graficas de puntos (Strip charts). Existen 3 metodos:
-   - overplot
-   - jitter
-   - stack
+   - overplot: Diagrama de dispersión unidimensional
+   - jitter: Diagrama de dispersion bidimencional (quita superposiciones)
+   - stack: Diagrama de puntos apilados por su
 
 ```
-> stripchart(precip, xlab = "rainfall") 
+str(airquality)
+
+stripchart(airquality$Ozone, xlab = "Ozono") 
 ```
-```
-> stripchart(rivers, method = "jitter", xlab = "length")
+
+Podemos ver que la mayoría de los datos están llenos por debajo de 50 con uno fuera de 150.
+
+Podemos pasar parámetros adicionales para controlar el aspecto de la grafica. Puedes leer sobre ellos en la sección de ayuda. ?stripchart
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de puntos
+]
+
+.right-column[
 
 ```
+stripchart(airquality$Ozone,
+main="Mean ozone in parts per billion at Roosevelt Island",
+xlab="Parts Per Billion",
+ylab="Ozone",
+method="jitter",
+col="orange",
+pch=1
+)
 ```
-> stripchart(discoveries, method = "stack", xlab = "number")
+
+Consideremos el campo de temperatura del conjunto de datos de calidad del aire. También generemos una distribución normal con la misma media y desviación estándar y tráigalos lado a lado para la comparación.
+
+
 ```
+# prepare the data
+temp <- airquality$Temp
+# gererate normal distribution with same mean and sd
+tempNorm <- rnorm(200,mean=mean(temp, na.rm=TRUE), sd = sd(temp, na.rm=TRUE))
+# make a list
+x <- list("temp"=temp, "norm"=tempNorm)
+```
+
+```
+stripchart(discoveries, method = "stack", xlab = "number")
+```
+
 **Ejercicio** 
  - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
 
 ```
-> demo("graphics")
+ demo("graphics")
 
 ```
 ]
@@ -215,11 +255,11 @@ layout: false
 Normalmente se usan para datos continuos y se requiere decidir un conjunto de clases o compartimientos que dividen la linea real en un conjunto de cajas a los cuales caen los valores.
 
 ```
-> hist(precip, main = "Histograma de lluvias en U.S.A")
+ hist(precip, main = "Histograma de lluvias en U.S.A")
 ```
 <br>
 ```
-> hist(precip, freq = FALSE, main = "") #Frecuencias Relativas
+ hist(precip, freq = FALSE, main = "") #Frecuencias Relativas
 ```
 
 <br>
@@ -270,11 +310,11 @@ El último dígito de los valores de datos se toma como una hoja y el (los) díg
 UKDriverDeaths serie de datos en el tiempo que contiene las muertes en accidentes automovilisticos o con lesiones fuertes en Reino Unido de Enero de 1969 a Diciembre de 1984. ?UKDriverDeaths.
 
 ```
-> install.packages("aplpack")
+ install.packages("aplpack")
 
-> library(aplpack)
+ library(aplpack)
 
-> stem.leaf(UKDriverDeaths, depth = FALSE)
+ stem.leaf(UKDriverDeaths, depth = FALSE)
 
 ```
 
@@ -310,12 +350,12 @@ Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el ti
 
 
 ```
-> plot(LakeHuron, type = "h")
+ plot(LakeHuron, type = "h")
 
 ```
 
 ```
-> plot(LakeHuron, type = "p")
+ plot(LakeHuron, type = "p")
 ```
 ]
 ---
@@ -372,21 +412,21 @@ otros vectores de la misma longitud.
 
 
 ```
-> estudiantes.origen = c("Sonora","Nuevo Leon","CDMX","CDMX","Nuevo Leon",
+ estudiantes.origen = c("Sonora","Nuevo Leon","CDMX","CDMX","Nuevo Leon",
 "Yucatan","Sonora","Yucatan","CDMX","Nuevo Leon","Durango","Jalisco","Nuevo Leon",
 "Sonora","Yucatan")
-> estudiantes.origen
-> length(estudiantes.origen)
+ estudiantes.origen
+ length(estudiantes.origen)
 
 ```
 Ahora creamos una variable de tipo factor, a partir de la existente:
 
 
 ```
-> festudiantes = as.factor(estudiantes.origen)
-> festudiantes
-> levels(festudiantes)
-> summary(festudiantes)
+ festudiantes = as.factor(estudiantes.origen)
+ festudiantes
+ levels(festudiantes)
+ summary(festudiantes)
 
 ```
 
@@ -394,8 +434,8 @@ Supongamos ahora que disponemos de las estaturas de cada uno de los estudiantes 
 anterior y vamos a calcular la estatura promedio
 
 ```
-> estudiantes.estaturas = c(1.83, 1.71, 1.79, 1.64, 1.74, 1.81, 1.62, 1.84, 1.68, 1.81, 1.82, 1.74, 1.84, 1.61, 1.84)
-> tapply(estudiantes.estaturas,festudiantes,mean)
+ estudiantes.estaturas = c(1.83, 1.71, 1.79, 1.64, 1.74, 1.81, 1.62, 1.84, 1.68, 1.81, 1.82, 1.74, 1.84, 1.61, 1.84)
+ tapply(estudiantes.estaturas,festudiantes,mean)
 
 ```
 
@@ -419,16 +459,16 @@ Supongamos que tenemos un vector con el nivel de inglés de 10 estudiantes:
 
 
 ```
-> nivel.ingles = c("medio", "medio", "bajo",  "medio", "bajo",  "medio", "alto",  "alto",  "bajo", "bajo" )
-> nivel.ingles
+ nivel.ingles = c("medio", "medio", "bajo",  "medio", "bajo",  "medio", "alto",  "alto",  "bajo", "bajo" )
+ nivel.ingles
 
 
 ```
 Ahora creamos un factor ordenado con el nivel de inglés de los estudiantes:
 
 ```
-> fnivel.ingles = ordered(nivel.ingles,levels=c("bajo","medio","alto"))
-> fnivel.ingles
+ fnivel.ingles = ordered(nivel.ingles,levels=c("bajo","medio","alto"))
+ fnivel.ingles
 
 ```
 
@@ -437,7 +477,7 @@ Si ahora queremos saber qué estudiantes tienen un nivel de inglés por debajo d
 
 
 ```
-> fnivel.ingles<"medio"
+ fnivel.ingles<"medio"
 
 ```
 
@@ -459,24 +499,24 @@ state.XXXX Data sets related to the 50 states of the United States of America.
 
 
 ```
-> str(state.abb)
+ str(state.abb)
 ```
 
 Frecuencias absolutas
 
 ```
-> Tbl <- table(state.division)
-> Tbl
+ Tbl <- table(state.division)
+ Tbl
 ```
 
 Frecuencias Relativas
 
 ```
-> Tbl/sum(Tbl)
+ Tbl/sum(Tbl)
 ```
 
 ```
-> Tbl/sum(Tbl)
+ Tbl/sum(Tbl)
 ```
 
 ]
@@ -497,32 +537,32 @@ layout: false
 Los datos de state.region enumera cada uno de los 50 estados y la región a la que pertenece, ya sea en el noreste, sur, norte central u oeste.
 
 ```
-> str(state.region)
+ str(state.region)
 ```
 
 ```
-> state.region[1:5]
+ state.region[1:5]
 ```
 
 ```
-> str(state.abb)
+ str(state.abb)
 ```
 
 Frecuencias absolutas
 
 ```
-> Tbl <- table(state.division)
-> Tbl
+ Tbl <- table(state.division)
+ Tbl
 ```
 
 Frecuencias Relativas
 
 ```
-> Tbl/sum(Tbl)
+ Tbl/sum(Tbl)
 ```
 
 ```
-> prop.table(Tbl) # same thing
+ prop.table(Tbl) # same thing
 ```
 
 ]
@@ -545,11 +585,11 @@ Para cada nivel de un factor, con las alturas de las barras proporcionales a las
 Pertenecientes a las respectivas categorías. Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
 
 ```
-> barplot(table(state.region), cex.names = 0.5)
+ barplot(table(state.region), cex.names = 0.5)
 ```
 
 ```
-> barplot(prop.table(table(state.region)), cex.names = 0.5)
+ barplot(prop.table(table(state.region)), cex.names = 0.5)
 ```
 
 ]
@@ -571,21 +611,21 @@ layout: false
 Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
 
 ```
-> install.packages("qcc")
+ install.packages("qcc")
 ```
 
 ```
-> library(qcc)
+ library(qcc)
 ```
 
 ```
-> pareto.chart(table(state.division), ylab = "Frequency")
+ pareto.chart(table(state.division), ylab = "Frequency")
 ```
 **Ejercicio** cambia los colores de la gráfica de pareto, utilizando alguna de las paletas de colores.
 ```
-> install.packages("RColorBrewer")
-> library(RColorBrewer)
-> display.brewer.all()
+ install.packages("RColorBrewer")
+ library(RColorBrewer)
+ display.brewer.all()
 ```
 
 ]
@@ -609,7 +649,7 @@ x <- table(state.region)
 ```
 
 ```
-> dotchart(as.vector(x), labels = names(x))
+ dotchart(as.vector(x), labels = names(x))
 ```
 ]
 
@@ -629,13 +669,13 @@ layout: false
 "These can be done with R but they fallen out of favor in recent years because researchers have determined that while the human eye is good at judging linear measures, it is notoriously bad at judging relative areas."  - Introduction to probability using R.
 
 ```
-> slices <- c(10, 12,4, 16, 8)
-> lbls <- c("US", "UK", "Australia", "Germany", "France")
+ slices <- c(10, 12,4, 16, 8)
+ lbls <- c("US", "UK", "Australia", "Germany", "France")
 
 ```
 
 ```
-> pie(slices, labels = lbls, main="Pie Chart of Countries"
+ pie(slices, labels = lbls, main="Pie Chart of Countries"
 ```
 ]
 
@@ -670,10 +710,10 @@ Ambas son estructuras arreglas en dos dimensiones en forma rectangular y estarem
 Ejemplo:
 
 ```
-> x <- 5:8
-> y <- letters[3:6]
-> z <- 1:4*pi
-> A <- data.frame(v1 = x, v2 = y, v3=z)
+ x <- 5:8
+ y <- letters[3:6]
+ z <- 1:4*pi
+ A <- data.frame(v1 = x, v2 = y, v3=z)
 ```
 ]
 
@@ -689,36 +729,36 @@ layout: false
 .right-column[
 
 ```
-> A = matrix( 
+ A = matrix( 
 +   c(2, 4, 3, 1, 5, 7), # the data elements 
 +   nrow=2,              # number of rows 
 +   ncol=3,              # number of columns 
 +   byrow = TRUE)        # fill matrix by rows 
  
-> A                      # print the matrix 
+ A                      # print the matrix 
 
 ```
 
 ```
-> A = matrix( 
+ A = matrix( 
 +   c(2, 4, 3, 1, 5, 7), # the data elements 
 +   nrow=2,              # number of rows 
 +   ncol=3,              # number of columns 
 +   byrow = TRUE)        # fill matrix by rows 
  
-> A                      # print the matrix 
+ A                      # print the matrix 
 
 ```
 
 ```
-> dimnames(A) = list( 
+ dimnames(A) = list( 
 +   c("row1", "row2"),         # row names 
 +   c("col1", "col2", "col3")) # column names
 ``` 
 
 ```
-> rownames(x) <- c("row1", "row2")
-> colnames(x) <- c("C1","C2","C3")
+ rownames(x) <- c("row1", "row2")
+ colnames(x) <- c("C1","C2","C3")
 ``` 
 ]
 
@@ -732,20 +772,20 @@ layout: false
 .right-column[
 
 ```
-> A<-cbind(c(1,2,3),c(4,5,6))
+ A<-cbind(c(1,2,3),c(4,5,6))
 [,1] [,2]
 [1,]    1    4
 [2,]    2    5
 [3,]    3    6
-> B<-rbind(c(1,2,3),c(4,5,6))
+ B<-rbind(c(1,2,3),c(4,5,6))
 [,1] [,2] [,3]
 [1,]    1    2    3
 [2,]    4    5    6
 
 
-> x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
-> x[-1,]    # select all rows except first
-> x[c(3,2),]
+ x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
+ x[-1,]    # select all rows except first
+ x[c(3,2),]
 ```
 ]
 
@@ -758,14 +798,14 @@ layout: false
 .right-column[
 
 ```
-> A[3, ]
-> A[1, ]
+ A[3, ]
+ A[1, ]
 ```
 
 ```
-> A[, 2]
-> names(A)
-> A$v1
+ A[, 2]
+ names(A)
+ A$v1
 ```
 
 ]
@@ -780,24 +820,24 @@ layout: false
 <br>
 
 ```
-> A <- data.frame(SN = c(1,2), Age = c(21,15), Name=c("John","Dora"))
+ A <- data.frame(SN = c(1,2), Age = c(21,15), Name=c("John","Dora"))
 ```
 
 ```
->  A[1,"Age"] <- 20; x
+  A[1,"Age"] <- 20; x
 ```
 
 Agregar nuevos elementos
 ```
-> rbind(A,list(1,16,"Paul"))
+ rbind(A,list(1,16,"Paul"))
 ```
 ```
-> cbind(A,State=c("NY","FL"))
+ cbind(A,State=c("NY","FL"))
 ```
 
 Eliminar un elemento
 ```
-> A$State <- NULL
+ A$State <- NULL
 ```
 
 DataFrames vs Matrices:
@@ -822,9 +862,9 @@ layout: false
 
 
 ```
->  if (test_expression) {
->	statement
->  }
+  if (test_expression) {
+	statement
+  }
 ```
 
 <img src="Images/ifcondition.jpg" alt="If statement", style="width:350px">
@@ -846,7 +886,7 @@ layout: false
 .right-column[
 
 ```
-> if (test_expression) {
+ if (test_expression) {
 +   statement1
 + } else {
 +   statement2
@@ -862,7 +902,7 @@ Si test_expression es TRUE, la instrucción 1 se ejecuta. Pero si es FALSO se ej
 Cascada if..else
 
 ```
-> if ( test_expression1) {
+ if ( test_expression1) {
 +	statement1
 + } else if ( test_expression2) {
 +	statement2
@@ -889,8 +929,8 @@ ifelse(test_expression, x, y)
 **Ejercicio** Crea un ifelse que evalue si X es par o no
 
 ```
-> a = c(5,7,2,9)
-> ifelse(a %% 2 == 0,"even","odd")
+ a = c(5,7,2,9)
+ ifelse(a %% 2 == 0,"even","odd")
 ```
 
 ]
@@ -907,7 +947,7 @@ layout: false
 <img src="Images/for_loop.jpg" alt="If statement", style="width:250px">
 
 ```
-> for (val in sequence){
+ for (val in sequence){
 +   statement
 + }
 
@@ -930,7 +970,7 @@ layout: false
 <img src="Images/While-loop.png" alt="If statement", style="width:250px">
 
 ```
-> while (test_expression){
+ while (test_expression){
 +	statement
 + }
 ```
@@ -952,8 +992,8 @@ layout: false
 .right-column[
 
 ```
-> i <- 1
-> while (i < 6) {
+ i <- 1
+ while (i < 6) {
 +	print(i)
 +	i = i+1
 + }
@@ -973,16 +1013,16 @@ Una instrucción break se usa dentro de un ciclo (repeat, for, while) para deten
 
 
 ```
-> if (test_expression) {
+ if (test_expression) {
 +	break
 + }
 ```
 Una siguiente declaración es útil cuando queremos omitir la iteración actual de un ciclo sin terminarlo. Al encontrar el siguiente, el analizador R omite una evaluación adicional y comienza la siguiente iteración del ciclo.
 
 ```
-> if (test_condition) {
+ if (test_condition) {
 	next
-> }
+ }
 ```
 
 ]
@@ -1000,15 +1040,15 @@ No hay verificación de condición en repetir bucle para salir del bucle.
 
 Nosotros mismos debemos poner una condición explícitamente dentro del cuerpo del ciclo y usar la instrucción break para salir del ciclo. De lo contrario, se producirá un ciclo infinito.
 ```
-> repeat {
+ repeat {
 +   statement
 +   break 
-> }
+ }
 ```
 
 ```
-> x <- 1
-> repeat {
+ x <- 1
+ repeat {
 +	print(x)
 +	x = x+1
 +	if (x == 6){
@@ -1033,12 +1073,12 @@ Cuando usar apply.
 Cuando tenemos una función para aplicar a una estructura de datos determinada. Donde estructura se puede definir como un tipo de matriz o lista. 
 
 ```
-> m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3) 
+ m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3) 
 ```
 Primero quiero asegurarme de haber creado correctamente la matriz, tres columnas cada una con una media de 0, 2 y 5 respectivamente. 
 
 ```
-> apply(m, 1, mean)
+ apply(m, 1, mean)
 ```
 
 Al pasar un 1 en el segundo argumento, recuperamos 30 valores, dando la media de cada fila. No son los tres números que esperábamos, intente de nuevo.
@@ -1059,22 +1099,22 @@ layout: false
 Utilizar tus propias funciones
 
 ```
-> mifuncion<-function(x){
+ mifuncion<-function(x){
 	length(x[x<0])
  }
 
-> apply(m, 2, FUN=mifuncion)
+ apply(m, 2, FUN=mifuncion)
 ```
 
 ```
-> apply(m, 2, function(x) length(x[x<0]))
+ apply(m, 2, function(x) length(x[x<0]))
 
 ```
 
 ```
-> apply(m, 2, function(x) is.matrix(x))
-> apply(m, 2, is.matrix)
-> apply(m, 2, is.vector)
+ apply(m, 2, function(x) is.matrix(x))
+ apply(m, 2, is.matrix)
+ apply(m, 2, is.vector)
 ```
 
 ]
@@ -1092,19 +1132,19 @@ Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos
 
 
 ```
-> sapply(1:3, function(x) x^2)
+ sapply(1:3, function(x) x^2)
 
 
-> lapply(1:3, function(x) x^2)
+ lapply(1:3, function(x) x^2)
 
 ```
 
 Utilizando la opcion simplify = F, saplly te da una lista
 ```
-> sapply(1:3, function(x) x^2, simplify=F)
-> ?unlist
-> ?tapply
-> ?
+ sapply(1:3, function(x) x^2, simplify=F)
+ ?unlist
+ ?tapply
+ ?
 ```
 ]
 ---
