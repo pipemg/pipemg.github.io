@@ -447,7 +447,7 @@ layout: false
 
 La **asimetría** (Fisher) de la muestra, se define por la fórmula
 
-<img src="http://www.universoformulas.com/imagenes/formulas/estadistica/descriptiva/coeficiente-asimetria-fisher.jpg" width=400px>
+<img src="coeficiente-asimetria-fisher.jpg" width=400px>
 
 donde S es la desviación estandar (o tipica)
 
@@ -556,7 +556,7 @@ layout: false
   ## Estadistica descriptiva 
 ]
 .right-column[
-<br><br>
+<br>
 
 Utilizando R. Calcula las siguientes cosas del vector 
 
@@ -564,11 +564,11 @@ Utilizando R. Calcula las siguientes cosas del vector
 x<-round(runif(20, min=1, max=100))
 ```
 
-- rango:  La diferencia entre el menor y el mayor valor.
-- media/media recortada: Medida de tendencia central (promedio)
-- mediana: El número de la mitad en un conjunto de números
-- varianza: Media aritmética del cuadrado de las desviaciones respecto a la media.
-- desviación estandar(típica): Raiz cuadrada de la varianza
+- **rango**:  La diferencia entre el menor y el mayor valor. <br>
+- **media/media recortada**: Medida de tendencia central (promedio)<br>
+- **mediana**: El número de la mitad en un conjunto de números<br>
+- **varianza**: Media aritmética del cuadrado de las desviaciones respecto a la media.<br>
+- **desviación estandar(típica)**: Raiz cuadrada de la varianza
 
 
 ]
