@@ -751,9 +751,15 @@ layout: false
 
 
 Un gráfico de barras es el análogo de un histograma para datos categóricos. 
-<br> Se muestra una barra Para cada nivel de un factor, con las alturas de las barras proporcionales a las frecuencias de observaciones
+
+<br> 
+
+Se muestra una barra Para cada nivel de un factor, con las alturas de las barras proporcionales a las frecuencias de observaciones
 Pertenecientes a las respectivas categorías.
-<br> Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
+
+<br> 
+
+Una desventaja de los gráficos de barras es que los niveles están ordenados alfabéticamente (por defecto), lo que a veces puede oscurecer los patrones en la pantalla.
 
 ```
  barplot(table(state.region), cex.names = 0.5)
@@ -778,7 +784,9 @@ layout: false
 .right-column[
 
 Un diagrama pareto es muy parecido a un gráfico de barras excepto que las barras se reordenan de tal manera que disminuyen en altura, pasando de izquierda a derecha. 
+
 <br> 
+
 La reorganización es útil porque puede revelar visualmente la estructura (si es que hay) en la velocidad de las barras disminuyen - esto es mucho más difícil cuando las barras se mezclan.
 
 ```
@@ -814,7 +822,6 @@ layout: false
 
 Estos se parecen mucho a un gráfico de barras que se ha girado en su lado con las barras reemplazadas por puntos en líneas horizontales. 
 
-<br>
 
 No transmiten más (o menos) información que el gráfico de barras asociado, pero la fuerza reside en la economía de la pantalla.
 
@@ -953,6 +960,7 @@ layout: false
 [1,]    1    4
 [2,]    2    5
 [3,]    3    6
+<br>
  B<-rbind(c(1,2,3),c(4,5,6))
 [,1] [,2] [,3]
 [1,]    1    2    3
@@ -960,7 +968,9 @@ layout: false
 
 
  x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
+<br>
  x[-1,]    # select all rows except first
+<br>
  x[c(3,2),]
 ```
 ]
@@ -972,14 +982,18 @@ layout: false
    ### Acceso a DataFrames
 ]
 .right-column[
+<br>
+Se puede acceder al igual que un vector de dos dimenciones, tanto por columnas como por renglones
 
 ```
  A[3, ]
  A[1, ]
+ A[, 2]
 ```
 
+También podemos acceder a las columnas por medio de la función $ utilizando los nombres de las columnas
+
 ```
- A[, 2]
  names(A)
  A$v1
 ```
@@ -1292,8 +1306,8 @@ Utilizar tus propias funciones
 ```
 
 ```
- apply(m, 2, function(x) is.matrix(x))
- apply(m, 2, is.matrix)
+ apply(m, 2, function(x) is.matrix(x)) <br>
+ apply(m, 2, is.matrix) <br>
  apply(m, 2, is.vector)
 ```
 
@@ -1306,7 +1320,7 @@ layout: false
    ### sapply and lapply
 ]
 .right-column[
- <br><br>
+ <br>
 
 Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
 
@@ -1321,8 +1335,8 @@ Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos
 
 Utilizando la opcion simplify = F, saplly te da una lista
 ```
- sapply(1:3, function(x) x^2, simplify=F)
- ?unlist
+ sapply(1:3, function(x) x^2, simplify=F)<br>
+ ?unlist<br>
  ?tapply
  ?
 ```
@@ -1368,7 +1382,7 @@ layout: false
    ### sapply and lapply
 ]
 .right-column[
-<br>
+
 <b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
 
 ```
@@ -1378,7 +1392,6 @@ l = (a=1:10,b=11:20)
 sapply(l, mean)
 
 ```
-<br>
 
 <b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
 
@@ -1389,7 +1402,6 @@ str(mtcars$cyl)
 tapply(mtcars$mpg,mtcars$cyl,mean)
 
 ```
-<br>
 <b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
 
 ```
