@@ -248,13 +248,44 @@ col=c("orange","red"), pch=16)
 stripchart(discoveries, method = "stack", xlab = "number")
 ```
 
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de puntos
+]
+.right-column[
+
+La función stripchart() también puede tomar fórmulas de la forma y ~ x donde, y es un vector numérico que se agrupa de acuerdo con el valor de x.
+
+```
+stripchart(Temp~Month,
+data=airquality,
+main="Different strip chart for each month",
+xlab="Months",
+ylab="Temperature",
+col="brown3",
+group.names=c("May","June","July","August","September"),
+vertical=TRUE,
+pch=16
+)
+```
+
+
 **Ejercicio** 
  - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
 
-```
- demo("graphics")
 
 ```
+demo("graphics")
+
+```
+
 ]
 
 
@@ -330,11 +361,11 @@ El último dígito de los valores de datos se toma como una hoja y el (los) díg
 UKDriverDeaths serie de datos en el tiempo que contiene las muertes en accidentes automovilisticos o con lesiones fuertes en Reino Unido de Enero de 1969 a Diciembre de 1984. ?UKDriverDeaths.
 
 ```
- install.packages("aplpack")
+install.packages("aplpack", dependencies=T)
 
- library(aplpack)
+library(aplpack)
 
- stem.leaf(UKDriverDeaths, depth = FALSE)
+stem.leaf(UKDriverDeaths, depth = FALSE)
 
 ```
 
@@ -378,6 +409,40 @@ Mediciones anuales (En pies) del lago Huron de 1875-1972. Los datos son en el ti
  plot(LakeHuron, type = "p")
 ```
 ]
+
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de Índice
+]
+.right-column[
+La función de graficación más utilizada en la programación de R es la función plot(). Es una función genérica, es decir, tiene muchos métodos que se llaman según el tipo de objeto pasado a plot().
+
+
+```
+x <- seq(-pi,pi,0.1)
+plot(x, sin(x))
+```
+
+```
+plot(x, sin(x),
+main="Overlaying Graphs",
+ylab="",
+type="l",
+col="blue")
+lines(x,cos(x), col="red")
+legend("topleft",
+c("sin(x)","cos(x)"),
+fill=c("blue","red")
+)
+```
+
+]
+
 ---
 
 layout: false
