@@ -236,6 +236,7 @@ layout: false
 ]
 .right-column[
 
+<br>
 
 ```
 stripchart(x, main="Multiple stripchart for comparision",
@@ -263,6 +264,19 @@ pch=16
 )
 ```
 
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de puntos
+]
+.right-column[
+
+<br>
 
 **Ejercicio** 
  - Comparar las diferentes gráficas y definir sus diferencias con un solo dataset
@@ -272,10 +286,7 @@ pch=16
 demo("graphics")
 
 ```
-
-
 ]
-
 
 ---
 
