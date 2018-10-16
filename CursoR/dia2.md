@@ -1240,14 +1240,13 @@ layout: false
 .right-column[
 <br>
 
-- La función <br>apply()</br> es la función base.
-- La función lapply se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
-- sapply es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
-- tapply() es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
-- by () funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
-```
+- La función <b>apply()</b> es la función base.
+- La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
+- <b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
+- <b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
+- <b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
 
-```
+
 ]
 ---
 layout: false
@@ -1258,13 +1257,50 @@ layout: false
 .right-column[
 <br>
 
-- La función <br>apply()</br> es la función base.
-- La función lapply se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
-- sapply es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.
-- tapply() es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.
-- by() funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
+```
+data(beavers)
+head(t(beaver1)[1:4,1:10])
+apply(t(beaver1),1,max) 
+apply(mtcars,2,mean) 
+head(apply(mtcars,2,function(x) x%%10))
+```
+<br>
+```
+#Crea una lista con dos elementos
+l = (a=1:10,b=11:20)
+#Calcula el promedio de cada elemento
+lapply(l, mean)
+class(lapply(l, mean))
+#Suma los valores de cada elemento
+lapply(l, sum)
+```
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+<br>
+```
+#Crea una lista con dos elementos
+l = (a=1:10,b=11:20)
+#Calcula el promedio de cada elemento
+sapply(l, mean)
+
 ```
 
+```
+#Cilindros de diferentes autos
+str(mtcars$cyl)
+#mpg= Millas por galon (Rendimiento)
+tapply(mtcars$mpg,mtcars$cyl,mean)
+```
+
+```
+data(iris) 
+by(iris[,1:4],iris$Species,colMeans)
 ```
 ]
 
