@@ -1328,6 +1328,7 @@ Utilizando la opcion simplify = F, saplly te da una lista
 ```
 ]
 
+
 ---
 layout: false
 .left-column[
@@ -1335,26 +1336,10 @@ layout: false
    ### sapply and lapply
 ]
 .right-column[
-<br>
-
-- La función <b>apply()</b> es la función base.<br>
-- La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.<br>
-- <b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
-- <b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
-- <b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
 
 
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### sapply and lapply
-]
-.right-column[
-<br>
+La función <b>apply()</b> es la función base.<br>
 
-Función Apply
 ```
 data(beavers)
 head(t(beaver1)[1:4,1:10])
@@ -1363,7 +1348,9 @@ apply(mtcars,2,mean)
 head(apply(mtcars,2,function(x) x%%10))
 ```
 <br>
-Función lapply
+
+La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
+
 ```
 #Crea una lista con dos elementos
 l = (a=1:10,b=11:20)
@@ -1382,7 +1369,8 @@ layout: false
 ]
 .right-column[
 <br>
-Función sapply
+<b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
+
 ```
 #Crea una lista con dos elementos
 l = (a=1:10,b=11:20)
@@ -1391,15 +1379,19 @@ sapply(l, mean)
 
 ```
 <br>
-Función tapply
+
+<b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
+
 ```
 #Cilindros de diferentes autos
 str(mtcars$cyl)
 #mpg= Millas por galon (Rendimiento)
 tapply(mtcars$mpg,mtcars$cyl,mean)
+
 ```
 <br>
-Función by
+<b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
+
 ```
 data(iris) 
 by(iris[,1:4],iris$Species,colMeans)
