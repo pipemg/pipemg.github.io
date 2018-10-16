@@ -248,19 +248,6 @@ col=c("orange","red"), pch=16)
 stripchart(discoveries, method = "stack", xlab = "number")
 ```
 
-]
-
-
----
-
-layout: false
-.left-column[
-  ## ¿Tipos de Datos?
-   ### - Datos cuantitativos 
-   ### - Gráficas de puntos
-]
-.right-column[
-
 La función stripchart() también puede tomar fórmulas de la forma y ~ x donde, y es un vector numérico que se agrupa de acuerdo con el valor de x.
 
 ```
@@ -285,6 +272,7 @@ pch=16
 demo("graphics")
 
 ```
+
 
 ]
 
