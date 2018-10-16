@@ -174,9 +174,9 @@ Una de las cosas básicas que debe de manejarse cuando se describen los datos so
 
 
  1. Graficas de puntos (Strip charts). Existen 3 metodos:
-   - overplot: Diagrama de dispersión unidimensional
-   - jitter: Diagrama de dispersion bidimencional (quita superposiciones)
-   - stack: Diagrama de puntos apilados por su
+   - <b>overplot</b>: <br>Diagrama de dispersión unidimensional
+   - <b>jitter</b>: <br>Diagrama de dispersion bidimencional (quita superposiciones)
+   - <b>stack</b>: <br>Diagrama de puntos apilados por su
 
 ```
 str(airquality)
@@ -201,6 +201,8 @@ layout: false
 
 .right-column[
 
+Generamos una gráfica de puntos agregeando un ruido aleatorio para separar las muestras sobrelapadas
+
 ```
 stripchart(airquality$Ozone,
 main="Mean ozone in parts per billion at Roosevelt Island",
@@ -216,12 +218,22 @@ Consideremos el campo de temperatura del conjunto de datos de calidad del aire. 
 
 
 ```
-# prepare the data
+# Preparación de la información
 temp <- airquality$Temp
-# gererate normal distribution with same mean and sd
+# Generar una distribución normal
 tempNorm <- rnorm(200,mean=mean(temp, na.rm=TRUE), sd = sd(temp, na.rm=TRUE))
-# make a list
-x <- list("temp"=temp, "norm"=tempNorm)
+# Generar una lista
+x <- list('temp'=temp, 'norm'=tempNorm)
+```
+
+```
+stripchart(x,
+main="Multiple stripchart for comparision",
+xlab="Degree Fahrenheit",
+ylab="Temperature",
+method="jitter",
+col=c("orange","red"),
+pch=16)
 ```
 
 ```
