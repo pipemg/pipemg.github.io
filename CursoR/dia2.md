@@ -207,11 +207,8 @@ Generamos una gráfica de puntos agregeando un ruido aleatorio para separar las 
 stripchart(airquality$Ozone,
 main="Mean ozone in parts per billion at Roosevelt Island",
 xlab="Parts Per Billion",
-ylab="Ozone",
-method="jitter",
-col="orange",
-pch=1
-)
+ylab="Ozone", method="jitter",
+col="orange", pch=1)
 ```
 
 Consideremos el campo de temperatura del conjunto de datos de calidad del aire. También generemos una distribución normal con la misma media y desviación estándar y tráigalos lado a lado para la comparación.
@@ -227,14 +224,23 @@ x <- list('temp'=temp, 'norm'=tempNorm)
 ```
 
 ```
-stripchart(x,
-main="Multiple stripchart for comparision",
+stripchart(x, main="Multiple stripchart for comparision",
 xlab="Degree Fahrenheit",
-ylab="Temperature",
-method="jitter",
-col=c("orange","red"),
-pch=16)
+ylab="Temperature", method="jitter",
+col=c("orange","red"), pch=16)
+
 ```
+]
+
+---
+
+layout: false
+.left-column[
+  ## ¿Tipos de Datos?
+   ### - Datos cuantitativos 
+   ### - Gráficas de puntos
+]
+.right-column[
 
 ```
 stripchart(discoveries, method = "stack", xlab = "number")
