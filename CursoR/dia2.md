@@ -223,12 +223,6 @@ tempNorm <- rnorm(200,mean=mean(temp, na.rm=TRUE), sd = sd(temp, na.rm=TRUE))
 x <- list('temp'=temp, 'norm'=tempNorm)
 ```
 
-```
-stripchart(x, main="Multiple stripchart for comparision",
-xlab="Degree Fahrenheit",
-ylab="Temperature", method="jitter",
-col=c("orange","red"), pch=16)
-```
 
 ]
 
@@ -241,6 +235,14 @@ layout: false
    ### - Gráficas de puntos
 ]
 .right-column[
+
+
+```
+stripchart(x, main="Multiple stripchart for comparision",
+xlab="Degree Fahrenheit",
+ylab="Temperature", method="jitter",
+col=c("orange","red"), pch=16)
+```
 
 ```
 stripchart(discoveries, method = "stack", xlab = "number")
