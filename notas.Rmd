@@ -1,0 +1,32 @@
+La tiorredoxina (Trx) es uno de los dos principales antioxidantes tiol que desempeñan papeles esenciales en la homeostasis y la señalización redox. A pesar de la importancia, hay una falta de método para monitorear la dinámica redox de Trx en las células vivas, lo que dificulta una mejor comprensión de los factores fisiológicos y patológicos
+roles del sistema redox Trx. En este trabajo, desarrollamos el primer fluorescente genéticamente codificado biosensor para Trx redox mediante la ingeniería de un relé redox entre las cisteínas del sitio activo de humanos
+Trx1 y rxRFP1-una proteína fluorescente roja sensible a redox. Utilizamos el biosensor resultante TrxRFP1: para controlar selectivamente las perturbaciones de Trx redox en diversas líneas celulares de mamíferos. Estamos localizados subcelularmente TrxRFP1 para imagen cambios compartimentados Trx redox. Además, combinamos TrxRFP1 con un biosensor fluorescente verde Grx1-roGFP2 para controlar simultáneamente la dinámica redox de Trx y glutatión en células vivas en respuesta a estímulos químicos y fisiológicamente relevantes.
+
+ 
+Estudios previos informaron una familia de biosensores basados ​​en proteínas fluorescentes (FP) genéticamente codificadas que pueden detectar la dinámica redox de las células vivas. Se han introducido puentes disulfuro reversibles en las superficies de un FP amarillo (YFP) y FP verdes (GFP), y recientemente, en los extremos N y C de un FP rojo permutado circularmente (cpRFP) para derivar rxYFP sensible a redox, roGFPs y rxRFPs20-23. Los biosensores codificados genéticamente también están disponibles para controlar varios ROS, RNS y RSS como el peróxido de hidrógeno (H2O2) 24-26, hidroperóxidos orgánicos (ROOH) 27, peroxinitrito (ONOO-) 28 y sulfuro de hidrógeno (H2S) .29,30 Además, rxYFP y roGFPs se han relacionado genéticamente con glutaredoxina (Grx), lo que resulta en biosensores selectivos para la dinámica redox del par de glutatión oxidado y reducido (GSSG / GSH) 31,32. A pesar del progreso, actualmente no existe un biosensor genéticamente codificado para probar la redox del sistema Trx. Anteriormente se había hecho un esfuerzo para fusionar rxYFP o roGFPs a Trx, pero no se pudo obtener ningún biosensor eficaz32. La estrategia actual para probar el estado redox de Trx se basa en la alquilación de Trx tioles en lisados ​​celulares seguida de electroforesis33. Este método de bajo rendimiento solo permite mediciones de punto final y no puede evitar la oxidación Trx adicional durante la preparación de la muestra. La dificultad técnica en la monitorización directa del estado redox de Trx en células vivas ha obstaculizado en gran medida las investigaciones sobre los papeles fisiológicos y patológicos del sistema redox Trx y las interplays entre Trx y otros componentes de señalización celular.
+
+Aquí divulgamos la primera sonda fluorescente que puede controlar directamente el estado redox de las cisteínas de sitio activo de Trx en células de mamífero vivas. Nuestra nueva sonda, llamada TrxRFP1, se desarrolló al crear y optimizar un redox redox entre humanos Trx1 y rxRFP1, una proteína fluorescente roja sensible a la redox desarrollada previamente en nuestro laboratorio22. Hemos utilizado el biosensor optimizado resultante, TrxRFP1, para controlar la dinámica de Trx redox inducida por diversos productos químicos, como H2O2, auranofina y trióxido de arsénico. Además, localizamos TrxRFP1 en el núcleo celular y las mitocondrias, validamos TrxRFP1 en una variedad de líneas celulares de mamíferos y combinamos TrxRFP1 con un biosensor fluorescente verde Grx1-roGFP2 para obtener imágenes simultáneas de la dinámica redox de Trx y glutatión. Observamos los cambios redox Trx en condiciones fisiológicamente relevantes, incluidas las estimulaciones por suero o factor de crecimiento epidérmico (EGF).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
