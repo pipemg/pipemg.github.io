@@ -827,7 +827,7 @@ layout: false
 >  }
 ```
 
-<img src="Images/ifcondition.jpg" alt="If statement", style="width:250px">
+<img src="Images/ifcondition.jpg" alt="If statement", style="width:350px">
 
 
 Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
