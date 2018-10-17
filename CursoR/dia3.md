@@ -63,7 +63,7 @@ layout: false
 ]
 .right-column[
 
-<img src="Images/diagrama_arbol.png" width="250px">
+<img src="Images/diagrama_arbol.png" width="350px">
 
 Ej. Un experimento consiste en lanzar una moneda y después lanzarla una segunda vez si sale
 cara. Si en el primer lanzamiento sale cruz, entonces se lanza un dado una vez.
@@ -118,7 +118,7 @@ table(urnsample)
 layout: false
 .left-column[
   ## Fundamentos de probabilidad
-   ### Diagrama de arbol
+   ### Diagrama de árbol
 ]
 .right-column[
 
@@ -132,54 +132,16 @@ Espacio muestral
  S <- c("DDD", "DDN", "DND", "DNN", "NDD", "NDN", "NND", "NNN")
 
 ```
-Los espacios muestrales con un número grande o infi nito de puntos muestrales se
+Los espacios muestrales con un número grande o infinito de puntos muestrales se
 describen mejor mediante un enunciado o método de la regla.
 
-S = {x | x es una ciudad con una población de más de un millón de habitantes},
+S = {x | x es una ciudad con más de un millón de habitantes},
 
 S = {(x, y) | x<sup>2</sup> + y<sup>2</sup> ≤ 4}.
 ]
 
 
 
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Subsets de datos en R
-]
-.right-column[
-
-%in%  #busqueda por elementos
-
-```
-> x <- 1:10
-> y <- 8:12
-> y %in% x
-> y[y %in% x]
-
-```
-
-isin 
-
-```
-> isin(x,y) #todo el vector
-
-```
-
-all 
-```
-> x <- 1:10
-> y <- c(3, 3, 7)
-> unique(c(y %in% x))
-
-
-```
-
-¿Por que isin y all tienen esos resultados?
-
-
-]
 
 ---
 
@@ -189,7 +151,6 @@ layout: false
    ### Union, Interseccion y diferencia
 ]
 .right-column[
-<br>
 
 **Evento** es un conjunto de puntos muestrales en los cuales estamos interesados, más que en la ocurrencia de un elemento específi co en el espacio muestral. Un evento es un subconjunto de un espacio muestral.
 
@@ -206,13 +167,11 @@ B<-apply(B,1,paste, collapse="")
 Suponga que se seleccionan, de forma aleatoria, tres artículos de un proceso de fabricación.
 Cada artículo se inspecciona y se clasifica como defectuoso, D, o no defectuoso, N.
 
-Podríamos estar interesados en el evento B de que el número de artículos defectuosos sea mayor que 1 
+Podríamos estar interesados en el evento B de que el número de artículos defectuosos sea mayor que 1.
 
 B = {DDN, DND, NDD, DDD}
 
-Es posible concebir que un evento puede ser un subconjunto que incluye todo el
-espacio muestral S, o un subconjunto de S que se denomina conjunto vacío y se denota
-con el símbolo ϕ.
+Es posible concebir que un evento puede ser un subconjunto que incluye todo el espacio muestral S, o un subconjunto de S que se denomina conjunto vacío y se denota con el símbolo ϕ.
 
 
 
@@ -235,7 +194,7 @@ union(A,B)
 
 ```
 
-<img src="Images/union.png" width="250px">
+<img src="Images/union.png" width="350px">
 ]
 ---
 
@@ -254,7 +213,7 @@ de S que no están en A. Denotamos el complemento de A mediante el símbolo A'
 setdiff(S,A)
 ```
 
-<img src="https://matematicasdivertidas6.files.wordpress.com/2012/07/complemento1.jpg" width="250px">
+<img src="https://matematicasdivertidas6.files.wordpress.com/2012/07/complemento1.jpg" width="350px">
 
 
 **Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
@@ -277,13 +236,10 @@ que contiene todos los elementos que son comunes a A y a B.
 intersect(A, B)
 ```
 
-<img src="Images/intersection.png" width="250px">
-
-
+<img src="Images/intersection.png" width="350px">
 
 
 ]
-
 
 
 ---
@@ -356,6 +312,49 @@ layout: false
 
 
 ---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Subsets de datos en R
+]
+.right-column[
+
+Subsets de datos en R
+
+%in%  #busqueda por elementos
+
+```
+> x <- 1:10
+> y <- 8:12
+> y %in% x
+> y[y %in% x]
+
+```
+
+isin 
+
+```
+> isin(x,y) #todo el vector
+
+```
+
+all 
+```
+> x <- 1:10
+> y <- c(3, 3, 7)
+> unique(c(y %in% x))
+
+
+```
+
+¿Por que isin y all tienen esos resultados?
+
+
+]
+
+
+---
+
 layout: false
 .left-column[
   ## Probabilidad
@@ -441,9 +440,9 @@ layout: false
 ]
 .right-column[
 <br>
-El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos
-ahora el número de permutaciones que son posibles tomando dos de las cuatro letras
-a la vez. Éstas serían ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db y dc.
+El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos ahora el número de permutaciones que son posibles tomando dos de las cuatro letras a la vez. 
+
+Éstas serían ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db y dc.
 
 En general, n objetos distintos tomados de r a la vez se pueden arreglar
 en n(n – 1)(n – 2) ··· (n – r + 1)
@@ -453,7 +452,16 @@ El número de permutaciones de n objetos distintos tomados de r a la vez es:
 
 En un año se otorgará uno de tres premios (a la investigación, la enseñanza y el servicio)
 a algunos de los estudiantes, de un grupo de 25, de posgrado del departamento de estadística.
-Si cada estudiante puede recibir un premio como máximo, ¿cuántas selecciones posibles habría?
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+
+Si cada estudiante puede recibir un premio como máximo, ¿cuántas  selecciones posibles habría?
 
 Solución: Como los premios son distinguibles, se trata de un problema de permutación. El número
 total de puntos muestrales es:
@@ -466,6 +474,7 @@ head(permutaciones)
 nrow(permutaciones)
 ```
 ]
+
 ---
 layout: false
 .left-column[
@@ -500,6 +509,16 @@ una segunda clase,..., n<sub>k</sub> de una k-ésima clase es
 
 n! / (n<sub>1</sub>!*n<sub>2</sub>!*...*n<sub>k</sub>!)
 
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
 Durante un entrenamiento de fútbol americano colegial, el coordinador defensivo necesita
 tener a 10 jugadores parados en una fi la. Entre estos 10 jugadores hay 1 de primer
 año, 2 de segundo año, 4 de tercer año y 3 de cuarto año, respectivamente. ¿De cuántas
