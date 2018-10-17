@@ -132,6 +132,16 @@ Espacio muestral
  S <- c("DDD", "DDN", "DND", "DNN", "NDD", "NDN", "NND", "NNN")
 
 ```
+]
+---
+
+layout: false
+.left-column[
+  ## Fundamentos de probabilidad
+   ### Diagrama de árbol
+]
+.right-column[
+
 Los espacios muestrales con un número grande o infinito de puntos muestrales se
 describen mejor mediante un enunciado o método de la regla.
 
