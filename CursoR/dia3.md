@@ -11,6 +11,282 @@ name: Inicio
 
 ---
 
+name: last-page
+template: inverse
+
+## Probabilidad
+---
+
+layout: false
+.left-column[
+  ## Fundamentos de probabilidad
+   ### Espacio muestral
+]
+.right-column[
+
+**Espacio muestral**  (denotado S) consiste en el conjunto de todos los posibles resultados de un experimento aleatorio.
+
+**Punto muestral** (Elemento/miembro) es un resultado del espacio muestral
+
+Moneda 
+
+```
+coin<-data.frame(pos=c("H","T"))
+
+```
+
+Espacio Muestral de una moneda que se lanza 3 veces
+
+```{r}
+Scoin<-expand.grid(tiro1=c("H","T"),tiro2=t(coin),tiro3=t(coin))
+Scoin[sample(1:nrow(Scoin),1),] # Un experimento aleatorio
+sample(x=c("H","T"), size=5, replace=T) # Un experimento aleatorio de tirar 5 monedas
+```
+
+Dado
+
+```
+dice<-data.frame(pos=c(1:6))
+Sdice<-expand.grid(t(dice),t(dice),t(dice))
+Sdice[sample(1:nrow(Sdice),1),]
+
+```
+
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fundamentos de probabilidad
+   ### Diagrama de arbol
+]
+.right-column[
+
+<img src="Images/diagrama_arbol.png" width="250px">
+
+Ej. Un experimento consiste en lanzar una moneda y después lanzarla una segunda vez si sale
+cara. Si en el primer lanzamiento sale cruz, entonces se lanza un dado una vez.
+```
+S<-c("HH","HT", "T1", "T2", "T3", "T4", "T5", "T6")
+
+```
+
+
+]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Espacio muestral
+]
+.right-column[
+<br><br>
+Espacio Muestral de Cartas Inglesas 
+
+```
+palos<-c("D","P","T","C")
+
+numeros<-c(1:10,"J","Q","R")
+
+cartas<-as.vector(outer(numeros, palos, paste, sep=""))
+
+cartas<-sample(cartas)
+
+Scartas<-sample(cartas,5,replace=F) #Obtener una mano
+
+
+```
+
+Espacio Muestral de Muestreo de urnas
+
+```
+urna=c("roja","azul","amarilla","violeta","negra","blanca")
+
+```
+
+```
+urnsample<-sample(urna,size=20, replace=T)
+
+table(urnsample)
+```
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fundamentos de probabilidad
+   ### Diagrama de arbol
+]
+.right-column[
+
+<img src="Images/diagrama_arbol.png" width="250px">
+
+Suponga que se seleccionan, de forma aleatoria, tres artículos de un proceso de fabricación.
+Cada artículo se inspecciona y se clasifica como defectuoso, D, o no defectuoso, N
+
+Espacio muestral
+```
+ S <- c("DDD", "DDN", "DND", "DNN", "NDD", "NDN", "NND", "NNN")
+
+```
+Los espacios muestrales con un número grande o infi nito de puntos muestrales se
+describen mejor mediante un enunciado o método de la regla.
+
+S = {x | x es una ciudad con una población de más de un millón de habitantes},
+
+S = {(x, y) | x<sup>2</sup> + y<sup>2</sup> ≤ 4}.
+]
+
+
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Subsets de datos en R
+]
+.right-column[
+
+%in%  #busqueda por elementos
+
+```
+> x <- 1:10
+> y <- 8:12
+> y %in% x
+> y[y %in% x]
+
+```
+
+isin 
+
+```
+> isin(x,y) #todo el vector
+
+```
+
+all 
+```
+> x <- 1:10
+> y <- c(3, 3, 7)
+> unique(c(y %in% x))
+
+
+```
+
+¿Por que isin y all tienen esos resultados?
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Union, Interseccion y diferencia
+]
+.right-column[
+<br>
+
+**Evento** es un conjunto de puntos muestrales en los cuales estamos interesados, más que en la ocurrencia de un elemento específi co en el espacio muestral. Un evento es un subconjunto de un espacio muestral.
+
+```
+S <- expand.grid(numeros, palos)
+colnames(S)<-c("numero", "palo")
+A <- subset(S, palo == "C")
+B <- subset(S, numero %in% as.character(7:9))
+S<-apply(S,1,paste, collapse="")
+A<-apply(A,1,paste, collapse="")
+B<-apply(B,1,paste, collapse="")
+```
+
+Suponga que se seleccionan, de forma aleatoria, tres artículos de un proceso de fabricación.
+Cada artículo se inspecciona y se clasifica como defectuoso, D, o no defectuoso, N.
+
+Podríamos estar interesados en el evento B de que el número de artículos defectuosos sea mayor que 1 
+
+B = {DDN, DND, NDD, DDD}
+
+Es posible concebir que un evento puede ser un subconjunto que incluye todo el
+espacio muestral S, o un subconjunto de S que se denomina conjunto vacío y se denota
+con el símbolo ϕ.
+
+
+
+]
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Union 
+]
+.right-column[
+<br>
+
+La unión de dos eventos A y B, que se denota con el símbolo A ∪ B, es el evento que
+contiene todos los elementos que pertenecen a A o a B, o a ambos.
+
+```
+union(A,B)
+
+```
+
+<img src="Images/union.png" width="250px">
+]
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Complemento 
+]
+.right-column[
+<br>
+
+El complemento de un evento A respecto de S es el subconjunto de todos los elementos
+de S que no están en A. Denotamos el complemento de A mediante el símbolo A'
+
+```
+setdiff(S,A)
+```
+
+<img src="https://matematicasdivertidas6.files.wordpress.com/2012/07/complemento1.jpg" width="250px">
+
+
+**Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
+]
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Interseccion y diferencia
+]
+.right-column[
+<br>
+
+La **intersección** de dos eventos A y B, que se denota con el símbolo A ∩ B, es el evento
+que contiene todos los elementos que son comunes a A y a B.
+
+```
+intersect(A, B)
+```
+
+<img src="Images/intersection.png" width="250px">
+
+
+
+
+]
+
+
+
+---
 layout: false
 .left-column[
   ## Programación
@@ -80,171 +356,201 @@ layout: false
 
 
 ---
-
-name: last-page
-template: inverse
-
-## Probabilidad
----
-
 layout: false
 .left-column[
   ## Probabilidad
-   ### Espacio muestral
+   ### Conteo de puntos muestrales
 ]
 .right-column[
+<br>
 
-**Espacio muestral**  (denotado S) consiste en el conjunto de todos los posibles resultados de un experimento aleatorio.
+**Regla de multiplicación**
+Si una operación se puede llevar a cabo en n1 formas, y si para cada una de éstas se
+puede realizar una segunda operación en n2 formas, entonces las dos operaciones
+se pueden ejecutar juntas de n1n2 formas.
 
-Moneda 
-
-```
-> coin<-data.frame(pos=c("H","T"))
-
-```
-Espacio Muestral de una moneda que se lanza 3 veces
-
-```
-> Scoin<-expand.grid(t(S),t(S),t(S))
-> Scoin[sample(1:nrow(Scoin),1),]
-> sample(x=c("H","T"), size=5, replace=T)
-```
-
-Dado
-
-```
-> dice<-data.frame(pos=c(1:6))
-> Sdice<-expand.grid(t(dice),t(dice),t(dice))
-
-```
+¿Cuántos puntos muestrales hay en el espacio muestral cuando se lanza un par de dados
+una vez? 
 
 
-```
->  Sdice[sample(1:nrow(Sdice),1),]
-
-```
-
-
-
+**Solución:** El primer dado puede caer en cualquiera de n1 = 6 maneras. Para cada una de esas 6
+maneras el segundo dado también puede caer en n2 = 6 formas. Por lo tanto, el par de
+dados puede caer en n1
+n2 = (6)(6) = 36 formas posibles. 
 
 ]
-
 ---
-
 layout: false
 .left-column[
   ## Probabilidad
-   ### Espacio muestral
+   ### Conteo de puntos muestrales
 ]
 .right-column[
-<br><br>
-Espacio Muestral de Cartas Inglesas 
+<br>
 
-```
-> palos<-c("D","P","T","C")
+**regla de multiplicación generalizada**
+Si una operación se puede ejecutar en n1 formas, y si para cada una de éstas se puede
+llevar a cabo una segunda operación en n2 formas, y para cada una de las primeras dos
+se puede realizar una tercera operación en n3 formas, y así sucesivamente, entonces la
+serie de k operaciones se puede realizar en n1 n2...nk formas. 
 
-> numeros<-c(1:10,"J","Q","R")
+Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes
+opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros,
+tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto
+de accesorios. ¿De cuántas formas diferentes puede Sam comprar las partes?
 
-> cartas<-as.vector(outer(numeros, palos, paste, sep=""))
+Solución: Como n1 = 2, n2 = 4, n3 = 3 y n4 = 5, hay n1 × n2 × n3 × n4 = 2 × 4 × 3 × 5 = 120
+formas diferentes de comprar las partes. 
 
-> cartas<-sample(cartas)
-
-```
-
-Espacio Muestral de Muestreo de urnas
-
-```
-> urna=c("roja","azul","amarilla","violeta","negra","blanca")
-
-```
-
-```
-> urnsample<-sample(urna,size=20, replace=T)
-
-> table(urnsample)
-```
+Ejercicio: ¿Cuántos números pares de cuatro dígitos se pueden formar con los dígitos 0, 1, 2, 5, 6
+y 9, si cada dígito se puede usar sólo una vez?
 
 ]
-
 
 ---
 layout: false
 .left-column[
   ## Probabilidad
-   ### Subsets de datos
+   ### Conteo de puntos muestrales
 ]
 .right-column[
-<br><br>
+<br>
 
-%in%  #busqueda por elementos
 
-```
-> x <- 1:10
-> y <- 8:12
-> y %in% x
-> y[y %in% x]
+Una **permutación** es un arreglo de todo o parte de un conjunto de objetos.Una permutación es un arreglo de todo o parte de un conjunto de objetos.
+
+Considere las tres letras a, b y c y las permutaciones posibles con las 3 letras
 
 ```
-
-isin 
-
-```
-> isin(x,y) #todo el vector
-
+S<-c("abc", "acb", "bac", "bca","cab", "cba")
 ```
 
-all 
+Aqui vemos que tenemos 3 opciones para la primera letra, 2 opciones para la segunda y automáticamente la tercera queda determinada. 
+
+
+Para cualquier entero no negativo n, n!, denominado **“n factorial”** se define como
+N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
+
+El número de **permutaciones** de n objetos es n!
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+<br>
+El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos
+ahora el número de permutaciones que son posibles tomando dos de las cuatro letras
+a la vez. Éstas serían ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db y dc.
+
+En general, n objetos distintos tomados de r a la vez se pueden arreglar
+en n(n – 1)(n – 2) ··· (n – r + 1)
+
+El número de permutaciones de n objetos distintos tomados de r a la vez es:
+<sub>n</sub>P<sub>r</sub> = n!/(n − r)!.
+
+En un año se otorgará uno de tres premios (a la investigación, la enseñanza y el servicio)
+a algunos de los estudiantes, de un grupo de 25, de posgrado del departamento de estadística.
+Si cada estudiante puede recibir un premio como máximo, ¿cuántas selecciones posibles habría?
+
+Solución: Como los premios son distinguibles, se trata de un problema de permutación. El número
+total de puntos muestrales es:
+
 ```
-> x <- 1:10
-> y <- c(3, 3, 7)
-> unique(c(y %in% x))
+install.packages("gtools",dependencies=T)
+library(gtools)
+permutaciones <- permutations(25, 3)
+head(permutaciones)
+nrow(permutaciones)
+```
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+<br>
+Las permutaciones que ocurren al arreglar objetos en un círculo se llaman permutaciones
+circulares. 
 
+El número de permutaciones de n objetos ordenados en un círculo es (n – 1)!
+
+Si 4 personas juegan en una mesa, no tenemos una permutación nueva si se mueven en dirección a las manecillas del reloj. Entonces consideramos una persona que esta en una posición fija. Si se tienen 4 personas en la mesa ¿Cuantas permutaciones posibles existen?
 
 ```
-
-¿Por que isin y all tienen esos resultados?
-
+factorial(4)
+```
 
 ]
 
 ---
-
 layout: false
 .left-column[
   ## Probabilidad
-   ### Union, Interseccion y diferencia
+   ### Conteo de puntos muestrales
 ]
 .right-column[
-<br><br>
-Elementos que existen en el Evento A, en el Evento B o en ambos
-union(A,B)
+<br>
+El número de permutaciones distintas de n objetos, en el que n1 son de una clase, n2 de
+una segunda clase,..., n<sub>k</sub> de una k-ésima clase es 
 
-```
-> S <- expand.grid(numeros, palos)
-> colnames(S)<-c("numero", "palo")
-> A <- subset(S, palo == "C")
-> B <- subset(S, numero %in% as.character(7:9))
+n! / (n<sub>1</sub>!*n<sub>2</sub>!*...*n<sub>k</sub>!)
 
-> union(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
-```
-Elementos que existen en el Evento A y en el Evento B
-intersect(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
-
-```
->  intersect(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
-
-```
-
-Elementos que existen en el Evento A pero no en el Evento B
+Durante un entrenamiento de fútbol americano colegial, el coordinador defensivo necesita
+tener a 10 jugadores parados en una fi la. Entre estos 10 jugadores hay 1 de primer
+año, 2 de segundo año, 4 de tercer año y 3 de cuarto año, respectivamente. ¿De cuántas
+formas diferentes se pueden arreglar en una fi la si lo único que los distingue es el grado
+en el cual están?
 
 
 ```
-> setdiff(apply(A,1,paste, collapse=""), apply(B,1,paste, collapse=""))
+factorial(10)/(factorial(1)*factorial(2)*factorial(4)*factorial(3))
 ```
 
-**Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
+Con frecuencia nos interesa el número de formas de dividir un conjunto de n objetos
+en r subconjuntos denominados celdas.
+
+Un hotel va a hospedar a siete estudiantes de posgrado que asisten a una conferencia, ¿en
+cuántas formas los puede asignar a una habitación triple y a dos dobles?
+
+```
+factorial(7)/(factorial(3)*factorial(2)*factorial(2))
+```
 
 ]
+
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+<br>
+
+
+En muchos problemas nos interesamos en el número de formas de seleccionar r
+objetos de n sin importar el orden. Tales selecciones se llaman **combinaciones**.
+
+Una combinación es realmente una partición con dos celdas, donde una celda contiene los r
+objetos seleccionados y la otra contiene los (n – r) objetos restantes
+
+Un niño le pide a su madre que le lleve cinco cartuchos de Game-BoyTM de su colección
+de 10 juegos recreativos y 5 de deportes. ¿De cuántas maneras podría su madre llevarle
+3 juegos recreativos y 2 de deportes?
+
+```
+combinaciones <- combinations(10, 3)
+nrow(combinaciones)
+```
+
+]
+
+
 
 ---
 layout: false
@@ -255,26 +561,35 @@ layout: false
 
 .right-column[
 
-<br><br>
+<br>
+
+
+La probabilidad de un evento A es la suma de los pesos de todos los puntos muestrales de A.
+
+Por lo tanto:
+ - 0<=P(A)<=1
+ - P(ϕ) = 0
+ - P(S) = 1
+
 P(A) ≈ observados / posibles ≈ S_n/n
 
 
 ```
-> S<-data.frame(pos=c(1:6))
-> posibles<-expand.grid(t(S),t(S),t(S))
-> posibles[which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]),]
-> obsv<-length(which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]))
-> prob= obsv/length(posibles)
+S<-data.frame(pos=c(1:6))
+posibles<-expand.grid(t(S),t(S),t(S))
+posibles[which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]),]
+obsv<-length(which(posibles[,1] == posibles[,2] & posibles[,3] == posibles[,2]))
+prob= obsv/length(posibles)
 ```
 
 Ej. Moneda no balanceada
 
 
 ```
-> S<-c("H","T")
-> p<-c(1/3,2/3)
-> sample(S, prob=p, size=1, replace=T)
-> sample(S, prob=p, size=200, replace=T)
+S<-c("H","T")
+p<-c(1/3,2/3)
+sample(S, prob=p, size=1, replace=T)
+sample(S, prob=p, size=200, replace=T)
 
 ```
 **WARNING:** RAM memory y probabilidades infinitecimales 
@@ -286,28 +601,32 @@ Ej. Moneda no balanceada
 layout: false
 .left-column[
   ## Probabilidad
-   ### Conteo con urnas
+   ### Probabilidad Condicional
 ]
 .right-column[
 <br>
 
-<img src="Images/Counting.png", width=500px>
-
-Numeros Factoriales
+```
+> S<-1:6
+> space <- sample(S, size=100, replace= TRUE) 
+> head(S) # first few rows
 
 ```
-> factorial(n) 
-```
-
-Coeficiente binomial (Combinaciones) 
 
 
 ```
-> choose(n,k)
+> E <- expand.grid(t(S),t(S),t(S))
+> A <- subset(E, Var1 == Var2)
+> B <- subset(E, Var1 + Var2 >= 8)
 
 ```
+
+
+
 
 ]
+
+
 ---
 layout: false
 .left-column[
