@@ -341,24 +341,6 @@ Subsets de datos en R
 
 ```
 
-isin 
-
-```
-> isin(x,y) #todo el vector
-
-```
-
-all 
-```
-> x <- 1:10
-> y <- c(3, 3, 7)
-> unique(c(y %in% x))
-
-
-```
-
-¿Por que isin y all tienen esos resultados?
-
 
 ]
 
@@ -666,7 +648,7 @@ layout: false
 .right-column[
 <br><br><br>
 
-Definición: Una variable aleatoria X es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
+**Una variable aleatoria X** es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
 
 Se define como S todos los posibles resultados de el evento E
 
@@ -697,12 +679,16 @@ layout: false
 
 Escribir una formula que define una variable aleatoria dentro de una función, agregando una columna a un data.frame.
 
-
 Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
 
 
 Ahora podemos preguntar, ¿Cual es la probabilidad de que U > 6?
 
+
+```
+dado4l<-c(1:4)
+S<-expand.grid(dado4l,dado4l,dado4l)
+```
 
 ]
 ---
@@ -891,6 +877,81 @@ x<-round(runif(20, min=1, max=100))
 
 layout: false
 .left-column[
+  ## Ejemplos de funciones
+  ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la media
+
+```
+> media<-function(x=NA)
++ {
++ x <- x[!is.na(x)]
++ sum(x)/length(x)
++ }
+> media(c(2,4,1,3,6,7))
+> media(c(2,4,1,3,6,NA))
+```
+
+Calcular la varianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Ejemplos de funciones
+  ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la desviación estandar
+
+```
+> DT<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sqrt(sum((x-(sum(x)/n))^2)/n)
++ return(v)
++ }
+> DT(1:3)
+> DT(c(1,3,4,2,6,4))
+```
+
+Calcular la covarianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
+]
+
+
+
+---
+
+layout: false
+.left-column[
   ## Estadistica descriptiva 
   ### Rangos intercuantiles y MAD
 ]
@@ -1057,79 +1118,6 @@ layout: false
 > write(A*B,"sumaAyB.dat") # Lo guardamos en un fichero .dat que se llame sumaAyB
 ```
 ]
----
-
-layout: false
-.left-column[
-  ## Ejemplos de funciones
-  ### Funciones elementales
-]
-.right-column[
-<br><br>
-
-Calcular la media
-
-```
-> media<-function(x=NA)
-+ {
-+ x <- x[!is.na(x)]
-+ sum(x)/length(x)
-+ }
-> media(c(2,4,1,3,6,7))
-> media(c(2,4,1,3,6,NA))
-```
-
-Calcular la varianza 
-
-```
-> Varianza<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sum((x-(sum(x)/n))^2)/n
-+ return(v)
-+ }
-```
-
-
-]
-
----
-
-layout: false
-.left-column[
-  ## Ejemplos de funciones
-  ### Funciones elementales
-]
-.right-column[
-<br><br>
-
-Calcular la desviación estandar
-
-```
-> DT<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sqrt(sum((x-(sum(x)/n))^2)/n)
-+ return(v)
-+ }
-> DT(1:3)
-> DT(c(1,3,4,2,6,4))
-```
-
-Calcular la covarianza 
-
-```
-> Varianza<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sum((x-(sum(x)/n))^2)/n
-+ return(v)
-+ }
-```
-
-Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
-]
-
 ---
 name: last-page
 template: inverse
