@@ -374,18 +374,13 @@ layout: false
 <br>
 
 **Regla de multiplicación**
-Si una operación se puede llevar a cabo en n1 formas, y si para cada una de éstas se
-puede realizar una segunda operación en n2 formas, entonces las dos operaciones
-se pueden ejecutar juntas de n1n2 formas.
+Si una operación se puede llevar a cabo en n1 formas, y si para cada una de éstas se puede realizar una segunda operación en n2 formas, entonces las dos operaciones se pueden ejecutar juntas de n1*n2 formas.
 
 ¿Cuántos puntos muestrales hay en el espacio muestral cuando se lanza un par de dados
 una vez? 
 
 
-**Solución:** El primer dado puede caer en cualquiera de n1 = 6 maneras. Para cada una de esas 6
-maneras el segundo dado también puede caer en n2 = 6 formas. Por lo tanto, el par de
-dados puede caer en n1
-n2 = (6)(6) = 36 formas posibles. 
+**Solución:** El primer dado puede caer en cualquiera de n1 = 6 maneras. Para cada una de esas 6 maneras el segundo dado también puede caer en n2 = 6 formas. Por lo tanto, el par de dados puede caer en n1*n2 = (6)(6) = 36 formas posibles. 
 
 ]
 ---
@@ -398,24 +393,18 @@ layout: false
 <br>
 
 **regla de multiplicación generalizada**
-Si una operación se puede ejecutar en n1 formas, y si para cada una de éstas se puede
-llevar a cabo una segunda operación en n2 formas, y para cada una de las primeras dos
-se puede realizar una tercera operación en n3 formas, y así sucesivamente, entonces la
-serie de k operaciones se puede realizar en n1 n2...nk formas. 
+Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puede llevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub>*n<sub>2</sub> * ... * n <sub>k</sub> formas. 
+<br>
+Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros, tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto de accesorios. 
 
-Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes
-opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros,
-tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto
-de accesorios. ¿De cuántas formas diferentes puede Sam comprar las partes?
+¿De cuántas formas diferentes puede Sam comprar las partes?
 
-Solución: Como n1 = 2, n2 = 4, n3 = 3 y n4 = 5, hay n1 × n2 × n3 × n4 = 2 × 4 × 3 × 5 = 120
-formas diferentes de comprar las partes. 
+**Solución:** Como n<sub>1</sub> = 2, n<sub>2</sub> = 4, n<sub>3</sub> = 3 y n<sub>4</sub> = 5, hay n<sub>1</sub> × n<sub>2</sub> × n<sub>3</sub> × n<sub>4</sub> = 2 × 4 × 3 × 5 = 120
 
-Ejercicio: ¿Cuántos números pares de cuatro dígitos se pueden formar con los dígitos 0, 1, 2, 5, 6
+**Ejercicio:** ¿Cuántos números pares de cuatro dígitos se pueden formar con los dígitos 0, 1, 2, 5, 6
 y 9, si cada dígito se puede usar sólo una vez?
 
 ]
-
 ---
 layout: false
 .left-column[
@@ -425,29 +414,29 @@ layout: false
 .right-column[
 <br>
 
-
 Una **permutación** es un arreglo de todo o parte de un conjunto de objetos.Una permutación es un arreglo de todo o parte de un conjunto de objetos.
 
 Considere las tres letras a, b y c y las permutaciones posibles con las 3 letras
 
-```
-S<-c("abc", "acb", "bac", "bca","cab", "cba")
-```
+S = {"abc", "acb", "bac", "bca","cab", "cba"}
+
 
 Aqui vemos que tenemos 3 opciones para la primera letra, 2 opciones para la segunda y automáticamente la tercera queda determinada. 
 
 
-Para cualquier entero no negativo n, n!, denominado **“n factorial”** se define como
-N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
+Para cualquier entero no negativo n, n!, denominado **"n factorial"** se define como N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
 
 El número de **permutaciones** de n objetos es n!
 ]
+
 ---
+
 layout: false
 .left-column[
   ## Probabilidad
    ### Conteo de puntos muestrales
 ]
+
 .right-column[
 <br>
 El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos ahora el número de permutaciones que son posibles tomando dos de las cuatro letras a la vez. 
