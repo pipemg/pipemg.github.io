@@ -501,24 +501,13 @@ Si 4 personas juegan en una mesa, no tenemos una permutación nueva si se mueven
 ```
 factorial(4)
 ```
-
-]
-
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Conteo de puntos muestrales
-]
-.right-column[
-<br>
 El número de permutaciones distintas de n objetos, en el que n1 son de una clase, n2 de
 una segunda clase,..., n<sub>k</sub> de una k-ésima clase es 
 
 n! / (n<sub>1</sub>!*n<sub>2</sub>!*...*n<sub>k</sub>!)
 
-
 ]
+
 
 ---
 layout: false
@@ -588,9 +577,6 @@ layout: false
 
 .right-column[
 
-<br>
-
-
 La probabilidad de un evento A es la suma de los pesos de todos los puntos muestrales de A.
 
 Por lo tanto:
@@ -619,9 +605,6 @@ sample(S, prob=p, size=1, replace=T)
 sample(S, prob=p, size=200, replace=T)
 
 ```
-**WARNING:** RAM memory y probabilidades infinitecimales 
-
-
 ]
 
 ---
@@ -647,21 +630,6 @@ layout: false
 > B <- subset(E, Var1 + Var2 >= 8)
 
 ```
-
-
-
-
-]
-
-
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Probabilidad Condicional
-]
-.right-column[
-<br><br><br>
 
 ```
 > S<-1:6
@@ -766,7 +734,7 @@ layout: false
   ### Forma
 ]
 .right-column[
-
+<br><br>
 **Simetría** y **asimetría** 
    - **positivamente sesgada**
    - **negativamente sesgada**
@@ -775,7 +743,7 @@ layout: false
 
 La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. 
 
-<img src="Images/curtosis.jpg", width=500px>
+
 
 ]
 
@@ -793,7 +761,7 @@ layout: false
 
 La **asimetría** (Fisher) de la muestra, se define por la fórmula
 
-<img src="coeficiente-asimetria-fisher.jpg" width=400px>
+<img src="Images/coeficiente-asimetria-fisher.jpg" width=400px>
 
 donde S es la desviación estandar (o tipica)
 
@@ -809,7 +777,7 @@ layout: false
    ### Medidas de Forma
 ]
 .right-column[
-<br><br>
+<br>
 
 
 La **curtosis**  de la muestra, se define por la fórmula

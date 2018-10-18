@@ -24,20 +24,16 @@ layout: false
 
 .right-column[
 
-En estadística, un fenómeno aleatorio es aquel que bajo el mismo conjunto aparente
-de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede
-predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un
-dado).
+En estadística, un **fenómeno aleatorio** es aquel que bajo el mismo conjunto aparente de condiciones iniciales, puede presentar resultados diferentes.
 
-Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos
-los factores de un experimento nos hace predecir exactamente el resultado del mismo.
-Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber
-exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+En un fenomeno aleatorio no se puede predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un dado).
 
-Un experimento se dice aleatorio si verifica las siguientes condiciones:
- - Es posible conocer previamente todos los posibles resultados asociados al
-experimento (el espacio muestral, constituido por diferentes sucesos).
- - Es imposible predecir el resultado exacto del mismo antes de realizarlo
+Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos los factores de un experimento nos hace predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un celular es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+
+Un experimento se dice **aleatorio** si verifica las siguientes condiciones:
+
+ - Es posible conocer previamente todos los **resultados asociados** al experimento (el espacio muestral, constituido por diferentes sucesos).
+ - Es **imposible predecir el resultado exacto** del mismo antes de realizarlo
 
 ]
 ---
@@ -49,16 +45,13 @@ layout: false
 ]
 .right-column[
 
-El espacio de resultados o espacio muestral, Ω es el conjunto de todos los posibles
-resultados de un experimento aleatorio.
+El **espacio de resultados** o espacio muestral, Ω es el conjunto de todos los posibles resultados de un experimento aleatorio.
 
-Sucesos
+**Sucesos**
 
-Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado
-del experimento aleatorio es uno de los elementos de A.
+Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado del experimento aleatorio es uno de los elementos de A.
 
-- Suceso complementario de A (A'): ocurre cuando el resultado del experimento
-no es un elemento de A.
+- Suceso complementario de A (A'): ocurre cuando el resultado del experimento no es un elemento de A.
 - Suceso unión de A y B (A ∪ B): ocurre cuando ó bien sucede A ó bien sucede B.
 - Suceso intersección de A y B (A ∩ B): ocurre cuando A y B suceden
 simultáneamente
