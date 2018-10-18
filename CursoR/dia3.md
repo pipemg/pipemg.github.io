@@ -394,7 +394,16 @@ layout: false
 
 **regla de multiplicación generalizada**
 Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puede llevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub>*n<sub>2</sub> * ... * n <sub>k</sub> formas. 
-<br>
+
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+
 Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros, tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto de accesorios. 
 
 ¿De cuántas formas diferentes puede Sam comprar las partes?
@@ -427,17 +436,16 @@ Aqui vemos que tenemos 3 opciones para la primera letra, 2 opciones para la segu
 Para cualquier entero no negativo n, n!, denominado **"n factorial"** se define como N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
 
 El número de **permutaciones** de n objetos es n!
+
 ]
-
 ---
-
 layout: false
 .left-column[
   ## Probabilidad
    ### Conteo de puntos muestrales
 ]
-
 .right-column[
+
 <br>
 El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos ahora el número de permutaciones que son posibles tomando dos de las cuatro letras a la vez. 
 
@@ -452,6 +460,7 @@ El número de permutaciones de n objetos distintos tomados de r a la vez es:
 En un año se otorgará uno de tres premios (a la investigación, la enseñanza y el servicio)
 a algunos de los estudiantes, de un grupo de 25, de posgrado del departamento de estadística.
 
+]
 ---
 layout: false
 .left-column[
