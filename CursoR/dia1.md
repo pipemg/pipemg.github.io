@@ -239,58 +239,13 @@ Importando desde el ambiente grafico
 
 ]
 
----
 
+
+
+## ¿Como instalarlo?
+---
 .left-column[
-  ## ¿Cómo funciona?
   ### - Entornos graficos
-]
-.right-column[
-### R commander (Rcmdr)
-
-Es una inferfaz gráfica que cuenta con botones y menus extensos, las caracteristicas son
-
- - Contiene codigos precargados (SPSS, SAS o Stata)
- - No provee acceso directo a la linea de comandos de R
- - No es enriquecido gráficamente, contiene 3 paneles:
-   - Ventana del script (código ejecutandose)
-   - Ventana de Salida (Imprime los resultados)
-   - Ventana de Mensajes(Errores/advertencias/notas) 
-  
-]
-
----
-
-.left-column[
-  ## ¿Cómo funciona?
-  ### - Entornos graficos
-]
-.right-column[
-<image src="http://www.unige.ch/ses/sococ/cl/r/rcommander.menu.png" width="380" align="left">
-]
----
-.left-column[
-<br>
-<image src="http://4.bp.blogspot.com/-bVDv8F9VdLY/T0yobXtHoEI/AAAAAAAADLk/QVue51r1Hbg/s1600/logo+Rcommander.png" width="100" align="left">
-]
-.right-column[
-<br>
-Utilizando las herramientas predefinidas
-
-
-<image src="Images/rcomander_analysis.jpg" width="550" align="rigth">
-
-]
-
----
-
-
-template: inverse
-
-## ¿Cuál usar y como instalarlo?
----
-.left-column[
- ## Comparación
 ]
 .right-column[
 <br><br>
@@ -300,14 +255,6 @@ RStudio
 
 - Uso para proyectos que requieren interacción directa con el código o manipulacion de datos compleja
 
-Rcmdr
-
-- Simple y amable para el usuario sobre todo en analisis estadísticos y diagnósticos.
-
-- Uso para analisis tradicionales, datos convencionales y tests estadísticos.
-
-<br>
-**NOTA:** Es posible ejecutar Rcmdr desde R-Studio.
 ]
 
 ---
@@ -328,68 +275,7 @@ https://www.rstudio.com/products/rstudio/download/
 ```
 <image src="Images/Rstudio_instalador.png" width="550" align="rigth">
 ]
----
-.left-column[
-  ## Instalación de Rcmdr 
-<br>
-<image src="Images/r-seleccionar-repositorio.png" width="150">
 
-]
-.right-column[
-
-Ejecutamos R
-
-```remark
-[usuario@equipo ~]$ R
-```
-
-Instalamos el paquete de Rcmdr
-
-```remark
-> install.packages("Rcmdr",dependencies=TRUE)
-```
-
-Seguimos las instrucciones de la salida
-
-```remark
-Aviso en install.packages("Rcmdr", dependencies = TRUE) :
-'lib = "/usr/lib/R/library"' is not writable
-Would you like to use a personal library instead? (y/n) y
-Would you like to create a personal library
-~/R/x86_64-unknown-linux-gnu-library/2.15
-to install packages into? (y/n) y
-```
-
-Se abrirá una ventana para seleccionar el repositorio de dónde descargar los paquetes necesarios. Seleccionamos el que queramos y después de aceptar empezará a descargar los paquetes.
-
-```remark
-chooseCRANmirror(graphics=FALSE) # chooseCRANmirror(81)
-
-
-```
-]
-
----
-.left-column[
-  ## Ejecutar Rcmdr 
-
-]
-.right-column[
-
-Ejecutamos R
-
-```remark
-[usuario@equipo ~]$ R
-```
-
-Cargamos la libreria de Rcmdr y ejecutamos
-
-```remark
-> library("Rcmdr")
-```
-<image src="Images/r-commander-gui.jpg" width="600">
-
-]
 
 ---
 
@@ -398,7 +284,6 @@ template: inverse
 
 ## Mis primeros pasos en R
 
-<image src="http://blogs.hazteoir.org/cprietoh/files/2013/06/f-11-300x221.png">
 
 ---
 .left-column[
