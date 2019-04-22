@@ -24,20 +24,16 @@ layout: false
 
 .right-column[
 
-En estadística, un fenómeno aleatorio es aquel que bajo el mismo conjunto aparente
-de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede
-predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un
-dado).
+En estadística, un **fenómeno aleatorio** es aquel que bajo el mismo conjunto aparente de condiciones iniciales, puede presentar resultados diferentes.
 
-Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos
-los factores de un experimento nos hace predecir exactamente el resultado del mismo.
-Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber
-exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+En un fenomeno aleatorio no se puede predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un dado).
 
-Un experimento se dice aleatorio si verifica las siguientes condiciones:
- - Es posible conocer previamente todos los posibles resultados asociados al
-experimento (el espacio muestral, constituido por diferentes sucesos).
- - Es imposible predecir el resultado exacto del mismo antes de realizarlo
+Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos los factores de un experimento nos hace predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un celular es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+
+Un experimento se dice **aleatorio** si verifica las siguientes condiciones:
+
+ - Es posible conocer previamente todos los **resultados asociados** al experimento (el espacio muestral, constituido por diferentes sucesos).
+ - Es **imposible predecir el resultado exacto** del mismo antes de realizarlo
 
 ]
 ---
@@ -49,16 +45,13 @@ layout: false
 ]
 .right-column[
 
-El espacio de resultados o espacio muestral, Ω es el conjunto de todos los posibles
-resultados de un experimento aleatorio.
+El **espacio de resultados** o espacio muestral, Ω es el conjunto de todos los posibles resultados de un experimento aleatorio.
 
-Sucesos
+**Sucesos**
 
-Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado
-del experimento aleatorio es uno de los elementos de A.
+Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado del experimento aleatorio es uno de los elementos de A.
 
-- Suceso complementario de A (A'): ocurre cuando el resultado del experimento
-no es un elemento de A.
+- Suceso complementario de A (A'): ocurre cuando el resultado del experimento no es un elemento de A.
 - Suceso unión de A y B (A ∪ B): ocurre cuando ó bien sucede A ó bien sucede B.
 - Suceso intersección de A y B (A ∩ B): ocurre cuando A y B suceden
 simultáneamente
@@ -146,26 +139,162 @@ layout: false
 
 .right-column[
 <br><br>
-Cuando una variable aleatoria toma diversos valores, la probabilidad asociada a cada uno de tales valores puede ser organizada como una **distribucion de probabilidad**.
+Cuando una **variable aleatoria** toma diversos valores, la probabilidad asociada a cada uno de tales valores puede ser organizada como una **distribucion de probabilidad**.
 
-Las distribuciones de probabilidad pueden representarse a traves de una una formula que se le denomina **funcion de probabilidad**. Existen dos tipos de distribuciones:
+- Distribuciones discretas:  espacio muestral contiene un número infinito de posibilidades, igual al número de puntos en un segmento de recta.**Variable aleatoria continua** 
 
-- Distribuciones discretas
-- Distribuciones continuas
+- Distribuciones continuas: son aquellas en donde el espacio muestral es contable. **Variable aleatoria discreta**
+
+
+
 ]
+
 ---
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Definiciones
+   ### Distribuciones discretas 
 ]
 
 .right-column[
+
+Al lanzar una moneda tres veces, la variable X, representa el número de caras tendria las siguientes probabilidades:
+
+| m       |   0    |   1    |    3   |    
+|:-------:|:------:|:------:|:------:|
+| P(M=m)  |  1/3   |   1/2  |  1/6   |  
+
+
+Esto se escribe de la forma  f(x) = P(X=x); es decir, f(3)=P(X=3).
+
+Al conjunto de pares ordenados se le llama **función de probabilidad**, función de masa de probabilidad o distribución de probabilidad de una variable aleatoria X.
+
+El conjunto de pares ordenados (x,f(x)) es una función de probabilidad de la variable discreta X si:
+
+1. f(X) >= 0
+2. Σ<sub>1</sub><sup>n</sup>(f(x)) = 1
+3. P(X = x) = f(x)
+
+
+Ejemplo: Un embarque de 20 computadoras portátiles similares para una tienda minorista contiene 3 que están defectuosas. Si una escuela compra al azar 2 de estas computadoras, calcule la distribución de probabilidad para el número de computadoras defectuosas.
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones discretas 
+]
+
+.right-column[
+
+Si una agencia automotriz vende 50% de su inventario de cierto vehículo extranjero equipado con bolsas de aire laterales, calcule una fórmula para la distribución de probabilidad del número de automóviles con bolsas de aire laterales entre los siguientes 4 vehículos que venda la agencia.
+
+La **función de distribución acomulativa** F(x) de una variable aleatoria discreta X con distribución de probabilidad f(x) es:
+
+F(x)=P(X<=x) = Σ<sub>t<=x</sub>(f(t)), para -∞< x <∞
+
+Calcule la función de la distribución acumulativa de la variable aleatoria X del ejercicio anterior. Utilice F(x) para verificar que f(2) =3/8.
+
+A menudo es útil ver una distribución de probabilidad en forma gráfi ca. Para esto se utiliza un histograma de probabilidades. para el ejemplo anterior:
+
+```
+x<-c(0,1,2,3,4)
+prob<-c(1/16,4/16,6/16,4/16,1/16)
+
+plot(x,prob,type="h")
+barplot(prob)
+```
+
+Graficar la distribución de probabilidad acomulada
+
+
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones continua 
+]
+
+.right-column[
+
+Una variable aleatoria continua tiene una probabilidad 0 de adoptar exactamente cualquiera de sus valores. Para la variable aleatoria continua X  no importa si incluimos o no un extremo del intervalo:
+
+P(a < X ≤ b) = P(a < X < b) + P(X = b) = P(a < X < b).
+
+
+La distribución de probabilidad de una variable aleatoria continua no se puede tabular pero si se presenta como una formula. Esta formula se le conoce como **función de densidad de probabilidad** o **función de densidad** de una variable discreta X.
+
+La función de densidad de probabilidad se construye de manera que el area bajo la curva limitada por el eje  sea igual a 1. 
+
+P (a < X < b) = ∫<sub>a</sub><sup>b</sup>f(x)dx .
+
+
+La función f (x) es una función de densidad de probabilidad (fdp) para la variable
+aleatoria continua X, defi nida en el conjunto de números reales, si
+
+1. f(x) >= 0 para toda x ∈ R
+2. ∫<sub>-∞</sub><sup>∞</sup>f(x)dx =1
+3. P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx
+
+
+
+]
+
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones continua 
+]
+
+.right-column[
+
+Suponga que el error en la temperatura de reacción, en °C, en un experimento de laboratorio controlado, es una variable aleatoria continua X que tiene la función de densidad de
+probabilidad
+
+f(x) = x<sup>2</sup>/3 para -1 < x < 2, 0 para toda otra x
+
+a) Verifique que f(x) es una función de densidad
+b) Calcule P(0<X<=1) 
+
 Existe una relación muy importante entre las funciones de distribución F(x) y de densidad f(x) de una variable aleatoria discreta. La función de distribución en un punto se obtiene acumulando el valor de la función de densidad para todos los valores del recorrido menores o iguales al punto en cuestión.
 
 F(X) = SUM(f(xi)) para toda xi en X
 
 
+]
+
+---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones continua 
+]
+
+.right-column[
+
+La función de distribución acumulativa F(x), de una variable aleatoria continua X con función de densidad f (x), es 
+
+F (x ) = P (X ≤ x ) = ∫<sup>x</sup> <sub>−∞</sub>f(t)dt, para −∞< x < ∞.
+
+por lo tanto
+
+P(a < X < b) = F(b)-F(a) 
+
+y
+
+f(x) = dF(x)/dx
+
+Calcular F(x) para el ejemplo anterior utilizando P(0<X<=1)
 
 ]
 ---
@@ -215,7 +344,7 @@ layout: false
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Definiciones
+   ### Funciones en R
 ]
 .right-column[
 <br><br>

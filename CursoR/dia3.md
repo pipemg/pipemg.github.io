@@ -63,7 +63,7 @@ layout: false
 ]
 .right-column[
 
-<img src="Images/diagrama_arbol.png" width="250px">
+<img src="Images/diagrama_arbol.png" width="350px">
 
 Ej. Un experimento consiste en lanzar una moneda y después lanzarla una segunda vez si sale
 cara. Si en el primer lanzamiento sale cruz, entonces se lanza un dado una vez.
@@ -118,7 +118,7 @@ table(urnsample)
 layout: false
 .left-column[
   ## Fundamentos de probabilidad
-   ### Diagrama de arbol
+   ### Diagrama de árbol
 ]
 .right-column[
 
@@ -132,54 +132,26 @@ Espacio muestral
  S <- c("DDD", "DDN", "DND", "DNN", "NDD", "NDN", "NND", "NNN")
 
 ```
-Los espacios muestrales con un número grande o infi nito de puntos muestrales se
+]
+---
+
+layout: false
+.left-column[
+  ## Fundamentos de probabilidad
+   ### Diagrama de árbol
+]
+.right-column[
+
+Los espacios muestrales con un número grande o infinito de puntos muestrales se
 describen mejor mediante un enunciado o método de la regla.
 
-S = {x | x es una ciudad con una población de más de un millón de habitantes},
+S = {x | x es una ciudad con más de un millón de habitantes},
 
 S = {(x, y) | x<sup>2</sup> + y<sup>2</sup> ≤ 4}.
 ]
 
 
 
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Subsets de datos en R
-]
-.right-column[
-
-%in%  #busqueda por elementos
-
-```
-> x <- 1:10
-> y <- 8:12
-> y %in% x
-> y[y %in% x]
-
-```
-
-isin 
-
-```
-> isin(x,y) #todo el vector
-
-```
-
-all 
-```
-> x <- 1:10
-> y <- c(3, 3, 7)
-> unique(c(y %in% x))
-
-
-```
-
-¿Por que isin y all tienen esos resultados?
-
-
-]
 
 ---
 
@@ -189,7 +161,6 @@ layout: false
    ### Union, Interseccion y diferencia
 ]
 .right-column[
-<br>
 
 **Evento** es un conjunto de puntos muestrales en los cuales estamos interesados, más que en la ocurrencia de un elemento específi co en el espacio muestral. Un evento es un subconjunto de un espacio muestral.
 
@@ -206,13 +177,11 @@ B<-apply(B,1,paste, collapse="")
 Suponga que se seleccionan, de forma aleatoria, tres artículos de un proceso de fabricación.
 Cada artículo se inspecciona y se clasifica como defectuoso, D, o no defectuoso, N.
 
-Podríamos estar interesados en el evento B de que el número de artículos defectuosos sea mayor que 1 
+Podríamos estar interesados en el evento B de que el número de artículos defectuosos sea mayor que 1.
 
 B = {DDN, DND, NDD, DDD}
 
-Es posible concebir que un evento puede ser un subconjunto que incluye todo el
-espacio muestral S, o un subconjunto de S que se denomina conjunto vacío y se denota
-con el símbolo ϕ.
+Es posible concebir que un evento puede ser un subconjunto que incluye todo el espacio muestral S, o un subconjunto de S que se denomina conjunto vacío y se denota con el símbolo ϕ.
 
 
 
@@ -235,7 +204,7 @@ union(A,B)
 
 ```
 
-<img src="Images/union.png" width="250px">
+<img src="Images/union.png" width="350px">
 ]
 ---
 
@@ -254,7 +223,7 @@ de S que no están en A. Denotamos el complemento de A mediante el símbolo A'
 setdiff(S,A)
 ```
 
-<img src="https://matematicasdivertidas6.files.wordpress.com/2012/07/complemento1.jpg" width="250px">
+<img src="https://matematicasdivertidas6.files.wordpress.com/2012/07/complemento1.jpg" width="350px">
 
 
 **Nota** setdiff no es simetrico y podemos calcular el complemento de todos los eventos Ej. setdiff(S,A)
@@ -277,13 +246,10 @@ que contiene todos los elementos que son comunes a A y a B.
 intersect(A, B)
 ```
 
-<img src="Images/intersection.png" width="250px">
-
-
+<img src="Images/intersection.png" width="350px">
 
 
 ]
-
 
 
 ---
@@ -359,24 +325,44 @@ layout: false
 layout: false
 .left-column[
   ## Probabilidad
+   ### Subsets de datos en R
+]
+.right-column[
+
+Subsets de datos en R
+
+%in%  #busqueda por elementos
+
+```
+> x <- 1:10
+> y <- 8:12
+> y %in% x
+> y[y %in% x]
+
+```
+
+
+]
+
+
+---
+
+layout: false
+.left-column[
+  ## Probabilidad
    ### Conteo de puntos muestrales
 ]
 .right-column[
 <br>
 
 **Regla de multiplicación**
-Si una operación se puede llevar a cabo en n1 formas, y si para cada una de éstas se
-puede realizar una segunda operación en n2 formas, entonces las dos operaciones
-se pueden ejecutar juntas de n1n2 formas.
+Si una operación se puede llevar a cabo en n1 formas, y si para cada una de éstas se puede realizar una segunda operación en n2 formas, entonces las dos operaciones se pueden ejecutar juntas de n1*n2 formas.
 
 ¿Cuántos puntos muestrales hay en el espacio muestral cuando se lanza un par de dados
 una vez? 
 
 
-**Solución:** El primer dado puede caer en cualquiera de n1 = 6 maneras. Para cada una de esas 6
-maneras el segundo dado también puede caer en n2 = 6 formas. Por lo tanto, el par de
-dados puede caer en n1
-n2 = (6)(6) = 36 formas posibles. 
+**Solución:** El primer dado puede caer en cualquiera de n1 = 6 maneras. Para cada una de esas 6 maneras el segundo dado también puede caer en n2 = 6 formas. Por lo tanto, el par de dados puede caer en n1*n2 = (6)(6) = 36 formas posibles. 
 
 ]
 ---
@@ -389,24 +375,27 @@ layout: false
 <br>
 
 **regla de multiplicación generalizada**
-Si una operación se puede ejecutar en n1 formas, y si para cada una de éstas se puede
-llevar a cabo una segunda operación en n2 formas, y para cada una de las primeras dos
-se puede realizar una tercera operación en n3 formas, y así sucesivamente, entonces la
-serie de k operaciones se puede realizar en n1 n2...nk formas. 
+Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puede llevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub>*n<sub>2</sub> * ... * n <sub>k</sub> formas. 
 
-Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes
-opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros,
-tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto
-de accesorios. ¿De cuántas formas diferentes puede Sam comprar las partes?
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
 
-Solución: Como n1 = 2, n2 = 4, n3 = 3 y n4 = 5, hay n1 × n2 × n3 × n4 = 2 × 4 × 3 × 5 = 120
-formas diferentes de comprar las partes. 
+Sam va a armar una computadora y para comprar las partes tiene que elegir entre las siguientes opciones: dos marcas de circuitos integrados, cuatro marcas de discos duros, tres marcas de memorias y cinco tiendas locales en las que puede adquirir un conjunto de accesorios. 
 
-Ejercicio: ¿Cuántos números pares de cuatro dígitos se pueden formar con los dígitos 0, 1, 2, 5, 6
+¿De cuántas formas diferentes puede Sam comprar las partes?
+
+**Solución:** Como n<sub>1</sub> = 2, n<sub>2</sub> = 4, n<sub>3</sub> = 3 y n<sub>4</sub> = 5, hay n<sub>1</sub> × n<sub>2</sub> × n<sub>3</sub> × n<sub>4</sub> = 2 × 4 × 3 × 5 = 120
+
+**Ejercicio:** ¿Cuántos números pares de cuatro dígitos se pueden formar con los dígitos 0, 1, 2, 5, 6
 y 9, si cada dígito se puede usar sólo una vez?
 
 ]
-
 ---
 layout: false
 .left-column[
@@ -415,23 +404,21 @@ layout: false
 ]
 .right-column[
 <br>
-
 
 Una **permutación** es un arreglo de todo o parte de un conjunto de objetos.Una permutación es un arreglo de todo o parte de un conjunto de objetos.
 
 Considere las tres letras a, b y c y las permutaciones posibles con las 3 letras
 
-```
-S<-c("abc", "acb", "bac", "bca","cab", "cba")
-```
+S = {"abc", "acb", "bac", "bca","cab", "cba"}
+
 
 Aqui vemos que tenemos 3 opciones para la primera letra, 2 opciones para la segunda y automáticamente la tercera queda determinada. 
 
 
-Para cualquier entero no negativo n, n!, denominado **“n factorial”** se define como
-N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
+Para cualquier entero no negativo n, n!, denominado **"n factorial"** se define como N! = n(n – 1) ··· (2)(1), con el caso especial de 0! = 1.
 
 El número de **permutaciones** de n objetos es n!
+
 ]
 ---
 layout: false
@@ -440,10 +427,11 @@ layout: false
    ### Conteo de puntos muestrales
 ]
 .right-column[
+
 <br>
-El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos
-ahora el número de permutaciones que son posibles tomando dos de las cuatro letras
-a la vez. Éstas serían ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db y dc.
+El número de permutaciones de las cuatro letras a, b, c y d será 4! = 24. Consideremos ahora el número de permutaciones que son posibles tomando dos de las cuatro letras a la vez. 
+
+Éstas serían ab, ac, ad, ba, bc, bd, ca, cb, cd, da, db y dc.
 
 En general, n objetos distintos tomados de r a la vez se pueden arreglar
 en n(n – 1)(n – 2) ··· (n – r + 1)
@@ -453,7 +441,17 @@ El número de permutaciones de n objetos distintos tomados de r a la vez es:
 
 En un año se otorgará uno de tres premios (a la investigación, la enseñanza y el servicio)
 a algunos de los estudiantes, de un grupo de 25, de posgrado del departamento de estadística.
-Si cada estudiante puede recibir un premio como máximo, ¿cuántas selecciones posibles habría?
+
+]
+---
+layout: false
+.left-column[
+  ## Probabilidad
+   ### Conteo de puntos muestrales
+]
+.right-column[
+
+Si cada estudiante puede recibir un premio como máximo, ¿cuántas  selecciones posibles habría?
 
 Solución: Como los premios son distinguibles, se trata de un problema de permutación. El número
 total de puntos muestrales es:
@@ -466,6 +464,7 @@ head(permutaciones)
 nrow(permutaciones)
 ```
 ]
+
 ---
 layout: false
 .left-column[
@@ -484,8 +483,13 @@ Si 4 personas juegan en una mesa, no tenemos una permutación nueva si se mueven
 ```
 factorial(4)
 ```
+El número de permutaciones distintas de n objetos, en el que n1 son de una clase, n2 de
+una segunda clase,..., n<sub>k</sub> de una k-ésima clase es 
+
+n! / (n<sub>1</sub>!*n<sub>2</sub>!*...*n<sub>k</sub>!)
 
 ]
+
 
 ---
 layout: false
@@ -494,12 +498,6 @@ layout: false
    ### Conteo de puntos muestrales
 ]
 .right-column[
-<br>
-El número de permutaciones distintas de n objetos, en el que n1 son de una clase, n2 de
-una segunda clase,..., n<sub>k</sub> de una k-ésima clase es 
-
-n! / (n<sub>1</sub>!*n<sub>2</sub>!*...*n<sub>k</sub>!)
-
 Durante un entrenamiento de fútbol americano colegial, el coordinador defensivo necesita
 tener a 10 jugadores parados en una fi la. Entre estos 10 jugadores hay 1 de primer
 año, 2 de segundo año, 4 de tercer año y 3 de cuarto año, respectivamente. ¿De cuántas
@@ -561,9 +559,6 @@ layout: false
 
 .right-column[
 
-<br>
-
-
 La probabilidad de un evento A es la suma de los pesos de todos los puntos muestrales de A.
 
 Por lo tanto:
@@ -592,9 +587,6 @@ sample(S, prob=p, size=1, replace=T)
 sample(S, prob=p, size=200, replace=T)
 
 ```
-**WARNING:** RAM memory y probabilidades infinitecimales 
-
-
 ]
 
 ---
@@ -620,21 +612,6 @@ layout: false
 > B <- subset(E, Var1 + Var2 >= 8)
 
 ```
-
-
-
-
-]
-
-
----
-layout: false
-.left-column[
-  ## Probabilidad
-   ### Probabilidad Condicional
-]
-.right-column[
-<br><br><br>
 
 ```
 > S<-1:6
@@ -671,7 +648,7 @@ layout: false
 .right-column[
 <br><br><br>
 
-Definición: Una variable aleatoria X es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
+**Una variable aleatoria X** es una función X:S -> R que asocia para cada w ∈ S exactamente X(ω) = x. 
 
 Se define como S todos los posibles resultados de el evento E
 
@@ -702,12 +679,16 @@ layout: false
 
 Escribir una formula que define una variable aleatoria dentro de una función, agregando una columna a un data.frame.
 
-
 Tiramos un dado de 4 lados 3 veces y definimos nuestra variable U = X1 - X2 + X3 
 
 
 Ahora podemos preguntar, ¿Cual es la probabilidad de que U > 6?
 
+
+```
+dado4l<-c(1:4)
+S<-expand.grid(dado4l,dado4l,dado4l)
+```
 
 ]
 ---
@@ -739,7 +720,7 @@ layout: false
   ### Forma
 ]
 .right-column[
-
+<br><br>
 **Simetría** y **asimetría** 
    - **positivamente sesgada**
    - **negativamente sesgada**
@@ -748,7 +729,7 @@ layout: false
 
 La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. 
 
-<img src="Images/curtosis.jpg", width=500px>
+
 
 ]
 
@@ -766,7 +747,7 @@ layout: false
 
 La **asimetría** (Fisher) de la muestra, se define por la fórmula
 
-<img src="coeficiente-asimetria-fisher.jpg" width=400px>
+<img src="Images/coeficiente-asimetria-fisher.jpg" width=400px>
 
 donde S es la desviación estandar (o tipica)
 
@@ -782,7 +763,7 @@ layout: false
    ### Medidas de Forma
 ]
 .right-column[
-<br><br>
+<br>
 
 
 La **curtosis**  de la muestra, se define por la fórmula
@@ -891,6 +872,81 @@ x<-round(runif(20, min=1, max=100))
 
 
 ]
+
+---
+
+layout: false
+.left-column[
+  ## Ejemplos de funciones
+  ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la media
+
+```
+> media<-function(x=NA)
++ {
++ x <- x[!is.na(x)]
++ sum(x)/length(x)
++ }
+> media(c(2,4,1,3,6,7))
+> media(c(2,4,1,3,6,NA))
+```
+
+Calcular la varianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+
+]
+
+---
+
+layout: false
+.left-column[
+  ## Ejemplos de funciones
+  ### Funciones elementales
+]
+.right-column[
+<br><br>
+
+Calcular la desviación estandar
+
+```
+> DT<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sqrt(sum((x-(sum(x)/n))^2)/n)
++ return(v)
++ }
+> DT(1:3)
+> DT(c(1,3,4,2,6,4))
+```
+
+Calcular la covarianza 
+
+```
+> Varianza<-function(x=NA)
++ {
++ n<-length(x)
++ v<-sum((x-(sum(x)/n))^2)/n
++ return(v)
++ }
+```
+
+Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
+]
+
+
 
 ---
 
@@ -1062,79 +1118,6 @@ layout: false
 > write(A*B,"sumaAyB.dat") # Lo guardamos en un fichero .dat que se llame sumaAyB
 ```
 ]
----
-
-layout: false
-.left-column[
-  ## Ejemplos de funciones
-  ### Funciones elementales
-]
-.right-column[
-<br><br>
-
-Calcular la media
-
-```
-> media<-function(x=NA)
-+ {
-+ x <- x[!is.na(x)]
-+ sum(x)/length(x)
-+ }
-> media(c(2,4,1,3,6,7))
-> media(c(2,4,1,3,6,NA))
-```
-
-Calcular la varianza 
-
-```
-> Varianza<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sum((x-(sum(x)/n))^2)/n
-+ return(v)
-+ }
-```
-
-
-]
-
----
-
-layout: false
-.left-column[
-  ## Ejemplos de funciones
-  ### Funciones elementales
-]
-.right-column[
-<br><br>
-
-Calcular la desviación estandar
-
-```
-> DT<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sqrt(sum((x-(sum(x)/n))^2)/n)
-+ return(v)
-+ }
-> DT(1:3)
-> DT(c(1,3,4,2,6,4))
-```
-
-Calcular la covarianza 
-
-```
-> Varianza<-function(x=NA)
-+ {
-+ n<-length(x)
-+ v<-sum((x-(sum(x)/n))^2)/n
-+ return(v)
-+ }
-```
-
-Ejercicio. Crear una funcion llamada fact2 que genere el factorial de cualquier numero.
-]
-
 ---
 name: last-page
 template: inverse
