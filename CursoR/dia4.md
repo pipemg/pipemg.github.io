@@ -943,6 +943,32 @@ layout: false
 
 ```
 ]
+
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones
+   ### Distribución Z
+]
+.right-column[
+<br><br>
+
+Valor estandarizado, cuando queremos comparar datos en escala que es independiente a la medida.
+
+Dado X=x[1], x[2], x[3], ... ,x[n] los z-scores son z[1], z[2],...z[n] se ven definidos como
+
+z[i]=(x[i]-median(x))/s 
+
+donde s es la sd()
+
+
+```
+> ?scale
+
+```
+]
 ---
 
 layout: false

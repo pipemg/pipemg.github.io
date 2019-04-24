@@ -374,8 +374,11 @@ layout: false
 .right-column[
 <br>
 
-**regla de multiplicación generalizada**
-Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puede llevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub>*n<sub>2</sub> * ... * n <sub>k</sub> formas. 
+**Regla de multiplicación generalizada**
+Si una operación se puede ejecutar en n<sub>1</sub> formas, y si para cada una de éstas se puede llevar a cabo una segunda operación en n<sub>2</sub> formas, y para cada una de las primeras dos se puede realizar una tercera operación en n<sub>3</sub> formas, y así sucesivamente, entonces la serie de k operaciones se puede realizar en n<sub>1</sub>*n<sub>2</sub> ...  n <sub>k</sub> formas. 
+
+
+$X = n_1 n_2 n_3... n_k$
 
 ]
 ---
@@ -727,9 +730,7 @@ layout: false
 
 <img src="Images/tipos-asimetria.jpg", width=500px>
 
-La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. 
-
-
+La **curtosis** (o apuntamiento) es una medida de forma que mide cuán escarpada o achatada está una curva o distribución. Es una medida del peso combinado de las colas en relación con el resto de la distribución.
 
 ]
 
@@ -747,11 +748,11 @@ layout: false
 
 La **asimetría** (Fisher) de la muestra, se define por la fórmula
 
-<img src="Images/coeficiente-asimetria-fisher.jpg" width=400px>
+<img src="Images/asimetria_fisher.jpeg" width=400px>
 
 donde S es la desviación estandar (o tipica)
 
-<img src="http://www.universoformulas.com/imagenes/estadistica/descriptiva/coeficiente-asimetria-fisher.jpg" width=400px>
+<img src="Images/coeficiente-asimetria-fisher.jpg" width=400px>
 
 ]
 ---
@@ -768,11 +769,13 @@ layout: false
 
 La **curtosis**  de la muestra, se define por la fórmula
 
-<img src="http://www.universoformulas.com/imagenes/formulas/estadistica/descriptiva/curtosis.jpg" width=400px>
+<img src="Images/curtosis.jpg" width=400px>
 
-donde S es la desviación estandar (o tipica)
+- S es la desviación estandar (o tipica).
+- N es el numero de datos en el vector X.
+- $\overline{x}$ is the mean of vector X.
 
-<img src="http://www.universoformulas.com/imagenes/estadistica/descriptiva/curtosis.jpg" width=400px>
+<img src="Images/KurtosisTypes.jpg" width=400px>
 
 ]
 
@@ -791,28 +794,30 @@ layout: false
 Asimetria
  
 ```
-> library(e1071)
-> skewness(discoveries)
+library(e1071)
+skewness(discoveries)
+plot(density(discoveries))
+abline(v=mean(discoveries), col="red")
+abline(v=quantile(discoveries)[2], col="blue")
+abline(v=quantile(discoveries)[4], col="blue")
 ```
 
-```
-> 2 * sqrt(6/length(discoveries))
-```
-
-**Nota** si 2 * sqrt(6/n) < skewness(x) => existe un sesgo dado el signo del calculo.
+**ejemplo**
+El ingreso familiar en los Estados Unidos está sesgado negativamente con una cola izquierda muy larga.
 
 
 Curtosis
  
 ```
-> kurtosis(UKDriverDeaths)
-```
+kurtosis(UKDriverDeaths)
+plot(density(UKDriverDeaths))
+abline(v=mean(UKDriverDeaths), col="red")
 
 ```
-> 4 * sqrt(6/length(UKDriverDeaths))
-```
 
-**Nota** abs(4 * sqrt(6/n)) < kurtosis(x) => presenta curtosis
+- En ecología, por ejemplo, cuando se estudian procesos de competencia, depredación y efectos de factores
+físicos o químicos, puede ser de gran utilidad determinar la curtosis a través del tiempo.
+
 
 
 ]
@@ -840,11 +845,6 @@ x<-round(runif(20, min=1, max=100))
 - desviación estandar
 
 
-**Nota Rcmdr**
-
-Statistics > Summaries > Numerical Summaries
-
-calculamos los cuantiles automaticamente
 
 ]
 
@@ -1042,31 +1042,7 @@ Para observar los valores outliers
 
 ]
 
----
 
-
-layout: false
-.left-column[
-  ## Estadistica descriptiva 
-   ### Z-value
-]
-.right-column[
-<br><br>
-
-Valor estandarizado, cuando queremos comparar datos en escala que es independiente a la medida.
-
-Dado X=x[1], x[2], x[3], ... ,x[n] los z-scores son z[1], z[2],...z[n] se ven definidos como
-
-z[i]=(x[i]-median(x))/s 
-
-donde s es la sd()
-
-
-```
-> ?scale
-
-```
-]
 ---
 
 layout: false
