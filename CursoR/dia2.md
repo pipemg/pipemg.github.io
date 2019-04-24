@@ -9,78 +9,553 @@ name: Inicio
 [fmunoz@lcg.unam.mx](mailto:fmunoz@lcg.unam.mx)
 .footnote[Introducción<br>[Descargar Presentación](http://pipemg.github.io/CursoR_INMEGEN/Presentacion2.pdf)]
 
+
 ---
-layout: false
+name: last-page
+template: inverse
 
-.left-column[
-  ## Archivos
-  ### - Ver archivos, obtener el directorio y cambiar de directorio
-
-]
-
-.right-column[
- 
-Escritura y lectura de archivos en R
-
-
-Supongamos que tenemos un fichero denominado [lista_de_datos.txt](lista_de_datos.txt)  y que lo queremos leer utilizando scan(file=" ", what = numeric(), n, sep, ...)
-
-
-```
- datos = scan("lista_de_datos.txt",sep=",")
-```
- 
-Para leer tablas directamente en R tenemos diversas funciones como read.table()
-
-```
- datos = read.table("edadaltura.csv", sep=",")
- colnames(datos)
- rownames(datos)
- ?read.table
-
-```
- 
-```
- ?read.csv
-
-```
-]
+## Matrices, Factores en R y DataFrames
 
 ---
 layout: false
 .left-column[
-  ## Archivos
-  ### - Ver archivos, obtener el directorio y cambiar de directorio
-
+  ## Datos multivariados
+   ### Introducción
 ]
-
 .right-column[
  
-Escritura y lectura de archivos en R
+Los estudios estadísticos requieren mas de un factor o medición asociado a cada objeto, para esto utilizamos otra **estructura de datos**.
 
-Para el caso análogo de escritura utilizamos la función write.table
+Para esto existen dos tipos de estructuras en R:
 
-```
- ?write.table
-```
- 
-guardemos la tabla de datos en el archivo datos1
+ - Matrices
+ - DataFrames
 
-```
- write.table(datos, "datos1.csv")
- write.table(datos, "datos2.tsv", sep="\t")
- write.table(datos, "datos3.tsv", sep="\t", quote=T)
-```
+Ambas son estructuras arreglas en dos dimensiones en forma rectangular y estaremos considerando que (a menos que se indique lo contrario):
 
-adicional a la función write.table, tenemos la función write para vectores.
+  - Las lineas son objetos
+  - Las columnas contienen diferentes mediciones o factores
+
+Ejemplo:
 
 ```
- x<-seq_len(1:100)
- write(x, file="seq_numerica.txt")
+ x <- 5:8
+ y <- letters[3:6]
+ z <- 1:4*pi
+ A <- data.frame(v1 = x, v2 = y, v3=z)
 ```
-
- 
 ]
+
+---
+
+
+
+layout: false
+.left-column[
+  ## Datos multivariados
+   ### Matrices
+]
+.right-column[
+
+```
+ A = matrix( 
++   c(2, 4, 3, 1, 5, 7), # the data elements 
++   nrow=2,              # number of rows 
++   ncol=3,              # number of columns 
++   byrow = TRUE)        # fill matrix by rows 
+ 
+ A                      # print the matrix 
+
+```
+
+```
+ A = matrix( 
++   c(2, 4, 3, 1, 5, 7), # the data elements 
++   nrow=2,              # number of rows 
++   ncol=3,              # number of columns 
++   byrow = TRUE)        # fill matrix by rows 
+ 
+ A                      # print the matrix 
+
+```
+
+```
+ dimnames(A) = list( 
++   c("row1", "row2"),         # row names 
++   c("col1", "col2", "col3")) # column names
+``` 
+
+```
+ rownames(x) <- c("row1", "row2")
+ colnames(x) <- c("C1","C2","C3")
+``` 
+]
+
+
+---
+layout: false
+.left-column[
+  ## Datos multivariados
+   ### Matrices
+]
+.right-column[
+
+```
+ A<-cbind(c(1,2,3),c(4,5,6))
+[,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+<br>
+ B<-rbind(c(1,2,3),c(4,5,6))
+[,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+
+
+ x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
+<br>
+ x[-1,]    # select all rows except first
+<br>
+ x[c(3,2),]
+```
+]
+
+---
+layout: false
+.left-column[
+  ## Datos multivariados
+   ### Acceso a DataFrames
+]
+.right-column[
+<br>
+Se puede acceder al igual que un vector de dos dimenciones, tanto por columnas como por renglones
+
+```
+ A[3, ]
+ A[1, ]
+ A[, 2]
+```
+
+También podemos acceder a las columnas por medio de la función $ utilizando los nombres de las columnas
+
+```
+ names(A)
+ A$v1
+```
+
+]
+
+---
+layout: false
+.left-column[
+  ## Datos multivariados
+   ### Modificar un DataFrame
+]
+.right-column[
+<br>
+
+```
+ A <- data.frame(SN = c(1,2), Age = c(21,15), Name=c("John","Dora"))
+```
+
+```
+  A[1,"Age"] <- 20; x
+```
+
+Agregar nuevos elementos
+```
+ rbind(A,list(1,16,"Paul"))
+```
+```
+ cbind(A,State=c("NY","FL"))
+```
+
+Eliminar un elemento
+```
+ A$State <- NULL
+```
+
+DataFrames vs Matrices:
+
+Las **Matrices** son solamente arreglos numericos de dos dimensiones mientras que los **DataFrame** contienen diferentes tipos de valores
+
+
+]
+---
+name: last-page
+template: inverse
+
+## Estructuras de Control 
+
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### If
+]
+.right-column[
+
+
+```
+  if (test_expression) {
+	statement
+  }
+```
+
+<img src="Images/ifcondition.jpg" alt="If statement", style="width:350px">
+
+
+Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
+
+
+**Ejercicio** Crea un if que evalue si X es positivo 
+
+
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### If else
+]
+.right-column[
+
+```
+ if (test_expression) {
++   statement1
++ } else {
++   statement2
++ }
+```
+
+
+Si test_expression es TRUE, la instrucción 1 se ejecuta. Pero si es FALSO se ejecuta la instrucción 2
+
+
+**Ejercicio** Crea un if,else que evalue si X es positivo o negativo
+
+Cascada if..else
+
+```
+ if ( test_expression1) {
++	statement1
++ } else if ( test_expression2) {
++	statement2
++ } else if ( test_expression3) {
++	statement3
++ } else {
++	statement4
++ }
+```
+
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### ifelse
+]
+.right-column[
+<br> 
+
+```
+ifelse(test_expression, x, y)
+```
+**Ejercicio** Crea un ifelse que evalue si X es par o no
+
+```
+ a = c(5,7,2,9)
+ ifelse(a %% 2 == 0,"even","odd")
+```
+
+]
+---
+layout: false
+.left-column[
+  ## Estructuras de Control 
+   ### For
+]
+.right-column[
+
+
+<img src="Images/for_loop.jpg" alt="If statement", style="width:350px">
+
+```
+ for (val in sequence){
++   statement
++ }
+
+```
+
+Aquí, la secuencia es un vector y val toma cada uno de sus valores durante el ciclo. En cada iteración, se evalúa la declaración.
+
+
+**Ejercicio**  contar el número de números pares en un vector.
+
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### R while Loop
+]
+.right-column[
+
+<img src="Images/While-loop.png" alt="If statement", style="width:250px">
+
+```
+ while (test_expression){
++	statement
++ }
+```
+
+
+Aquí, test_expression se evalúa y el cuerpo del loop se ingresa si el resultado es TRUE.
+
+
+
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### R while Loop
+]
+.right-column[
+
+Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_expression nuevamente.
+
+Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
+
+
+```
+ i <- 1
+ while (i < 6) {
++	print(i)
++	i = i+1
++ }
+```
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ###  break and next 
+
+]
+.right-column[
+
+<br><br>
+Una instrucción break se usa dentro de un ciclo (repeat, for, while) para detener las iteraciones y hacer fluir el control fuera del ciclo.
+
+
+```
+ if (test_expression) {
++	break
++ }
+```
+<br>
+
+Una siguiente declaración es útil cuando queremos omitir la iteración actual de un ciclo sin terminarlo. Al encontrar el siguiente, el analizador R omite una evaluación adicional y comienza la siguiente iteración del ciclo.
+
+```
+ if (test_condition) {
+	next
+ }
+```
+
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### repeat
+]
+.right-column[
+
+Un ciclo de repetición se usa para iterar sobre un bloque de código varias veces.
+
+No hay verificación de condición en repetir bucle para salir del bucle.
+
+Nosotros mismos debemos poner una condición explícitamente dentro del cuerpo del ciclo y usar la instrucción break para salir del ciclo. De lo contrario, se producirá un ciclo infinito.
+```
+ repeat {
++   statement
++   break 
+ }
+```
+
+```
+ x <- 1
+ repeat {
++	print(x)
++	x = x+1
++	if (x == 6){
++ 		break
++ 	}
++ }
+```
+]
+
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### apply
+]
+.right-column[
+ 
+
+Cuando usar apply.
+
+Cuando tenemos una función para aplicar a una estructura de datos determinada. Donde estructura se puede definir como un tipo de matriz o lista. 
+
+```
+ m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3) 
+```
+Primero quiero asegurarme de haber creado correctamente la matriz, tres columnas cada una con una media de 0, 2 y 5 respectivamente. 
+
+```
+ apply(m, 1, mean)
+```
+
+Al pasar un 1 en el segundo argumento, recuperamos 30 valores, dando la media de cada fila. No son los tres números que esperábamos, intente de nuevo.
+```
+apply(m, 2, mean)
+```
+]
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### apply
+]
+.right-column[
+ 
+<br><br>
+Utilizar tus propias funciones
+
+```
+ mifuncion<-function(x){
+	length(x[x<0])
+ }
+
+ apply(m, 2, FUN=mifuncion)
+```
+
+```
+ apply(m, 2, function(x) length(x[x<0]))
+
+```
+
+```
+ apply(m, 2, function(x) is.matrix(x)) <br>
+ apply(m, 2, is.matrix) <br>
+ apply(m, 2, is.vector)
+```
+
+]
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+ <br>
+
+Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
+
+
+```
+ sapply(1:3, function(x) x^2)
+
+
+ lapply(1:3, function(x) x^2)
+
+```
+
+Utilizando la opcion simplify = F, saplly te da una lista
+```
+ sapply(1:3, function(x) x^2, simplify=F)<br>
+ ?unlist<br>
+ ?tapply
+ ?
+```
+]
+
+
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+
+
+La función <b>apply()</b> es la función base.<br>
+
+```
+data(beavers)
+head(t(beaver1)[1:4,1:10])
+apply(t(beaver1),1,max) 
+apply(mtcars,2,mean) 
+head(apply(mtcars,2,function(x) x%%10))
+```
+<br>
+
+La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
+
+```
+#Crea una lista con dos elementos
+l = (a=1:10,b=11:20)
+#Calcula el promedio de cada elemento
+lapply(l, mean)
+class(lapply(l, mean))
+#Suma los valores de cada elemento
+lapply(l, sum)
+```
+]
+---
+layout: false
+.left-column[
+  ##  Estructuras de Control 
+   ### sapply and lapply
+]
+.right-column[
+
+<b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
+
+```
+#Crea una lista con dos elementos
+l = (a=1:10,b=11:20)
+#Calcula el promedio de cada elemento
+sapply(l, mean)
+
+```
+
+<b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
+
+```
+#Cilindros de diferentes autos
+str(mtcars$cyl)
+#mpg= Millas por galon (Rendimiento)
+tapply(mtcars$mpg,mtcars$cyl,mean)
+
+```
+<b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
+
+```
+data(iris) 
+by(iris[,1:4],iris$Species,colMeans)
+```
+]
+
 
 ---
 name: last-page
@@ -859,554 +1334,6 @@ layout: false
 
 ```
  pie(slices, labels = lbls, main="Pie Chart of Countries"
-```
-]
-
----
-name: last-page
-template: inverse
-
-## Matrices, Factores en R y DataFrames
-
----
-
-
-layout: false
-.left-column[
-  ## Datos multivariados
-   ### Introducción
-]
-.right-column[
- 
-Los estudios estadísticos requieren mas de un factor o medición asociado a cada objeto, para esto utilizamos otra **estructura de datos**.
-
-Para esto existen dos tipos de estructuras en R:
-
- - Matrices
- - DataFrames
-
-Ambas son estructuras arreglas en dos dimensiones en forma rectangular y estaremos considerando que (a menos que se indique lo contrario):
-
-  - Las lineas son objetos
-  - Las columnas contienen diferentes mediciones o factores
-
-Ejemplo:
-
-```
- x <- 5:8
- y <- letters[3:6]
- z <- 1:4*pi
- A <- data.frame(v1 = x, v2 = y, v3=z)
-```
-]
-
----
-
-
-
-layout: false
-.left-column[
-  ## Datos multivariados
-   ### Matrices
-]
-.right-column[
-
-```
- A = matrix( 
-+   c(2, 4, 3, 1, 5, 7), # the data elements 
-+   nrow=2,              # number of rows 
-+   ncol=3,              # number of columns 
-+   byrow = TRUE)        # fill matrix by rows 
- 
- A                      # print the matrix 
-
-```
-
-```
- A = matrix( 
-+   c(2, 4, 3, 1, 5, 7), # the data elements 
-+   nrow=2,              # number of rows 
-+   ncol=3,              # number of columns 
-+   byrow = TRUE)        # fill matrix by rows 
- 
- A                      # print the matrix 
-
-```
-
-```
- dimnames(A) = list( 
-+   c("row1", "row2"),         # row names 
-+   c("col1", "col2", "col3")) # column names
-``` 
-
-```
- rownames(x) <- c("row1", "row2")
- colnames(x) <- c("C1","C2","C3")
-``` 
-]
-
-
----
-layout: false
-.left-column[
-  ## Datos multivariados
-   ### Matrices
-]
-.right-column[
-
-```
- A<-cbind(c(1,2,3),c(4,5,6))
-[,1] [,2]
-[1,]    1    4
-[2,]    2    5
-[3,]    3    6
-<br>
- B<-rbind(c(1,2,3),c(4,5,6))
-[,1] [,2] [,3]
-[1,]    1    2    3
-[2,]    4    5    6
-
-
- x[c(1,2),c(2,3)]    # select rows 1 & 2 and columns 2 & 3
-<br>
- x[-1,]    # select all rows except first
-<br>
- x[c(3,2),]
-```
-]
-
----
-layout: false
-.left-column[
-  ## Datos multivariados
-   ### Acceso a DataFrames
-]
-.right-column[
-<br>
-Se puede acceder al igual que un vector de dos dimenciones, tanto por columnas como por renglones
-
-```
- A[3, ]
- A[1, ]
- A[, 2]
-```
-
-También podemos acceder a las columnas por medio de la función $ utilizando los nombres de las columnas
-
-```
- names(A)
- A$v1
-```
-
-]
-
----
-layout: false
-.left-column[
-  ## Datos multivariados
-   ### Modificar un DataFrame
-]
-.right-column[
-<br>
-
-```
- A <- data.frame(SN = c(1,2), Age = c(21,15), Name=c("John","Dora"))
-```
-
-```
-  A[1,"Age"] <- 20; x
-```
-
-Agregar nuevos elementos
-```
- rbind(A,list(1,16,"Paul"))
-```
-```
- cbind(A,State=c("NY","FL"))
-```
-
-Eliminar un elemento
-```
- A$State <- NULL
-```
-
-DataFrames vs Matrices:
-
-Las **Matrices** son solamente arreglos numericos de dos dimensiones mientras que los **DataFrame** contienen diferentes tipos de valores
-
-
-]
----
-name: last-page
-template: inverse
-
-## Estructuras de Control 
-
----
-layout: false
-.left-column[
-  ## Estructuras de Control 
-   ### If
-]
-.right-column[
-
-
-```
-  if (test_expression) {
-	statement
-  }
-```
-
-<img src="Images/ifcondition.jpg" alt="If statement", style="width:350px">
-
-
-Si test_expression es TRUE, la instrucción se ejecuta. Pero si es FALSO, no pasa nada.
-
-
-**Ejercicio** Crea un if que evalue si X es positivo 
-
-
-]
----
-layout: false
-.left-column[
-  ## Estructuras de Control 
-   ### If else
-]
-.right-column[
-
-```
- if (test_expression) {
-+   statement1
-+ } else {
-+   statement2
-+ }
-```
-
-
-Si test_expression es TRUE, la instrucción 1 se ejecuta. Pero si es FALSO se ejecuta la instrucción 2
-
-
-**Ejercicio** Crea un if,else que evalue si X es positivo o negativo
-
-Cascada if..else
-
-```
- if ( test_expression1) {
-+	statement1
-+ } else if ( test_expression2) {
-+	statement2
-+ } else if ( test_expression3) {
-+	statement3
-+ } else {
-+	statement4
-+ }
-```
-
-]
----
-layout: false
-.left-column[
-  ## Estructuras de Control 
-   ### ifelse
-]
-.right-column[
-<br> 
-
-```
-ifelse(test_expression, x, y)
-```
-**Ejercicio** Crea un ifelse que evalue si X es par o no
-
-```
- a = c(5,7,2,9)
- ifelse(a %% 2 == 0,"even","odd")
-```
-
-]
----
-layout: false
-.left-column[
-  ## Estructuras de Control 
-   ### For
-]
-.right-column[
-
-
-<img src="Images/for_loop.jpg" alt="If statement", style="width:350px">
-
-```
- for (val in sequence){
-+   statement
-+ }
-
-```
-
-Aquí, la secuencia es un vector y val toma cada uno de sus valores durante el ciclo. En cada iteración, se evalúa la declaración.
-
-
-**Ejercicio**  contar el número de números pares en un vector.
-
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### R while Loop
-]
-.right-column[
-
-<img src="Images/While-loop.png" alt="If statement", style="width:250px">
-
-```
- while (test_expression){
-+	statement
-+ }
-```
-
-
-Aquí, test_expression se evalúa y el cuerpo del loop se ingresa si el resultado es TRUE.
-
-
-
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### R while Loop
-]
-.right-column[
-
-Las instrucciones dentro del ciclo se ejecutan y el flujo vuelve a evaluar test_expression nuevamente.
-
-Esto se repite cada vez hasta que test_expression se evalúa como FALSE, en cuyo caso, el ciclo sale
-
-
-```
- i <- 1
- while (i < 6) {
-+	print(i)
-+	i = i+1
-+ }
-```
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ###  break and next 
-
-]
-.right-column[
-
-<br><br>
-Una instrucción break se usa dentro de un ciclo (repeat, for, while) para detener las iteraciones y hacer fluir el control fuera del ciclo.
-
-
-```
- if (test_expression) {
-+	break
-+ }
-```
-<br>
-
-Una siguiente declaración es útil cuando queremos omitir la iteración actual de un ciclo sin terminarlo. Al encontrar el siguiente, el analizador R omite una evaluación adicional y comienza la siguiente iteración del ciclo.
-
-```
- if (test_condition) {
-	next
- }
-```
-
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### repeat
-]
-.right-column[
-
-Un ciclo de repetición se usa para iterar sobre un bloque de código varias veces.
-
-No hay verificación de condición en repetir bucle para salir del bucle.
-
-Nosotros mismos debemos poner una condición explícitamente dentro del cuerpo del ciclo y usar la instrucción break para salir del ciclo. De lo contrario, se producirá un ciclo infinito.
-```
- repeat {
-+   statement
-+   break 
- }
-```
-
-```
- x <- 1
- repeat {
-+	print(x)
-+	x = x+1
-+	if (x == 6){
-+ 		break
-+ 	}
-+ }
-```
-]
-
-
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### apply
-]
-.right-column[
- 
-
-Cuando usar apply.
-
-Cuando tenemos una función para aplicar a una estructura de datos determinada. Donde estructura se puede definir como un tipo de matriz o lista. 
-
-```
- m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3) 
-```
-Primero quiero asegurarme de haber creado correctamente la matriz, tres columnas cada una con una media de 0, 2 y 5 respectivamente. 
-
-```
- apply(m, 1, mean)
-```
-
-Al pasar un 1 en el segundo argumento, recuperamos 30 valores, dando la media de cada fila. No son los tres números que esperábamos, intente de nuevo.
-```
-apply(m, 2, mean)
-```
-]
-
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### apply
-]
-.right-column[
- 
-<br><br>
-Utilizar tus propias funciones
-
-```
- mifuncion<-function(x){
-	length(x[x<0])
- }
-
- apply(m, 2, FUN=mifuncion)
-```
-
-```
- apply(m, 2, function(x) length(x[x<0]))
-
-```
-
-```
- apply(m, 2, function(x) is.matrix(x)) <br>
- apply(m, 2, is.matrix) <br>
- apply(m, 2, is.vector)
-```
-
-]
-
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### sapply and lapply
-]
-.right-column[
- <br>
-
-Estas dos funciones funcionan de manera similar, atraviesan un conjunto de datos como una lista o un vector y llaman a la función especificada para cada elemento.
-
-
-```
- sapply(1:3, function(x) x^2)
-
-
- lapply(1:3, function(x) x^2)
-
-```
-
-Utilizando la opcion simplify = F, saplly te da una lista
-```
- sapply(1:3, function(x) x^2, simplify=F)<br>
- ?unlist<br>
- ?tapply
- ?
-```
-]
-
-
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### sapply and lapply
-]
-.right-column[
-
-
-La función <b>apply()</b> es la función base.<br>
-
-```
-data(beavers)
-head(t(beaver1)[1:4,1:10])
-apply(t(beaver1),1,max) 
-apply(mtcars,2,mean) 
-head(apply(mtcars,2,function(x) x%%10))
-```
-<br>
-
-La función <b>lapply()</b> se aplica para operaciones en objetos de lista y devuelve un objeto de lista de la misma longitud del conjunto original.
-
-```
-#Crea una lista con dos elementos
-l = (a=1:10,b=11:20)
-#Calcula el promedio de cada elemento
-lapply(l, mean)
-class(lapply(l, mean))
-#Suma los valores de cada elemento
-lapply(l, sum)
-```
-]
----
-layout: false
-.left-column[
-  ##  Estructuras de Control 
-   ### sapply and lapply
-]
-.right-column[
-
-<b>sapply</b> es similar a lapply con la diferencia de que devuelve un vector o una matriz en lugar de un objeto de lista.<br>
-
-```
-#Crea una lista con dos elementos
-l = (a=1:10,b=11:20)
-#Calcula el promedio de cada elemento
-sapply(l, mean)
-
-```
-
-<b>tapply()</b> es una función muy poderosa que te permite dividir un vector en pedazos y luego aplicar alguna función a cada uno de ellos.<br>
-
-```
-#Cilindros de diferentes autos
-str(mtcars$cyl)
-#mpg= Millas por galon (Rendimiento)
-tapply(mtcars$mpg,mtcars$cyl,mean)
-
-```
-<b>by()</b> funciona de manera similar a group by function en SQL, aplicado a factores, donde podemos aplicar operaciones en un conjunto de resultados individuales.
-
-```
-data(iris) 
-by(iris[,1:4],iris$Species,colMeans)
 ```
 ]
 

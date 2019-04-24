@@ -240,12 +240,22 @@ Importando desde el ambiente grafico
 ]
 
 
-
+---
 
 ## ¿Como instalarlo?
+
+.left-column[
+  ### Rstudio
+]
+.right-column[
+
+<image src="Images/rstudio_download.png" width="550" align="rigth">
+
+]
+
 ---
 .left-column[
-  ### - Entornos graficos
+  ### Rstudio
 ]
 .right-column[
 <br><br>
@@ -999,11 +1009,7 @@ Ejercició. busca las funciones de R que comienzan con lengt
 
  - **R-Forge:**  [http://r-forge.r-project.org/](http://r-forge.r-project.org/)
 
- - **R Wiki:** [http://wiki.r-project.org/rwiki/doku.php](http://wiki.r-project.org/rwiki/doku.php)
-
  - **R Graph Gallery:**  [http://addictedtor.free.fr/graphiques/](http://addictedtor.free.fr/graphiques/)
-
- - **R Graphical Manual** [http://bm2.genes.nig.ac.jp/RGM2/index.php](http://bm2.genes.nig.ac.jp/RGM2/index.php)
 
  - **RSeek**  [(http://www.rseek.org](http://www.rseek.org) 
 
@@ -1093,8 +1099,78 @@ Cambiar el directorio actual
 > source("beers_code.r")
 ```
 ]
+---
+layout: false
+
+.left-column[
+  ## Archivos
+  ### - Ver archivos, obtener el directorio y cambiar de directorio
+
+]
+
+.right-column[
+ 
+Escritura y lectura de archivos en R
 
 
+Supongamos que tenemos un fichero denominado [lista_de_datos.txt](lista_de_datos.txt)  y que lo queremos leer utilizando scan(file=" ", what = numeric(), n, sep, ...)
+
+
+```
+ datos = scan("lista_de_datos.txt",sep=",")
+```
+ 
+Para leer tablas directamente en R tenemos diversas funciones como read.table()
+
+```
+ datos = read.table("edadaltura.csv", sep=",")
+ colnames(datos)
+ rownames(datos)
+ ?read.table
+
+```
+ 
+```
+ ?read.csv
+
+```
+]
+
+---
+layout: false
+.left-column[
+  ## Archivos
+  ### - Ver archivos, obtener el directorio y cambiar de directorio
+
+]
+
+.right-column[
+ 
+Escritura y lectura de archivos en R
+
+Para el caso análogo de escritura utilizamos la función write.table
+
+```
+ ?write.table
+```
+ 
+guardemos la tabla de datos en el archivo datos1
+
+```
+ write.table(datos, "datos1.csv")
+ write.table(datos, "datos2.tsv", sep="\t")
+ write.table(datos, "datos3.tsv", sep="\t", quote=T)
+```
+
+adicional a la función write.table, tenemos la función write para vectores.
+
+```
+ x<-seq_len(1:100)
+ write(x, file="seq_numerica.txt")
+```
+
+ 
+]
 
 ---
 
