@@ -171,9 +171,9 @@ Al conjunto de pares ordenados se le llama **función de probabilidad**, funció
 
 El conjunto de pares ordenados (x,f(x)) es una función de probabilidad de la variable discreta X si:
 
-1. f(X) >= 0
-2. Σ<sub>1</sub><sup>n</sup>(f(x)) = 1
-3. P(X = x) = f(x)
+1. $f(X) >= 0$
+2. $Σ_1^n(f(x)) = 1$
+3. $P(X = x) = f(x)$
 
 
 Ejemplo: Un embarque de 20 computadoras portátiles similares para una tienda minorista contiene 3 que están defectuosas. Si una escuela compra al azar 2 de estas computadoras, calcule la distribución de probabilidad para el número de computadoras defectuosas.
@@ -196,7 +196,7 @@ La **función de distribución acomulativa** F(x) de una variable aleatoria disc
 
 F(x)=P(X<=x) = Σ<sub>t<=x</sub>(f(t)), para -∞< x <∞
 
-Calcule la función de la distribución acumulativa de la variable aleatoria X del ejercicio anterior. Utilice F(x) para verificar que f(2) =3/8.
+Calcule y grafique la función de la distribución acumulativa de la variable aleatoria X del ejercicio anterior. Utilice F(x) para verificar que f(2) =3/8.
 
 A menudo es útil ver una distribución de probabilidad en forma gráfi ca. Para esto se utiliza un histograma de probabilidades. para el ejemplo anterior:
 
@@ -207,8 +207,6 @@ prob<-c(1/16,4/16,6/16,4/16,1/16)
 plot(x,prob,type="h")
 barplot(prob)
 ```
-
-Graficar la distribución de probabilidad acomulada
 
 
 ]
@@ -239,9 +237,9 @@ P (a < X < b) = ∫<sub>a</sub><sup>b</sup>f(x)dx .
 La función f (x) es una función de densidad de probabilidad (fdp) para la variable
 aleatoria continua X, defi nida en el conjunto de números reales, si
 
-1. f(x) >= 0 para toda x ∈ R
-2. ∫<sub>-∞</sub><sup>∞</sup>f(x)dx =1
-3. P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx
+1. $f(x) >= 0 para toda x ∈ R$
+2. $∫_-∞^∞f(x)dx =1$
+3. $P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx$
 
 
 

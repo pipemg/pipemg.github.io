@@ -1,0 +1,6 @@
+Paquetes a instalar
+ 
+library(e1071)
+library(RColorBrewer)
+library(qcc)
+library(aplpack)

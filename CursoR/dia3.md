@@ -771,9 +771,6 @@ La **curtosis**  de la muestra, se define por la fórmula
 
 <img src="Images/curtosis.jpg" width=400px>
 
-- S es la desviación estandar (o tipica).
-- N es el numero de datos en el vector X.
-- $\overline{x}$ is the mean of vector X.
 
 <img src="Images/KurtosisTypes.jpg" width=400px>
 
@@ -870,6 +867,14 @@ x<-round(runif(20, min=1, max=100))
 - **varianza**: Media aritmética del cuadrado de las desviaciones respecto a la media.<br>
 - **desviación estandar(típica)**: Raiz cuadrada de la varianza
 
+```
+summary(mtcars$mpg)
+```
+
+```
+library(fBasics)
+basicStats(mtcars$mpg)
+```
 
 ]
 

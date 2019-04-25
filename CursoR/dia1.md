@@ -19,15 +19,13 @@ layout: false
 * Introducción a R
   * Historia de R
   * Instalación de R
-  * R, R commander y RStudio
-  * Bibliografía
+  * R y RStudio
 
 - Fundamentos de R y programación
   - Expresiones y sintaxis en R
   - Funciones en R
   - Crear una función en R
-  - Ayuda, manuales y ejemplos
-  - Manejo de archivos del sistema
+
 
 - Variables y estructuras de datos
   - El vector como unidad básica de R
@@ -38,6 +36,9 @@ layout: false
   - Nombres del vector
   - Operaciones sobre vectores
   - Listas y sus operaciones
+
+- Ayuda, manuales y ejemplos
+- Manejo de archivos del sistema
 ]
 
 
