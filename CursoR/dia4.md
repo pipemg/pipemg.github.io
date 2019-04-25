@@ -171,9 +171,9 @@ Al conjunto de pares ordenados se le llama **función de probabilidad**, funció
 
 El conjunto de pares ordenados (x,f(x)) es una función de probabilidad de la variable discreta X si:
 
-1. $f(X) >= 0$
-2. $Σ_1^n(f(x)) = 1$
-3. $P(X = x) = f(x)$
+1. f(X) >= 0
+2. Σ<sub>1</sub><sup>n</sup>(f(x)) = 1
+3. P(X = x) = f(x)
 
 
 Ejemplo: Un embarque de 20 computadoras portátiles similares para una tienda minorista contiene 3 que están defectuosas. Si una escuela compra al azar 2 de estas computadoras, calcule la distribución de probabilidad para el número de computadoras defectuosas.
@@ -209,6 +209,8 @@ barplot(prob)
 ```
 
 
+
+
 ]
 
 ---
@@ -237,9 +239,9 @@ P (a < X < b) = ∫<sub>a</sub><sup>b</sup>f(x)dx .
 La función f (x) es una función de densidad de probabilidad (fdp) para la variable
 aleatoria continua X, defi nida en el conjunto de números reales, si
 
-1. $f(x) >= 0 para toda x ∈ R$
-2. $∫_-∞^∞f(x)dx =1$
-3. $P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx$
+1. f(x) >= 0 para toda x ∈ R
+2. ∫<sub>-∞</sub><sup>∞</sup>f(x)dx =1
+3. P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx
 
 
 
@@ -382,6 +384,49 @@ un número entre 1 y n sin disponer de ninguna información adicional.
 ]
 
 
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Proceso de Bernoulli
+]
+.right-column[
+
+Los **procesos de Bernoulli** se refieren a experimentos que se repeten una cantidad finita de n veces en donde cada repetición tiene como resultado 2 opciones: éxito o fracaso. 
+
+Un proceso de Bernoulli tiene las siguientes propiedades:
+
+- El experimento se trata de la repetición de n ensayos. 
+- Cada uno de los ensayo se clasifica en éxitos o no éxitos(fracaso).
+- Cada uno de los ensayos son independientes.
+- La probabilidad de que suceda un éxito es constante y a esta se la llama p, mientras que la probabilidad de no éxito también se mantiene constante y es q=1-p
+
+
+Cuando se trata de procesos de Bernoulli existen 5 distribuciones asociadas la de bernulli(diatomica), la binomial, hipergeométrica, geométrica y la de Pascal.
+]
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución de Bernoulli
+]
+.right-column[
+
+Si **X** es una variable aleatoria que mide el ~~"número de éxitos"~~, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
+
+
+![Bernulli1]("Images/bernulli1.png")
+
+Su función de probabilidad viene definida por:
+
+![Bernulli2]("Images/bernulli2.png")
+
+![Bernulli3]("Images/bernulli3.png")
+
+![Bernulli4]("Images/bernulli3.png")
 
 ---
 
@@ -392,24 +437,23 @@ layout: false
 ]
 .right-column[
 
-La distribución  binomial es una distribucón de probabilidad que
-toma valor 1 para la probabilidad de éxito (p) y valor q para la probabilidad de fracaso (q = 1 − p).
+La distribución  binomial es una distribucón de probabilidad que toma valor 1 para la probabilidad de éxito (p) y valor q para la probabilidad de fracaso (q = 1 − p).
 
 Se dice que la variable aleatoria X se distribuye como una Binomial de
 parametro p si sigue un proceso de bernulli. 
 
- - Los experimentos constan de ensayos repetidos
+ - Los experimentos constan de n ensayos repetidos
  - Cada ensayo se clasifica como éxito o fracaso
  - La probabilidad de éxito p es constante
- - Los ensayos
+ - Los ensayos son independientes
 
-# f(x) = p<sup>x</sup> (1 − p)<sup>1-x</sup>; con x = {0, 1}
+f(x) = p<sup>x</sup> (1 − p)<sup>1-x</sup>; con x = {0, 1}
 
-# P(X = 1) = p , P(X = 0) = 1 − p , 0 < p < 1
+P(X = 1) = p , P(X = 0) = 1 − p , 0 < p < 1
 
-# µ = p 
+µ = p 
 
-# σ^2 = p(1 − p)
+σ^2 = p(1 − p)
 
 ]
 ---
