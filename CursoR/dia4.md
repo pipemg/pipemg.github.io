@@ -350,10 +350,10 @@ layout: false
 <br><br>
 A cada nombre de función dado por R se le agrega un prefijo ‘d’ para obtener la función de densidad, ‘p’ para la función de distribución acumulada, ‘q’ para la función cuantil o percentil y ‘r’ para generar variables pseudo-aleatorias (random). La sintaxis es la siguiente:
 
-> dxxx(x, ...)
-> pxxx(q, ...)
-> qxxx(p, ...)
-> rxxx(n, ...)
+dxxx(x, ...)
+pxxx(q, ...)
+qxxx(p, ...)
+rxxx(n, ...)
 
 Donde xxx indica el nombre de cualquiera de las distribuciones, x y q son vectores que toman valores en el soporte de la distribución, p es un vector de probabilidades y n es un valor entero.
 
@@ -438,6 +438,7 @@ layout: false
 ]
 .right-column[
 
+Función:
 <img src="Images/bernulli3.png"  height=50px> 
 
 
@@ -446,21 +447,50 @@ layout: false
 
 **Ejemplo**
 
-"Lanzar dos monedas, probabilidad de conseguir que salga al menos una cruz".
+"Lanzar una moneda, probabilidad de conseguir que salga cruz".
 
-Se trata de un experimento con el exito (p) que salga una o dos cruces. 
-La probabilidad de sacar 1 cruz y cara es 1/2
-La probabilidad de sacar 2 caras es 1/4
+P(X=1) = 1/2
+P(X=0) = 1/2
 
-P(X=1) = 1/4
-P(X=0) = 1/4
-P(X=2) = 2/4
+Por lo tanto al probabilidad de exito (p) es 1/2 
 
-Por lo tanto al probabilidad de exito (p) es 3/4 
-Mientras que la probabilidad de fracaso (1) es q=1-p igual a 1/4
+Mientras que la probabilidad de fracaso (1) es q=1-p igual a 1/2
 
-X ~ Be(0,3/4)
+X ~ Be(0,0.5)
 ]
+
+---
+
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribución de Bernoulli
+]
+.right-column[
+
+Uso en R
+
+```
+dbinom(x, prob, log = FALSE)
+pbinom(q, prob, lower.tail = TRUE, log.p = FALSE)
+qbinom(p, prob, lower.tail = TRUE, log.p = FALSE)
+rbinom(n, prob)
+```
+
+x,q vector de cuantiles
+p vector of probabilidades.
+n numero de observaciones 
+prob Probabilidad de éxito 
+log, log.p Usar logaritmos
+lower.tail valor lógico; si es VERDAD la probabilidad es P[X<=x] si es FALSO P[X>=x]
+
+```
+dbinom(1,size=1, prob=.5)
+```
+
+]
+
 
 ---
 
@@ -515,6 +545,13 @@ P(X = 3) = conv(10,3) * 0.2^3 * 0.8 ^ 7 =
 
 P(X ≤ 2) =P(X = 0) + P(X = 1) + P(X = 2)
 =0.1074 + 0.2684 + 0.3020 = 0.6778
+
+```
+dbinom(3,10,prob=.2) # 3 Marcados
+
+sum(dbinom(c(0,1,2),10,prob=.2)) # 2 o menos
+
+```
 ]
 
 ---
@@ -526,6 +563,7 @@ layout: false
 ]
 .right-column[
 <br><br>
+Dentro de R:
 - dbinom(x, size, prob, log = F); Devuelve resultados de la función de densidad.
 - pbinom(q, size, prob, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
 - qbinom(p, size, prob, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la binomial.
@@ -549,20 +587,22 @@ layout: false
 ]
 .right-column[
 <br><br>
+
+**Ejemplos**
 ```
-> dbinom(3, 10, 0.5) # Calculamos la P(X=3) de una Binomial(10,0.5) 
-> dbinom(6, 10, 0.5) # Calculamos la P(X=6) de una Binomial(10,0.5)
-> dbinom(c(2, 1, 0), 10, 0.5) # Calculamos la P(X=2,1,0) de una Binomial(10,0.5)
-> sum(dbinom(c(2, 1, 0), 10, 0.5)) # Calculamos la P(X<=2) de una Binomial(10,0.5)
-> sum(dbinom(c(0, 1, 2), 10, 0.5))
-> # Que coincide con la función pbinom
-> pbinom(2,10,0.5)
-> pbinom(2,10,0.5, lower.tail=F) # Calculamos la P(X>2) de una Binomial(10,0.5)
-> pbinom(10,10,0.5) 
-> qbinom(c(0.90), 10, 0.5)# Los valores de X que tiene una probabilidad de ocurrir en torno al 90%
-> qbinom(c(0.95), 10, 0.5) # Los valores de X que tiene una probabilidad de ocurrir en torno al 95%
-> rbinom(2,10,0.5) # 2 números aleatorios de una binomial
-> rbinom(9,10,0.5)  # 9 números aleatorios de una binomial
+dbinom(3, 10, 0.5) # Calculamos la P(X=3) de una Binomial(10,0.5) 
+dbinom(6, 10, 0.5) # Calculamos la P(X=6) de una Binomial(10,0.5)
+dbinom(c(2, 1, 0), 10, 0.5) # Calculamos la P(X=2,1,0) de una Binomial(10,0.5)
+sum(dbinom(c(2, 1, 0), 10, 0.5)) # Calculamos la P(X<=2) de una Binomial(10,0.5)
+sum(dbinom(c(0, 1, 2), 10, 0.5))
+# Que coincide con la función pbinom
+pbinom(2,10,0.5)
+pbinom(2,10,0.5, lower.tail=F) # Calculamos la P(X>2) de una Binomial(10,0.5)
+pbinom(10,10,0.5) 
+qbinom(c(0.90), 10, 0.5)# Los valores de X que tiene una probabilidad de ocurrir en torno al 90%
+qbinom(c(0.95), 10, 0.5) # Los valores de X que tiene una probabilidad de ocurrir en torno al 95%
+rbinom(2,10,0.5) # 2 números aleatorios de una binomial
+rbinom(9,10,0.5)  # 9 números aleatorios de una binomial
 
 ```
 
@@ -724,12 +764,12 @@ layout: false
 <br><br>
 
 ```
-> dgeom(4, 0.5) # Calculamos la P(X=4) de una G(0.5); representa el número de fallos antes del primer éxito
+dgeom(4, 0.5) # Calculamos la P(X=4) de una G(0.5); representa el número de fallos antes del primer éxito
 
-> pgeom(4, 0.5, lower.tail = F) # Calculamos la P(X>4) de una G(0.5) > # Que en este caso coincide con dgeom(4, 0.5)
+pgeom(4, 0.5, lower.tail = F) # Calculamos la P(X>4) de una G(0.5) > # Que en este caso coincide con dgeom(4, 0.5)
 
-> Lo comprobamos; P(X > 4) = 1 - P(X<=3) = 1 - [P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)]
-> 1 - (dgeom(0, 0.5) + dgeom(1, 0.5) + dgeom(2, 0.5)+ dgeom(3, 0.5) + dgeom(4, 0.5))
+#Lo comprobamos; P(X > 4) = 1 - P(X<=3) = 1 - [P(X=0)+P(X=1)+P(X=2)+P(X=3)+P(X=4)]
+1 - (dgeom(0, 0.5) + dgeom(1, 0.5) + dgeom(2, 0.5)+ dgeom(3, 0.5) + dgeom(4, 0.5))
 
 ```
 ]
@@ -796,12 +836,12 @@ con:
 - lower.tail: Parámetro booleano, si es TRUE (por defecto), las probabilidades son P[X ≤ x], de lo contrario, P[X > x].
 
 ```
-> # Suponga que el 60% de los elementos no están defectuosos.
-> # Para encontrar la probabilidad de localizar el quinto elemento sin defecto en el séptimo ensayo.
-> # Calculamos P(X = 7), con r=5
-> dnbinom(7-5, 5, 0.6)
-> # si queremos calcular en el séptimo ensayo o antes
-> pnbinom(7-5, 5, 0.6, lower.tail = T)
+# Suponga que el 60% de los elementos no están defectuosos.
+# Para encontrar la probabilidad de localizar el quinto elemento sin defecto en el séptimo ensayo.
+# Calculamos P(X = 7), con r=5
+dnbinom(7-5, 5, 0.6)
+# si queremos calcular en el séptimo ensayo o antes
+pnbinom(7-5, 5, 0.6, lower.tail = T)
 ```
 ]
 ---
@@ -877,16 +917,16 @@ layout: false
 .right-column[
 <br><br>
 ```
-> # Calcular la P(Z>1) de una N(0,1)
-> pnorm(1, mean = 0, sd = 1, lower.tail = F)
-> # Calcular la P(-2<Z<2) de una N(0,1)
-> pnorm(c(2), mean = 0, sd = 1) - pnorm(c(-2), mean = 0, sd = 1)
-> # Calcular la P(0<Z<1.96) de una N(0,1)
-> pnorm(1.96, mean = 0, sd = 1) - pnorm(0, mean = 0, sd = 1)
-> # Calcular la P(Z<=z)=0,5793 de una N(0,1)
-> qnorm(0.5793, mean = 0, sd = 1)
-> # Calcular la P(Z>150) de una Normal de media 125 y la desviación esaándar 50.
-> pnorm(150, mean = 125, sd = 50, lower.tail = F)
+# Calcular la P(Z>1) de una N(0,1)
+pnorm(1, mean = 0, sd = 1, lower.tail = F)
+# Calcular la P(-2<Z<2) de una N(0,1)
+pnorm(c(2), mean = 0, sd = 1) - pnorm(c(-2), mean = 0, sd = 1)
+# Calcular la P(0<Z<1.96) de una N(0,1)
+pnorm(1.96, mean = 0, sd = 1) - pnorm(0, mean = 0, sd = 1)
+# Calcular la P(Z<=z)=0,5793 de una N(0,1)
+qnorm(0.5793, mean = 0, sd = 1)
+# Calcular la P(Z>150) de una Normal de media 125 y la desviación esaándar 50.
+pnorm(150, mean = 125, sd = 50, lower.tail = F)
 ```
 ]
 
@@ -945,7 +985,7 @@ La función de densidad de t es
 <img src="Images/t-test.png"> Test-T</img>
 
 ```
-> qpois(0.985, 3)
+qpois(0.985, 3)
 ```
 ]
 ---
@@ -1006,16 +1046,16 @@ layout: false
 .right-column[
 <br><br>
 ```
-> # Calcular la P(Z>1) de una N(0,1)
-> pnorm(1, mean = 0, sd = 1, lower.tail = F)
-> # Calcular la P(-2<Z<2) de una N(0,1)
-> pnorm(c(2), mean = 0, sd = 1) - pnorm(c(-2), mean = 0, sd = 1)
-> # Calcular la P(0<Z<1.96) de una N(0,1)
-> pnorm(1.96, mean = 0, sd = 1) - pnorm(0, mean = 0, sd = 1)
-> # Calcular la P(Z<=z)=0,5793 de una N(0,1)
-> qnorm(0.5793, mean = 0, sd = 1)
-> # Calcular la P(Z>150) de una Normal de media 125 y la desviación estándar 50.
-> pnorm(150, mean = 125, sd = 50, lower.tail = F)
+# Calcular la P(Z>1) de una N(0,1)
+pnorm(1, mean = 0, sd = 1, lower.tail = F)
+# Calcular la P(-2<Z<2) de una N(0,1)
+pnorm(c(2), mean = 0, sd = 1) - pnorm(c(-2), mean = 0, sd = 1)
+# Calcular la P(0<Z<1.96) de una N(0,1)
+pnorm(1.96, mean = 0, sd = 1) - pnorm(0, mean = 0, sd = 1)
+# Calcular la P(Z<=z)=0,5793 de una N(0,1)
+qnorm(0.5793, mean = 0, sd = 1)
+# Calcular la P(Z>150) de una Normal de media 125 y la desviación estándar 50.
+pnorm(150, mean = 125, sd = 50, lower.tail = F)
 
 ```
 ]
@@ -1041,7 +1081,7 @@ donde s es la sd()
 
 
 ```
-> ?scale
+?scale
 
 ```
 ]
@@ -1098,14 +1138,14 @@ layout: false
 .right-column[
 <br><br>
 ```
-> # Calcular P(T >= 1.3) con 7 grados de libertad.
-> pt(1.3, 7, lower.tail = F)
-> # Calcular P(T < 2.30) con 20 grados de libertad.
-> pt(2.30,20, lower.tail = T)
-> # P(T >= t) = 0.05 con 25 grados de libertad.
-> qt(0.05, 25, lower.tail = F)
-> # Calcular 5 números aleatorios con 25 grados de libertad.
-> rt(5, 25)
+# Calcular P(T >= 1.3) con 7 grados de libertad.
+pt(1.3, 7, lower.tail = F)
+# Calcular P(T < 2.30) con 20 grados de libertad.
+pt(2.30,20, lower.tail = T)
+# P(T >= t) = 0.05 con 25 grados de libertad.
+qt(0.05, 25, lower.tail = F)
+# Calcular 5 números aleatorios con 25 grados de libertad.
+rt(5, 25)
 ```
 ]
 
@@ -1198,14 +1238,14 @@ layout: false
 .right-column[
 <br><br>
 ```
-> # Calcular X^2(0.52, 7) con 7 grados de libertad.
-> qchisq(0.52, 7, lower.tail = F)
-> # P(X^2 < x) = 0.80 con 25 grados de libertad
-> qchisq(0.8, 25, lower.tail = T)
-> # P(X^2 >= 18.49) con 24 grados de libertad.
-> pchisq(18.49, 24, lower.tail = F)
-> # Calcular 5 números aleatorios de una dist. Chi-cuadrado con 24 grados de libertad.
-> rchisq(5, 24)
+# Calcular X^2(0.52, 7) con 7 grados de libertad.
+qchisq(0.52, 7, lower.tail = F)
+# P(X^2 < x) = 0.80 con 25 grados de libertad
+qchisq(0.8, 25, lower.tail = T)
+# P(X^2 >= 18.49) con 24 grados de libertad.
+pchisq(18.49, 24, lower.tail = F)
+# Calcular 5 números aleatorios de una dist. Chi-cuadrado con 24 grados de libertad.
+rchisq(5, 24)
 
 ```
 ]
@@ -1270,14 +1310,14 @@ layout: false
 .right-column[
 
 ```
-> # Calcular F(0.15, 3, 2). con 3 y 2 grados de libertad.
-> qf(0.15, 3, 2, lower.tail=F)
-> # P(F < f) = 0.025 con df1 = 20 y df2 = Infinito.
-> qf(0.025, 20, Inf, lower.tail=T)
-> # P(F >= 198.50) con df1 = 10 y df2 = 2.
-> pf(198.50, 10, 2, lower.tail=F)
-> # Calcular 5 números aleatorios de una dist. F de Snedecor con 24 y 10 grados de libertad.
-> rf(5,24,10)
+# Calcular F(0.15, 3, 2). con 3 y 2 grados de libertad.
+qf(0.15, 3, 2, lower.tail=F)
+# P(F < f) = 0.025 con df1 = 20 y df2 = Infinito.
+qf(0.025, 20, Inf, lower.tail=T)
+# P(F >= 198.50) con df1 = 10 y df2 = 2.
+pf(198.50, 10, 2, lower.tail=F)
+# Calcular 5 números aleatorios de una dist. F de Snedecor con 24 y 10 grados de libertad.
+rf(5,24,10)
 ```
 ]
 
@@ -1355,17 +1395,17 @@ layout: false
 .right-column[
 <br><br>
 ```
-> # Mediante una distribución beta con ALPHA = 5 y BETA = 4.
-> # Calcule la probabilidad al menos del 75%
-> pbeta(0.75, 5, 4, lower.tail = F)
-> # Menos del 50%
-> pbeta(0.5, 5, 4, lower.tail = T)
-> # P(X < x)=0.25
-> qbeta(0.25, 5, 4, lower.tail = T)
-> # P(X > x) = 0.5
-> qbeta(0.5, 5, 4, lower.tail = F)
-> # Calcular 5 números aleatorios de una dist. Beta con ALPHA = 5 y BETA = 4
-> rbeta(5,5,4)
+# Mediante una distribución beta con ALPHA = 5 y BETA = 4.
+# Calcule la probabilidad al menos del 75%
+pbeta(0.75, 5, 4, lower.tail = F)
+# Menos del 50%
+pbeta(0.5, 5, 4, lower.tail = T)
+# P(X < x)=0.25
+qbeta(0.25, 5, 4, lower.tail = T)
+# P(X > x) = 0.5
+qbeta(0.5, 5, 4, lower.tail = F)
+# Calcular 5 números aleatorios de una dist. Beta con ALPHA = 5 y BETA = 4
+rbeta(5,5,4)
 
 ```
  
@@ -1410,17 +1450,17 @@ layout: false
 ]
 .right-column[
 ```
-> # Mediante una distribución gamma con ALPHA = 3 y BETA = 0.5.
-> # Calcule la probabilidad de que sea mejor de 10
-> pgamma(10, 3, rate = 0.5, lower.tail = F)
-> # Entre 4 y 8
-> pgamma(8, 3, rate = 0.5, lower.tail = T) - pgamma(4, 3, rate = 0.5, lower.tail = T)
-> # P(X <x) = 0.7
-> qgamma(0.7, 3, rate = 0.5, lower.tail = T)
-> # P(X > x) = 0.5
-> qgamma(0.5, 3, rate = 0.5, lower.tail = F)
-> # Calcular 5 números aleatorios de una dist. gamma con ALPHA = 3 y BETA = 0.5
-> rgamma(5, 3, rate = 0.5)
+# Mediante una distribución gamma con ALPHA = 3 y BETA = 0.5.
+# Calcule la probabilidad de que sea mejor de 10
+pgamma(10, 3, rate = 0.5, lower.tail = F)
+# Entre 4 y 8
+pgamma(8, 3, rate = 0.5, lower.tail = T) - pgamma(4, 3, rate = 0.5, lower.tail = T)
+# P(X <x) = 0.7
+qgamma(0.7, 3, rate = 0.5, lower.tail = T)
+# P(X > x) = 0.5
+qgamma(0.5, 3, rate = 0.5, lower.tail = F)
+# Calcular 5 números aleatorios de una dist. gamma con ALPHA = 3 y BETA = 0.5
+rgamma(5, 3, rate = 0.5)
 ```
 ]
 
@@ -1458,11 +1498,11 @@ La función en R para obtener modelos de regresión lineal simple, Y=aX+b, es �
 puede utilizar esta función para el análisis de la varianza y análisis de covarianza.
 
 ```
-> a.docencia <- c(3,1,1,2,5,6,12,7,3,10,6,11,4,4,16,4,5,3,5,2)
-> edad <- c(35,27,26,30,33,42,51,35,45,37,43,36,36,56,29,35,37,29,34,29)
-> # Y=a~nos de docencia y X=edad
-> lm(a.docencia~edad)->r1
-> r1
+a.docencia <- c(3,1,1,2,5,6,12,7,3,10,6,11,4,4,16,4,5,3,5,2)
+edad <- c(35,27,26,30,33,42,51,35,45,37,43,36,36,56,29,35,37,29,34,29)
+# Y=a~nos de docencia y X=edad
+lm(a.docencia~edad)->r1
+r1
 
 ```
 
@@ -1492,30 +1532,30 @@ Dibujar la recta de regresión
  
 
 ```
-> # Defino los datos
-> x <- c(3, 5, 2, 3, 1, 4, 6, 4)
-> y <- c(150, 150, 250, 200, 350, 200, 50, 125)
-> # Defino la recta de regresión
-> lm(y~x)->ryx
+# Defino los datos
+x <- c(3, 5, 2, 3, 1, 4, 6, 4)
+y <- c(150, 150, 250, 200, 350, 200, 50, 125)
+# Defino la recta de regresión
+lm(y~x)->ryx
 
-> # Definimos el eje X
-> litros <- seq(0:length(x))
-> # Defino la recta
-> precio <- (ryx$coefficients[1])+ (ryx$coefficients[2])*aceite# Ecuación ajustada
-> #Dibujo los puntos, se~nalados con una X
-> plot(x, y, pch="X", col=2, xlab="Litros", ylab="Precio")
-> #Dibujo la recta
-> lines(precio, col=4)
-
-```
-
+# Definimos el eje X
+litros <- seq(0:length(x))
+# Defino la recta
+precio <- (ryx$coefficients[1])+ (ryx$coefficients[2])*aceite# Ecuación ajustada
+#Dibujo los puntos, se~nalados con una X
+plot(x, y, pch="X", col=2, xlab="Litros", ylab="Precio")
+#Dibujo la recta
+lines(precio, col=4)
 
 ```
-> # Creamos el diagrama de puntos
-> plot(x, y)
-> # Dibujamos la recta de regresión
-> abline(lm(y ~ x))
-> predict(ryx) # Son los valores de y cuando aplicamos la recta de regresión a los calores de x
+
+
+```
+# Creamos el diagrama de puntos
+plot(x, y)
+# Dibujamos la recta de regresión
+abline(lm(y ~ x))
+predict(ryx) # Son los valores de y cuando aplicamos la recta de regresión a los calores de x
 ```
 ]
 ---
@@ -1531,10 +1571,10 @@ la función “predict”. Esta función obtiene todas las posibles predicciones
 Predecir un vector de valores  y utilizar summary.
 <br><br>
 ```
-> x <- c(3, 5, 2, 3, 1, 4, 6, 4)
-> y <- c(150, 150, 250, 200, 350, 200, 50, 125)
-> # Recta de regresión sin termino independiente
-> lm(y~0+x)
+x <- c(3, 5, 2, 3, 1, 4, 6, 4)
+y <- c(150, 150, 250, 200, 350, 200, 50, 125)
+# Recta de regresión sin termino independiente
+lm(y~0+x)
 ```
 ]
 ---
@@ -1549,8 +1589,8 @@ Para calcular la función de regresión polinomial Y = a<sub>0</sub> + a<sub>1</
 lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 ``` 
-> # Cuadrática
-> lm(y~x+x^2)
+# Cuadrática
+lm(y~x+x^2)
 ```
 ]
 
@@ -1567,8 +1607,8 @@ Para calcular la función de regresión polinomial Y = a<sub>0</sub> + a<sub>1</
 lm(y˜x + I(x<sup>2</sup>) + I(x<sup>3</sup>) + ... + I(x<sup>p</sup>)).
 
 ``` 
-> # Cuadrática
-> lm(y~x+x^2)
+# Cuadrática
+lm(y~x+x^2)
 ```
 ]
 
@@ -1582,9 +1622,9 @@ layout: false
 .right-column[
 <br><br>
 ```
-> lm(y~0+x+x^2)
-> lm(y~0+x+I(x^2)+I(x^3))
-> lm(y~0+x+I(x^2)+I(x^3)+I(x^4))
+lm(y~0+x+x^2)
+lm(y~0+x+I(x^2)+I(x^3))
+lm(y~0+x+I(x^2)+I(x^3)+I(x^4))
 ```
 ]
 
@@ -1600,7 +1640,7 @@ layout: false
 Para calcular la función de regresión potencial Y = aX<sup>b</sup> utilizamos la función lm(log(y)˜ log(x)).
 
 ```
-> lm(log(y)~log(x))
+lm(log(y)~log(x))
 ```
 ]
 ---
@@ -1615,7 +1655,7 @@ layout: false
 Para calcular la función de regresión potencial Y = e<sup>a+bX</sup> utilizamos la función lm(log(y)˜x).
 
 ```
-> lm(log(y)~x)
+lm(log(y)~x)
 ```
 ]
 ---
@@ -1630,7 +1670,7 @@ layout: false
 Para calcular la función de regresión logarítmica Y = a + b log(x) utilizamos la función lm(y˜ log(x)).
 
 ```
-> lm(y~log(x))
+lm(y~log(x))
 ```
 ]
 
