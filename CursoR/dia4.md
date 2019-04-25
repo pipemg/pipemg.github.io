@@ -438,7 +438,6 @@ layout: false
 ]
 .right-column[
 
-
 <img src="Images/bernulli3.png" height=150px> 
 
 <img src="Images/bernulli4.png" height=200px>
