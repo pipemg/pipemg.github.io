@@ -419,7 +419,7 @@ layout: false
 .right-column[
 
 
-Si **X** es una variable aleatoria que mide el ~~"número de éxitos"~~, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
+Si **X** es una variable aleatoria que mide el _"número de éxitos"_, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
 
 <img src="Images/bernulli1.png" width=450px> 
 
