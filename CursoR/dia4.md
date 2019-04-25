@@ -398,12 +398,36 @@ Los **procesos de Bernoulli** se refieren a experimentos que se repeten una cant
 Un proceso de Bernoulli tiene las siguientes propiedades:
 
 - El experimento se trata de la repetición de n ensayos. 
+
 - Cada uno de los ensayo se clasifica en éxitos o no éxitos(fracaso).
+
 - Cada uno de los ensayos son independientes.
+
 - La probabilidad de que suceda un éxito es constante y a esta se la llama p, mientras que la probabilidad de no éxito también se mantiene constante y es q=1-p
 
 
 Cuando se trata de procesos de Bernoulli existen 5 distribuciones asociadas la de bernulli(diatomica), la binomial, hipergeométrica, geométrica y la de Pascal.
+]
+
+---
+
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Proceso de Bernoulli
+]
+.right-column[
+
+
+Si **X** es una variable aleatoria que mide el ~~"número de éxitos"~~, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
+
+<img src="Images/bernulli1.png" width=450px> 
+
+
+Su función de probabilidad viene definida por:
+
+<img src="Images/bernulli2.png" width=450px> 
+
 ]
 ---
 
@@ -415,18 +439,28 @@ layout: false
 ]
 .right-column[
 
-Si **X** es una variable aleatoria que mide el ~~"número de éxitos"~~, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
 
+<img src="Images/bernulli3.png" width=450px> 
 
-![Bernulli1]("Images/bernulli1.png")
+<img src="Images/bernulli4.png" width=450px> 
 
-Su función de probabilidad viene definida por:
+**Ejemplo**
 
-![Bernulli2]("Images/bernulli2.png")
+"Lanzar dos monedas, probabilidad de conseguir que salga al menos una cruz".
 
-![Bernulli3]("Images/bernulli3.png")
+Se trata de un experimento con el exito (p) que salga una o dos cruces. 
+La probabilidad de sacar 1 cruz y cara es 1/2
+La probabilidad de sacar 2 caras es 1/4
 
-![Bernulli4]("Images/bernulli3.png")
+P(X=1) = 1/4
+P(X=0) = 1/4
+P(X=2) = 2/4
+
+Por lo tanto al probabilidad de exito (p) es 3/4 
+Mientras que la probabilidad de fracaso (1) es q=1-p igual a 1/4
+
+X ~ Be(0,3/4)
+
 
 ---
 
