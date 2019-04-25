@@ -224,7 +224,7 @@ layout: false
 
 .right-column[
 
-Una variable aleatoria continua tiene una probabilidad 0 de adoptar exactamente cualquiera de sus valores. Para la variable aleatoria continua X  no importa si incluimos o no un extremo del intervalo:
+Una variable aleatoria continua tiene una probabilidad 0 de adoptar exactamente cualquiera de sus valores. Por lo tanto no importa si incluimos o no un extremo del intervalo:
 
 P(a < X ≤ b) = P(a < X < b) + P(X = b) = P(a < X < b).
 
@@ -236,7 +236,7 @@ La función de densidad de probabilidad se construye de manera que el area bajo 
 P (a < X < b) = ∫<sub>a</sub><sup>b</sup>f(x)dx .
 
 
-La función f (x) es una función de densidad de probabilidad (fdp) para la variable
+La función f (x) es una función de densidad de probabilidad (**fdp**) para la variable
 aleatoria continua X, defi nida en el conjunto de números reales, si
 
 1. f(x) >= 0 para toda x ∈ R
@@ -261,14 +261,14 @@ layout: false
 Suponga que el error en la temperatura de reacción, en °C, en un experimento de laboratorio controlado, es una variable aleatoria continua X que tiene la función de densidad de
 probabilidad
 
-f(x) = x<sup>2</sup>/3 para -1 < x < 2, 0 para toda otra x
+f(x) = x<sup>2</sup>/3   para -1 < x < 2, 0 para toda otra x
 
 a) Verifique que f(x) es una función de densidad
 b) Calcule P(0<X<=1) 
 
 Existe una relación muy importante entre las funciones de distribución F(x) y de densidad f(x) de una variable aleatoria discreta. La función de distribución en un punto se obtiene acumulando el valor de la función de densidad para todos los valores del recorrido menores o iguales al punto en cuestión.
 
-F(X) = SUM(f(xi)) para toda xi en X
+F(X) = Σ(f(xi)) ∀  x<sub>i</sub> ∈ X
 
 
 ]
@@ -286,11 +286,11 @@ La función de distribución acumulativa F(x), de una variable aleatoria continu
 
 F (x ) = P (X ≤ x ) = ∫<sup>x</sup> <sub>−∞</sub>f(t)dt, para −∞< x < ∞.
 
-por lo tanto
+⇒
 
 P(a < X < b) = F(b)-F(a) 
 
-y
+⇒
 
 f(x) = dF(x)/dx
 
@@ -421,12 +421,11 @@ layout: false
 
 Si **X** es una variable aleatoria que mide el _"número de éxitos"_, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
 
-<img src="Images/bernulli1.png" width=450px> 
-
+<img src="Images/bernulli1.png" height=100px> 
 
 Su función de probabilidad viene definida por:
 
-<img src="Images/bernulli2.png" width=450px> 
+<img src="Images/bernulli2.png" width=300px> 
 
 ]
 ---
@@ -440,9 +439,9 @@ layout: false
 .right-column[
 
 
-<img src="Images/bernulli3.png" width=450px> 
+<img src="Images/bernulli3.png" height=150px> 
 
-<img src="Images/bernulli4.png" width=450px> 
+<img src="Images/bernulli4.png" height=200px>
 
 **Ejemplo**
 
@@ -460,7 +459,7 @@ Por lo tanto al probabilidad de exito (p) es 3/4
 Mientras que la probabilidad de fracaso (1) es q=1-p igual a 1/4
 
 X ~ Be(0,3/4)
-
+]
 
 ---
 
