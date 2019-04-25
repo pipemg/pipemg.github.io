@@ -28,7 +28,20 @@ En estadística, un **fenómeno aleatorio** es aquel que bajo el mismo conjunto 
 
 En un fenomeno aleatorio no se puede predecir el resultado exacto de cada experiencia particular. (Ej: Lanzamiento de un dado).
 
-Este tipo de fenómeno es opuesto al fenómeno determinista, en el que conocer todos los factores de un experimento nos hace predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un celular es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+Este tipo de fenómeno es opuesto al **fenómeno determinista**, en el que conocer todos los factores de un experimento nos hace predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un celular es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío.
+
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+
+]
+
+.right-column[
+
 
 Un experimento se dice **aleatorio** si verifica las siguientes condiciones:
 
@@ -51,22 +64,13 @@ El **espacio de resultados** o espacio muestral, Ω es el conjunto de todos los
 
 Llamaremos suceso a cualquier subconjunto de Ω. Un suceso A ocurre si el resultado del experimento aleatorio es uno de los elementos de A.
 
-- Suceso complementario de A (A'): ocurre cuando el resultado del experimento no es un elemento de A.
-- Suceso unión de A y B (A ∪ B): ocurre cuando ó bien sucede A ó bien sucede B.
-- Suceso intersección de A y B (A ∩ B): ocurre cuando A y B suceden
-simultáneamente
-
-Cada uno de los elementos de Ω constituye un suceso. A estos sucesos se les
-denomina sucesos elementales.
+Cada uno de los elementos de Ω constituye un suceso. Y se llaman sucesos elementales.
 
 El propio Ω también constituye un suceso, al que se denomina suceso seguro
 
 ]
 
-.right-column[
-Nociones básicas sobre sucesos
 
-]
 ---
 
 layout: false
@@ -77,7 +81,7 @@ layout: false
 ]
 
 .right-column[
-Ejemplo 1
+**Ejemplo**
 
 Se lanzan dos dados, uno rojo y otro azul. El espacio de resultados Ω estará
 constituido por los 36 posibles resultados del experimento, es decir:
@@ -100,27 +104,52 @@ layout: false
   ## Fenómenos aleatorios
    ### Definición clásica de probabilidad
 
-
 ]
 
 .right-column[
 
 #### Probabilidad
-La probabilidad es una medida para cuantificar la seguridad que tenemos de que
-ocurra cada uno de los sucesos de un experimento aleatorio. A cada suceso A se le
-asocia un valor, P(A), con 0 ≤ P(A) ≤ 1.
+La probabilidad es una **medida para cuantificar la seguridad que tenemos de que
+ocurra cada uno de los sucesos de un experimento aleatorio**.
 
-Si P(A) = 0, el suceso A no va a ocurrir. Si P(A) = 1, el suceso A va a ocurrir con
-toda seguridad. Conforme mayor sea el número P(A) más verosímil es el suceso A.
+A cada suceso A se le asocia un valor, P(A), con 0 ≤ P(A) ≤ 1.
+
+Si P(A) = 0, el suceso A no va a ocurrir. 
+
+Si P(A) = 1, el suceso A va a ocurrir con toda seguridad.
+
+Conforme mayor sea el número P(A) más verosímil es el suceso A.
+
+]
+---
+
+layout: false
+.left-column[
+  ## Fenómenos aleatorios
+   ### Definición clásica de probabilidad
+
+]
+
+.right-column[
+
 
 #### Definición clásica
 
 En la definición clásica de probabilidad, todos los resultados del experimento nos
 resultan igualmente verosímiles, por lo que tendrán igual probabilidad.
-De este modo, la probabilidad de un suceso A podrá ser calculada del siguiente modo:
+
+La probabilidad de un suceso A podrá ser calculada del siguiente modo:
 P(A) = # de sucesos elementales faborables de A / # total de sucesos
 
 Ejemplo
+
+Se tira una moneda de dos caras, cuando la moneda sale sol, se lanza de nuevo. Si sale cruz se lanza una moneda. **A** es un evento tal que A={ El lanzamiento del dado es par}
+
+El espacio total es {HH, HT, T1, T2, T3, T4, T5, T6} 
+A = {T2, T4,  T6}
+
+P(A) = 3/8 
+
 ]
 ---
 
@@ -167,16 +196,47 @@ Al lanzar una moneda tres veces, la variable X, representa el número de caras t
 
 Esto se escribe de la forma  f(x) = P(X=x); es decir, f(3)=P(X=3).
 
+
+]
+---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones discretas 
+]
+
+.right-column[
+
+<br>
 Al conjunto de pares ordenados se le llama **función de probabilidad**, función de masa de probabilidad o distribución de probabilidad de una variable aleatoria X.
 
 El conjunto de pares ordenados (x,f(x)) es una función de probabilidad de la variable discreta X si:
 
 1. f(X) >= 0
+
 2. Σ<sub>1</sub><sup>n</sup>(f(x)) = 1
+
 3. P(X = x) = f(x)
 
 
-Ejemplo: Un embarque de 20 computadoras portátiles similares para una tienda minorista contiene 3 que están defectuosas. Si una escuela compra al azar 2 de estas computadoras, calcule la distribución de probabilidad para el número de computadoras defectuosas.
+]
+---
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones discretas 
+]
+
+.right-column[
+
+<br>
+
+
+**Ejemplo** 
+
+Un embarque de 20 computadoras portátiles similares para una tienda minorista contiene 3 que están defectuosas. 
+
+Si una escuela compra al azar 2 de estas computadoras, calcule la distribución de probabilidad para el número de computadoras defectuosas.
 
 ]
 
@@ -189,16 +249,17 @@ layout: false
 ]
 
 .right-column[
+<br>
 
-Si una agencia automotriz vende 50% de su inventario de cierto vehículo extranjero equipado con bolsas de aire laterales, calcule una fórmula para la distribución de probabilidad del número de automóviles con bolsas de aire laterales entre los siguientes 4 vehículos que venda la agencia.
+Si una agencia automotriz vende 50% de su inventario de cierto vehículo con bolsas de aire laterales, calcule una fórmula para la distribución de probabilidad del número de automóviles con bolsas de aire laterales entre los siguientes 4 vehículos que venda la agencia.
 
 La **función de distribución acomulativa** F(x) de una variable aleatoria discreta X con distribución de probabilidad f(x) es:
 
-F(x)=P(X<=x) = Σ<sub>t<=x</sub>(f(t)), para -∞< x <∞
+F(x) = P(X<=x) = Σ<sub>t</sub> <sup>x</sup>(f(t)), para -∞< x <∞
 
-Calcule y grafique la función de la distribución acumulativa de la variable aleatoria X del ejercicio anterior. Utilice F(x) para verificar que f(2) =3/8.
+Calcule y grafique la función de la distribución acumulativa de la variable aleatoria X.
 
-A menudo es útil ver una distribución de probabilidad en forma gráfi ca. Para esto se utiliza un histograma de probabilidades. para el ejemplo anterior:
+Utilice F(x) para verificar que f(2) =3/8.
 
 ```
 x<-c(0,1,2,3,4)
@@ -215,6 +276,29 @@ barplot(prob)
 
 ---
 
+layout: false
+.left-column[
+  ## Distribuciones de probabilidad
+   ### Distribuciones continua 
+]
+
+.right-column[
+
+Una variable aleatoria continua tiene una probabilidad 0 de adoptar exactamente cualquiera de sus valores. Ya que:
+
+P(a < X ≤ b) = P(a < X < b) + P(X = b) = P(a < X < b).
+
+
+La distribución de probabilidad de una variable aleatoria continua no se puede tabular pero si se presenta como una formula. 
+
+Esta formula se le conoce como **función de densidad de probabilidad** o **función de densidad** de una variable discreta X.
+
+
+
+
+]
+
+---
 
 layout: false
 .left-column[
@@ -224,12 +308,6 @@ layout: false
 
 .right-column[
 
-Una variable aleatoria continua tiene una probabilidad 0 de adoptar exactamente cualquiera de sus valores. Por lo tanto no importa si incluimos o no un extremo del intervalo:
-
-P(a < X ≤ b) = P(a < X < b) + P(X = b) = P(a < X < b).
-
-
-La distribución de probabilidad de una variable aleatoria continua no se puede tabular pero si se presenta como una formula. Esta formula se le conoce como **función de densidad de probabilidad** o **función de densidad** de una variable discreta X.
 
 La función de densidad de probabilidad se construye de manera que el area bajo la curva limitada por el eje  sea igual a 1. 
 
@@ -240,13 +318,13 @@ La función f (x) es una función de densidad de probabilidad (**fdp**) para la 
 aleatoria continua X, defi nida en el conjunto de números reales, si
 
 1. f(x) >= 0 para toda x ∈ R
+
 2. ∫<sub>-∞</sub><sup>∞</sup>f(x)dx =1
+
 3. P(a < X < b ) = ∫<sub>a</sub><sup>b</sup> f(x)dx
 
 
-
 ]
-
 ---
 
 
@@ -264,9 +342,12 @@ probabilidad
 f(x) = x<sup>2</sup>/3   para -1 < x < 2, 0 para toda otra x
 
 a) Verifique que f(x) es una función de densidad
+
 b) Calcule P(0<X<=1) 
 
-Existe una relación muy importante entre las funciones de distribución F(x) y de densidad f(x) de una variable aleatoria discreta. La función de distribución en un punto se obtiene acumulando el valor de la función de densidad para todos los valores del recorrido menores o iguales al punto en cuestión.
+Existe una relación muy importante entre las funciones de distribución **F(x)** y de densidad **f(x)** de una variable aleatoria discreta. 
+
+La función de distribución en un punto se obtiene acumulando el valor de la función de densidad para todos los valores del recorrido menores o iguales al punto en cuestión.
 
 F(X) = Σ(f(xi)) ∀  x<sub>i</sub> ∈ X
 
@@ -311,8 +392,8 @@ layout: false
 | bern          | Binomial          | Discreta  |    µ = np     |              σ<sup>2</sup>=npq            |
 | geom          | geometrica        | Discreta  |    µ =1/p     |   σ<sup>2</sup>=(1-p)/p<sup>2</sup>       |
 | hyper         | hipergeométrica   | Discreta  |    µ = nk/N   |  σ<sup>2</sup>=(N-n)/(n-1) n k/N(1 - k/N) |
-| nbinom        | binomial negativa | Discreta  |    µ = [(r-1)(1-p)/p] si r>1, 0 si r<=1  | σ<sup>2</sup>= |
-| pois          | Poisson           | Discreta  |    µ =  λ     |  σ<sup>2</sup> =  λ                       |
+| nbinom        | binomial negativa | Discreta  |    µ = [(r-1)(1-p)/p] si r>1, 0 si r<=1  | σ<sup>2</sup>= k(1-p)/9<sup>2</sup>|
+| pois          | Poisson           | Discreta  |    µ =  λ     |  σ<sup>2</sup> = λ   |
 | beta          | beta              | Continua  |    µ = α/(α + β) | σ<sup>2</sup>=αβ/(α + β)<sup>2</sup> /(α + β + 1)  |
 
 ]
@@ -618,7 +699,9 @@ layout: false
 <br><br>
 ### Ejemplo
 
-Considere un conjunto de experimentos de Bernoulli en el que se seleccionan tres articulos al azar de un proceso de producción, luego seinspeccionan y se clasifican como defectuosos o no defectuosos. Un artículodefectuoso se designa como éxito. El número de éxitos es una variable aleatoriaX que toma valores integrales de 0 a 3. Los ocho resultadosposibles son.
+Considere un conjunto de experimentos de Bernoulli en el que se seleccionan tres articulos al azar de un proceso de producción,  se inspeccionan y se clasifican como defectuosos o no defectuosos. Un artículodefectuoso se designa como éxito. El número de éxitos es una variable aleatoria **X**.
+
+Los ocho resultadosposibles son.
 
 |  **Resultado**  | NNN | NDN | NND | DNN | NDD | DND | DDN | DDD |
 |:---------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -649,7 +732,7 @@ Para la distribución de probabilidad de X es:
 
 En forma general, una probabilidad p de éxito y q=1-p el fracaso. La distribucion de la variable aleatoria binomial X, el númerode éxitos en n ensayos independientes es:
 
-- b(x;n,p) = Conv(n,x)p<sup>x</sup>q<sup>n-x</sup>, x = 0,1,2,3,4,...,n
+- b(x;n,p) = Conv(n,x) p<sup>x</sup> q<sup>n-x</sup>, x = 0,1,2,3,4,...,n
 
 - (q + p)<sup>n</sup> = Conv(n,0) q<sup>n</sup> + Conv(n,1) p<sup>1</sup>q<sup>n-1</sup> + Conv(n,2) p<sup>2</sup>q<sup>n-2</sup> + ... + Conv(n,n) p<sup>n</sup>
 
