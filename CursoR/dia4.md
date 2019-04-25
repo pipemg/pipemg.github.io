@@ -421,11 +421,11 @@ layout: false
 
 Si **X** es una variable aleatoria que mide el _"número de éxitos"_, y se realiza un único experimento con dos posibles resultados (éxito o fracaso), se dice que la variable aleatoria **X**  se distribuye como una Bernoulli de parámetro **p**.
 
-<img src="Images/bernulli1.png" height=100px> 
+<img src="Images/bernulli1.png" height=50px> 
 
 Su función de probabilidad viene definida por:
 
-<img src="Images/bernulli2.png" width=300px> 
+<img src="Images/bernulli2.png" height=50px> 
 
 ]
 ---
@@ -438,9 +438,11 @@ layout: false
 ]
 .right-column[
 
-<img src="Images/bernulli3.png" height=150px> 
+<img src="Images/bernulli3.png"  height=50px> 
 
-<img src="Images/bernulli4.png" height=200px>
+
+<img src="Images/bernulli4.png"  height=50px> 
+
 
 **Ejemplo**
 
