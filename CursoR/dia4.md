@@ -520,10 +520,12 @@ layout: false
 .right-column[
 
 Función:
-<img src="Images/bernulli3.png"  height=50px> 
 
+<img src="Images/bernulli3.png"  height=100px> 
 
-<img src="Images/bernulli4.png"  height=50px> 
+Esperanza y varianza 
+
+<img src="Images/bernulli4.png"  height=100px> 
 
 
 **Ejemplo**
@@ -643,12 +645,16 @@ layout: false
    ### Distribución Binomial
 ]
 .right-column[
-<br><br>
+<br>
+
 Dentro de R:
-- dbinom(x, size, prob, log = F); Devuelve resultados de la función de densidad.
-- pbinom(q, size, prob, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
-- qbinom(p, size, prob, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la binomial.
-- rbinom(n, size, prob); Devuelve un vector de valores binomiales aleatorios.
+
+```
+dbinom(x, size, prob, log = F); Devuelve resultados de la función de densidad.
+pbinom(q, size, prob, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+qbinom(p, size, prob, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la binomial.
+rbinom(n, size, prob); Devuelve un vector de valores binomiales aleatorios.
+```
 
 Con:
 - x, q: Vector de cuantiles.
@@ -667,7 +673,7 @@ layout: false
    ### Distribución Binomial
 ]
 .right-column[
-<br><br>
+<br>
 
 **Ejemplos**
 ```
@@ -696,7 +702,8 @@ layout: false
    ### Distribución Binomial
 ]
 .right-column[
-<br><br>
+
+<br>
 ### Ejemplo
 
 Considere un conjunto de experimentos de Bernoulli en el que se seleccionan tres articulos al azar de un proceso de producción,  se inspeccionan y se clasifican como defectuosos o no defectuosos. Un artículodefectuoso se designa como éxito. El número de éxitos es una variable aleatoria **X**.
@@ -721,7 +728,8 @@ layout: false
    ### Distribución Binomial
 ]
 .right-column[
-<br><br>
+<br>
+
 El número x de éxitos en n experimentos de Bernoulli se denomina **Variable aleatoria binomial**. La  distribución de probabilidades de esta variable aleatoria discreta se llama **distribución binomial**.
 
 - Se denota como b(x,n,p)
@@ -944,10 +952,13 @@ La función de densidad de la distribución de Poisson es:
 - f(k,λ) = e<sup>-λ</sup>λ<sup>k</sup>/k!
 
 Para obtener valores que se basen en la distribución de Poisson, R dispone de cuatro funciones basados en“pois”:
-- dpois(x, lambda, log = F); Devuelve resultados de la función de densidad.
-- ppois(q, lambda, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
-- qpois(p, lambda, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Poisson.
-- rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
+
+```
+dpois(x, lambda, log = F); Devuelve resultados de la función de densidad.
+ppois(q, lambda, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+qpois(p, lambda, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la Poisson.
+rpois(n, lambda); Devuelve un vector de valores binomiales aleatorios
+```
 ]
 
 
@@ -959,16 +970,17 @@ layout: false
    ### Distribución normal
 ]
 .right-column[
+<br>
 La distribución normal, distribución de Gauss o distribución gaussiana, a una de las distribuciones de probabilidad de variable continua que con más frecuencia aparece en fenómenos reales.
 
-Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota X ∼ N(µ, σ) si su función de densidad está dada por:
+Se dice que una variable aleatoria continua X sigue una distribución normal de parámetros µ y σ y se denota **X ∼ N(µ, σ)** si su función de densidad está dada por:
 
 <img src="./Images/normal.png" with=40%>
  
-Intuitivamente, es la distribución de probabilidad que se asume para una variable
-cuyos posibles valores se disponen de forma simétrica en torno a su media de modo
-que los valores próximos a dicha media tendrán mayor probabilidad de ser
-alcanzados. Conforme más alejados estén de la media, los valores tienen menor
+La distribución de probabilidad que se asume para una variable
+cuyos posibles valores se disponen de forma simétrica en torno a su media.
+
+Conforme más alejados estén de la media, los valores tienen menor
 probabilidad de ser alcanzados.
 
 ]
@@ -980,14 +992,16 @@ layout: false
    ### Distribución normal
 ]
 .right-column[
+<br>
 
 Para obtener valores que se basen en la distribución normal, R dispone de cuatro funciones basados en “norm”:
 
-
-- dnorm(x, mean = 0, sd = 1, log = F); Resultados de la función de densidad.
-- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de distribución acumulada.
-- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de los cuantiles de la Normal.
-- rnorm(n, mean = 0, sd = 1); Vector de valores normales aleatorios.
+```
+dnorm(x, mean = 0, sd = 1, log = F); Resultados de la función de densidad.
+pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de distribución acumulada.
+qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Resultados de los cuantiles de la Normal.
+rnorm(n, mean = 0, sd = 1); Vector de valores normales aleatorios.
+```
 ]
 
 ---
@@ -1021,6 +1035,8 @@ layout: false
    ### Distribución normal
 ]
 .right-column[
+<br>
+
 La vida de un semiconductor láser a una potencia constante se distribuye
 normalmente con media 7000 horas y desviación típica 600 horas. ¿Cuál es la
 probabilidad de que la vida del láser esté entre 6280 y 7120 horas?
@@ -1060,12 +1076,12 @@ La distribución t de Student es la distribución de probabilidad del cociente:
 - Z/sqrt(V/v)
 
 donde:
-1. Z tiene una distribución normal de media nula y varianza 1
-2. V tiene una distribución chi-cuadrado con ν grados de libertad
+1. Z tiene una distribución normal de media 0 y var 1
+2. V tiene una distribución chi<sup>2</sup> con ν grados de libertad
 3. Z y V son independientess
 La función de densidad de t es
 
-<img src="Images/t-test.png"> Test-T</img>
+<img src="Images/t-test.png"> 
 
 ```
 qpois(0.985, 3)
@@ -1100,13 +1116,15 @@ layout: false
    ### Distribución normal
 ]
 .right-column[
+<br>
 
-
-- dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la función de densidad.
-- pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
-- qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la
+```
+dnorm(x, mean = 0, sd = 1, log = F); Devuelve resultados de la función de densidad.
+pnorm(q, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+qnorm(p, mean = 0, sd = 1, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la
 Normal.
-- rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
+rnorm(n, mean = 0, sd = 1); Devuelve un vector de valores normales aleatorios.
+```
 
 Con:
  - x, q: Vector de cuantiles.
@@ -1178,15 +1196,18 @@ layout: false
 .right-column[
 
 La distribución t-Student es una distribución de probabilidad que surge del problema de estimar la media
-de una población **normalmente distribuida** cuando el **tama˜no de la muestra es peque˜no**.
+de una población **normalmente distribuida** cuando el **tamaño de la muestra es pequeño**.
 
 Aparece de manera natural al realizar la prueba t de Student para la determinación de las diferencias entre dos medias muestrales y para la construcción del intervalo de confianza para la diferencia entre las medias de dos poblaciones cuando se desconoce la desviación típica de una población y ésta debe ser estimada a partir de los datos de una muestra.
 
 T = Z/sqrt(V/v)
 
 - Z variable aleatoria distribuida segun una normal típica (media = 0, varianza=1)
+
 - V es una variable con distribución chi^2
+
 - Z y V son independientes
+
 ]
 ---
 layout: false
@@ -1196,10 +1217,12 @@ layout: false
 ]
 .right-column[
 
-- dt(x, df, ncp, log = F); Devuelve resultados de la función de densidad.
-- pt(q, df, ncp, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
-- qt(p, df, ncp, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la t-Student.
-- rt(n, df, ncp); Devuelve un vector de valores t-Student aleatorios.
+```
+dt(x, df, ncp, log = F); Devuelve resultados de la función de densidad.
+pt(q, df, ncp, lower.tail = T, log.p = F); Devuelve resultados de la función de distribución acumulada.
+qt(p, df, ncp, lower.tail = T, log.p = F); Devuelve resultados de los cuantiles de la t-Student.
+rt(n, df, ncp); Devuelve un vector de valores t-Student aleatorios.
+```
 
 Con:
 - x, q: Vector de cuantiles.
@@ -1271,17 +1294,7 @@ Intuitivamente, esta distribución es de utilidad para obtener información de l
 poblacional a partir de un conjunto de datos extraídos de una variable normal.
 
 ]
----
-layout: false
-.left-column[
-  ## Distribuciones de probabilidad
-   ### Distribución Chi-cuadrado
-]
-.right-column[
 
-Ejemplo 
-
-]
 
 ---
 layout: false
@@ -1340,22 +1353,25 @@ layout: false
    ### Distribución F
 ]
 .right-column[
-
+<br>
 
 La distribución de probabilidad F de Snedecor con n y m grados de libertad (F(n, m))
 es la asociada a una variable aleatoria que se obtiene a partir del cociente de una dos
 variables chi-cuadrado con n y m grados de libertad respectivamente.
-Por tanto, esta distribución sólo tomar valores positivos. Su función de densidad es
-muy compleja y su gráfica es parecida a la de la distribución chi-cuadrado
 
+Esta distribución sólo tomar valores positivos. 
+
+Su función de densidad es muy compleja y su gráfica es parecida a la de la distribución chi-cuadrado
 
 La distribución F de Snedecor es una distribución de probabilidad continua. Una variable aleatoria de
 distribución F se construye como el siguiente cociente:
 
 F=U<sub>1</sub>d<sub>1</sub> / U<sub>2</sub>d<sub>2</sub>
 
-- U1 y U2 siguen una distribución chi-cuadrada con d1 y d2 grados de libertad respectivamente, y
+- U1 y U2 siguen una distribución chi-cuadrada con d1 y d2 grados de libertad respectivamente
+
 - U1 y U2 son estadísticamente independientes
+
 
 ]
 
@@ -1403,15 +1419,14 @@ pf(198.50, 10, 2, lower.tail=F)
 rf(5,24,10)
 ```
 ]
-
 ---
-
 layout: false
 .left-column[
   ## Distribuciones de probabilidad
-   ### Distribución uniforme continua
+   ### Distribución Uniforme Continua
 ]
 .right-column[
+<br>
 Distribuciones Uniforme Continua en el intervalo [a, b] (U[a, b])
 Es la distribución de probabilidad que se asocia a variables aleatorias que pueden
 tomar cualquier valor en el intervalo [a, b] y cuya función de densidad es
@@ -1421,7 +1436,8 @@ f(x) = 1/(a-b) donde x esta en [a,b]
 Intuitivamente, es la distribución de probabilidad que se asocia a experimentos
 similares a elegir un número al azar entre los valores a y b.
 
-(Falta gráfica)
+]
+
 ---
 
 layout: false
@@ -1436,6 +1452,10 @@ En estadística la distribución beta es una distribución de probabilidad conti
 <img src="Images/beta_dist.png" width=450px> 
 
 Donde Γ es la función gamma. 
+
+Γ(n) = (n-1)! 
+
+
 ]
 ---
 
