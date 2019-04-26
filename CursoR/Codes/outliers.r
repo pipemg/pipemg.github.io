@@ -1,3 +1,7 @@
+#Los valores atípicos o outliers son datos que son numéricamente distantes del resto de los datos. Este tipo de valores suelen indicar datos ajenos al resto o errores en la toma de datos.
+
+#La función v.atipicos() detecta, mediante el test de Grubbs, los valores atípicos de un vector y con el parámetro e=1 devuelve el mismo vector con los valores atípicos eliminados. Es necesaria la librería outliers.
+
 # v.atipicos()
 # Elimina outliers si son significativos. Usa test de Grubbs
 # Comprueba si la distribución es normal
