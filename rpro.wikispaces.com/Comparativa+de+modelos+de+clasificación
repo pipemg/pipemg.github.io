@@ -1,0 +1,1817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="https://rpro.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (R Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/Comparativa+de+modelos+de+clasificaci%C3%B3n" />
+<link rel="alternate" title="R - All Changes" href="https://rpro.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="rpro : Comparativa de modelos de clasificación - Discussion" href="https://rpro.wikispaces.com/message/xml/Comparativa+de+modelos+de+clasificaci%C3%B3n?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="rpro : Comparativa de modelos de clasificación - Edits" href="https://rpro.wikispaces.com/page/xml/Comparativa+de+modelos+de+clasificaci%C3%B3n?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/Comparativa+de+modelos+de+clasificaci%C3%B3n/edits"/>
+<link rel="microsummary" href="/page/microsummary/Comparativa+de+modelos+de+clasificaci%C3%B3n/messages"/>
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'https://ssl.wikicdn.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '21368592',
+    name: 'rpro',
+    text: 'R',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 21567364
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '21823996',
+    name: ''
+  },
+  space: {
+    id: '21567364',
+    name: 'rpro',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'Comparativa de modelos de clasificación',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'https://ssl.wikicdn.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1519151009802 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script><meta name="google-site-verification" content="fr-ILXJ0alms-v5yI_UPYhyfr6HlghKO7MpXd16SdHg" />
+<meta name="google-site-verification" content="fr-ILXJ0alms-v5yI_UPYhyfr6HlghKO7MpXd16SdHg" />
+<title>R - Comparativa de modelos de clasificación</title>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://ssl.wikicdn.com/_/z6371z4x/i/logo-144.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://ssl.wikicdn.com/_/j5j77xz3/i/logo-114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://ssl.wikicdn.com/_/vq8j5432/i/logo-72.png" />
+<link rel="apple-touch-icon" href="https://ssl.wikicdn.com/_/38515190/i/logo-57.png" />
+<link rel="shortcut icon" href="https://ssl.wikicdn.com/_/55v9k02z/i/logo-16.png" />
+<style type="text/css">
+/* Standard theme styles */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.ws-theme-header-inner,
+.ws-theme-body-inner,
+.ws-theme-footer-inner,
+.ws-theme-content-inner,
+.ws-theme-sidebar-inner {
+  position: relative;
+}
+.ws-theme-header-inner:after,
+.ws-theme-body-inner:after,
+.ws-theme-footer-inner:after,
+.ws-theme-content-inner:after,
+.ws-theme-sidebar-inner:after,
+.ws-theme-menu-inner:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ws-theme-content, .ws-theme-sidebar {
+  overflow-x: auto;
+}
+.ws-theme-footer {
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ws-theme-content {
+    width: 550px;
+    min-height: 384px;
+    float: right;
+  }
+  .ws-theme-sidebar {
+    width: 200px;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .ws-theme-container {
+    width: 970px;
+  }
+  .ws-theme-content {
+    width: 770px;
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  .ws-theme-container {
+    width: 1170px;
+  }
+  .ws-theme-content {
+    width: 970px;
+    min-height: 600px;
+  }
+}
+/* End standard theme styles */
+</style>
+<style type="text/css">
+/* Theme-specific styles */
+body {
+  background: #F2F0ED;
+}
+
+/* BEGIN TOP-NAV STYLES */
+.WikispacesContent .ws-main-top-sub-nav .navbar.navbar-static-top {
+  min-height: 5px;
+}
+
+.WikispacesContent .ws-main-top-nav {
+  color: #AAAAAA !important;
+}
+.WikispacesContent .ws-main-top-nav .navbar {
+  background-color: #000000 !important;
+  border-bottom: 1px solid #000000 !important;
+}
+.WikispacesContent .ws-main-top-nav .navbar-header a:hover,
+.WikispacesContent .ws-main-top-nav .WikiInternalHeaderNavMenu a:hover {
+  color: #dddddd !important;
+}
+.WikispacesContent .ws-main-top-nav .navbar-brand {
+  text-shadow: 0 1px 0 #333333 !important;
+}
+.WikispacesContent .ws-main-top-nav .ws-navbar-search .search-query {
+  background-color: #666666 !important;
+  border: 1px solid #464646 !important;
+  color: #BBBBBB !important;
+}
+
+.WikispacesContent .ws-main-top-nav input:-moz-placeholder {
+  color: #BBBBBB !important;
+}
+.WikispacesContent .ws-main-top-nav input::-moz-placeholder {
+  color: #BBBBBB !important;
+}
+.WikispacesContent .ws-main-top-nav input:-ms-input-placeholder  {
+  color: #BBBBBB !important;
+}
+.WikispacesContent .ws-main-top-nav input::-webkit-input-placeholder {
+  color: #BBBBBB !important;
+}
+
+.WikispacesContent .ws-main-top-nav .WikiInternalHeaderNav {
+  height: 34px;
+}
+.WikispacesContent .ws-main-top-nav .WikiInternalHeaderNavMenu {
+  color: inherit !important;
+}
+.WikispacesContent .ws-main-top-nav .WikiInternalHeaderNav .notificationCount {
+  background-color: #666666 !important;
+  border: 1px solid #464646 !important;
+  color: #BBBBBB !important;
+}
+.WikispacesContent .ws-main-top-nav .WikiInternalHeaderNavMenu .userImage {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #464646 !important;
+}
+
+.WikispacesContent .ws-main-top-sub-nav .navbar {
+  background-color: #E9694E !important;
+  border-bottom: 1px solid #e34120 !important;
+}
+.WikispacesContent .ws-main-top-sub-nav .navbar .nav>li>a {
+  color: #E6E4E2;
+  text-shadow: 0 1px 0 #444444;
+}
+.WikispacesContent .ws-main-top-sub-nav .navbar .nav>li>a:hover {
+  color: #FFFFFF !important;
+  background-color: transparent;
+}
+/* END TOP-NAV STYLES */
+
+.ws-theme-content-inner,
+.ws-theme-footer-inner {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.ws-theme-content,
+.ws-theme-sidebar {
+  overflow-x: visible;
+}
+
+.ws-theme-body-inner {
+ padding-top: 8px;
+}
+
+.ws-theme-content-inner {
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #BBB;
+}
+
+.ws-theme-sidebar {
+  display: none;
+}
+.ws-theme-footer {
+  margin: 10px 0;
+  color: #666F76;
+  font-size: 12px;
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  color: #467;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #F2F0ED url('https://ssl.wikicdn.com/_/kx7610z5/i/theme_edu_background.jpg');
+  }
+
+  .ws-theme-body-inner {
+   padding-top: 15px;
+  }
+
+  .ws-theme-content {
+    float: left;
+  }
+  .ws-theme-content-inner {
+    margin-left: 0;
+    margin-right: 15px;
+      border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.625);
+    }
+
+  .ws-theme-sidebar {
+    display: block;
+    float: right;
+  }
+  .ws-theme-menu {
+    margin-bottom: 10px;
+    background-color: #E6E4E2;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.375);
+  }
+  .ws-theme-menu.ws-theme-add-content-bar {
+    background-color: #FFF;
+  }
+  .ws-theme-menu.ws-theme-nav-menu {
+    overflow-x: hidden;
+  }
+
+  .ws-theme-menu ul.WikiActions > li.ws-row-header,
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryHeader {
+    color: #333;
+  }
+
+  .ws-theme-menu ul.WikiActions > li,
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryHeader,
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryItems ol > li a {
+    padding: 8px;
+    border-bottom: 1px solid #CCC;
+  }
+  .ws-theme-menu ul.WikiActions :first-child {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+  .ws-theme-menu ul.WikiActions :last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  .ws-theme-menu ul.WikiActions > li .fa,
+  .ws-theme-menu ul.WikiActions > li .fa {
+    /* Retain ws-icon-fixed width */
+    width: 16px;
+  }
+  .ws-theme-menu ul.WikiActions > li.ws-row-header .ws-row-subtext {
+    font-size: 90%;
+    text-align: right;
+  }
+  .ws-theme-menu ul.WikiActions > li.ws-row-header .ws-row-subtext a {
+    display: inline-block;
+    margin-left: 8px;
+  }
+  .ws-theme-menu ul.WikiActions > li.ws-row-active {
+    color: #FFFFFF;
+    background-color: #38657D;
+  }
+
+  .ws-theme-menu ul.WikiActions,
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryItems ol,
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryItems ol > li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ws-theme-menu ul.WikiActions a,
+  .ws-theme-menu .WikispacesNavbar a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  .ws-theme-menu .WikiCustomNav {
+    margin: 8px;
+  }
+  .ws-theme-menu .WikiCustomNav .WikispacesNavbar {
+    margin: 8px -8px 0 -8px;
+    border-top: 1px solid #CCC;
+  }
+  .ws-theme-menu .WikiCustomNav > .includeBody:first-child .WikispacesNavbar {
+    margin-top: -8px;
+    border-top: none;
+  }
+  .ws-theme-menu .WikispacesNavbar .WikispacesNavbarEntryItems ol > li a {
+    padding-left: 28px; /* .ws-icon-fixed + 8 */
+    display: block;
+  }
+  .ws-theme-menu .WikispacesCustomNavEdit {
+    display: block;
+    margin: 4px auto;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .ws-theme-menu .WikiAddContentBar {
+    display: table;
+    width: 200px;
+  }
+  .ws-theme-menu .WikiAddContentBar a {
+    display: table-cell;
+    width: 32px;
+    line-height: 36px;
+    text-decoration: none !important;
+    text-align: center;
+  }
+  .ws-theme-menu .WikiAddContentBar i {
+    font-size: 22px;
+  }
+
+  .ws-theme-footer-inner {
+    margin: 0;
+  }
+}
+/* End theme-specific styles */
+</style>
+<link rel="stylesheet" href="https://www.wikispaces.com/stylesheet/viewi/217420326D.css" type="text/css" />
+<link rel="stylesheet" href="https://ssl.wikicdn.com/s/nogz/9jvvjv40-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="https://ssl.wikicdn.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="https://ssl.wikicdn.com/s/nogz/jq1zk7j6-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleSpaceAccount = 'UA-64358124-1';
+  _gaq.push(['gaSpace._setAccount', wsGoogleSpaceAccount]);
+  _gaq.push(['gaSpace._trackPageview']);
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body><a href="#WikiContent" class="hidden sr-only sr-only-focusable">Skip to main content</a><div id="js-fixed-header-holder" class="fixed"><div class="WikispacesContent WikispacesBs3" role="banner">
+      
+    <div class="ws-main-top-nav ">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+                  <div class="hidden-xs">
+            <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                                    <span class="WikiInternalHeaderNavMenuArea guestUserName">guest</span><span class="slideMarker divider">|</span>
+        
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/user/join?goto=https%3A%2F%2Frpro.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>          </div>
+                <div class="navbar-header">
+          <div class="visible-xs pull-left">
+            <a href="/space/menu" class="WikispacesDialogLink btn navbar-btn">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="visible-xs pull-right js-globalnav-popover-container">
+                        <a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n" class="btn navbar-btn ws-mobile-guest-username js-globalnav-popover-trigger">
+              guest
+            </a>
+                        <div class="hidden js-globalnav-popover-content">
+              <div class="WikispacesContent WikispacesBs3">
+                <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                          
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/user/join?goto=https%3A%2F%2Frpro.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="https://www.wikispaces.com/site/signin?goto=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>              </div>
+            </div>
+          </div>
+          <div class="ws-navbar-middle-xs">
+            <div class="navbar-brand" role="navigation">
+              <a href="https://www.wikispaces.com/" class="ws-logo"></a>
+              <i class="fa fa-angle-right"></i>
+              <a href="https://rpro.wikispaces.com/">R</a>
+                              <i class="fa fa-angle-right"></i> <a href="https://rpro.wikispaces.com/home">Home</a>
+              
+            </div>
+          </div>
+                    <form action="/search/view" method="post" class="navbar-form ws-include-xs pull-left ws-navbar-search hidden-xs" role="search"><input type="hidden" name="wikispacesFormToken" value="23d6b1b08943d194f31374f4900959e83478711a"/><input type="text" class="form-control search-query" name="q" value="" placeholder="Search" /> </form>
+                  </div>
+      </div>
+    </div>
+  </div>
+    <div class="ws-main-top-sub-nav" role="navigation">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+        <ul class="nav navbar-nav ws-include-xs pull-right">
+                  </ul>
+      </div>
+    </div>
+  </div>
+    </div></div><div id="js-fixed-header-offset">
+<div class="ws-theme-body">
+  <div class="ws-theme-container">
+    <div class="ws-theme-body-inner">
+      <div class="ws-theme-sidebar">
+        <div class="ws-theme-sidebar-inner">
+                    <nav role="navigation">
+            <div class="ws-theme-menu">
+              <div class="ws-theme-menu-inner">
+                <ul class="WikiActions WikiElement WikiControls">
+    <li id="WikiActionHome"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="https://rpro.wikispaces.com/"><i class="fa fa-home fa-fw"></i></a><a href="https://rpro.wikispaces.com/">Wiki Home</a></div></li>
+    <li id="WikiActionChanges"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/changes"><i class="fa fa-clock-o fa-fw"></i></a><a href="/wiki/changes">Recent Changes</a></div></li>
+    <li id="WikiActionPagesAndFiles"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/space/content"><i class="fa fa-file-text-o fa-fw"></i></a><a href="/space/content">Pages and Files</a></div></li>
+    <li id="WikiActionMembers"><div class="js-member-link"><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/members"><i class="fa fa-user fa-fw"></i></a><a href="/wiki/members">Members</a></div></li>
+</ul>
+              </div>
+            </div>
+            <div class="ws-theme-menu ws-theme-nav-menu">
+              <div class="ws-theme-menu-inner">
+                <div class="WikiCustomNav WikiElement wiki"><span style="line-height: 1.5;"><a class="wiki_link" href="/Introducci%C3%B3n%20a%20la%20wiki">Introducción a la wiki</a></span><br />
+<br />
+<a class="wiki_link" href="/Programaci%C3%B3n%20en%20R">Programación en R</a><br />
+<br />
+<a class="wiki_link" href="/Quiero%20saber%20lo%20que%20puedo%20hacer">Saber lo que puedo hacer</a><br />
+<a class="wiki_link" href="/Estad%C3%ADstica%20y%20programaci%C3%B3n%20con%20R">Índice completo de estadística</a><br />
+<ul><li><span style="line-height: 1.5;"><a class="wiki_link" href="/An%C3%A1lisis%20exploratorio">Análisis exploratorio</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Estad%C3%ADstica%20descriptiva">Estadística descriptiva</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Ajuste%20a%20distribuciones">Ajuste a distribuciones</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Comparaci%C3%B3n%20de%20medias">Comparación de medias</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Comparaci%C3%B3n%20de%20varianzas">Comparación de varianzas</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Correlaci%C3%B3n%20lineal">Correlación lineal</a></span></li><li><span style="line-height: 1.5;"><a class="wiki_link" href="/Tablas%20de%20contingencia">Tablas de contingencia</a></span></li></ul><a class="wiki_link" href="/Modelos%20para%20explicar%2C%20ordenar%20y%20clasificar">Modelos (clasificación)</a><br />
+<ul><li><a class="wiki_link" href="/%C3%81rboles%20de%20clasificaci%C3%B3n">Árboles de clasificación</a></li><li><a class="wiki_link" href="/An%C3%A1lisis%20discriminante">Análisis discriminante</a></li><li><a class="wiki_link" href="/Regresi%C3%B3n%20log%C3%ADstica">Regresión logística</a></li><li><a class="wiki_link" href="/SVM%20%28M%C3%A1quinas%20de%20vectores%20de%20soporte%29">SVM (Máquinas de vectores de soporte)</a></li><li><a class="wiki_link" href="/AdaBoost">AdaBoost</a></li><li><a class="wiki_link" href="/Bagging">Bagging</a></li><li><a class="wiki_link" href="/Random%20Forest">Random Forest</a></li><li><a class="wiki_link" href="/Redes%20neuronales">Redes neuronales</a></li><li><a class="wiki_link" href="/Clasificador%20bayesiano%20ingenuo">Clasificador bayesiano ingenuo</a></li><li><a class="wiki_link" href="/ANOVA%20de%20un%20nivel">ANOVA</a></li><li><a class="wiki_link" href="/Regresi%C3%B3n%20lineal">Regresión lineal</a></li><li><a class="wiki_link" href="/Comparativa%20de%20modelos%20de%20clasificaci%C3%B3n">Comparativa de modelos de clasificación</a></li></ul><a class="wiki_link" href="/Simulaci%C3%B3n%20de%20datos%20y%20muestreo%20aleatorio">Simulación y muestreo</a><br />
+<br />
+<!-- ws:start:WikiTextIncludeRule:00:&lt;img src=&quot;https://www.wikispaces.com/site/embedthumbnail/include/tagCloud?w=200&amp;h=100&quot; class=&quot;WikiMedia WikiMediaInclude&quot; id=&quot;wikitext@@include@@component=&amp;quot;tagCloud&amp;quot;&quot; title=&quot;Include tagCloud: component=&amp;quot;tagCloud&amp;quot;&quot; /&gt; --><ol class="includeTagCloud"><li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=C5.0"><span class="tagcloud_3"title="2" >C5.0</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=Kendall"><span class="tagcloud_1"title="1" >Kendall</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=Mclust"><span class="tagcloud_1"title="1" >Mclust</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=Pearson"><span class="tagcloud_1"title="1" >Pearson</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=Spearman"><span class="tagcloud_1"title="1" >Spearman</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=TukeyHSD"><span class="tagcloud_1"title="1" >TukeyHSD</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=ad.test"><span class="tagcloud_1"title="1" >ad.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=aov"><span class="tagcloud_3"title="2" >aov</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=bagging"><span class="tagcloud_3"title="2" >bagging</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=bartlett.test"><span class="tagcloud_1"title="1" >bartlett.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=binom.test"><span class="tagcloud_3"title="2" >binom.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=boosting"><span class="tagcloud_3"title="2" >boosting</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=chisq.test"><span class="tagcloud_3"title="2" >chisq.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=contrasts"><span class="tagcloud_1"title="1" >contrasts</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=cor"><span class="tagcloud_5"title="3" >cor</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=cor.test"><span class="tagcloud_5"title="3" >cor.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=curve"><span class="tagcloud_1"title="1" >curve</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=dist"><span class="tagcloud_1"title="1" >dist</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=dnorm"><span class="tagcloud_1"title="1" >dnorm</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=factor"><span class="tagcloud_3"title="2" >factor</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=fisher.test"><span class="tagcloud_1"title="1" >fisher.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=fivenum"><span class="tagcloud_1"title="1" >fivenum</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=fligner.test"><span class="tagcloud_1"title="1" >fligner.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=glm"><span class="tagcloud_1"title="1" >glm</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=grubbs.test"><span class="tagcloud_1"title="1" >grubbs.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=hclust"><span class="tagcloud_1"title="1" >hclust</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=hist"><span class="tagcloud_1"title="1" >hist</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=ic.var"><span class="tagcloud_1"title="1" >ic.var</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=kmeans"><span class="tagcloud_1"title="1" >kmeans</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=kruskal.test"><span class="tagcloud_1"title="1" >kruskal.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=lda"><span class="tagcloud_3"title="2" >lda</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=leveneTest"><span class="tagcloud_1"title="1" >leveneTest</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28C50%29"><span class="tagcloud_3"title="2" >library(C50)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28ISLR%29"><span class="tagcloud_1"title="1" >library(ISLR)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28MASS%29"><span class="tagcloud_5"title="3" >library(MASS)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28adabag%29"><span class="tagcloud_3"title="2" >library(adabag)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28caret%29"><span class="tagcloud_3"title="2" >library(caret)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28e1071%29"><span class="tagcloud_5"title="3" >library(e1071)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28ipred%29"><span class="tagcloud_3"title="2" >library(ipred)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28klaR%29"><span class="tagcloud_3"title="2" >library(klaR)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28mclust%29"><span class="tagcloud_1"title="1" >library(mclust)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28nnet%29"><span class="tagcloud_3"title="2" >library(nnet)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28nortest%29"><span class="tagcloud_3"title="2" >library(nortest)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28outliers%29"><span class="tagcloud_1"title="1" >library(outliers)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28randomForest%29"><span class="tagcloud_3"title="2" >library(randomForest)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28rpart%29"><span class="tagcloud_5"title="3" >library(rpart)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=library%28useful%29"><span class="tagcloud_1"title="1" >library(useful)</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=lillie.test"><span class="tagcloud_1"title="1" >lillie.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=mean"><span class="tagcloud_1"title="1" >mean</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=median"><span class="tagcloud_1"title="1" >median</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=naiveBayes"><span class="tagcloud_3"title="2" >naiveBayes</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=nnet"><span class="tagcloud_3"title="2" >nnet</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=nortest"><span class="tagcloud_1"title="1" >nortest</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=outlier"><span class="tagcloud_1"title="1" >outlier</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=plot.kmeans"><span class="tagcloud_1"title="1" >plot.kmeans</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=prcomp"><span class="tagcloud_1"title="1" >prcomp</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=prop.test"><span class="tagcloud_1"title="1" >prop.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=prune"><span class="tagcloud_3"title="2" >prune</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=qda"><span class="tagcloud_3"title="2" >qda</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=quantile"><span class="tagcloud_1"title="1" >quantile</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=randomForest"><span class="tagcloud_3"title="2" >randomForest</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=rm.outlier"><span class="tagcloud_1"title="1" >rm.outlier</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=rpart"><span class="tagcloud_5"title="3" >rpart</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=sd"><span class="tagcloud_1"title="1" >sd</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=shapiro.test"><span class="tagcloud_1"title="1" >shapiro.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=stepAIC"><span class="tagcloud_1"title="1" >stepAIC</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=summary"><span class="tagcloud_1"title="1" >summary</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=svm"><span class="tagcloud_3"title="2" >svm</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=t.test"><span class="tagcloud_3"title="2" >t.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=table"><span class="tagcloud_1"title="1" >table</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=train"><span class="tagcloud_1"title="1" >train</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=var"><span class="tagcloud_1"title="1" >var</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=var.test"><span class="tagcloud_1"title="1" >var.test</span></a></li> <li class="includeTagCloudTag"><a href="https://rpro.wikispaces.com/space/content?tag=wilcox.test"><span class="tagcloud_3"title="2" >wilcox.test</span></a></li> </ol><!-- ws:end:WikiTextIncludeRule:00 --></div>                <div class="ws-theme-nav-edit">
+                                  </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main class="ws-theme-content" role="main">
+        <div class="ws-theme-content-inner">
+          <div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+<div class="ws-menu-bar WikiControls WikispacesContent WikispacesBs3">
+  
+    <h1 class="pageTitle"><a href="/Comparativa+de+modelos+de+clasificaci%C3%B3n">Comparativa de modelos de clasificación</a></h1>
+      <div class="btn-group pull-right">
+          <span class="btn btn-default disabled tipme" title="you do not have permission to edit this page"><i class="fa fa-pencil fa-fw"></i> Edit</span>          <a class="btn btn-default tipme" title="no discussion posts" href="/Comparativa+de+modelos+de+clasificaci%C3%B3n#discussion"><i class="fa fa-comments fa-fw"></i> 0</a>          <a class="btn btn-default tipme" title="view 9 revisions" href="/page/history/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="fa fa-clock-o fa-fw"></i> 9</a>          <a class="btn btn-default ws-btn-more dropdown-toggle tipme" title="more options" href="/page/menu/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="icon-height-only fa-fw"></i>&hellip;</a>        <ul class="ws-more-menu dropdown-menu dropdown-menu-right">
+              <li class=" dropdown"><a class=" ws-tag-dropdown-toggle" href="/page/tags/Comparativa+de+modelos+de+clasificaci%C3%B3n"><span class="pull-right">19</span> <i class="fa fa-tag fa-fw"></i> Tags</a>
+          <div class="dropdown-menu dropdown-menu-right ws-tag-dropdown-menu">
+          
+
+
+
+<form action="#" name="WikiTagForm" class="WikiTagForm"><input type="hidden" name="wikispacesFormToken" value="7adf82a5c9e75ab891f9ccad806fa291ad8184cd"/><input type="hidden" name="wikispacesFormToken" value="7adf82a5c9e75ab891f9ccad806fa291ad8184cd"/>
+  <div class="WikiTagList">
+    <i class="fa fa-tag ws-action"></i>
+        <ul class="list-unstyled">
+                          <li><a href="/space/content?tag=bagging">bagging</a></li>
+                                <li><a href="/space/content?tag=boosting">boosting</a></li>
+                                <li><a href="/space/content?tag=C5.0">C5.0</a></li>
+                                <li><a href="/space/content?tag=lda">lda</a></li>
+                                <li><a href="/space/content?tag=library%28adabag%29">library(adabag)</a></li>
+                                <li><a href="/space/content?tag=library%28C50%29">library(C50)</a></li>
+                                <li><a href="/space/content?tag=library%28caret%29">library(caret)</a></li>
+                                <li><a href="/space/content?tag=library%28e1071%29">library(e1071)</a></li>
+                                <li><a href="/space/content?tag=library%28ipred%29">library(ipred)</a></li>
+                                <li><a href="/space/content?tag=library%28MASS%29">library(MASS)</a></li>
+                                <li><a href="/space/content?tag=library%28nnet%29">library(nnet)</a></li>
+                                <li><a href="/space/content?tag=library%28randomForest%29">library(randomForest)</a></li>
+                                <li><a href="/space/content?tag=library%28rpart%29">library(rpart)</a></li>
+                                <li><a href="/space/content?tag=naiveBayes">naiveBayes</a></li>
+                                <li><a href="/space/content?tag=nnet">nnet</a></li>
+                                <li><a href="/space/content?tag=qda">qda</a></li>
+                                <li><a href="/space/content?tag=randomForest">randomForest</a></li>
+                                <li><a href="/space/content?tag=rpart">rpart</a></li>
+                                <li><a href="/space/content?tag=svm">svm</a></li>
+              </ul>
+      </div>
+  </form>      </div>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class=" WikispacesDialogLink" href="https://rpro.wikispaces.com/wiki/addmonitor?monitorLink=page%3AComparativa%20de%20modelos%20de%20clasificaci%C3%B3n"><i class="fa fa-eye fa-fw"></i> Notify</a>
+    </li>
+        <li class=""><a class=" WikispacesDialogLink" href="/page/rss/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="fa fa-rss fa-fw"></i> RSS</a>
+    </li>
+        <li class=""><a class="" href="/page/links/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="fa fa-link fa-fw"></i> Backlinks</a>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class="" href="/page/code/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="fa fa-code fa-fw"></i> Source</a>
+    </li>
+        <li class=""><a class="" href="/Comparativa+de+modelos+de+clasificaci%C3%B3n?f=print"><i class="fa fa-print fa-fw"></i> Print</a>
+    </li>
+        <li class=""><a class="" href="/page/pdf/Comparativa+de+modelos+de+clasificaci%C3%B3n"><i class="fa fa-cloud-download fa-fw"></i> Export (PDF)</a>
+    </li>
+      </ul>  </div>
+  </div>
+
+
+
+
+  <textarea class="form-control" id="autosaveContent" style="display:none;" rows="1" cols="1"></textarea>
+  <div id="autosavePrompt" style="display:none;"></div>
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextTocRule:10:&lt;img id=&quot;wikitext@@toc@@flat&quot; class=&quot;WikiMedia WikiMediaTocFlat&quot; title=&quot;Table of Contents&quot; src=&quot;/site/embedthumbnail/toc/flat?w=100&amp;h=16&quot;/&gt; --><!-- ws:end:WikiTextTocRule:10 --><!-- ws:start:WikiTextTocRule:11: --><a href="#Función modelos()">Función modelos()</a><!-- ws:end:WikiTextTocRule:11 --><!-- ws:start:WikiTextTocRule:12: --> | <a href="#Ejemplo sin parámetros">Ejemplo sin parámetros</a><!-- ws:end:WikiTextTocRule:12 --><!-- ws:start:WikiTextTocRule:13: --> | <a href="#Ejemplo con parámetros">Ejemplo con parámetros</a><!-- ws:end:WikiTextTocRule:13 --><!-- ws:start:WikiTextTocRule:14: -->
+<!-- ws:end:WikiTextTocRule:14 --><hr />
+La función <span style="color: #ff0000;">modelos()</span>, ajusta 10 modelos diferentes:<br />
+<ol><li><span style="line-height: 1.5;">Red neuronal: nnet</span></li><li><span style="line-height: 1.5;">C5.0</span></li><li><span style="line-height: 1.5;">Máquinas de vectores de soporte: svm</span></li><li><span style="line-height: 1.5;">Bootstrapped Aggregation: bagging</span></li><li><span style="line-height: 1.5;">Random Forest: randomForest</span></li><li><span style="line-height: 1.5;">Adaptative Boosting: boosting</span></li><li><span style="line-height: 1.5;">Árboles de clasificación: rpart</span></li><li><span style="line-height: 1.5;">Clasificador bayesiano ingenuo: naiveBayes</span></li><li><span style="line-height: 1.5;">Análisis disciminane lineal: lda</span></li><li><span style="line-height: 1.5;">Análisis disciminane cuadrático: qda</span></li></ol><br />
+Presenta como resultado por pantalla las matrices de confusión y el porcentaje de casos correctamente clasificados. Devuelve como valor invisible una lista con todos los modelos ajustados. Como datos admite data frames de variables explicativas (independientes) cuantitativas o cualitativas y como variable respuesta (dependiente) una cualitativa.<br />
+Los parámetros son:<br />
+<ul><li><strong>datos</strong>: data frame con las variables. Valor por defeco: iris</li><li><strong>dep</strong>: valor numérico que indica el número de la variable respuesta (dependiente). Valor por defecto 5 (variable Species de los datos iris)</li><li><strong>p</strong>: es la proporción usada para el entrenamiento (el resto se usa para probarlo). Valor por defecto p = 0.75 (75% de los datos usados para entrenamiento)</li><li><strong>ad</strong>: 1 si se realizarán los análisis discriminantes lineal y cuadrático, 0 si se omiten. Valor por defecto ad = 1</li></ul><br />
+Si no se indica ningún data frame usa los datos de iris para clasificar las especies que contiene.<br />
+<br />
+Esta función requiere las librerías:<br />
+<ul><li>caret</li><li>nnet</li><li>C50</li><li>e1071</li><li>ipred</li><li>randomForest</li><li>adabag</li><li>rpart</li><li>MASS</li></ul><br />
+<!-- ws:start:WikiTextHeadingRule:4:&lt;h1&gt; --><h1 id="toc0"><a name="Función modelos()"></a><!-- ws:end:WikiTextHeadingRule:4 -->Función modelos()</h1>
+ <!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;rsplus&quot;&gt;modelos &amp;lt;- function(datos = iris, dep = 5, p = 0.75, ad=1) {&lt;br/&gt;&lt;br/&gt;  # Creación del subgrupo de entrenamiento y de prueba&lt;br/&gt;  library(caret)&lt;br/&gt;  datos.indices &amp;lt;- createDataPartition(datos[,dep],p = p, list=F)&lt;br/&gt;  datos.train &amp;lt;- datos[datos.indices,]&lt;br/&gt;&lt;br/&gt;  if(p != 1) {&lt;br/&gt;    datos.test &amp;lt;- datos[-datos.indices,]&lt;br/&gt;  } else {&lt;br/&gt;    datos.test &amp;lt;- datos.train&lt;br/&gt;  }&lt;br/&gt;  # Fórmula&lt;br/&gt;  f &amp;lt;- as.formula(paste(names(datos[dep]),&amp;quot;~.&amp;quot;))&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # Redes neuronales&lt;br/&gt;  library(nnet)&lt;br/&gt;  parametros &amp;lt;- train(f, data=datos.train, method=&amp;quot;nnet&amp;quot;, trace=F)&lt;br/&gt;  size &amp;lt;- parametros$bestTune$size&lt;br/&gt;  decay &amp;lt;- parametros$bestTune$decay&lt;br/&gt;  modelo.nnet &amp;lt;- nnet(f,trace=F, data=datos.train, size=size, decay=decay)&lt;br/&gt;  pred.nnet &amp;lt;- predict(modelo.nnet, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred.nnet,datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Red neuronal: nnet\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos1 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos1,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # C5.0&lt;br/&gt;  library(C50)&lt;br/&gt;  modelo.c50 &amp;lt;- C5.0(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.c50, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred,datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Árbol de clasificación C5.0\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos2 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos2,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # SVM&lt;br/&gt;  library(e1071)&lt;br/&gt;  modelo.svm &amp;lt;- svm(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.svm, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred,datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** SVM\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos3 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos3,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # Bootstrapped Aggregation: Bagging&lt;br/&gt;  library(ipred)&lt;br/&gt;  modelo.ba &amp;lt;- ipred::bagging(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.ba, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred,datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Bootstrapped Aggregation: bagging\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos4 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos4,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # Random Forest&lt;br/&gt;  library(randomForest)&lt;br/&gt;  modelo.rf &amp;lt;- randomForest(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.rf, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;Random Forest\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos5 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos5,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # AdaBoost - Adaptative Boosting&lt;br/&gt;  library(adabag)&lt;br/&gt;  modelo.ad &amp;lt;- boosting(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.ad, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred$class, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Adaptative Boosting: boosting\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos6 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos6,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # Árboles de clasificación: rpart&lt;br/&gt;  library(rpart)&lt;br/&gt;  modelo.rp &amp;lt;- rpart(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.rp, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Árboles de clasificación: rpart\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos7 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos7,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  # Clasificador bayesiano ingenuo (Naive Bayes classifier): naiveBayes&lt;br/&gt;&lt;br/&gt;  modelo.nb &amp;lt;- naiveBayes(f, data=datos.train)&lt;br/&gt;  pred &amp;lt;- predict(modelo.nb, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;  # Matriz de confusión&lt;br/&gt;  mc &amp;lt;- table(pred, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;  # Ordenar tabla alfabéticamente&lt;br/&gt;  # Por algún motivo a veces sale desordenada&lt;br/&gt;  mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;  cat(&amp;quot;** Clasificador bayesiano ingenuo: naiveBayes\n&amp;quot;)&lt;br/&gt;  print(mc)&lt;br/&gt;  # Aciertos en %&lt;br/&gt;  aciertos10 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;  cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos10,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;  if(ad != 0) {&lt;br/&gt;    library(MASS)&lt;br/&gt;    # Análisis disciminane lineal&lt;br/&gt;    modelo.lda &amp;lt;- rpart(f, data=datos.train)&lt;br/&gt;    pred &amp;lt;- predict(modelo.lda, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;    # Matriz de confusión&lt;br/&gt;    mc &amp;lt;- table(pred, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;    # Ordenar tabla alfabéticamente&lt;br/&gt;    # Por algún motivo a veces sale desordenada&lt;br/&gt;    mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;    cat(&amp;quot;** Análisis disciminane lineal: lda\n&amp;quot;)&lt;br/&gt;    print(mc)&lt;br/&gt;    # Aciertos en %&lt;br/&gt;    aciertos8 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;    cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos8,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;    # Análisis disciminane cuadrático&lt;br/&gt;    modelo.qda &amp;lt;- rpart(f, data=datos.train)&lt;br/&gt;    pred &amp;lt;- predict(modelo.qda, datos.test, type=&amp;quot;class&amp;quot;)&lt;br/&gt;    # Matriz de confusión&lt;br/&gt;    mc &amp;lt;- table(pred, datos.test[,dep], dnn = c(&amp;quot;Asignado&amp;quot;,&amp;quot;Real&amp;quot;))&lt;br/&gt;    # Ordenar tabla alfabéticamente&lt;br/&gt;    # Por algún motivo a veces sale desordenada&lt;br/&gt;    mc &amp;lt;- mc[order(rownames(mc)),order(colnames(mc))]&lt;br/&gt;    cat(&amp;quot;** Análisis disciminane cuadrático: qda\n&amp;quot;)&lt;br/&gt;    print(mc)&lt;br/&gt;    # Aciertos en %&lt;br/&gt;    aciertos9 &amp;lt;- sum(diag(mc)) / sum(mc) * 100&lt;br/&gt;    cat(&amp;quot;\nCorrectamente clasificados:&amp;quot;,round(aciertos9,2),&amp;quot;%\n\n\n&amp;quot;)&lt;br/&gt;  }&lt;br/&gt;&lt;br/&gt;  resumen &amp;lt;- c(aciertos1,aciertos2,aciertos3,aciertos4,aciertos5,aciertos6,aciertos7,aciertos10)&lt;br/&gt;  names(resumen) &amp;lt;- c(&amp;quot;nnet&amp;quot;,&amp;quot;C5.0&amp;quot;,&amp;quot;svm&amp;quot;,&amp;quot;bagging&amp;quot;,&amp;quot;randomForest&amp;quot;,&amp;quot;boosting&amp;quot;,&amp;quot;rpart&amp;quot;,&amp;quot;naiveBayes&amp;quot;)&lt;br/&gt;  mod.list &amp;lt;- list(nnet=modelo.nnet, C5.0=modelo.c50, svm=modelo.svm, bagging=modelo.ba, randomForest=modelo.rf, boosting=modelo.ad, rpart=modelo.rp,naiveBayes=modelo.nb)&lt;br/&gt;  if(ad != 0) {&lt;br/&gt;    resumen &amp;lt;- c(resumen,aciertos8,aciertos9)&lt;br/&gt;    names(resumen) &amp;lt;- c(names(resumen[1:8]),&amp;quot;lda&amp;quot;,&amp;quot;qda&amp;quot;)&lt;br/&gt;    mod.list &amp;lt;- list(nnet=modelo.nnet, C5.0=modelo.c50, svm=modelo.svm, bagging=modelo.ba, randomForest=modelo.rf, boosting=modelo.ad, rpart=modelo.rp, naiveBayes=modelo.nb, lda=modelo.lda, qda=modelo.qda)&lt;br/&gt;  }&lt;br/&gt;  resumen &amp;lt;- sort(resumen,decreasing=T)&lt;br/&gt;  resumen &amp;lt;- as.matrix(resumen,nc=1)&lt;br/&gt;  colnames(resumen) &amp;lt;- &amp;quot;% correctos&amp;quot;&lt;br/&gt;  cat(&amp;quot;Resumen:\n&amp;quot;)&lt;br/&gt;&lt;br/&gt;  print(resumen)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;  return(invisible(mod.list))&lt;br/&gt;}&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.rsplus  {font-family:monospace;}
+.rsplus .imp {font-weight: bold; color: red;}
+.rsplus .kw1 {color: #0000FF; font-weight: bold;}
+.rsplus .kw2 {color: #0000FF; font-weight: bold;}
+.rsplus .kw3 {color: #CC9900; font-weight: bold;}
+.rsplus .kw4 {color: #0000FF; font-weight: bold;}
+.rsplus .kw5 {color: #0000FF; font-weight: bold;}
+.rsplus .kw6 {color: #0000FF; font-weight: bold;}
+.rsplus .kw7 {color: #0000FF; font-weight: bold;}
+.rsplus .kw8 {color: #0000FF; font-weight: bold;}
+.rsplus .co1 {color: #228B22;}
+.rsplus .es0 {color: #000099; font-weight: bold;}
+.rsplus .br0 {color: #080;}
+.rsplus .sy0 {color: #080;}
+.rsplus .st0 {color: #ff0000;}
+.rsplus .nu0 {color: #ff0000;}
+.rsplus .re0 {color:#A020F0;}
+.rsplus span.xtra { display:block; }
+
+-->
+</style><pre class="rsplus">modelos <span class="sy0">&lt;-</span> <span class="kw2">function</span><span class="br0">&#40;</span>datos <span class="sy0">=</span> <span class="kw3">iris</span>, dep <span class="sy0">=</span> <span class="nu0">5</span>, p <span class="sy0">=</span> <span class="nu0">0.75</span>, ad<span class="sy0">=</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&nbsp;
+  <span class="co1"># Creación del subgrupo de entrenamiento y de prueba</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>caret<span class="br0">&#41;</span>
+  datos.<span class="me1">indices</span> <span class="sy0">&lt;-</span> createDataPartition<span class="br0">&#40;</span>datos<span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>,p <span class="sy0">=</span> p, <span class="kw2">list</span><span class="sy0">=</span><span class="kw2">F</span><span class="br0">&#41;</span>
+  datos.<span class="me1">train</span> <span class="sy0">&lt;-</span> datos<span class="br0">&#91;</span>datos.<span class="me1">indices</span>,<span class="br0">&#93;</span>
+&nbsp;
+  <span class="kw2">if</span><span class="br0">&#40;</span>p <span class="sy0">!=</span> <span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    datos.<span class="me1">test</span> <span class="sy0">&lt;-</span> datos<span class="br0">&#91;</span><span class="sy0">-</span>datos.<span class="me1">indices</span>,<span class="br0">&#93;</span>
+  <span class="br0">&#125;</span> <span class="kw1">else</span> <span class="br0">&#123;</span>
+    datos.<span class="me1">test</span> <span class="sy0">&lt;-</span> datos.<span class="me1">train</span>
+  <span class="br0">&#125;</span>
+  <span class="co1"># Fórmula</span>
+  f <span class="sy0">&lt;-</span> <span class="kw7">as.<span class="me1">formula</span></span><span class="br0">&#40;</span><span class="kw2">paste</span><span class="br0">&#40;</span><span class="kw2">names</span><span class="br0">&#40;</span>datos<span class="br0">&#91;</span>dep<span class="br0">&#93;</span><span class="br0">&#41;</span>,<span class="st0">&quot;~.&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># Redes neuronales</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>nnet<span class="br0">&#41;</span>
+  parametros <span class="sy0">&lt;-</span> train<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span>, method<span class="sy0">=</span><span class="st0">&quot;nnet&quot;</span>, <span class="kw2">trace</span><span class="sy0">=</span><span class="kw2">F</span><span class="br0">&#41;</span>
+  size <span class="sy0">&lt;-</span> parametros$bestTune$size
+  decay <span class="sy0">&lt;-</span> parametros$bestTune$decay
+  modelo.<span class="me1">nnet</span> <span class="sy0">&lt;-</span> nnet<span class="br0">&#40;</span>f,<span class="kw2">trace</span><span class="sy0">=</span><span class="kw2">F</span>, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span>, size<span class="sy0">=</span>size, decay<span class="sy0">=</span>decay<span class="br0">&#41;</span>
+  pred.<span class="me1">nnet</span> <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">nnet</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred.<span class="me1">nnet</span>,datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Red neuronal: nnet<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos1 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos1,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># C5.0</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>C50<span class="br0">&#41;</span>
+  modelo.<span class="me1">c50</span> <span class="sy0">&lt;-</span> C5.0<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">c50</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred,datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Árbol de clasificación C5.0<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos2 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos2,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># SVM</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>e1071<span class="br0">&#41;</span>
+  modelo.<span class="me1">svm</span> <span class="sy0">&lt;-</span> svm<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">svm</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred,datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** SVM<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos3 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos3,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># Bootstrapped Aggregation: Bagging</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>ipred<span class="br0">&#41;</span>
+  modelo.<span class="me1">ba</span> <span class="sy0">&lt;-</span> ipred<span class="sy0">::</span><span class="me2">bagging</span><span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">ba</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred,datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Bootstrapped Aggregation: bagging<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos4 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos4,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># Random Forest</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>randomForest<span class="br0">&#41;</span>
+  modelo.<span class="me1">rf</span> <span class="sy0">&lt;-</span> randomForest<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">rf</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;Random Forest<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos5 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos5,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># AdaBoost - Adaptative Boosting</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>adabag<span class="br0">&#41;</span>
+  modelo.<span class="me1">ad</span> <span class="sy0">&lt;-</span> boosting<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">ad</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred$class, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Adaptative Boosting: boosting<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos6 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos6,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+  <span class="co1"># Árboles de clasificación: rpart</span>
+  <span class="kw2">library</span><span class="br0">&#40;</span>rpart<span class="br0">&#41;</span>
+  modelo.<span class="me1">rp</span> <span class="sy0">&lt;-</span> rpart<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">rp</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Árboles de clasificación: rpart<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos7 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos7,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+  <span class="co1"># Clasificador bayesiano ingenuo (Naive Bayes classifier): naiveBayes</span>
+&nbsp;
+  modelo.<span class="me1">nb</span> <span class="sy0">&lt;-</span> naiveBayes<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+  pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">nb</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+  <span class="co1"># Matriz de confusión</span>
+  mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+  <span class="co1"># Ordenar tabla alfabéticamente</span>
+  <span class="co1"># Por algún motivo a veces sale desordenada</span>
+  mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Clasificador bayesiano ingenuo: naiveBayes<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+  <span class="co1"># Aciertos en %</span>
+  aciertos10 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos10,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+  <span class="kw2">if</span><span class="br0">&#40;</span>ad <span class="sy0">!=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw2">library</span><span class="br0">&#40;</span>MASS<span class="br0">&#41;</span>
+    <span class="co1"># Análisis disciminane lineal</span>
+    modelo.<span class="me1">lda</span> <span class="sy0">&lt;-</span> rpart<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+    pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">lda</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+    <span class="co1"># Matriz de confusión</span>
+    mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+    <span class="co1"># Ordenar tabla alfabéticamente</span>
+    <span class="co1"># Por algún motivo a veces sale desordenada</span>
+    mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Análisis disciminane lineal: lda<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+    <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+    <span class="co1"># Aciertos en %</span>
+    aciertos8 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+    <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos8,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+    <span class="co1"># Análisis disciminane cuadrático</span>
+    modelo.<span class="me1">qda</span> <span class="sy0">&lt;-</span> rpart<span class="br0">&#40;</span>f, <span class="kw8">data</span><span class="sy0">=</span>datos.<span class="me1">train</span><span class="br0">&#41;</span>
+    pred <span class="sy0">&lt;-</span> <span class="kw7">predict</span><span class="br0">&#40;</span>modelo.<span class="me1">qda</span>, datos.<span class="me1">test</span>, type<span class="sy0">=</span><span class="st0">&quot;class&quot;</span><span class="br0">&#41;</span>
+    <span class="co1"># Matriz de confusión</span>
+    mc <span class="sy0">&lt;-</span> <span class="kw2">table</span><span class="br0">&#40;</span>pred, datos.<span class="me1">test</span><span class="br0">&#91;</span>,dep<span class="br0">&#93;</span>, dnn <span class="sy0">=</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;Asignado&quot;</span>,<span class="st0">&quot;Real&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+    <span class="co1"># Ordenar tabla alfabéticamente</span>
+    <span class="co1"># Por algún motivo a veces sale desordenada</span>
+    mc <span class="sy0">&lt;-</span> mc<span class="br0">&#91;</span><span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">rownames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span>,<span class="kw2">order</span><span class="br0">&#40;</span><span class="kw2">colnames</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#93;</span>
+    <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;** Análisis disciminane cuadrático: qda<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+    <span class="kw2">print</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span>
+    <span class="co1"># Aciertos en %</span>
+    aciertos9 <span class="sy0">&lt;-</span> <span class="kw2">sum</span><span class="br0">&#40;</span><span class="kw2">diag</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">/</span> <span class="kw2">sum</span><span class="br0">&#40;</span>mc<span class="br0">&#41;</span> <span class="sy0">*</span> <span class="nu0">100</span>
+    <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;<span class="es0">\n</span>Correctamente clasificados:&quot;</span>,<span class="kw2">round</span><span class="br0">&#40;</span>aciertos9,<span class="nu0">2</span><span class="br0">&#41;</span>,<span class="st0">&quot;%<span class="es0">\n</span><span class="es0">\n</span><span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+  <span class="br0">&#125;</span>
+&nbsp;
+  resumen <span class="sy0">&lt;-</span> <span class="kw2">c</span><span class="br0">&#40;</span>aciertos1,aciertos2,aciertos3,aciertos4,aciertos5,aciertos6,aciertos7,aciertos10<span class="br0">&#41;</span>
+  <span class="kw2">names</span><span class="br0">&#40;</span>resumen<span class="br0">&#41;</span> <span class="sy0">&lt;-</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="st0">&quot;nnet&quot;</span>,<span class="st0">&quot;C5.0&quot;</span>,<span class="st0">&quot;svm&quot;</span>,<span class="st0">&quot;bagging&quot;</span>,<span class="st0">&quot;randomForest&quot;</span>,<span class="st0">&quot;boosting&quot;</span>,<span class="st0">&quot;rpart&quot;</span>,<span class="st0">&quot;naiveBayes&quot;</span><span class="br0">&#41;</span>
+  mod.<span class="me1">list</span> <span class="sy0">&lt;-</span> <span class="kw2">list</span><span class="br0">&#40;</span>nnet<span class="sy0">=</span>modelo.<span class="me1">nnet</span>, C5.0<span class="sy0">=</span>modelo.<span class="me1">c50</span>, svm<span class="sy0">=</span>modelo.<span class="me1">svm</span>, bagging<span class="sy0">=</span>modelo.<span class="me1">ba</span>, randomForest<span class="sy0">=</span>modelo.<span class="me1">rf</span>, boosting<span class="sy0">=</span>modelo.<span class="me1">ad</span>, rpart<span class="sy0">=</span>modelo.<span class="me1">rp</span>,naiveBayes<span class="sy0">=</span>modelo.<span class="me1">nb</span><span class="br0">&#41;</span>
+  <span class="kw2">if</span><span class="br0">&#40;</span>ad <span class="sy0">!=</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    resumen <span class="sy0">&lt;-</span> <span class="kw2">c</span><span class="br0">&#40;</span>resumen,aciertos8,aciertos9<span class="br0">&#41;</span>
+    <span class="kw2">names</span><span class="br0">&#40;</span>resumen<span class="br0">&#41;</span> <span class="sy0">&lt;-</span> <span class="kw2">c</span><span class="br0">&#40;</span><span class="kw2">names</span><span class="br0">&#40;</span>resumen<span class="br0">&#91;</span><span class="nu0">1</span><span class="sy0">:</span><span class="nu0">8</span><span class="br0">&#93;</span><span class="br0">&#41;</span>,<span class="st0">&quot;lda&quot;</span>,<span class="st0">&quot;qda&quot;</span><span class="br0">&#41;</span>
+    mod.<span class="me1">list</span> <span class="sy0">&lt;-</span> <span class="kw2">list</span><span class="br0">&#40;</span>nnet<span class="sy0">=</span>modelo.<span class="me1">nnet</span>, C5.0<span class="sy0">=</span>modelo.<span class="me1">c50</span>, svm<span class="sy0">=</span>modelo.<span class="me1">svm</span>, bagging<span class="sy0">=</span>modelo.<span class="me1">ba</span>, randomForest<span class="sy0">=</span>modelo.<span class="me1">rf</span>, boosting<span class="sy0">=</span>modelo.<span class="me1">ad</span>, rpart<span class="sy0">=</span>modelo.<span class="me1">rp</span>, naiveBayes<span class="sy0">=</span>modelo.<span class="me1">nb</span>, lda<span class="sy0">=</span>modelo.<span class="me1">lda</span>, qda<span class="sy0">=</span>modelo.<span class="me1">qda</span><span class="br0">&#41;</span>
+  <span class="br0">&#125;</span>
+  resumen <span class="sy0">&lt;-</span> <span class="kw2">sort</span><span class="br0">&#40;</span>resumen,decreasing<span class="sy0">=</span><span class="kw2">T</span><span class="br0">&#41;</span>
+  resumen <span class="sy0">&lt;-</span> <span class="kw2">as.<span class="me1">matrix</span></span><span class="br0">&#40;</span>resumen,nc<span class="sy0">=</span><span class="nu0">1</span><span class="br0">&#41;</span>
+  <span class="kw2">colnames</span><span class="br0">&#40;</span>resumen<span class="br0">&#41;</span> <span class="sy0">&lt;-</span> <span class="st0">&quot;% correctos&quot;</span>
+  <span class="kw2">cat</span><span class="br0">&#40;</span><span class="st0">&quot;Resumen:<span class="es0">\n</span>&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+  <span class="kw2">print</span><span class="br0">&#40;</span>resumen<span class="br0">&#41;</span>
+&nbsp;
+&nbsp;
+  <span class="kw2">return</span><span class="br0">&#40;</span><span class="kw2">invisible</span><span class="br0">&#40;</span>mod.<span class="me1">list</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+<span class="br0">&#125;</span></pre>
+
+<!-- ws:end:WikiTextCodeRule:0 --><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:6:&lt;h1&gt; --><h1 id="toc1"><a name="Ejemplo sin parámetros"></a><!-- ws:end:WikiTextHeadingRule:6 -->Ejemplo sin parámetros</h1>
+ <br />
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;rsplus&quot;&gt;&amp;gt; modelos()&lt;br/&gt;Loading required package: lattice&lt;br/&gt;Loading required package: ggplot2&lt;br/&gt;** Red neuronal: nnet&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         11         0&lt;br/&gt;  virginica       0          1        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 97.22 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Árbol de clasificación C5.0&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         10         0&lt;br/&gt;  virginica       0          2        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.44 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** SVM&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         11         0&lt;br/&gt;  virginica       0          1        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 97.22 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Bootstrapped Aggregation: bagging&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         11         0&lt;br/&gt;  virginica       0          1        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 97.22 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;randomForest 4.6-10&lt;br/&gt;Type rfNews() to see new features/changes/bug fixes.&lt;br/&gt;Random Forest&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         11         0&lt;br/&gt;  virginica       0          1        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 97.22 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Loading required package: rpart&lt;br/&gt;Loading required package: mlbench&lt;br/&gt;&lt;br/&gt;Attaching package: ‘adabag’&lt;br/&gt;&lt;br/&gt;The following object is masked from ‘package:ipred’:&lt;br/&gt;&lt;br/&gt;    bagging&lt;br/&gt;&lt;br/&gt;** Adaptative Boosting: boosting&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         11         0&lt;br/&gt;  virginica       0          1        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 97.22 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Árboles de clasificación: rpart&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         10         0&lt;br/&gt;  virginica       0          2        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.44 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Clasificador bayesiano ingenuo: naiveBayes&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         12         0&lt;br/&gt;  virginica       0          0        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 100 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Análisis disciminane lineal: lda&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         10         0&lt;br/&gt;  virginica       0          2        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.44 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Análisis disciminane cuadrático: qda&lt;br/&gt;            Real&lt;br/&gt;Asignado     setosa versicolor virginica&lt;br/&gt;  setosa         12          0         0&lt;br/&gt;  versicolor      0         10         0&lt;br/&gt;  virginica       0          2        12&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.44 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Resumen:&lt;br/&gt;             % correctos&lt;br/&gt;naiveBayes     100.00000&lt;br/&gt;nnet            97.22222&lt;br/&gt;svm             97.22222&lt;br/&gt;bagging         97.22222&lt;br/&gt;randomForest    97.22222&lt;br/&gt;boosting        97.22222&lt;br/&gt;C5.0            94.44444&lt;br/&gt;rpart           94.44444&lt;br/&gt;lda             94.44444&lt;br/&gt;qda             94.44444&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.rsplus  {font-family:monospace;}
+.rsplus .imp {font-weight: bold; color: red;}
+.rsplus .kw1 {color: #0000FF; font-weight: bold;}
+.rsplus .kw2 {color: #0000FF; font-weight: bold;}
+.rsplus .kw3 {color: #CC9900; font-weight: bold;}
+.rsplus .kw4 {color: #0000FF; font-weight: bold;}
+.rsplus .kw5 {color: #0000FF; font-weight: bold;}
+.rsplus .kw6 {color: #0000FF; font-weight: bold;}
+.rsplus .kw7 {color: #0000FF; font-weight: bold;}
+.rsplus .kw8 {color: #0000FF; font-weight: bold;}
+.rsplus .co1 {color: #228B22;}
+.rsplus .es0 {color: #000099; font-weight: bold;}
+.rsplus .br0 {color: #080;}
+.rsplus .sy0 {color: #080;}
+.rsplus .st0 {color: #ff0000;}
+.rsplus .nu0 {color: #ff0000;}
+.rsplus .re0 {color:#A020F0;}
+.rsplus span.xtra { display:block; }
+
+-->
+</style><pre class="rsplus"><span class="sy0">&gt;</span> modelos<span class="br0">&#40;</span><span class="br0">&#41;</span>
+Loading required package<span class="sy0">:</span> lattice
+Loading required package<span class="sy0">:</span> ggplot2
+<span class="sy0">**</span> Red neuronal<span class="sy0">:</span> nnet
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">11</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">1</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">97.22</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Árbol <span class="kw8">de</span> clasificación C5.0
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">10</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">2</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.44</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> SVM
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">11</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">1</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">97.22</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Bootstrapped Aggregation<span class="sy0">:</span> bagging
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">11</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">1</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">97.22</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+randomForest <span class="nu0">4.6</span><span class="sy0">-</span><span class="nu0">10</span>
+Type rfNews<span class="br0">&#40;</span><span class="br0">&#41;</span> to see <span class="kw6">new</span> features<span class="sy0">/</span>changes<span class="sy0">/</span>bug fixes.
+<span class="me1">Random</span> Forest
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">11</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">1</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">97.22</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+Loading required package<span class="sy0">:</span> rpart
+Loading required package<span class="sy0">:</span> mlbench
+&nbsp;
+Attaching package<span class="sy0">:</span> ‘adabag’
+&nbsp;
+The following object <span class="kw6">is</span> masked from ‘package<span class="sy0">:</span>ipred’<span class="sy0">:</span>
+&nbsp;
+    bagging
+&nbsp;
+<span class="sy0">**</span> Adaptative Boosting<span class="sy0">:</span> boosting
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">11</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">1</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">97.22</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Árboles <span class="kw8">de</span> clasificación<span class="sy0">:</span> rpart
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">10</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">2</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.44</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Clasificador bayesiano ingenuo<span class="sy0">:</span> naiveBayes
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">12</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">0</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">100</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Análisis disciminane lineal<span class="sy0">:</span> lda
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">10</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">2</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.44</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Análisis disciminane cuadrático<span class="sy0">:</span> qda
+            Real
+Asignado     setosa versicolor virginica
+  setosa         <span class="nu0">12</span>          <span class="nu0">0</span>         <span class="nu0">0</span>
+  versicolor      <span class="nu0">0</span>         <span class="nu0">10</span>         <span class="nu0">0</span>
+  virginica       <span class="nu0">0</span>          <span class="nu0">2</span>        <span class="nu0">12</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.44</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+Resumen<span class="sy0">:</span>
+             <span class="sy0">%</span> correctos
+naiveBayes     <span class="nu0">100.00000</span>
+nnet            <span class="nu0">97.22222</span>
+svm             <span class="nu0">97.22222</span>
+bagging         <span class="nu0">97.22222</span>
+randomForest    <span class="nu0">97.22222</span>
+boosting        <span class="nu0">97.22222</span>
+C5.0            <span class="nu0">94.44444</span>
+rpart           <span class="nu0">94.44444</span>
+lda             <span class="nu0">94.44444</span>
+qda             <span class="nu0">94.44444</span></pre>
+
+<!-- ws:end:WikiTextCodeRule:1 --><br />
+<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:8:&lt;h1&gt; --><h1 id="toc2"><a name="Ejemplo con parámetros"></a><!-- ws:end:WikiTextHeadingRule:8 -->Ejemplo con parámetros</h1>
+ Con estos datos se pueden tardar varios minutos en finalizar el programa<br />
+<br />
+<!-- ws:start:WikiTextCodeRule:2:
+&lt;pre class=&quot;rsplus&quot;&gt;&amp;gt; library(C50)&lt;br/&gt;&amp;gt; data(churn)&lt;br/&gt;&amp;gt; modelos(churnTrain,20)&lt;br/&gt;&lt;br/&gt;** Red neuronal: nnet&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  711 120&lt;br/&gt;     yes   1   0&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 85.46 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Árbol de clasificación C5.0&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  698  32&lt;br/&gt;     yes  14  88&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.47 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** SVM&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  710  93&lt;br/&gt;     yes   2  27&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 88.58 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Bootstrapped Aggregation: bagging&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  698  35&lt;br/&gt;     yes  14  85&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 94.11 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;randomForest 4.6-10&lt;br/&gt;Type rfNews() to see new features/changes/bug fixes.&lt;br/&gt;Random Forest&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  676  15&lt;br/&gt;     yes  36 105&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 93.87 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Loading required package: rpart&lt;br/&gt;Loading required package: mlbench&lt;br/&gt;&lt;br/&gt;Attaching package: ‘adabag’&lt;br/&gt;&lt;br/&gt;The following object is masked from ‘package:ipred’:&lt;br/&gt;&lt;br/&gt;    bagging&lt;br/&gt;&lt;br/&gt;** Adaptative Boosting: boosting&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  697  37&lt;br/&gt;     yes  15  83&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 93.75 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Árboles de clasificación: rpart&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  701  40&lt;br/&gt;     yes  11  80&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 93.87 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Clasificador bayesiano ingenuo: naiveBayes&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  674  58&lt;br/&gt;     yes  38  62&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 88.46 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Análisis disciminane lineal: lda&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  701  40&lt;br/&gt;     yes  11  80&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 93.87 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;** Análisis disciminane cuadrático: qda&lt;br/&gt;        Real&lt;br/&gt;Asignado  no yes&lt;br/&gt;     no  701  40&lt;br/&gt;     yes  11  80&lt;br/&gt;&lt;br/&gt;Correctamente clasificados: 93.87 %&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Resumen:&lt;br/&gt;             % correctos&lt;br/&gt;C5.0            94.47115&lt;br/&gt;bagging         94.11058&lt;br/&gt;randomForest    93.87019&lt;br/&gt;rpart           93.87019&lt;br/&gt;lda             93.87019&lt;br/&gt;qda             93.87019&lt;br/&gt;boosting        93.75000&lt;br/&gt;svm             88.58173&lt;br/&gt;naiveBayes      88.46154&lt;br/&gt;nnet            85.45673&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.rsplus  {font-family:monospace;}
+.rsplus .imp {font-weight: bold; color: red;}
+.rsplus .kw1 {color: #0000FF; font-weight: bold;}
+.rsplus .kw2 {color: #0000FF; font-weight: bold;}
+.rsplus .kw3 {color: #CC9900; font-weight: bold;}
+.rsplus .kw4 {color: #0000FF; font-weight: bold;}
+.rsplus .kw5 {color: #0000FF; font-weight: bold;}
+.rsplus .kw6 {color: #0000FF; font-weight: bold;}
+.rsplus .kw7 {color: #0000FF; font-weight: bold;}
+.rsplus .kw8 {color: #0000FF; font-weight: bold;}
+.rsplus .co1 {color: #228B22;}
+.rsplus .es0 {color: #000099; font-weight: bold;}
+.rsplus .br0 {color: #080;}
+.rsplus .sy0 {color: #080;}
+.rsplus .st0 {color: #ff0000;}
+.rsplus .nu0 {color: #ff0000;}
+.rsplus .re0 {color:#A020F0;}
+.rsplus span.xtra { display:block; }
+
+-->
+</style><pre class="rsplus"><span class="sy0">&gt;</span> <span class="kw2">library</span><span class="br0">&#40;</span>C50<span class="br0">&#41;</span>
+<span class="sy0">&gt;</span> <span class="kw8">data</span><span class="br0">&#40;</span>churn<span class="br0">&#41;</span>
+<span class="sy0">&gt;</span> modelos<span class="br0">&#40;</span>churnTrain,<span class="nu0">20</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="sy0">**</span> Red neuronal<span class="sy0">:</span> nnet
+        Real
+Asignado  no yes
+     no  <span class="nu0">711</span> <span class="nu0">120</span>
+     yes   <span class="nu0">1</span>   <span class="nu0">0</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">85.46</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Árbol <span class="kw8">de</span> clasificación C5.0
+        Real
+Asignado  no yes
+     no  <span class="nu0">698</span>  <span class="nu0">32</span>
+     yes  <span class="nu0">14</span>  <span class="nu0">88</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.47</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> SVM
+        Real
+Asignado  no yes
+     no  <span class="nu0">710</span>  <span class="nu0">93</span>
+     yes   <span class="nu0">2</span>  <span class="nu0">27</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">88.58</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Bootstrapped Aggregation<span class="sy0">:</span> bagging
+        Real
+Asignado  no yes
+     no  <span class="nu0">698</span>  <span class="nu0">35</span>
+     yes  <span class="nu0">14</span>  <span class="nu0">85</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">94.11</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+randomForest <span class="nu0">4.6</span><span class="sy0">-</span><span class="nu0">10</span>
+Type rfNews<span class="br0">&#40;</span><span class="br0">&#41;</span> to see <span class="kw6">new</span> features<span class="sy0">/</span>changes<span class="sy0">/</span>bug fixes.
+<span class="me1">Random</span> Forest
+        Real
+Asignado  no yes
+     no  <span class="nu0">676</span>  <span class="nu0">15</span>
+     yes  <span class="nu0">36</span> <span class="nu0">105</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">93.87</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+Loading required package<span class="sy0">:</span> rpart
+Loading required package<span class="sy0">:</span> mlbench
+&nbsp;
+Attaching package<span class="sy0">:</span> ‘adabag’
+&nbsp;
+The following object <span class="kw6">is</span> masked from ‘package<span class="sy0">:</span>ipred’<span class="sy0">:</span>
+&nbsp;
+    bagging
+&nbsp;
+<span class="sy0">**</span> Adaptative Boosting<span class="sy0">:</span> boosting
+        Real
+Asignado  no yes
+     no  <span class="nu0">697</span>  <span class="nu0">37</span>
+     yes  <span class="nu0">15</span>  <span class="nu0">83</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">93.75</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Árboles <span class="kw8">de</span> clasificación<span class="sy0">:</span> rpart
+        Real
+Asignado  no yes
+     no  <span class="nu0">701</span>  <span class="nu0">40</span>
+     yes  <span class="nu0">11</span>  <span class="nu0">80</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">93.87</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Clasificador bayesiano ingenuo<span class="sy0">:</span> naiveBayes
+        Real
+Asignado  no yes
+     no  <span class="nu0">674</span>  <span class="nu0">58</span>
+     yes  <span class="nu0">38</span>  <span class="nu0">62</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">88.46</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Análisis disciminane lineal<span class="sy0">:</span> lda
+        Real
+Asignado  no yes
+     no  <span class="nu0">701</span>  <span class="nu0">40</span>
+     yes  <span class="nu0">11</span>  <span class="nu0">80</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">93.87</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+<span class="sy0">**</span> Análisis disciminane cuadrático<span class="sy0">:</span> qda
+        Real
+Asignado  no yes
+     no  <span class="nu0">701</span>  <span class="nu0">40</span>
+     yes  <span class="nu0">11</span>  <span class="nu0">80</span>
+&nbsp;
+Correctamente clasificados<span class="sy0">:</span> <span class="nu0">93.87</span> <span class="sy0">%</span>
+&nbsp;
+&nbsp;
+Resumen<span class="sy0">:</span>
+             <span class="sy0">%</span> correctos
+C5.0            <span class="nu0">94.47115</span>
+bagging         <span class="nu0">94.11058</span>
+randomForest    <span class="nu0">93.87019</span>
+rpart           <span class="nu0">93.87019</span>
+lda             <span class="nu0">93.87019</span>
+qda             <span class="nu0">93.87019</span>
+boosting        <span class="nu0">93.75000</span>
+svm             <span class="nu0">88.58173</span>
+naiveBayes      <span class="nu0">88.46154</span>
+nnet            <span class="nu0">85.45673</span></pre>
+
+<!-- ws:end:WikiTextCodeRule:2 --><br />
+<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextIncludeRule:03:&lt;img src=&quot;https://www.wikispaces.com/site/embedthumbnail/include/backlinks?w=200&amp;h=100&quot; class=&quot;WikiMedia WikiMediaInclude&quot; id=&quot;wikitext@@include@@component=&amp;quot;backlinks&amp;quot; page=&amp;quot;page:Comparativa de modelos de clasificaci&amp;oacute;n&amp;quot; limit=&amp;quot;10&amp;quot;&quot; title=&quot;Include backlinks: component=&amp;quot;backlinks&amp;quot; page=&amp;quot;page:Comparativa de modelos de clasificaci&amp;oacute;n&amp;quot; limit=&amp;quot;10&amp;quot;&quot; /&gt; --><div class="includeBody-Comparativa_de_modelos_de_clasificación includeBody-Comparativa%20de%20modelos%20de%20clasificaci%C3%B3n includeBody"><table class="includeBacklinks">
+  <thead>
+    <tr class="includeBacklinksHeading">
+      <th class="includeBacklinksPageHeading">Page</th>
+      <th class="includeBacklinksDateHeading">Date Edited</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://rpro.wikispaces.com/Estad%C3%ADstica+y+programaci%C3%B3n+con+R" class="includeBacklinksLinkUrl">Estadística y programación con R</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Sep 9, 2017</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://rpro.wikispaces.com/Modelos+de+clasificaci%C3%B3n" class="includeBacklinksLinkUrl">Modelos de clasificación</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jul 12, 2015</td>
+    </tr>
+        <tr class="includeBacklinksLink">
+      <td class="includeBacklinksLinkPage">
+        <a href="https://rpro.wikispaces.com/space.menu" class="includeBacklinksLinkUrl">space.menu</a>
+      </td>
+      <td class="includeBacklinksLinkDate">Jul 17, 2015</td>
+    </tr>
+      </tbody>
+</table></div><!-- ws:end:WikiTextIncludeRule:03 -->
+  </div>
+
+<div id="pageEditor" class="editorWrapper editorLayer">
+  <iframe id="target_editor" name="target_editor" src="/s/blank.html" style="width:0px;height:0px;border:0"></iframe>
+    <form action="/page/edit/Comparativa+de+modelos+de+clasificaci%C3%B3n" method="post" class="editorForm" id="editorForm"><input type="hidden" name="wikispacesFormToken" value="cd0029b9e0cca820796c0a4a3ab3f37fdb3fa747"/><div class="jowic"><input type="text" class="form-control" name="wikispaces_user_id" value="user-1519151009"/></div><div class="wsh"><input type="text" class="form-control" name="goto" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="mode" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="version" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="pageComments" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="saveAndContinue" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="comment" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="commentsDisabled" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="contentPresent" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="editorCleanup" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="WikispacesEditorContent" autocomplete = "off"/></div><input type="hidden" name="wikispacesASFormToken" value="a4c508b41c9a7fc7f2e6d65e96cfb42fc90e9795"/>
+    <input type="hidden" title="goto" name="e75a0f7c5211e6e06007dbf7344fefff8878c96e" value=""/>
+    <input type="hidden" title="mode" name="687cd0c856e4a7af1d23471c7aa5746d9bafce6d" autocomplete="off" value="visual"/>
+    <input type="hidden" title="version" name="b42e6fa616a640a99733dd284c29939d58e619fd" autocomplete="off" value="555235363"/>
+    <input type="hidden" title="pageComments" name="21177d900fffa41e4cecde85f0c7ddc74f58ffff" autocomplete="off" value=""/>
+    <input type="hidden" title="saveAndContinue" name="4851e4f1d11247e2592e50545c7bce938cd95e66" value="0"/>
+    <input type="hidden" title="comment" name="0bfd6214088f27d080f14a2006d161158362d5d5" value=""/>
+    <input type="hidden" title="commentsDisabled" name="c7da99cc935e26206ef19a2887897a4346515e50" autocomplete="off" value=""/>
+    <input type="hidden" title="contentPresent" name="659b1be205ad0ff3d796aa1924607b5a11b1996f" autocomplete="off" value=""/>
+    <input type="hidden" title="editorCleanup" name="e31bacdec88362bec94f7802101872e0e5c2762b" autocomplete="off" value=""/>
+
+    <textarea id="wsMainEditor" title="content" class="noContentHide" name="fd3667e96dbd1d8324ec66460fcc3de577606092" style="width: 100%; position: absolute; top: -50000px; left: -50000px;" autocomplete="off"></textarea>
+
+  <noscript>
+    <h2>Javascript Required</h2>
+    <p>You need to enable Javascript in your browser to edit pages.</p>
+  </noscript>
+
+  </form>
+  
+  
+  <div id="plainTextEditor" style="position:relative;display:none" class="editorLayer" >
+    <textarea id="textEditor" class="autogrow"></textarea>
+    <p style="clear:both;" align="right"><a href="http://helpcenter.wikispaces.com/customer/portal/articles/1959131-wikitext">help on how to format text</a></p>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="ws-theme-footer" role="contentinfo">
+  <div class="ws-theme-container">
+    <div class="ws-theme-footer-inner">
+      <div class="WikiFooterNav WikiElement">
+<a href="http://helpcenter.wikispaces.com/" rel="nofollow" class="js-help-trigger">Help</a> &middot;
+<a href="https://www.wikispaces.com/about">About</a> &middot;
+<a href="https://www.wikispaces.com/content/pricing" rel="nofollow">Pricing</a> &middot;
+<a href="https://www.wikispaces.com/privacy" rel="nofollow">Privacy</a> &middot;
+<a href="https://www.wikispaces.com/terms" rel="nofollow">Terms</a> &middot;
+<a href="https://www.wikispaces.com/site/help?url=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n" rel="nofollow"><strong>Support</strong></a> &middot;
+<a href="/space/subscribe/upgrade"><strong>Upgrade</strong></a>
+</div>      <div class="WikiLicense WikiElement">Contributions to https://rpro.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-nc-sa/3.0">Creative Commons Attribution Share-Alike Non-Commercial 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-nc-sa/3.0"><img src="https://ssl.wikicdn.com/i/creativecommons/by-nc-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike Non-Commercial 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2018 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div>    </div>
+  </div>
+</footer>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="https://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="https://ssl.wikicdn.com/s/nogz/z80252q5-common.min.js" type="text/javascript"></script>
+<script src="https://ssl.wikicdn.com/s/nogz/40k60203-editorc.min.js" type="text/javascript"></script>
+<script src="https://ssl.wikicdn.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="https://ssl.wikicdn.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="https://ssl.wikicdn.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 0;
+ws.attributes.pageId = 214382435;
+ws.attributes.version = 555235363;
+ws.attributes.showEditor = true;
+ws.attributes.editUrl = "https:\/\/rpro.wikispaces.com\/page\/edit\/Comparativa+de+modelos+de+clasificaci%C3%B3n?goto=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "https:\/\/rpro.wikispaces.com\/page\/shares\/Comparativa+de+modelos+de+clasificaci%C3%B3n";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.common.addNotice("<script type=\"text\/javascript\">function wsDismissBanner() { ws.common.removeNotice();  ws.cookie.set(\"wsAnnouncement\", 1, {expires: 365 * 86400, domain: \".wikispaces.com\"}); return false;}$(\".ui-pnotify-closer\").remove();<\/script><i class=\"fa fa-times fa-fw ws-close\" onclick=\"wsDismissBanner();\"><\/i>It's time for us to say farewell\u2026 Regretfully, we've made the tough decision to close Wikispaces. Find out why, and what will happen, <a href='http:\/\/blog.wikispaces.com' target='_top'>here<a\/>", "warning");
+});
+
+jQuery(document).ready(function($) {
+  
+  function tipPlacement() {
+    return this.$element.closest('.ws-menu-bar .btn-group').is('.open') ? 'top' : 'bottom';
+  }
+
+  
+
+  $('.ws-menu-bar').each(function() {
+    var $menuBar = $(this);
+    var $tagDropdown = $menuBar.find('.ws-tag-dropdown-menu');
+    $menuBar.find('.tipme').tooltip({placement: tipPlacement, container: '.ws-menu-bar'});
+
+    
+    $menuBar.find('.ws-btn-more').click(ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .btn-group').is('.open')) {
+        ws.common.hideMorePageBar();
+      } else {
+        ws.common.showMorePageBar();
+      }
+    }));
+
+    $menuBar.on('click', '.ws-tag-dropdown-toggle', ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .dropdown').is('.open')) {
+        ws.common.hideTagDropdown();
+      } else {
+        ws.common.showTagDropdown();
+      }
+    }));
+
+    $(document.body).click(function(e) {
+      var $target = $(e.target);
+      if (!$target.closest('.ws-more-menu').closest('.ws-menu-bar').is($menuBar)
+          || $target.closest('a').is('.WikispacesDialogLink')) {
+        ws.common.hideMorePageBar();
+      }
+      if ($tagDropdown.length && !$target.closest('.ws-tag-dropdown-menu').is($tagDropdown)) {
+        ws.common.hideTagDropdown();
+      }
+    });
+    
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  $('.ws-more-menu').on('click', 'a', function(e) {
+    if ($(this).is('.disabled')) {
+      e.preventDefault();
+    }
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'https://rpro.wikispaces.com/page/edit/Comparativa+de+modelos+de+clasificaci%C3%B3n?goto=https%3A%2F%2Frpro.wikispaces.com%2FComparativa%2Bde%2Bmodelos%2Bde%2Bclasificaci%25C3%25B3n';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.loadEditorLibs('https://www.wikispaces.com/site/editorlibs/en/11kk95v9.js');
+});
+
+
+ws.editor.startEditor = function (moreCoreOptions, moreMainOptions) {
+  ws.editor.canEdit = true;
+
+  var coreOptions = {
+    'content_css': ['https://www.wikispaces.com/stylesheet/editori/217420326D.css']
+  };
+
+  // The stylesheet is passed in as a string, turn it into an array
+  // Add bootstrap styles to the editor, if we are in a theme that has full screen bootstrap
+  if (jQuery('body').is('.WikispacesBs3')) {
+    coreOptions.content_css.push('https://www.wikispaces.com//s/internal-bootstrap-body.css');
+  }
+
+  var mainOptions = {
+    'wssave_cancel_url': '/Comparativa+de+modelos+de+clasificaci%C3%B3n',
+    'wsimage_upload_url': 'https://rpro.wikispaces.com/file/multiupload',
+    'wsimage_max_file_size_mb': '50',
+    'wsimage_page_view_group': ''
+  };
+
+  ws.editor.loadEditor(jQuery.extend(coreOptions, moreCoreOptions), jQuery.extend(mainOptions, moreMainOptions));
+};
+
+  var wikispaces_page_version = '555235363';
+
+  jQuery(document).ready(function() {
+    ws.editor.enableButtons();
+  });
+
+
+
+--></script><!-- w24 183 wki:60:66(2) mem:2:16(28) tot:183:183(1) dql:5:9(3) pdb:2:2(1) -->
+
+</body>
+</html>
