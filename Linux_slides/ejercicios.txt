@@ -1,6 +1,0 @@
-sudo apt-get install cowsay
-	sudo yum install cowsay
-		brew install cowsay
-
-
-cowsay -f tux Tux es la mascota de linux
